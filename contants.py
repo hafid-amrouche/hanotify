@@ -1,0 +1,1 @@
+media_files_domain = 'http://localhost:8080'

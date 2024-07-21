@@ -1,0 +1,126 @@
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+from django.http import JsonResponse
+from others.models import State
+from .serializers import UserSerializerWithToken
+from django.contrib.auth.hashers import make_password
+import json, os
+from django.db.models import Q
+from django.db.models import Avg
+from django.utils.translation import gettext as _
+from user.models import UserToken
+import json
+from django.contrib.auth import authenticate
+from django.contrib.auth.models import User 
+from functions import is_acceptable_string, is_only_latin_and_arabic_letters
+from time import sleep
+
+
+# Create your views here.
+
+@api_view(['POST'])
+def login(request):
+    print(request.headers)
+    sleep(1)
+    data = json.loads(request.body)
+    username= data.get('username').lower()
+    password = data.get('password')
+    user = authenticate(request, username=username, password=password)
+    if not user:
+        # # check if his account is deleted
+        # accountDeleted = DeletedAccount.objects.filter(username=username, password=password)
+        # if accountDeleted.exists():
+        #     message = {'detail': _('Your account has been deleted.')}
+        #     accountDeleted.first().delete()
+        #     return JsonResponse(message, status=400)  
+        
+        message = {'detail': _('There is no user with this username and password.')}
+        return JsonResponse(message, status=400)
+    serializer = UserSerializerWithToken(user).data
+    UserToken.objects.create(
+        user = user,
+        token = serializer['token']
+    )
+    return Response(serializer)
+
+@api_view(['POST'])
+def register(request):
+    sleep(1)
+    try :
+        data = json.loads(request.body)
+        first_name = data['first_name']
+        last_name = data['last_name']
+        username = data['username'].lower()
+        password = data['password']
+        confirmPassword = data['password']
+        if len(first_name) < 3 or not(is_only_latin_and_arabic_letters(first_name)) :
+            message = {'detail': _('First name is not acceptable')}
+            return JsonResponse(message, status=400)
+        
+        elif len(last_name) < 3 or not(is_only_latin_and_arabic_letters(last_name))  :
+            message = {'detail': _('Last name is not acceptable')}
+            return JsonResponse(message, status=400)
+        
+        elif username=='' or (not is_acceptable_string(username)) :
+            message = {'detail': _('Username is not acceptable')}
+            return JsonResponse(message, status=400)
+        
+        elif User.objects.filter(username=username) :
+            message = {'detail': _('This username {} is taken try another one').format(username)}
+            return JsonResponse(message, status=400)
+        
+        elif password == '':
+            message = {'detail': _('Password cannot be empty')}
+            return JsonResponse(message, status=400)
+        
+        elif len(password) < 8 :
+            message = {'detail': _('Password should have at least 8 characters')}
+            return JsonResponse(message, status=400)
+        
+        elif not is_acceptable_string(password) :
+            message = {'detail': _('Password is not acceptable')}
+            return JsonResponse(message, status=400)
+        
+        elif password != confirmPassword:
+            message = {'detail': _('Passwords Do not match')}
+            return JsonResponse(message, status=400)
+        
+        user = User.objects.create(
+            first_name=first_name,
+            last_name = last_name,
+            username=username,
+            password=make_password(password)
+        )
+        # UserPassword.objects.create(
+        #     user = user,
+        #     password = password
+        # )
+
+        userData = UserSerializerWithToken(user, many=False).data
+        UserToken.objects.create(
+            user_id = user.id,
+            token = userData['token']
+        )
+        return Response(userData)
+    
+    except:
+        try:
+            user.delete()
+        except :
+            pass
+        message = {'detail': _('User was not created please try again')}
+        return JsonResponse(message, status=400)
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def logout(request):
+    sleep(1)
+    data = json.loads(request.body)
+    try :
+        token = data.get('token')
+        UserToken.objects.get(token=token, user=request.user).delete()
+    except Exception as e:
+        print(e)
+        pass
+    return JsonResponse({'detail': 'TOKEN_NOT_DELETED'})
