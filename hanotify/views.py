@@ -1,11 +1,5 @@
-
-from json_files.states import states
-from json_files.cities import cities
-from others.models import State, City
 from django.http import JsonResponse
 from django.contrib.auth.models import User 
-from rest_framework.decorators import api_view, permission_classes
-
 
 def home(request):
     return JsonResponse({

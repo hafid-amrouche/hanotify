@@ -22,8 +22,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home ),
     path('check-username', views.checkUsername),
-    path('stores/', include('store.urls')),
+    path('store/', include('store.urls')),
     path('user/', include('user.urls')),
     path('orders/', include('orders.urls')),
-    path('product/', include('product.urls'))
+    path('product/', include('product.urls')),
+    path('category/', include('category.urls')),
 ]

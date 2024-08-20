@@ -1,13871 +1,9248 @@
-cities = [
-    {
-        "id": "1",
-        "post_code": "01001",
-        "name": "Adrar",
-        "ar_name": "أدرار",
-        "longitude": "27.9763317",
-        "latitude": "-0.4841573",
-        "code": "01"
-    },
-    {
-        "id": "2",
-        "post_code": "01002",
-        "name": "Tamest",
-        "ar_name": "تأماست",
-        "longitude": "27.4257197",
-        "latitude": "-0.2807673",
-        "code": "01"
-    },
-    {
-        "id": "3",
-        "post_code": "01003",
-        "name": "Charouine",
-        "ar_name": "شروين",
-        "longitude": "29.0189483",
-        "latitude": "-0.2690792",
-        "code": "01"
-    },
-    {
-        "id": "4",
-        "post_code": "01004",
-        "name": "Reggane",
-        "ar_name": "رڨان",
-        "longitude": "25.4775826",
-        "latitude": "-4.3665328",
-        "code": "01"
-    },
-    {
-        "id": "5",
-        "post_code": "01005",
-        "name": "In Zghmir",
-        "ar_name": "ان زغمير",
-        "longitude": "25.8711501",
-        "latitude": "-6.252223",
-        "code": "01"
-    },
-    {
-        "id": "6",
-        "post_code": "01006",
-        "name": "Tit",
-        "ar_name": "تــيـــت",
-        "longitude": "26.9368382",
-        "latitude": "1.481824",
-        "code": "01"
-    },
-    {
-        "id": "7",
-        "post_code": "01007",
-        "name": "Ksar Kaddour",
-        "ar_name": "قصر قدور",
-        "longitude": "29.5798013",
-        "latitude": "0.3643512",
-        "code": "01"
-    },
-    {
-        "id": "8",
-        "post_code": "01008",
-        "name": "Tsabit",
-        "ar_name": "تسابيت",
-        "longitude": "28.3533514",
-        "latitude": "-0.2255095",
-        "code": "01"
-    },
-    {
-        "id": "9",
-        "post_code": "01009",
-        "name": "Timimoun",
-        "ar_name": "تيميمون",
-        "longitude": "29.2536341",
-        "latitude": "0.218653",
-        "code": "01"
-    },
-    {
-        "id": "10",
-        "post_code": "01010",
-        "name": "Ouled Said",
-        "ar_name": "أولاد سعيد",
-        "longitude": "29.4217292",
-        "latitude": "0.2254341",
-        "code": "01"
-    },
-    {
-        "id": "11",
-        "post_code": "01011",
-        "name": "Zaouiet Kounta",
-        "ar_name": "زاوية كنتة",
-        "longitude": "27.2293681",
-        "latitude": "-0.2202846",
-        "code": "01"
-    },
-    {
-        "id": "12",
-        "post_code": "01012",
-        "name": "Aoulef",
-        "ar_name": "أولف",
-        "longitude": "26.9710733",
-        "latitude": "1.059451",
-        "code": "01"
-    },
-    {
-        "id": "13",
-        "post_code": "01013",
-        "name": "Timokten",
-        "ar_name": "تيمقتن",
-        "longitude": "27.0221605",
-        "latitude": "1.0255048",
-        "code": "01"
-    },
-    {
-        "id": "14",
-        "post_code": "01014",
-        "name": "Tamentit",
-        "ar_name": "تامنطيت",
-        "longitude": "27.764557",
-        "latitude": "-0.2722121",
-        "code": "01"
-    },
-    {
-        "id": "15",
-        "post_code": "01015",
-        "name": "Fenoughil",
-        "ar_name": "فنوغيل",
-        "longitude": "27.6489014",
-        "latitude": "-0.3155995",
-        "code": "01"
-    },
-    {
-        "id": "16",
-        "post_code": "01016",
-        "name": "Tinerkouk",
-        "ar_name": "زاوية دباغ",
-        "longitude": "29.708777",
-        "latitude": "0.6955288",
-        "code": "01"
-    },
-    {
-        "id": "17",
-        "post_code": "01017",
-        "name": "Deldoul",
-        "ar_name": "دﻟﺪول",
-        "longitude": "34.2080511",
-        "latitude": "3.2543828",
-        "code": "01"
-    },
-    {
-        "id": "18",
-        "post_code": "01018",
-        "name": "Sali",
-        "ar_name": "سالى",
-        "longitude": "26.7370315",
-        "latitude": "-2.8517184",
-        "code": "01"
-    },
-    {
-        "id": "19",
-        "post_code": "01019",
-        "name": "Akabli",
-        "ar_name": "أقبلي",
-        "longitude": "26.7057062",
-        "latitude": "1.344838",
-        "code": "01"
-    },
-    {
-        "id": "20",
-        "post_code": "01020",
-        "name": "Metarfa",
-        "ar_name": "المطارفة",
-        "longitude": "28.5978205",
-        "latitude": "-0.1587011",
-        "code": "01"
-    },
-    {
-        "id": "21",
-        "post_code": "01021",
-        "name": "Ouled Ahmed Tammi",
-        "ar_name": "أولاد أحمد تيمى",
-        "longitude": "27.9766155",
-        "latitude": "-0.20396",
-        "code": "01"
-    },
-    {
-        "id": "22",
-        "post_code": "01022",
-        "name": "Bouda",
-        "ar_name": "بودة",
-        "longitude": "27.9779233",
-        "latitude": "-0.4533424",
-        "code": "01"
-    },
-    {
-        "id": "23",
-        "post_code": "01023",
-        "name": "Aougrout",
-        "ar_name": "أوقروت",
-        "longitude": "28.7499992",
-        "latitude": "0.2412452",
-        "code": "01"
-    },
-    {
-        "id": "24",
-        "post_code": "01024",
-        "name": "Talmine",
-        "ar_name": "",
-        "longitude": "27.9766155",
-        "latitude": "-0.20396",
-        "code": "01"
-    },
-    {
-        "id": "25",
-        "post_code": "01025",
-        "name": "Bordj Badji Mokhtar",
-        "ar_name": "برج باجي مختار",
-        "longitude": "22.9676154",
-        "latitude": "-3.946422",
-        "code": "01"
-    },
-    {
-        "id": "26",
-        "post_code": "01026",
-        "name": "Sbaa",
-        "ar_name": "السبع",
-        "longitude": "28.2112372",
-        "latitude": "-0.1862527",
-        "code": "01"
-    },
-    {
-        "id": "27",
-        "post_code": "01027",
-        "name": "Ouled Aissa",
-        "ar_name": "أولاد عيسى",
-        "longitude": "29.4201586",
-        "latitude": "-0.104542",
-        "code": "01"
-    },
-    {
-        "id": "28",
-        "post_code": "01028",
-        "name": "Timiaouine",
-        "ar_name": "تيمياوين",
-        "longitude": "20.9259001",
-        "latitude": "0.7958642",
-        "code": "01"
-    },
-    {
-        "id": "29",
-        "post_code": "02001",
-        "name": "Chlef",
-        "ar_name": "الشلف",
-        "longitude": "36.1691042",
-        "latitude": "1.2838598",
-        "code": "02"
-    },
-    {
-        "id": "30",
-        "post_code": "02002",
-        "name": "Tenes",
-        "ar_name": "تنس",
-        "longitude": "36.508324",
-        "latitude": "1.2426542",
-        "code": "02"
-    },
-    {
-        "id": "31",
-        "post_code": "02003",
-        "name": "Benairia",
-        "ar_name": "بنايرية",
-        "longitude": "36.3849733",
-        "latitude": "1.3150523",
-        "code": "02"
-    },
-    {
-        "id": "32",
-        "post_code": "02004",
-        "name": "El Karimia",
-        "ar_name": "الكريمية",
-        "longitude": "36.0774092",
-        "latitude": "1.5112398",
-        "code": "02"
-    },
-    {
-        "id": "33",
-        "post_code": "02005",
-        "name": "Tadjna",
-        "ar_name": "تاجنة",
-        "longitude": "36.3240803",
-        "latitude": "1.1303901",
-        "code": "02"
-    },
-    {
-        "id": "34",
-        "post_code": "02006",
-        "name": "Taougrite",
-        "ar_name": "تاوقريت",
-        "longitude": "36.2460876",
-        "latitude": "0.8993445",
-        "code": "02"
-    },
-    {
-        "id": "35",
-        "post_code": "02007",
-        "name": "Beni Haoua",
-        "ar_name": "بني حواء",
-        "longitude": "36.4938241",
-        "latitude": "1.5198873",
-        "code": "02"
-    },
-    {
-        "id": "36",
-        "post_code": "02008",
-        "name": "Sobha",
-        "ar_name": "صبحة",
-        "longitude": "36.1084781",
-        "latitude": "1.1017012",
-        "code": "02"
-    },
-    {
-        "id": "37",
-        "post_code": "02009",
-        "name": "Harchoun",
-        "ar_name": "حرشون",
-        "longitude": "36.1184786",
-        "latitude": "1.4187143",
-        "code": "02"
-    },
-    {
-        "id": "38",
-        "post_code": "02010",
-        "name": "Ouled Fares",
-        "ar_name": "أولاد فارس",
-        "longitude": "36.2302131",
-        "latitude": "1.0951463",
-        "code": "02"
-    },
-    {
-        "id": "39",
-        "post_code": "02011",
-        "name": "Sidi Akacha",
-        "ar_name": "سيدي عكاشة",
-        "longitude": "36.4357802",
-        "latitude": "1.2554858",
-        "code": "02"
-    },
-    {
-        "id": "40",
-        "post_code": "02012",
-        "name": "Boukadir",
-        "ar_name": "بوقدير",
-        "longitude": "36.0617947",
-        "latitude": "1.1083316",
-        "code": "02"
-    },
-    {
-        "id": "41",
-        "post_code": "02013",
-        "name": "Beni Rached",
-        "ar_name": "بني راشد",
-        "longitude": "36.2930145",
-        "latitude": "1.4611361",
-        "code": "02"
-    },
-    {
-        "id": "42",
-        "post_code": "02014",
-        "name": "Talassa",
-        "ar_name": "تلعصة",
-        "longitude": "36.4266341",
-        "latitude": "1.0790634",
-        "code": "02"
-    },
-    {
-        "id": "43",
-        "post_code": "02015",
-        "name": "Herenfa",
-        "ar_name": "الهرنفة",
-        "longitude": "36.2438569",
-        "latitude": "1.0440444",
-        "code": "02"
-    },
-    {
-        "id": "44",
-        "post_code": "02016",
-        "name": "Oued Goussine",
-        "ar_name": "واد ڨوسين",
-        "longitude": "36.4949721",
-        "latitude": "1.3928579",
-        "code": "02"
-    },
-    {
-        "id": "45",
-        "post_code": "02017",
-        "name": "Dahra",
-        "ar_name": "الظهرة",
-        "longitude": "36.2551398",
-        "latitude": "0.8432006",
-        "code": "02"
-    },
-    {
-        "id": "46",
-        "post_code": "02018",
-        "name": "Ouled Abbes",
-        "ar_name": "أولاد عباس",
-        "longitude": "36.2139534",
-        "latitude": "1.4578336",
-        "code": "02"
-    },
-    {
-        "id": "47",
-        "post_code": "02019",
-        "name": "Sendjas",
-        "ar_name": "سنجاس",
-        "longitude": "36.0396831",
-        "latitude": "1.2713566",
-        "code": "02"
-    },
-    {
-        "id": "48",
-        "post_code": "02020",
-        "name": "Zeboudja",
-        "ar_name": "الزبوجة",
-        "longitude": "36.3910799",
-        "latitude": "1.3907765",
-        "code": "02"
-    },
-    {
-        "id": "49",
-        "post_code": "02021",
-        "name": "Oued Sly",
-        "ar_name": "واد سلي",
-        "longitude": "36.0806537",
-        "latitude": "1.1443351",
-        "code": "02"
-    },
-    {
-        "id": "50",
-        "post_code": "02022",
-        "name": "Abou El Hassen",
-        "ar_name": "أبو الحسن",
-        "longitude": "36.407875",
-        "latitude": "1.1184571",
-        "code": "02"
-    },
-    {
-        "id": "51",
-        "post_code": "02023",
-        "name": "El Marsa",
-        "ar_name": "المرصى",
-        "longitude": "36.2599947",
-        "latitude": "0.722512",
-        "code": "02"
-    },
-    {
-        "id": "52",
-        "post_code": "02024",
-        "name": "Chettia",
-        "ar_name": "الشطية",
-        "longitude": "36.1782742",
-        "latitude": "1.1791394",
-        "code": "02"
-    },
-    {
-        "id": "53",
-        "post_code": "02025",
-        "name": "Sidi Abderrahmane",
-        "ar_name": "سيدي عبد الرحمان",
-        "longitude": "36.4236714",
-        "latitude": "1.0492304",
-        "code": "02"
-    },
-    {
-        "id": "54",
-        "post_code": "02026",
-        "name": "Moussadek",
-        "ar_name": "مصدق",
-        "longitude": "36.3521334",
-        "latitude": "1.0004317",
-        "code": "02"
-    },
-    {
-        "id": "55",
-        "post_code": "02027",
-        "name": "El Hadjadj",
-        "ar_name": "الحجاج",
-        "longitude": "35.6908338",
-        "latitude": "1.538967",
-        "code": "02"
-    },
-    {
-        "id": "56",
-        "post_code": "02028",
-        "name": "Labiod Medjadja",
-        "ar_name": "الأبيض مجاجة",
-        "longitude": "36.2682804",
-        "latitude": "1.3325618",
-        "code": "02"
-    },
-    {
-        "id": "57",
-        "post_code": "02029",
-        "name": "Oued Fodda",
-        "ar_name": "واد الفضة",
-        "longitude": "36.1995109",
-        "latitude": "1.4672731",
-        "code": "02"
-    },
-    {
-        "id": "58",
-        "post_code": "02030",
-        "name": "Ouled Ben Abdelkader",
-        "ar_name": "أولاد بن عبد القادر",
-        "longitude": "35.9670371",
-        "latitude": "1.192049",
-        "code": "02"
-    },
-    {
-        "id": "59",
-        "post_code": "02031",
-        "name": "Bouzghaia",
-        "ar_name": "بوزغاية",
-        "longitude": "36.3604333",
-        "latitude": "1.1871646",
-        "code": "02"
-    },
-    {
-        "id": "60",
-        "post_code": "02032",
-        "name": "Ain Merane",
-        "ar_name": "عين مران",
-        "longitude": "36.1625642",
-        "latitude": "0.9651016",
-        "code": "02"
-    },
-    {
-        "id": "61",
-        "post_code": "02033",
-        "name": "Oum Drou",
-        "ar_name": "أم الذروع",
-        "longitude": "36.2034869",
-        "latitude": "1.3460801",
-        "code": "02"
-    },
-    {
-        "id": "62",
-        "post_code": "02034",
-        "name": "Breira",
-        "ar_name": "بريرة",
-        "longitude": "36.4476233",
-        "latitude": "1.5221188",
-        "code": "02"
-    },
-    {
-        "id": "63",
-        "post_code": "02035",
-        "name": "Beni Bouateb",
-        "ar_name": "بني بوعتاب",
-        "longitude": "35.9895844",
-        "latitude": "1.5589402",
-        "code": "02"
-    },
-    {
-        "id": "64",
-        "post_code": "03001",
-        "name": "Laghouat",
-        "ar_name": "الأغواط",
-        "longitude": "33.7939523",
-        "latitude": "2.8368501",
-        "code": "03"
-    },
-    {
-        "id": "65",
-        "post_code": "03002",
-        "name": "Ksar El Hirane",
-        "ar_name": "قصر الحيران",
-        "longitude": "33.7855481",
-        "latitude": "3.119366",
-        "code": "03"
-    },
-    {
-        "id": "66",
-        "post_code": "03003",
-        "name": "Benacer Ben Chohra",
-        "ar_name": "بن ناصر بن شهرة",
-        "longitude": "33.7522913",
-        "latitude": "2.9939138",
-        "code": "03"
-    },
-    {
-        "id": "67",
-        "post_code": "03004",
-        "name": "Sidi Makhlouf",
-        "ar_name": "سيدي مخلوف",
-        "longitude": "34.1276242",
-        "latitude": "3.0060262",
-        "code": "03"
-    },
-    {
-        "id": "68",
-        "post_code": "03005",
-        "name": "Hassi Delaa",
-        "ar_name": "حاسي دلاعة",
-        "longitude": "33.4154299",
-        "latitude": "3.5410309",
-        "code": "03"
-    },
-    {
-        "id": "69",
-        "post_code": "03006",
-        "name": "Hassi R'Mel",
-        "ar_name": "حاسي الرمل",
-        "longitude": "32.9412958",
-        "latitude": "3.2443135",
-        "code": "03"
-    },
-    {
-        "id": "70",
-        "post_code": "03007",
-        "name": "Ain Mahdi",
-        "ar_name": "عــيــن مـــاضــي",
-        "longitude": "33.7955179",
-        "latitude": "2.2924947",
-        "code": "03"
-    },
-    {
-        "id": "71",
-        "post_code": "03008",
-        "name": "Tadjmout",
-        "ar_name": "تاجموت",
-        "longitude": "33.8376241",
-        "latitude": "2.5234705",
-        "code": "03"
-    },
-    {
-        "id": "72",
-        "post_code": "03009",
-        "name": "El Kheneg",
-        "ar_name": "الخنق",
-        "longitude": "33.7441108",
-        "latitude": "2.7841758",
-        "code": "03"
-    },
-    {
-        "id": "73",
-        "post_code": "03010",
-        "name": "Gueltat Sidi Saad",
-        "ar_name": "قلتة سيدي سعد",
-        "longitude": "34.2983511",
-        "latitude": "1.9323492",
-        "code": "03"
-    },
-    {
-        "id": "74",
-        "post_code": "03011",
-        "name": "Ain Sidi Ali",
-        "ar_name": "عين سيدي علي",
-        "longitude": "34.1666661",
-        "latitude": "1.5412452",
-        "code": "03"
-    },
-    {
-        "id": "75",
-        "post_code": "03012",
-        "name": "Beidha",
-        "ar_name": "بيضاء",
-        "longitude": "33.7873735",
-        "latitude": "2.8829115",
-        "code": "03"
-    },
-    {
-        "id": "76",
-        "post_code": "03013",
-        "name": "Brida",
-        "ar_name": "بريدة",
-        "longitude": "33.9495922",
-        "latitude": "1.7465471",
-        "code": "03"
-    },
-    {
-        "id": "77",
-        "post_code": "03014",
-        "name": "El Ghicha",
-        "ar_name": "الغيشة",
-        "longitude": "33.9297719",
-        "latitude": "2.1396303",
-        "code": "03"
-    },
-    {
-        "id": "78",
-        "post_code": "03015",
-        "name": "Hadj Mechri",
-        "ar_name": "الحاج المشري",
-        "longitude": "33.9572842",
-        "latitude": "1.5908605",
-        "code": "03"
-    },
-    {
-        "id": "79",
-        "post_code": "03016",
-        "name": "Sebgag",
-        "ar_name": "سبقاق",
-        "longitude": "34.0285379",
-        "latitude": "1.9293458",
-        "code": "03"
-    },
-    {
-        "id": "80",
-        "post_code": "03017",
-        "name": "Taouiala",
-        "ar_name": "تاويالة",
-        "longitude": "33.8715595",
-        "latitude": "1.8530845",
-        "code": "03"
-    },
-    {
-        "id": "81",
-        "post_code": "03018",
-        "name": "Tadjrouna",
-        "ar_name": "تاجرونة",
-        "longitude": "33.5036312",
-        "latitude": "2.0924622",
-        "code": "03"
-    },
-    {
-        "id": "82",
-        "post_code": "03019",
-        "name": "Aflou",
-        "ar_name": "أفلو",
-        "longitude": "34.1121156",
-        "latitude": "2.0835167",
-        "code": "03"
-    },
-    {
-        "id": "83",
-        "post_code": "03020",
-        "name": "El Assafia",
-        "ar_name": "العسافية",
-        "longitude": "33.8269722",
-        "latitude": "2.9816293",
-        "code": "03"
-    },
-    {
-        "id": "84",
-        "post_code": "03021",
-        "name": "Oued Morra",
-        "ar_name": "وادي مرة",
-        "longitude": "34.1666661",
-        "latitude": "2.3079121",
-        "code": "03"
-    },
-    {
-        "id": "85",
-        "post_code": "03022",
-        "name": "Oued M'Zi",
-        "ar_name": "وادي مزي",
-        "longitude": "33.9410427",
-        "latitude": "2.4231133",
-        "code": "03"
-    },
-    {
-        "id": "86",
-        "post_code": "03023",
-        "name": "El Haouaita",
-        "ar_name": "الهوارية",
-        "longitude": "37.0505755",
-        "latitude": "10.9904863",
-        "code": "03"
-    },
-    {
-        "id": "87",
-        "post_code": "03024",
-        "name": "Sidi Bouzid",
-        "ar_name": "سيدي بوزيد",
-        "longitude": "35.0363883",
-        "latitude": "9.4595281",
-        "code": "03"
-    },
-    {
-        "id": "88",
-        "post_code": "04001",
-        "name": "Oum El Bouaghi",
-        "ar_name": "أم البواقي",
-        "longitude": "35.8725963",
-        "latitude": "7.0830052",
-        "code": "04"
-    },
-    {
-        "id": "89",
-        "post_code": "04002",
-        "name": "Ain Beida",
-        "ar_name": "عين البيضاء",
-        "longitude": "35.7948292",
-        "latitude": "7.3338883",
-        "code": "04"
-    },
-    {
-        "id": "90",
-        "post_code": "04003",
-        "name": "Ain M'lila",
-        "ar_name": "عين مليلة",
-        "longitude": "36.0260869",
-        "latitude": "6.4239017",
-        "code": "04"
-    },
-    {
-        "id": "91",
-        "post_code": "04004",
-        "name": "Behir Chergui",
-        "ar_name": "بحير الشرڨي",
-        "longitude": "35.7937891",
-        "latitude": "7.7132713",
-        "code": "04"
-    },
-    {
-        "id": "92",
-        "post_code": "04005",
-        "name": "El Amiria",
-        "ar_name": "العامرية",
-        "longitude": "36.1101777",
-        "latitude": "6.9026434",
-        "code": "04"
-    },
-    {
-        "id": "93",
-        "post_code": "04006",
-        "name": "Sigus",
-        "ar_name": "سيقوس",
-        "longitude": "36.1085199",
-        "latitude": "6.603674",
-        "code": "04"
-    },
-    {
-        "id": "94",
-        "post_code": "04007",
-        "name": "El Belala",
-        "ar_name": "البلالة",
-        "longitude": "35.6660914",
-        "latitude": "7.7837598",
-        "code": "04"
-    },
-    {
-        "id": "95",
-        "post_code": "04008",
-        "name": "Ain Babouche",
-        "ar_name": "عين بابوش",
-        "longitude": "35.9402286",
-        "latitude": "7.1751022",
-        "code": "04"
-    },
-    {
-        "id": "96",
-        "post_code": "04009",
-        "name": "Berriche",
-        "ar_name": "بريش",
-        "longitude": "35.9155816",
-        "latitude": "7.3676848",
-        "code": "04"
-    },
-    {
-        "id": "97",
-        "post_code": "04010",
-        "name": "Ouled Hamla",
-        "ar_name": "أولاد حملة",
-        "longitude": "36.0811426",
-        "latitude": "6.3334038",
-        "code": "04"
-    },
-    {
-        "id": "98",
-        "post_code": "04011",
-        "name": "Dhala",
-        "ar_name": "الضلعة",
-        "longitude": "35.4610885",
-        "latitude": "7.5379943",
-        "code": "04"
-    },
-    {
-        "id": "99",
-        "post_code": "04012",
-        "name": "Ain Kercha",
-        "ar_name": "عين كرشة",
-        "longitude": "35.9275632",
-        "latitude": "6.6811426",
-        "code": "04"
-    },
-    {
-        "id": "100",
-        "post_code": "04013",
-        "name": "Hanchir Toumghani",
-        "ar_name": "هنشير تومغني",
-        "longitude": "35.9371712",
-        "latitude": "6.7319584",
-        "code": "04"
-    },
-    {
-        "id": "101",
-        "post_code": "04014",
-        "name": "El Djazia",
-        "ar_name": "الجازيـــــــة",
-        "longitude": "35.663473",
-        "latitude": "7.5030506",
-        "code": "04"
-    },
-    {
-        "id": "102",
-        "post_code": "04015",
-        "name": "Ain Diss",
-        "ar_name": "عين الديس",
-        "longitude": "35.8101391",
-        "latitude": "7.2888545",
-        "code": "04"
-    },
-    {
-        "id": "103",
-        "post_code": "04016",
-        "name": "Fkirina",
-        "ar_name": "فكرينة",
-        "longitude": "35.6638941",
-        "latitude": "7.2909736",
-        "code": "04"
-    },
-    {
-        "id": "104",
-        "post_code": "04017",
-        "name": "Souk Naamane",
-        "ar_name": "سوق نعمان",
-        "longitude": "35.93924",
-        "latitude": "6.2583772",
-        "code": "04"
-    },
-    {
-        "id": "105",
-        "post_code": "04018",
-        "name": "Zorg",
-        "ar_name": "الزرڨ",
-        "longitude": "35.8726014",
-        "latitude": "7.1180248",
-        "code": "04"
-    },
-    {
-        "id": "106",
-        "post_code": "04019",
-        "name": "El Fedjoudj Boughrara Saoudi",
-        "ar_name": "الفجوج بوغرارة سعودى",
-        "longitude": "35.709409",
-        "latitude": "6.8162978",
-        "code": "04"
-    },
-    {
-        "id": "107",
-        "post_code": "04020",
-        "name": "Ouled Zouai",
-        "ar_name": "أولاد زواي",
-        "longitude": "35.8556626",
-        "latitude": "6.3821021",
-        "code": "04"
-    },
-    {
-        "id": "108",
-        "post_code": "04021",
-        "name": "Bir Chouhada",
-        "ar_name": "بئر الشهداء",
-        "longitude": "35.9007146",
-        "latitude": "6.1753867",
-        "code": "04"
-    },
-    {
-        "id": "109",
-        "post_code": "04022",
-        "name": "Ksar Sbahi",
-        "ar_name": "قصر صباحي",
-        "longitude": "36.0820976",
-        "latitude": "7.250204",
-        "code": "04"
-    },
-    {
-        "id": "110",
-        "post_code": "04023",
-        "name": "Oued Nini",
-        "ar_name": "وادي نيني",
-        "longitude": "35.5716976",
-        "latitude": "7.3377513",
-        "code": "04"
-    },
-    {
-        "id": "111",
-        "post_code": "04024",
-        "name": "Meskiana",
-        "ar_name": "مسكيانة",
-        "longitude": "35.6297416",
-        "latitude": "7.6523636",
-        "code": "04"
-    },
-    {
-        "id": "112",
-        "post_code": "04025",
-        "name": "Ain Fekroune",
-        "ar_name": "عين فكرون",
-        "longitude": "35.9745986",
-        "latitude": "6.851982",
-        "code": "04"
-    },
-    {
-        "id": "113",
-        "post_code": "04026",
-        "name": "Rahia",
-        "ar_name": "الراحية",
-        "longitude": "35.7166662",
-        "latitude": "7.6579122",
-        "code": "04"
-    },
-    {
-        "id": "114",
-        "post_code": "04027",
-        "name": "Ain Zitoun",
-        "ar_name": "عين الزيتون",
-        "longitude": "35.6841587",
-        "latitude": "6.9309782",
-        "code": "04"
-    },
-    {
-        "id": "115",
-        "post_code": "04028",
-        "name": "Ouled Gacem",
-        "ar_name": "أولاد ڨاسم",
-        "longitude": "36.0328844",
-        "latitude": "6.6594743",
-        "code": "04"
-    },
-    {
-        "id": "116",
-        "post_code": "04029",
-        "name": "El Harmilia",
-        "ar_name": "الحرملية",
-        "longitude": "35.9257478",
-        "latitude": "6.6176749",
-        "code": "04"
-    },
-    {
-        "id": "117",
-        "post_code": "05001",
-        "name": "Batna",
-        "ar_name": "باتنة",
-        "longitude": "35.5784266",
-        "latitude": "6.1083422",
-        "code": "05"
-    },
-    {
-        "id": "118",
-        "post_code": "05002",
-        "name": "Ghassira",
-        "ar_name": "غسيرة",
-        "longitude": "35.0629605",
-        "latitude": "6.1563323",
-        "code": "05"
-    },
-    {
-        "id": "119",
-        "post_code": "05003",
-        "name": "Maafa",
-        "ar_name": "معافة",
-        "longitude": "35.2770359",
-        "latitude": "5.8156273",
-        "code": "05"
-    },
-    {
-        "id": "120",
-        "post_code": "05004",
-        "name": "Merouana",
-        "ar_name": "مروانة",
-        "longitude": "35.6417881",
-        "latitude": "5.8172903",
-        "code": "05"
-    },
-    {
-        "id": "121",
-        "post_code": "05005",
-        "name": "Seriana",
-        "ar_name": "سريانة",
-        "longitude": "35.7161562",
-        "latitude": "6.127064",
-        "code": "05"
-    },
-    {
-        "id": "122",
-        "post_code": "05006",
-        "name": "Menaa",
-        "ar_name": "منعة",
-        "longitude": "35.1373236",
-        "latitude": "5.9981034",
-        "code": "05"
-    },
-    {
-        "id": "123",
-        "post_code": "05007",
-        "name": "El Madher",
-        "ar_name": "المعذر",
-        "longitude": "35.6392974",
-        "latitude": "6.3042185",
-        "code": "05"
-    },
-    {
-        "id": "124",
-        "post_code": "05008",
-        "name": "Tazoult",
-        "ar_name": "تازولت",
-        "longitude": "35.470362",
-        "latitude": "6.1694644",
-        "code": "05"
-    },
-    {
-        "id": "125",
-        "post_code": "05009",
-        "name": "Ngaous",
-        "ar_name": "نڨاوس",
-        "longitude": "35.5525842",
-        "latitude": "5.5189965",
-        "code": "05"
-    },
-    {
-        "id": "126",
-        "post_code": "05010",
-        "name": "Guigba",
-        "ar_name": "قيقبة",
-        "longitude": "35.7407753",
-        "latitude": "5.5352956",
-        "code": "05"
-    },
-    {
-        "id": "127",
-        "post_code": "05011",
-        "name": "Inoughissen",
-        "ar_name": "إينوغيسن",
-        "longitude": "35.2771231",
-        "latitude": "6.4628765",
-        "code": "05"
-    },
-    {
-        "id": "128",
-        "post_code": "05012",
-        "name": "Ouyoun El Assafir",
-        "ar_name": "عيون العصافير",
-        "longitude": "35.5468473",
-        "latitude": "6.2710449",
-        "code": "05"
-    },
-    {
-        "id": "129",
-        "post_code": "05013",
-        "name": "Djerma",
-        "ar_name": "جرمة",
-        "longitude": "35.6853933",
-        "latitude": "6.2267778",
-        "code": "05"
-    },
-    {
-        "id": "130",
-        "post_code": "05014",
-        "name": "Bitam",
-        "ar_name": "بيطام",
-        "longitude": "35.1772246",
-        "latitude": "4.9980505",
-        "code": "05"
-    },
-    {
-        "id": "131",
-        "post_code": "05015",
-        "name": "Metkaouak",
-        "ar_name": "عزيل عبد القادر",
-        "longitude": "35.323352",
-        "latitude": "4.6952399",
-        "code": "05"
-    },
-    {
-        "id": "132",
-        "post_code": "05016",
-        "name": "Arris",
-        "ar_name": "اريس",
-        "longitude": "35.3105194",
-        "latitude": "6.2007524",
-        "code": "05"
-    },
-    {
-        "id": "133",
-        "post_code": "05017",
-        "name": "Kimmel",
-        "ar_name": "كيمل",
-        "longitude": "34.9992137",
-        "latitude": "6.2208802",
-        "code": "05"
-    },
-    {
-        "id": "134",
-        "post_code": "05018",
-        "name": "Tilatou",
-        "ar_name": "تيلاطو",
-        "longitude": "35.3131323",
-        "latitude": "5.4911366",
-        "code": "05"
-    },
-    {
-        "id": "135",
-        "post_code": "05019",
-        "name": "Ain Djasser",
-        "ar_name": "عين جاسر",
-        "longitude": "35.8311206",
-        "latitude": "5.9331296",
-        "code": "05"
-    },
-    {
-        "id": "136",
-        "post_code": "05020",
-        "name": "Ouled Selam",
-        "ar_name": "أولاد سلام",
-        "longitude": "35.8457485",
-        "latitude": "5.7276937",
-        "code": "05"
-    },
-    {
-        "id": "137",
-        "post_code": "05021",
-        "name": "Tigherghar",
-        "ar_name": "تيغرغار",
-        "longitude": "35.0765612",
-        "latitude": "5.8212842",
-        "code": "05"
-    },
-    {
-        "id": "138",
-        "post_code": "05022",
-        "name": "Ain Yagout",
-        "ar_name": "عين ياقوت",
-        "longitude": "35.7864482",
-        "latitude": "6.2679257",
-        "code": "05"
-    },
-    {
-        "id": "139",
-        "post_code": "05023",
-        "name": "Fesdis",
-        "ar_name": "فسديس",
-        "longitude": "35.6179227",
-        "latitude": "6.1696788",
-        "code": "05"
-    },
-    {
-        "id": "140",
-        "post_code": "05024",
-        "name": "Sefiane",
-        "ar_name": "سفيان",
-        "longitude": "35.4280853",
-        "latitude": "5.5186532",
-        "code": "05"
-    },
-    {
-        "id": "141",
-        "post_code": "05025",
-        "name": "Rahbat",
-        "ar_name": "الرحبات",
-        "longitude": "35.7257797",
-        "latitude": "5.5571911",
-        "code": "05"
-    },
-    {
-        "id": "142",
-        "post_code": "05026",
-        "name": "Tighanimine",
-        "ar_name": "تيغانمين",
-        "longitude": "35.185829",
-        "latitude": "6.2290737",
-        "code": "05"
-    },
-    {
-        "id": "143",
-        "post_code": "05027",
-        "name": "Lemsane",
-        "ar_name": "لمسان",
-        "longitude": "35.6384911",
-        "latitude": "5.7282516",
-        "code": "05"
-    },
-    {
-        "id": "144",
-        "post_code": "05028",
-        "name": "Ksar Belezma",
-        "ar_name": "قصر بلازمة",
-        "longitude": "35.728729",
-        "latitude": "5.8247576",
-        "code": "05"
-    },
-    {
-        "id": "145",
-        "post_code": "05029",
-        "name": "Seggana",
-        "ar_name": "سقانة",
-        "longitude": "35.3380358",
-        "latitude": "5.4071512",
-        "code": "05"
-    },
-    {
-        "id": "146",
-        "post_code": "05030",
-        "name": "Ichmoul",
-        "ar_name": "ايشمول",
-        "longitude": "35.3059756",
-        "latitude": "6.4186737",
-        "code": "05"
-    },
-    {
-        "id": "147",
-        "post_code": "05031",
-        "name": "Foum Toub",
-        "ar_name": "فم الطوب",
-        "longitude": "35.3867728",
-        "latitude": "6.4478348",
-        "code": "05"
-    },
-    {
-        "id": "148",
-        "post_code": "05032",
-        "name": "Beni Foudhala El Hakania",
-        "ar_name": "بنى فضالة الحقانية",
-        "longitude": "35.3790646",
-        "latitude": "5.9300746",
-        "code": "05"
-    },
-    {
-        "id": "149",
-        "post_code": "05033",
-        "name": "Oued El Ma",
-        "ar_name": "واد الماء",
-        "longitude": "35.6696259",
-        "latitude": "5.952935",
-        "code": "05"
-    },
-    {
-        "id": "150",
-        "post_code": "05034",
-        "name": "Talkhamt",
-        "ar_name": "تالخمت",
-        "longitude": "35.722912",
-        "latitude": "5.7070515",
-        "code": "05"
-    },
-    {
-        "id": "151",
-        "post_code": "05035",
-        "name": "Bouzina",
-        "ar_name": "بوزينة",
-        "longitude": "35.2757765",
-        "latitude": "5.9780111",
-        "code": "05"
-    },
-    {
-        "id": "152",
-        "post_code": "05036",
-        "name": "Chemora",
-        "ar_name": "الشمرة",
-        "longitude": "35.6301185",
-        "latitude": "6.4747992",
-        "code": "05"
-    },
-    {
-        "id": "153",
-        "post_code": "05037",
-        "name": "Oued Chaaba",
-        "ar_name": "واد الشعبة",
-        "longitude": "35.5243377",
-        "latitude": "6.011965",
-        "code": "05"
-    },
-    {
-        "id": "154",
-        "post_code": "05038",
-        "name": "Taxlent",
-        "ar_name": "تاكسلانت",
-        "longitude": "35.5635407",
-        "latitude": "5.7388089",
-        "code": "05"
-    },
-    {
-        "id": "155",
-        "post_code": "05039",
-        "name": "Gosbat",
-        "ar_name": "القصبات",
-        "longitude": "35.6198308",
-        "latitude": "5.3394309",
-        "code": "05"
-    },
-    {
-        "id": "156",
-        "post_code": "05040",
-        "name": "Ouled Aouf",
-        "ar_name": "أولاد عوف",
-        "longitude": "35.4740373",
-        "latitude": "5.7172224",
-        "code": "05"
-    },
-    {
-        "id": "157",
-        "post_code": "05041",
-        "name": "Boumagueur",
-        "ar_name": "بــومقر",
-        "longitude": "35.4973671",
-        "latitude": "5.5073234",
-        "code": "05"
-    },
-    {
-        "id": "158",
-        "post_code": "05042",
-        "name": "Barika",
-        "ar_name": "بريكة",
-        "longitude": "35.3698534",
-        "latitude": "5.1424493",
-        "code": "05"
-    },
-    {
-        "id": "159",
-        "post_code": "05043",
-        "name": "Djezzar",
-        "ar_name": "الجزار",
-        "longitude": "35.5180608",
-        "latitude": "5.1947203",
-        "code": "05"
-    },
-    {
-        "id": "160",
-        "post_code": "05044",
-        "name": "Tkout",
-        "ar_name": "تكوت",
-        "longitude": "35.1533059",
-        "latitude": "6.2237014",
-        "code": "05"
-    },
-    {
-        "id": "161",
-        "post_code": "05045",
-        "name": "Ain Touta",
-        "ar_name": "عين التوتة",
-        "longitude": "35.3640241",
-        "latitude": "5.7540788",
-        "code": "05"
-    },
-    {
-        "id": "162",
-        "post_code": "05046",
-        "name": "Hidoussa",
-        "ar_name": "حيدوسة",
-        "longitude": "35.528608",
-        "latitude": "5.7812335",
-        "code": "05"
-    },
-    {
-        "id": "163",
-        "post_code": "05047",
-        "name": "Teniet El Abed",
-        "ar_name": "نية العابد",
-        "longitude": "35.2869315",
-        "latitude": "6.1926387",
-        "code": "05"
-    },
-    {
-        "id": "164",
-        "post_code": "05048",
-        "name": "Oued Taga",
-        "ar_name": "وادي الطاقة",
-        "longitude": "35.4185955",
-        "latitude": "6.2379494",
-        "code": "05"
-    },
-    {
-        "id": "165",
-        "post_code": "05049",
-        "name": "Ouled Fadel",
-        "ar_name": "أولاد فاضل",
-        "longitude": "35.5552777",
-        "latitude": "6.540245",
-        "code": "05"
-    },
-    {
-        "id": "166",
-        "post_code": "05050",
-        "name": "Timgad",
-        "ar_name": "تيمقاد",
-        "longitude": "35.5269245",
-        "latitude": "6.3713303",
-        "code": "05"
-    },
-    {
-        "id": "167",
-        "post_code": "05051",
-        "name": "Ras El Aioun",
-        "ar_name": "رأس العيون",
-        "longitude": "35.6547596",
-        "latitude": "5.5340598",
-        "code": "05"
-    },
-    {
-        "id": "168",
-        "post_code": "05052",
-        "name": "Chir",
-        "ar_name": "شير",
-        "longitude": "35.218839",
-        "latitude": "6.061661",
-        "code": "05"
-    },
-    {
-        "id": "169",
-        "post_code": "05053",
-        "name": "Ouled Si Slimane",
-        "ar_name": "أولاد سي سليمان",
-        "longitude": "35.5671114",
-        "latitude": "5.5504885",
-        "code": "05"
-    },
-    {
-        "id": "170",
-        "post_code": "05054",
-        "name": "Zanat El Beida",
-        "ar_name": "زانة البيضاء",
-        "longitude": "35.7947074",
-        "latitude": "5.9551803",
-        "code": "05"
-    },
-    {
-        "id": "171",
-        "post_code": "05055",
-        "name": "M'doukel",
-        "ar_name": "أمدوكال",
-        "longitude": "35.1132204",
-        "latitude": "5.0064721",
-        "code": "05"
-    },
-    {
-        "id": "172",
-        "post_code": "05056",
-        "name": "Ouled Ammar",
-        "ar_name": "أولاد عمار",
-        "longitude": "35.4637775",
-        "latitude": "5.1226733",
-        "code": "05"
-    },
-    {
-        "id": "173",
-        "post_code": "05057",
-        "name": "El Hassi",
-        "ar_name": "الحاسي",
-        "longitude": "35.7805122",
-        "latitude": "5.8788416",
-        "code": "05"
-    },
-    {
-        "id": "174",
-        "post_code": "05058",
-        "name": "Lazrou",
-        "ar_name": "لازرو",
-        "longitude": "35.8042574",
-        "latitude": "6.2001918",
-        "code": "05"
-    },
-    {
-        "id": "175",
-        "post_code": "05059",
-        "name": "Boumia",
-        "ar_name": "بومية",
-        "longitude": "35.7041224",
-        "latitude": "6.3963578",
-        "code": "05"
-    },
-    {
-        "id": "176",
-        "post_code": "05060",
-        "name": "Boulhilat",
-        "ar_name": "بولهيلات",
-        "longitude": "35.7374798",
-        "latitude": "6.5889619",
-        "code": "05"
-    },
-    {
-        "id": "177",
-        "post_code": "05061",
-        "name": "Larbaa",
-        "ar_name": "الاربعاء",
-        "longitude": "36.5787079",
-        "latitude": "3.103324",
-        "code": "05"
-    },
-    {
-        "id": "178",
-        "post_code": "06001",
-        "name": "Bejaia",
-        "ar_name": "بجاية",
-        "longitude": "36.7695763",
-        "latitude": "4.938545",
-        "code": "06"
-    },
-    {
-        "id": "179",
-        "post_code": "06002",
-        "name": "Amizour",
-        "ar_name": "اميزور",
-        "longitude": "36.6429158",
-        "latitude": "4.8679708",
-        "code": "06"
-    },
-    {
-        "id": "180",
-        "post_code": "06003",
-        "name": "Ferraoun",
-        "ar_name": "فرعون",
-        "longitude": "36.5654312",
-        "latitude": "4.8417715",
-        "code": "06"
-    },
-    {
-        "id": "181",
-        "post_code": "06004",
-        "name": "Taourirt Ighil",
-        "ar_name": "تاوريرت اغيل",
-        "longitude": "36.7329317",
-        "latitude": "4.6709356",
-        "code": "06"
-    },
-    {
-        "id": "182",
-        "post_code": "06005",
-        "name": "Chelata",
-        "ar_name": "شلاطة",
-        "longitude": "36.5079843",
-        "latitude": "4.4892072",
-        "code": "06"
-    },
-    {
-        "id": "183",
-        "post_code": "06006",
-        "name": "Tamokra",
-        "ar_name": "تامقرة",
-        "longitude": "36.3916342",
-        "latitude": "4.5814411",
-        "code": "06"
-    },
-    {
-        "id": "184",
-        "post_code": "06007",
-        "name": "Timzrit",
-        "ar_name": "تيمزريت",
-        "longitude": "36.6161452",
-        "latitude": "4.7342109",
-        "code": "06"
-    },
-    {
-        "id": "185",
-        "post_code": "06008",
-        "name": "Souk El Thenine",
-        "ar_name": "ﺳﻮق اﻻﺛﻨﻴﻦ",
-        "longitude": "36.6150269",
-        "latitude": "5.2777913",
-        "code": "06"
-    },
-    {
-        "id": "186",
-        "post_code": "06009",
-        "name": "M'cisna",
-        "ar_name": "مسيسنة",
-        "longitude": "36.5646521",
-        "latitude": "4.6922142",
-        "code": "06"
-    },
-    {
-        "id": "187",
-        "post_code": "06010",
-        "name": "Thinabdher",
-        "ar_name": "تينبذار",
-        "longitude": "36.6333952",
-        "latitude": "4.6645332",
-        "code": "06"
-    },
-    {
-        "id": "188",
-        "post_code": "06011",
-        "name": "Tichi",
-        "ar_name": "تيشي",
-        "longitude": "36.620329",
-        "latitude": "5.0944646",
-        "code": "06"
-    },
-    {
-        "id": "189",
-        "post_code": "06012",
-        "name": "Semaoun",
-        "ar_name": "سمعون",
-        "longitude": "36.6163121",
-        "latitude": "4.8029022",
-        "code": "06"
-    },
-    {
-        "id": "190",
-        "post_code": "06013",
-        "name": "Kendira",
-        "ar_name": "كنديرة",
-        "longitude": "36.5568449",
-        "latitude": "4.948437",
-        "code": "06"
-    },
-    {
-        "id": "191",
-        "post_code": "06014",
-        "name": "Tifra",
-        "ar_name": "تيفرة",
-        "longitude": "36.6626768",
-        "latitude": "4.6505501",
-        "code": "06"
-    },
-    {
-        "id": "192",
-        "post_code": "06015",
-        "name": "Ighram",
-        "ar_name": "إغرم",
-        "longitude": "36.4765457",
-        "latitude": "4.3924687",
-        "code": "06"
-    },
-    {
-        "id": "193",
-        "post_code": "06016",
-        "name": "Amalou",
-        "ar_name": "امالو",
-        "longitude": "36.4780606",
-        "latitude": "4.5674507",
-        "code": "06"
-    },
-    {
-        "id": "194",
-        "post_code": "06017",
-        "name": "Ighil Ali",
-        "ar_name": "إغيل على",
-        "longitude": "36.2905404",
-        "latitude": "4.4345472",
-        "code": "06"
-    },
-    {
-        "id": "195",
-        "post_code": "06018",
-        "name": "Ifelain Ilmathen",
-        "ar_name": "افناين الماثن",
-        "longitude": "36.6673126",
-        "latitude": "4.7479832",
-        "code": "06"
-    },
-    {
-        "id": "196",
-        "post_code": "06019",
-        "name": "Toudja",
-        "ar_name": "توجة",
-        "longitude": "36.7862498",
-        "latitude": "4.7209914",
-        "code": "06"
-    },
-    {
-        "id": "197",
-        "post_code": "06020",
-        "name": "Darguina",
-        "ar_name": "درقينة",
-        "longitude": "36.5537403",
-        "latitude": "5.3057073",
-        "code": "06"
-    },
-    {
-        "id": "198",
-        "post_code": "06021",
-        "name": "Sidi Ayad",
-        "ar_name": "سيدي عياد",
-        "longitude": "36.6095992",
-        "latitude": "4.6956681",
-        "code": "06"
-    },
-    {
-        "id": "199",
-        "post_code": "06022",
-        "name": "Aokas",
-        "ar_name": "أوقاس",
-        "longitude": "36.6195851",
-        "latitude": "5.2038174",
-        "code": "06"
-    },
-    {
-        "id": "200",
-        "post_code": "06023",
-        "name": "Ait Djellil",
-        "ar_name": "آيث جليل",
-        "longitude": "36.5626795",
-        "latitude": "4.7643966",
-        "code": "06"
-    },
-    {
-        "id": "201",
-        "post_code": "06024",
-        "name": "Adekar",
-        "ar_name": "آدكار",
-        "longitude": "36.7343709",
-        "latitude": "4.5420287",
-        "code": "06"
-    },
-    {
-        "id": "202",
-        "post_code": "06025",
-        "name": "Akbou",
-        "ar_name": "أقبو",
-        "longitude": "36.4583204",
-        "latitude": "4.4639658",
-        "code": "06"
-    },
-    {
-        "id": "203",
-        "post_code": "06026",
-        "name": "Seddouk",
-        "ar_name": "صدوق",
-        "longitude": "36.5367869",
-        "latitude": "4.6409049",
-        "code": "06"
-    },
-    {
-        "id": "204",
-        "post_code": "06027",
-        "name": "Tazmalt",
-        "ar_name": "تازمالت",
-        "longitude": "36.3980947",
-        "latitude": "4.3892305",
-        "code": "06"
-    },
-    {
-        "id": "205",
-        "post_code": "06028",
-        "name": "Ait R'zine",
-        "ar_name": "آيت أرزين",
-        "longitude": "36.3866561",
-        "latitude": "4.4646094",
-        "code": "06"
-    },
-    {
-        "id": "206",
-        "post_code": "06029",
-        "name": "Chemini",
-        "ar_name": "شميني",
-        "longitude": "36.5928345",
-        "latitude": "4.5601731",
-        "code": "06"
-    },
-    {
-        "id": "207",
-        "post_code": "06030",
-        "name": "Souk Oufella",
-        "ar_name": "سوق أوفلة",
-        "longitude": "36.5880436",
-        "latitude": "4.5992053",
-        "code": "06"
-    },
-    {
-        "id": "208",
-        "post_code": "06031",
-        "name": "Taskriout",
-        "ar_name": "تاسقريوت",
-        "longitude": "36.5565707",
-        "latitude": "5.2237624",
-        "code": "06"
-    },
-    {
-        "id": "209",
-        "post_code": "06032",
-        "name": "Tibane",
-        "ar_name": "طيبان",
-        "longitude": "36.6131706",
-        "latitude": "4.6360841",
-        "code": "06"
-    },
-    {
-        "id": "210",
-        "post_code": "06033",
-        "name": "Tala Hamza",
-        "ar_name": "ثالة حمزة",
-        "longitude": "36.6904609",
-        "latitude": "4.9432228",
-        "code": "06"
-    },
-    {
-        "id": "211",
-        "post_code": "06034",
-        "name": "Barbacha",
-        "ar_name": "برباشة",
-        "longitude": "36.5628189",
-        "latitude": "4.8862205",
-        "code": "06"
-    },
-    {
-        "id": "212",
-        "post_code": "06035",
-        "name": "Beni Ksila",
-        "ar_name": "بنى كسيلة",
-        "longitude": "36.8280602",
-        "latitude": "4.6309708",
-        "code": "06"
-    },
-    {
-        "id": "213",
-        "post_code": "06036",
-        "name": "Ouzallaguen",
-        "ar_name": "أوزلاقن",
-        "longitude": "36.5473904",
-        "latitude": "4.5075207",
-        "code": "06"
-    },
-    {
-        "id": "214",
-        "post_code": "06037",
-        "name": "Bouhamza",
-        "ar_name": "بوحمزة",
-        "longitude": "36.4393229",
-        "latitude": "4.5700544",
-        "code": "06"
-    },
-    {
-        "id": "215",
-        "post_code": "06038",
-        "name": "Beni Melikeche",
-        "ar_name": "بنى مليكش",
-        "longitude": "36.4475154",
-        "latitude": "4.3846601",
-        "code": "06"
-    },
-    {
-        "id": "216",
-        "post_code": "06039",
-        "name": "Sidi Aich",
-        "ar_name": "سيدي عيش",
-        "longitude": "36.6223093",
-        "latitude": "4.6792592",
-        "code": "06"
-    },
-    {
-        "id": "217",
-        "post_code": "06040",
-        "name": "El Kseur",
-        "ar_name": "القصر",
-        "longitude": "36.7187382",
-        "latitude": "4.7678254",
-        "code": "06"
-    },
-    {
-        "id": "218",
-        "post_code": "06041",
-        "name": "Melbou",
-        "ar_name": "ملبو",
-        "longitude": "36.6217049",
-        "latitude": "5.351135",
-        "code": "06"
-    },
-    {
-        "id": "219",
-        "post_code": "06042",
-        "name": "Akfadou",
-        "ar_name": "اكفادو",
-        "longitude": "36.6580416",
-        "latitude": "4.5747965",
-        "code": "06"
-    },
-    {
-        "id": "220",
-        "post_code": "06043",
-        "name": "Leflaye",
-        "ar_name": "لفلاى",
-        "longitude": "36.597995",
-        "latitude": "4.6441959",
-        "code": "06"
-    },
-    {
-        "id": "221",
-        "post_code": "06044",
-        "name": "Kherrata",
-        "ar_name": "خراطة",
-        "longitude": "36.4719307",
-        "latitude": "5.2047107",
-        "code": "06"
-    },
-    {
-        "id": "222",
-        "post_code": "06045",
-        "name": "Draa Kaid",
-        "ar_name": "ذراع القايد",
-        "longitude": "36.4405974",
-        "latitude": "5.168301",
-        "code": "06"
-    },
-    {
-        "id": "223",
-        "post_code": "06046",
-        "name": "Tamridjet",
-        "ar_name": "تامريجت",
-        "longitude": "36.5729424",
-        "latitude": "5.3775099",
-        "code": "06"
-    },
-    {
-        "id": "224",
-        "post_code": "06047",
-        "name": "Ait Smail",
-        "ar_name": "آيت سماعيل",
-        "longitude": "36.554314",
-        "latitude": "5.1892262",
-        "code": "06"
-    },
-    {
-        "id": "225",
-        "post_code": "06048",
-        "name": "Boukhelifa",
-        "ar_name": "بوخليفة",
-        "longitude": "36.6367939",
-        "latitude": "5.0058926",
-        "code": "06"
-    },
-    {
-        "id": "226",
-        "post_code": "06049",
-        "name": "Tizi N'berber",
-        "ar_name": "تيزى نبربر",
-        "longitude": "36.5899196",
-        "latitude": "5.1307333",
-        "code": "06"
-    },
-    {
-        "id": "227",
-        "post_code": "06050",
-        "name": "Beni Maouch",
-        "ar_name": "بني معوش",
-        "longitude": "36.4881459",
-        "latitude": "4.72105",
-        "code": "06"
-    },
-    {
-        "id": "228",
-        "post_code": "06051",
-        "name": "Oued Ghir",
-        "ar_name": "وادي غير",
-        "longitude": "36.7149207",
-        "latitude": "4.9085928",
-        "code": "06"
-    },
-    {
-        "id": "229",
-        "post_code": "06052",
-        "name": "Boudjellil",
-        "ar_name": "بوجليل",
-        "longitude": "36.3223972",
-        "latitude": "4.3477724",
-        "code": "06"
-    },
-    {
-        "id": "230",
-        "post_code": "07001",
-        "name": "Biskra",
-        "ar_name": "بسكرة",
-        "longitude": "34.851484",
-        "latitude": "5.6546304",
-        "code": "07"
-    },
-    {
-        "id": "231",
-        "post_code": "07002",
-        "name": "Oumache",
-        "ar_name": "أوماش",
-        "longitude": "34.586303",
-        "latitude": "5.5181413",
-        "code": "07"
-    },
-    {
-        "id": "232",
-        "post_code": "07003",
-        "name": "Branis",
-        "ar_name": "البرانس",
-        "longitude": "34.9709574",
-        "latitude": "5.6412543",
-        "code": "07"
-    },
-    {
-        "id": "233",
-        "post_code": "07004",
-        "name": "Chetma",
-        "ar_name": "شتمة",
-        "longitude": "34.8655388",
-        "latitude": "5.7729266",
-        "code": "07"
-    },
-    {
-        "id": "234",
-        "post_code": "07005",
-        "name": "Ouled Djellal",
-        "ar_name": "أولاد جلال",
-        "longitude": "34.4174639",
-        "latitude": "4.9713028",
-        "code": "07"
-    },
-    {
-        "id": "235",
-        "post_code": "07006",
-        "name": "Ras El Miaad",
-        "ar_name": "راس الميعاد",
-        "longitude": "34.0268001",
-        "latitude": "4.1596986",
-        "code": "07"
-    },
-    {
-        "id": "236",
-        "post_code": "07007",
-        "name": "Besbes",
-        "ar_name": "البسباس",
-        "longitude": "36.7204026",
-        "latitude": "7.7544139",
-        "code": "07"
-    },
-    {
-        "id": "237",
-        "post_code": "07008",
-        "name": "Sidi Khaled",
-        "ar_name": "سيدي خالد",
-        "longitude": "34.3845588",
-        "latitude": "4.8400248",
-        "code": "07"
-    },
-    {
-        "id": "238",
-        "post_code": "07009",
-        "name": "Doucen",
-        "ar_name": "الدوسن",
-        "longitude": "34.6197821",
-        "latitude": "4.9863232",
-        "code": "07"
-    },
-    {
-        "id": "239",
-        "post_code": "07010",
-        "name": "Ech Chaiba",
-        "ar_name": "أولاد رحمة",
-        "longitude": "34.6257746",
-        "latitude": "4.5572238",
-        "code": "07"
-    },
-    {
-        "id": "240",
-        "post_code": "07011",
-        "name": "Sidi Okba",
-        "ar_name": "سيدي عقبة",
-        "longitude": "34.776526",
-        "latitude": "5.8344242",
-        "code": "07"
-    },
-    {
-        "id": "241",
-        "post_code": "07012",
-        "name": "Mchouneche",
-        "ar_name": "مشونش",
-        "longitude": "34.9063847",
-        "latitude": "5.8993044",
-        "code": "07"
-    },
-    {
-        "id": "242",
-        "post_code": "07013",
-        "name": "El Haouch",
-        "ar_name": "الحوش",
-        "longitude": "34.5603287",
-        "latitude": "5.8852281",
-        "code": "07"
-    },
-    {
-        "id": "243",
-        "post_code": "07014",
-        "name": "Ain Naga",
-        "ar_name": "عين الناقة",
-        "longitude": "34.6508231",
-        "latitude": "6.0189093",
-        "code": "07"
-    },
-    {
-        "id": "244",
-        "post_code": "07015",
-        "name": "Zeribet El Oued",
-        "ar_name": "زريبة الوادي",
-        "longitude": "34.683456",
-        "latitude": "6.3748921",
-        "code": "07"
-    },
-    {
-        "id": "245",
-        "post_code": "07016",
-        "name": "El Feidh",
-        "ar_name": "الفيض",
-        "longitude": "34.4990192",
-        "latitude": "6.1924699",
-        "code": "07"
-    },
-    {
-        "id": "246",
-        "post_code": "07017",
-        "name": "El Kantara",
-        "ar_name": "القنطرة",
-        "longitude": "35.2052532",
-        "latitude": "5.5062642",
-        "code": "07"
-    },
-    {
-        "id": "247",
-        "post_code": "07018",
-        "name": "Ain Zaatout",
-        "ar_name": "عين زعطوط",
-        "longitude": "35.1705188",
-        "latitude": "5.7860157",
-        "code": "07"
-    },
-    {
-        "id": "248",
-        "post_code": "07019",
-        "name": "El Outaya",
-        "ar_name": "لوطاية",
-        "longitude": "34.9772883",
-        "latitude": "5.4401959",
-        "code": "07"
-    },
-    {
-        "id": "249",
-        "post_code": "07020",
-        "name": "Djemorah",
-        "ar_name": "جمورة",
-        "longitude": "35.0989288",
-        "latitude": "5.6954643",
-        "code": "07"
-    },
-    {
-        "id": "250",
-        "post_code": "07021",
-        "name": "Tolga",
-        "ar_name": "طولقة",
-        "longitude": "34.894129",
-        "latitude": "4.9483543",
-        "code": "07"
-    },
-    {
-        "id": "251",
-        "post_code": "07022",
-        "name": "Lioua",
-        "ar_name": "لواء",
-        "longitude": "34.5726359",
-        "latitude": "5.224675",
-        "code": "07"
-    },
-    {
-        "id": "252",
-        "post_code": "07023",
-        "name": "Lichana",
-        "ar_name": "لشانة",
-        "longitude": "34.7379403",
-        "latitude": "5.3672479",
-        "code": "07"
-    },
-    {
-        "id": "253",
-        "post_code": "07024",
-        "name": "Ourlal",
-        "ar_name": "أورلال",
-        "longitude": "34.563429",
-        "latitude": "5.3748787",
-        "code": "07"
-    },
-    {
-        "id": "254",
-        "post_code": "07025",
-        "name": "M'lili",
-        "ar_name": "مليلي",
-        "longitude": "34.5781616",
-        "latitude": "5.4617608",
-        "code": "07"
-    },
-    {
-        "id": "255",
-        "post_code": "07026",
-        "name": "Foughala",
-        "ar_name": "فوغالة",
-        "longitude": "34.7598362",
-        "latitude": "5.2212069",
-        "code": "07"
-    },
-    {
-        "id": "256",
-        "post_code": "07027",
-        "name": "Bordj Ben Azzouz",
-        "ar_name": "برج بن عزوز",
-        "longitude": "34.7281944",
-        "latitude": "5.281975",
-        "code": "07"
-    },
-    {
-        "id": "257",
-        "post_code": "07028",
-        "name": "M'ziraa",
-        "ar_name": "مزيرعة",
-        "longitude": "34.8853471",
-        "latitude": "6.0060458",
-        "code": "07"
-    },
-    {
-        "id": "258",
-        "post_code": "07029",
-        "name": "Bouchagroun",
-        "ar_name": "بوشقرون",
-        "longitude": "34.7378859",
-        "latitude": "5.4169652",
-        "code": "07"
-    },
-    {
-        "id": "259",
-        "post_code": "07030",
-        "name": "Mekhadma",
-        "ar_name": "مخادمة",
-        "longitude": "34.5636943",
-        "latitude": "5.3092183",
-        "code": "07"
-    },
-    {
-        "id": "260",
-        "post_code": "07031",
-        "name": "El Ghrous",
-        "ar_name": "الغروس",
-        "longitude": "34.7175474",
-        "latitude": "5.0903931",
-        "code": "07"
-    },
-    {
-        "id": "261",
-        "post_code": "07032",
-        "name": "El Hadjab",
-        "ar_name": "الحاجب",
-        "longitude": "34.7967888",
-        "latitude": "5.4551949",
-        "code": "07"
-    },
-    {
-        "id": "262",
-        "post_code": "07033",
-        "name": "Khanguet Sidinadji",
-        "ar_name": "خنڨة سيدي ناجي",
-        "longitude": "34.784537",
-        "latitude": "6.6327354",
-        "code": "07"
-    },
-    {
-        "id": "263",
-        "post_code": "08001",
-        "name": "Bechar",
-        "ar_name": "بشار",
-        "longitude": "31.5965368",
-        "latitude": "-2.4145248",
-        "code": "08"
-    },
-    {
-        "id": "264",
-        "post_code": "08002",
-        "name": "Erg Ferradj",
-        "ar_name": "عرق فراج",
-        "longitude": "31.0835905",
-        "latitude": "-2.8630916",
-        "code": "08"
-    },
-    {
-        "id": "265",
-        "post_code": "08003",
-        "name": "Ouled Khoudir",
-        "ar_name": "أولاد خدير",
-        "longitude": "29.2558699",
-        "latitude": "-1.0641503",
-        "code": "08"
-    },
-    {
-        "id": "266",
-        "post_code": "08004",
-        "name": "Meridja",
-        "ar_name": "مريجة",
-        "longitude": "31.5494045",
-        "latitude": "-2.95583",
-        "code": "08"
-    },
-    {
-        "id": "267",
-        "post_code": "08005",
-        "name": "Timoudi",
-        "ar_name": "تيمودى",
-        "longitude": "29.3195526",
-        "latitude": "-1.135803",
-        "code": "08"
-    },
-    {
-        "id": "268",
-        "post_code": "08006",
-        "name": "Lahmar",
-        "ar_name": "لحمر",
-        "longitude": "31.9312184",
-        "latitude": "-2.2681563",
-        "code": "08"
-    },
-    {
-        "id": "269",
-        "post_code": "08007",
-        "name": "Beni Abbes",
-        "ar_name": "بني عباس",
-        "longitude": "30.1302299",
-        "latitude": "-2.1782542",
-        "code": "08"
-    },
-    {
-        "id": "270",
-        "post_code": "08008",
-        "name": "Beni Ikhlef",
-        "ar_name": "بني يخلف",
-        "longitude": "29.5802183",
-        "latitude": "-1.6128088",
-        "code": "08"
-    },
-    {
-        "id": "271",
-        "post_code": "08009",
-        "name": "Mechraa Houari Boumedienne",
-        "ar_name": "مشرع ھوارى بومدين",
-        "longitude": "30.9318258",
-        "latitude": "-2.741164",
-        "code": "08"
-    },
-    {
-        "id": "272",
-        "post_code": "08010",
-        "name": "Kenedsa",
-        "ar_name": "القنادسة",
-        "longitude": "31.5570599",
-        "latitude": "-2.4381801",
-        "code": "08"
-    },
-    {
-        "id": "273",
-        "post_code": "08011",
-        "name": "Igli",
-        "ar_name": "إقلي",
-        "longitude": "30.452849",
-        "latitude": "-2.3000801",
-        "code": "08"
-    },
-    {
-        "id": "274",
-        "post_code": "08012",
-        "name": "Tabalbala",
-        "ar_name": "تبلبالة",
-        "longitude": "28.9735664",
-        "latitude": "-5.9957642",
-        "code": "08"
-    },
-    {
-        "id": "275",
-        "post_code": "08013",
-        "name": "Taghit",
-        "ar_name": "تــــاغـيــث",
-        "longitude": "30.9150725",
-        "latitude": "-2.0472123",
-        "code": "08"
-    },
-    {
-        "id": "276",
-        "post_code": "08014",
-        "name": "El Ouata",
-        "ar_name": "الوطى",
-        "longitude": "29.854111",
-        "latitude": "-1.8650158",
-        "code": "08"
-    },
-    {
-        "id": "277",
-        "post_code": "08015",
-        "name": "Boukais",
-        "ar_name": "بوكايس",
-        "longitude": "31.9230182",
-        "latitude": "-2.4714058",
-        "code": "08"
-    },
-    {
-        "id": "278",
-        "post_code": "08016",
-        "name": "Mogheul",
-        "ar_name": "موغل",
-        "longitude": "32.0219943",
-        "latitude": "-2.2227252",
-        "code": "08"
-    },
-    {
-        "id": "279",
-        "post_code": "08017",
-        "name": "Abadla",
-        "ar_name": "العبادلة",
-        "longitude": "31.0174866",
-        "latitude": "-2.7615494",
-        "code": "08"
-    },
-    {
-        "id": "280",
-        "post_code": "08018",
-        "name": "Kerzaz",
-        "ar_name": "كرزاز",
-        "longitude": "29.4602231",
-        "latitude": "-1.4553024",
-        "code": "08"
-    },
-    {
-        "id": "281",
-        "post_code": "08019",
-        "name": "Ksabi",
-        "ar_name": "قصابى",
-        "longitude": "29.0984238",
-        "latitude": "-1.0022456",
-        "code": "08"
-    },
-    {
-        "id": "282",
-        "post_code": "08020",
-        "name": "Tamtert",
-        "ar_name": "تامترت",
-        "longitude": "29.9166662",
-        "latitude": "-1.9087548",
-        "code": "08"
-    },
-    {
-        "id": "283",
-        "post_code": "08021",
-        "name": "Beni Ounif",
-        "ar_name": "بني ونيف",
-        "longitude": "32.0512638",
-        "latitude": "-1.2519046",
-        "code": "08"
-    },
-    {
-        "id": "284",
-        "post_code": "09001",
-        "name": "Blida",
-        "ar_name": "البليدة‎",
-        "longitude": "36.4802972",
-        "latitude": "2.7659184",
-        "code": "09"
-    },
-    {
-        "id": "285",
-        "post_code": "09002",
-        "name": "Chebli",
-        "ar_name": "الشبلي",
-        "longitude": "36.5685763",
-        "latitude": "2.9433463",
-        "code": "09"
-    },
-    {
-        "id": "286",
-        "post_code": "09003",
-        "name": "Bouinan",
-        "ar_name": "بوعينان",
-        "longitude": "36.5154839",
-        "latitude": "2.9218243",
-        "code": "09"
-    },
-    {
-        "id": "287",
-        "post_code": "09004",
-        "name": "Oued El Alleug",
-        "ar_name": "واد العلايڨ",
-        "longitude": "36.5502875",
-        "latitude": "2.7026126",
-        "code": "09"
-    },
-    {
-        "id": "288",
-        "post_code": "09007",
-        "name": "Ouled Yaich",
-        "ar_name": "اولاد يعيش",
-        "longitude": "36.4852123",
-        "latitude": "2.8325741",
-        "code": "09"
-    },
-    {
-        "id": "289",
-        "post_code": "09008",
-        "name": "Chrea",
-        "ar_name": "الشريعة",
-        "longitude": "36.4254896",
-        "latitude": "2.8286336",
-        "code": "09"
-    },
-    {
-        "id": "290",
-        "post_code": "09010",
-        "name": "El Affroun",
-        "ar_name": "العفرون",
-        "longitude": "36.4460675",
-        "latitude": "2.5382873",
-        "code": "09"
-    },
-    {
-        "id": "291",
-        "post_code": "09011",
-        "name": "Chiffa",
-        "ar_name": "الشفة",
-        "longitude": "36.444398",
-        "latitude": "2.6691173",
-        "code": "09"
-    },
-    {
-        "id": "292",
-        "post_code": "09012",
-        "name": "Hammam Melouane",
-        "ar_name": "حمام ملوان",
-        "longitude": "36.436102",
-        "latitude": "2.8604689",
-        "code": "09"
-    },
-    {
-        "id": "293",
-        "post_code": "09013",
-        "name": "Ben Khlil",
-        "ar_name": "بني خليل",
-        "longitude": "36.5959588",
-        "latitude": "2.7838729",
-        "code": "09"
-    },
-    {
-        "id": "294",
-        "post_code": "09014",
-        "name": "Soumaa",
-        "ar_name": "صومعة",
-        "longitude": "36.507015",
-        "latitude": "2.8509281",
-        "code": "09"
-    },
-    {
-        "id": "295",
-        "post_code": "09016",
-        "name": "Mouzaia",
-        "ar_name": "موزاية",
-        "longitude": "36.50497",
-        "latitude": "2.6139932",
-        "code": "09"
-    },
-    {
-        "id": "296",
-        "post_code": "09017",
-        "name": "Souhane",
-        "ar_name": "صوحان",
-        "longitude": "36.5263305",
-        "latitude": "3.1705831",
-        "code": "09"
-    },
-    {
-        "id": "297",
-        "post_code": "09018",
-        "name": "Meftah",
-        "ar_name": "مفتاح",
-        "longitude": "36.6238272",
-        "latitude": "3.1711838",
-        "code": "09"
-    },
-    {
-        "id": "298",
-        "post_code": "09019",
-        "name": "Ouled Selama",
-        "ar_name": "أولاد سلامة",
-        "longitude": "36.514057",
-        "latitude": "3.0705904",
-        "code": "09"
-    },
-    {
-        "id": "299",
-        "post_code": "09020",
-        "name": "Boufarik",
-        "ar_name": "بوفاريك",
-        "longitude": "36.5739581",
-        "latitude": "2.8478167",
-        "code": "09"
-    },
-    {
-        "id": "300",
-        "post_code": "09021",
-        "name": "Larbaa",
-        "ar_name": "الاربعاء",
-        "longitude": "36.5787079",
-        "latitude": "3.103324",
-        "code": "09"
-    },
-    {
-        "id": "301",
-        "post_code": "09022",
-        "name": "Oued Djer",
-        "ar_name": "واد جر",
-        "longitude": "36.4223526",
-        "latitude": "2.4657911",
-        "code": "09"
-    },
-    {
-        "id": "302",
-        "post_code": "09023",
-        "name": "Beni Tamou",
-        "ar_name": "بني تامو",
-        "longitude": "36.5401306",
-        "latitude": "2.7729529",
-        "code": "09"
-    },
-    {
-        "id": "303",
-        "post_code": "09024",
-        "name": "Bouarfa",
-        "ar_name": "بوعرفة",
-        "longitude": "36.4151693",
-        "latitude": "2.7284692",
-        "code": "09"
-    },
-    {
-        "id": "304",
-        "post_code": "09025",
-        "name": "Beni Mered",
-        "ar_name": "بني مراد",
-        "longitude": "36.5327654",
-        "latitude": "2.8198593",
-        "code": "09"
-    },
-    {
-        "id": "305",
-        "post_code": "09026",
-        "name": "Bougara",
-        "ar_name": "بوڨرة",
-        "longitude": "36.4936597",
-        "latitude": "2.9731862",
-        "code": "09"
-    },
-    {
-        "id": "306",
-        "post_code": "09027",
-        "name": "Guerrouaou",
-        "ar_name": "ڨرواو",
-        "longitude": "36.5019935",
-        "latitude": "2.8148899",
-        "code": "09"
-    },
-    {
-        "id": "307",
-        "post_code": "09028",
-        "name": "Ain Romana",
-        "ar_name": "عين الرمانة",
-        "longitude": "36.3875985",
-        "latitude": "2.5722144",
-        "code": "09"
-    },
-    {
-        "id": "308",
-        "post_code": "09029",
-        "name": "Djebabra",
-        "ar_name": "جبابرة",
-        "longitude": "36.5803885",
-        "latitude": "3.2252592",
-        "code": "09"
-    },
-    {
-        "id": "309",
-        "post_code": "10001",
-        "name": "Bouira",
-        "ar_name": "البويرة",
-        "longitude": "36.3728066",
-        "latitude": "3.8350413",
-        "code": "10"
-    },
-    {
-        "id": "310",
-        "post_code": "10002",
-        "name": "El Asnam",
-        "ar_name": "الأصنام",
-        "longitude": "36.3709809",
-        "latitude": "3.8941923",
-        "code": "10"
-    },
-    {
-        "id": "311",
-        "post_code": "10003",
-        "name": "Guerrouma",
-        "ar_name": "قرومة",
-        "longitude": "36.4678041",
-        "latitude": "3.3603546",
-        "code": "10"
-    },
-    {
-        "id": "312",
-        "post_code": "10004",
-        "name": "Souk El Khemis",
-        "ar_name": "سوق الخميس",
-        "longitude": "36.3941664",
-        "latitude": "3.5550187",
-        "code": "10"
-    },
-    {
-        "id": "313",
-        "post_code": "10005",
-        "name": "Kadiria",
-        "ar_name": "قادرية",
-        "longitude": "36.5253163",
-        "latitude": "3.5963676",
-        "code": "10"
-    },
-    {
-        "id": "314",
-        "post_code": "10006",
-        "name": "Hanif",
-        "ar_name": "احنيف",
-        "longitude": "36.2632628",
-        "latitude": "4.0687934",
-        "code": "10"
-    },
-    {
-        "id": "315",
-        "post_code": "10007",
-        "name": "Dirah",
-        "ar_name": "ديــرة",
-        "longitude": "36.0038981",
-        "latitude": "3.5835066",
-        "code": "10"
-    },
-    {
-        "id": "316",
-        "post_code": "10008",
-        "name": "Ait Laaziz",
-        "ar_name": "آيت لعزيز",
-        "longitude": "36.4453381",
-        "latitude": "3.8484757",
-        "code": "10"
-    },
-    {
-        "id": "317",
-        "post_code": "10009",
-        "name": "Taghzout",
-        "ar_name": "تاغزوت",
-        "longitude": "36.4161178",
-        "latitude": "3.9036414",
-        "code": "10"
-    },
-    {
-        "id": "318",
-        "post_code": "10010",
-        "name": "Raouraoua",
-        "ar_name": "الروراوة",
-        "longitude": "36.2168126",
-        "latitude": "3.5492681",
-        "code": "10"
-    },
-    {
-        "id": "319",
-        "post_code": "10011",
-        "name": "Mezdour",
-        "ar_name": "مسدور",
-        "longitude": "36.0722819",
-        "latitude": "3.923954",
-        "code": "10"
-    },
-    {
-        "id": "320",
-        "post_code": "10012",
-        "name": "Haizer",
-        "ar_name": "حيزر",
-        "longitude": "36.4068708",
-        "latitude": "3.9487242",
-        "code": "10"
-    },
-    {
-        "id": "321",
-        "post_code": "10013",
-        "name": "Lakhdaria",
-        "ar_name": "الأخضرية",
-        "longitude": "36.5613265",
-        "latitude": "3.5173819",
-        "code": "10"
-    },
-    {
-        "id": "322",
-        "post_code": "10014",
-        "name": "Maala",
-        "ar_name": "معالة",
-        "longitude": "36.4945576",
-        "latitude": "3.4880279",
-        "code": "10"
-    },
-    {
-        "id": "323",
-        "post_code": "10015",
-        "name": "El Hachimia",
-        "ar_name": "الھاشمية",
-        "longitude": "36.2227385",
-        "latitude": "3.7198058",
-        "code": "10"
-    },
-    {
-        "id": "324",
-        "post_code": "10016",
-        "name": "Aomar",
-        "ar_name": "أعمر",
-        "longitude": "36.5022135",
-        "latitude": "3.7122176",
-        "code": "10"
-    },
-    {
-        "id": "325",
-        "post_code": "10017",
-        "name": "Chorfa",
-        "ar_name": "الشرفاء",
-        "longitude": "36.3782491",
-        "latitude": "4.3082238",
-        "code": "10"
-    },
-    {
-        "id": "326",
-        "post_code": "10018",
-        "name": "Bordj Oukhriss",
-        "ar_name": "برج أوخريص",
-        "longitude": "36.09281",
-        "latitude": "3.8468001",
-        "code": "10"
-    },
-    {
-        "id": "327",
-        "post_code": "10019",
-        "name": "El Adjiba",
-        "ar_name": "العجيبة",
-        "longitude": "36.3723036",
-        "latitude": "4.0139476",
-        "code": "10"
-    },
-    {
-        "id": "328",
-        "post_code": "10020",
-        "name": "El Hakimia",
-        "ar_name": "الحاكمية",
-        "longitude": "36.0907204",
-        "latitude": "3.72668",
-        "code": "10"
-    },
-    {
-        "id": "329",
-        "post_code": "10021",
-        "name": "El Khebouzia",
-        "ar_name": "الخبوزية",
-        "longitude": "36.3091266",
-        "latitude": "3.5599129",
-        "code": "10"
-    },
-    {
-        "id": "330",
-        "post_code": "10022",
-        "name": "Ahl El Ksar",
-        "ar_name": "أھل القصر",
-        "longitude": "36.2426022",
-        "latitude": "3.9606117",
-        "code": "10"
-    },
-    {
-        "id": "331",
-        "post_code": "10023",
-        "name": "Bouderbala",
-        "ar_name": "بودربالة",
-        "longitude": "36.5662885",
-        "latitude": "3.4137415",
-        "code": "10"
-    },
-    {
-        "id": "332",
-        "post_code": "10024",
-        "name": "Zbarbar",
-        "ar_name": "زبربر",
-        "longitude": "36.4732903",
-        "latitude": "3.4459708",
-        "code": "10"
-    },
-    {
-        "id": "333",
-        "post_code": "10025",
-        "name": "Ain El Hadjar",
-        "ar_name": "عين الحجر",
-        "longitude": "36.3598252",
-        "latitude": "3.7160585",
-        "code": "10"
-    },
-    {
-        "id": "334",
-        "post_code": "10026",
-        "name": "Djebahia",
-        "ar_name": "الجباحية",
-        "longitude": "36.4603324",
-        "latitude": "3.6520932",
-        "code": "10"
-    },
-    {
-        "id": "335",
-        "post_code": "10027",
-        "name": "Aghbalou",
-        "ar_name": "أغبالو",
-        "longitude": "36.4259787",
-        "latitude": "4.2679284",
-        "code": "10"
-    },
-    {
-        "id": "336",
-        "post_code": "10028",
-        "name": "Taguedit",
-        "ar_name": "تاڨديت",
-        "longitude": "35.9534858",
-        "latitude": "3.7969676",
-        "code": "10"
-    },
-    {
-        "id": "337",
-        "post_code": "10029",
-        "name": "Ain Turk",
-        "ar_name": "عين الترك",
-        "longitude": "36.4049144",
-        "latitude": "3.7447465",
-        "code": "10"
-    },
-    {
-        "id": "338",
-        "post_code": "10030",
-        "name": "Saharidj",
-        "ar_name": "الصهاريج",
-        "longitude": "36.4310532",
-        "latitude": "4.1825268",
-        "code": "10"
-    },
-    {
-        "id": "339",
-        "post_code": "10031",
-        "name": "Dechmia",
-        "ar_name": "الدشمية",
-        "longitude": "36.1366443",
-        "latitude": "3.5034345",
-        "code": "10"
-    },
-    {
-        "id": "340",
-        "post_code": "10032",
-        "name": "Ridane",
-        "ar_name": "ريدان",
-        "longitude": "36.0701573",
-        "latitude": "3.399751",
-        "code": "10"
-    },
-    {
-        "id": "341",
-        "post_code": "10033",
-        "name": "Bechloul",
-        "ar_name": "بشلول",
-        "longitude": "36.3745093",
-        "latitude": "3.9607305",
-        "code": "10"
-    },
-    {
-        "id": "342",
-        "post_code": "10034",
-        "name": "Boukram",
-        "ar_name": "بوكرام",
-        "longitude": "36.5178782",
-        "latitude": "3.2987712",
-        "code": "10"
-    },
-    {
-        "id": "343",
-        "post_code": "10035",
-        "name": "Ain Bessam",
-        "ar_name": "عين بسام",
-        "longitude": "36.3364461",
-        "latitude": "3.5562554",
-        "code": "10"
-    },
-    {
-        "id": "344",
-        "post_code": "10036",
-        "name": "Bir Ghbalou",
-        "ar_name": "بئر غبالو",
-        "longitude": "36.268461",
-        "latitude": "3.5073827",
-        "code": "10"
-    },
-    {
-        "id": "345",
-        "post_code": "10037",
-        "name": "Mchedallah",
-        "ar_name": "مشدا الله",
-        "longitude": "36.3633061",
-        "latitude": "4.1871831",
-        "code": "10"
-    },
-    {
-        "id": "346",
-        "post_code": "10038",
-        "name": "Sour El Ghozlane",
-        "ar_name": "سور الغزلان",
-        "longitude": "36.1694764",
-        "latitude": "3.55647",
-        "code": "10"
-    },
-    {
-        "id": "347",
-        "post_code": "10039",
-        "name": "Maamora",
-        "ar_name": "المعمورة",
-        "longitude": "35.9979399",
-        "latitude": "3.525493",
-        "code": "10"
-    },
-    {
-        "id": "348",
-        "post_code": "10040",
-        "name": "Ouled Rached",
-        "ar_name": "أولاد راشد",
-        "longitude": "36.2020432",
-        "latitude": "3.9321509",
-        "code": "10"
-    },
-    {
-        "id": "349",
-        "post_code": "10041",
-        "name": "Ain Laloui",
-        "ar_name": "عين العلوي",
-        "longitude": "36.3067411",
-        "latitude": "3.6860828",
-        "code": "10"
-    },
-    {
-        "id": "350",
-        "post_code": "10042",
-        "name": "Hadjera Zerga",
-        "ar_name": "الحجرة الزرقاء",
-        "longitude": "35.9465348",
-        "latitude": "3.6906234",
-        "code": "10"
-    },
-    {
-        "id": "351",
-        "post_code": "10043",
-        "name": "Ath Mansour",
-        "ar_name": "آث منصور",
-        "longitude": "36.2991769",
-        "latitude": "4.2484448",
-        "code": "10"
-    },
-    {
-        "id": "352",
-        "post_code": "10044",
-        "name": "El Mokrani",
-        "ar_name": "المقراني",
-        "longitude": "36.4249768",
-        "latitude": "3.5341619",
-        "code": "10"
-    },
-    {
-        "id": "353",
-        "post_code": "10045",
-        "name": "Oued El Berdi",
-        "ar_name": "وادى البردي",
-        "longitude": "36.257285",
-        "latitude": "3.8546965",
-        "code": "10"
-    },
-    {
-        "id": "354",
-        "post_code": "11001",
-        "name": "Tamanghasset",
-        "ar_name": "تمنراست",
-        "longitude": "22.2707733",
-        "latitude": "4.5540574",
-        "code": "11"
-    },
-    {
-        "id": "355",
-        "post_code": "11002",
-        "name": "Abalessa",
-        "ar_name": "أبلسة",
-        "longitude": "21.984742",
-        "latitude": "2.2077874",
-        "code": "11"
-    },
-    {
-        "id": "356",
-        "post_code": "11003",
-        "name": "In Ghar",
-        "ar_name": "عـيـن غــار",
-        "longitude": "27.1037909",
-        "latitude": "1.8904637",
-        "code": "11"
-    },
-    {
-        "id": "357",
-        "post_code": "11004",
-        "name": "In Guezzam",
-        "ar_name": "عين قزام",
-        "longitude": "20.3875487",
-        "latitude": "4.7892187",
-        "code": "11"
-    },
-    {
-        "id": "358",
-        "post_code": "11005",
-        "name": "Idles",
-        "ar_name": "إدلس",
-        "longitude": "23.8174829",
-        "latitude": "5.9250425",
-        "code": "11"
-    },
-    {
-        "id": "359",
-        "post_code": "11006",
-        "name": "Tazouk",
-        "ar_name": "تاظروك",
-        "longitude": "23.4241274",
-        "latitude": "6.2425195",
-        "code": "11"
-    },
-    {
-        "id": "360",
-        "post_code": "11007",
-        "name": "Tinzaouatine",
-        "ar_name": "تين زاوتين",
-        "longitude": "20.4281421",
-        "latitude": "2.0907022",
-        "code": "11"
-    },
-    {
-        "id": "361",
-        "post_code": "11008",
-        "name": "In Salah",
-        "ar_name": "عين صالح",
-        "longitude": "27.1955358",
-        "latitude": "2.4666218",
-        "code": "11"
-    },
-    {
-        "id": "362",
-        "post_code": "11009",
-        "name": "In Amguel",
-        "ar_name": "ان أمقل",
-        "longitude": "24.9098562",
-        "latitude": "1.2189579",
-        "code": "11"
-    },
-    {
-        "id": "363",
-        "post_code": "11010",
-        "name": "Foggaret Ezzaouia",
-        "ar_name": "فقارة الزوى",
-        "longitude": "27.3604139",
-        "latitude": "2.8384638",
-        "code": "11"
-    },
-    {
-        "id": "364",
-        "post_code": "12001",
-        "name": "Tebessa",
-        "ar_name": "تبسة",
-        "longitude": "35.4117209",
-        "latitude": "8.0755254",
-        "code": "12"
-    },
-    {
-        "id": "365",
-        "post_code": "12002",
-        "name": "Bir El Ater",
-        "ar_name": "بئر العاتر",
-        "longitude": "34.7546133",
-        "latitude": "8.0234307",
-        "code": "12"
-    },
-    {
-        "id": "366",
-        "post_code": "12003",
-        "name": "Cheria",
-        "ar_name": "الــشــريــعـة",
-        "longitude": "35.267904",
-        "latitude": "7.7355765",
-        "code": "12"
-    },
-    {
-        "id": "367",
-        "post_code": "12004",
-        "name": "Stah Guentis",
-        "ar_name": "سطح قنطيس",
-        "longitude": "34.9951892",
-        "latitude": "7.2928362",
-        "code": "12"
-    },
-    {
-        "id": "368",
-        "post_code": "12005",
-        "name": "El Aouinet",
-        "ar_name": "العوينات",
-        "longitude": "35.8685842",
-        "latitude": "7.8693435",
-        "code": "12"
-    },
-    {
-        "id": "369",
-        "post_code": "12006",
-        "name": "Lahouidjbet",
-        "ar_name": "الحويجبات",
-        "longitude": "35.292789",
-        "latitude": "8.274572",
-        "code": "12"
-    },
-    {
-        "id": "370",
-        "post_code": "12007",
-        "name": "Safsaf El Ouesra",
-        "ar_name": "صفصاف الوسرة",
-        "longitude": "34.9570976",
-        "latitude": "8.1988049",
-        "code": "12"
-    },
-    {
-        "id": "371",
-        "post_code": "12008",
-        "name": "Hammamet",
-        "ar_name": "الحمامات",
-        "longitude": "35.4519226",
-        "latitude": "7.923867",
-        "code": "12"
-    },
-    {
-        "id": "372",
-        "post_code": "12009",
-        "name": "Negrine",
-        "ar_name": "نقرين",
-        "longitude": "34.485828",
-        "latitude": "7.5028466",
-        "code": "12"
-    },
-    {
-        "id": "373",
-        "post_code": "12010",
-        "name": "Bir El Mokadem",
-        "ar_name": "بــئــر مــقـدم",
-        "longitude": "35.3704867",
-        "latitude": "7.8005075",
-        "code": "12"
-    },
-    {
-        "id": "374",
-        "post_code": "12011",
-        "name": "El Kouif",
-        "ar_name": "الكويف",
-        "longitude": "35.499565",
-        "latitude": "8.3115219",
-        "code": "12"
-    },
-    {
-        "id": "375",
-        "post_code": "12012",
-        "name": "Morsott",
-        "ar_name": "مرسط",
-        "longitude": "35.6694643",
-        "latitude": "8.0015659",
-        "code": "12"
-    },
-    {
-        "id": "376",
-        "post_code": "12013",
-        "name": "El Ogla",
-        "ar_name": "العقلة",
-        "longitude": "35.1833322",
-        "latitude": "7.4579122",
-        "code": "12"
-    },
-    {
-        "id": "377",
-        "post_code": "12014",
-        "name": "Bir Dheb",
-        "ar_name": "بٔير الذھب",
-        "longitude": "35.4117259",
-        "latitude": "8.110545",
-        "code": "12"
-    },
-    {
-        "id": "378",
-        "post_code": "12015",
-        "name": "El Ogla",
-        "ar_name": "العقلة",
-        "longitude": "35.1833322",
-        "latitude": "7.4579122",
-        "code": "12"
-    },
-    {
-        "id": "379",
-        "post_code": "12016",
-        "name": "Gorriguer",
-        "ar_name": "قوريقر",
-        "longitude": "35.1833322",
-        "latitude": "7.4579122",
-        "code": "12"
-    },
-    {
-        "id": "380",
-        "post_code": "12017",
-        "name": "Bekkaria",
-        "ar_name": "بكارية",
-        "longitude": "35.3666661",
-        "latitude": "8.2412452",
-        "code": "12"
-    },
-    {
-        "id": "381",
-        "post_code": "12018",
-        "name": "Boukhadra",
-        "ar_name": "بوخضرة",
-        "longitude": "35.7490236",
-        "latitude": "8.0267572",
-        "code": "12"
-    },
-    {
-        "id": "382",
-        "post_code": "12019",
-        "name": "Ouenza",
-        "ar_name": "الونزة",
-        "longitude": "35.9421139",
-        "latitude": "8.1088536",
-        "code": "12"
-    },
-    {
-        "id": "383",
-        "post_code": "12020",
-        "name": "El Ma El Biodh",
-        "ar_name": "الماء الأبيض",
-        "longitude": "35.2066339",
-        "latitude": "8.1509541",
-        "code": "12"
-    },
-    {
-        "id": "384",
-        "post_code": "12021",
-        "name": "Oum Ali",
-        "ar_name": "أم على",
-        "longitude": "35.0115532",
-        "latitude": "8.2926392",
-        "code": "12"
-    },
-    {
-        "id": "385",
-        "post_code": "12022",
-        "name": "Tlidjene",
-        "ar_name": "ثليجان",
-        "longitude": "35.1184512",
-        "latitude": "7.7597808",
-        "code": "12"
-    },
-    {
-        "id": "386",
-        "post_code": "12023",
-        "name": "Ain Zerga",
-        "ar_name": "عين الزرقاء",
-        "longitude": "35.6333322",
-        "latitude": "8.2579122",
-        "code": "12"
-    },
-    {
-        "id": "387",
-        "post_code": "12024",
-        "name": "El Meridj",
-        "ar_name": "المريج",
-        "longitude": "35.7935581",
-        "latitude": "8.2175374",
-        "code": "12"
-    },
-    {
-        "id": "388",
-        "post_code": "12025",
-        "name": "Boulhaf Dyr",
-        "ar_name": "بولحاف الدير",
-        "longitude": "35.4117259",
-        "latitude": "8.110545",
-        "code": "12"
-    },
-    {
-        "id": "389",
-        "post_code": "12026",
-        "name": "Bedjene",
-        "ar_name": "بجن",
-        "longitude": "35.3487094",
-        "latitude": "7.469641",
-        "code": "12"
-    },
-    {
-        "id": "390",
-        "post_code": "12027",
-        "name": "El Mazeraa",
-        "ar_name": "المزرعة",
-        "longitude": "35.4117259",
-        "latitude": "8.110545",
-        "code": "12"
-    },
-    {
-        "id": "391",
-        "post_code": "12028",
-        "name": "Ferkane",
-        "ar_name": "فـــــــركـــــان",
-        "longitude": "34.557943",
-        "latitude": "7.3995494",
-        "code": "12"
-    },
-    {
-        "id": "392",
-        "post_code": "13001",
-        "name": "Tlemcen",
-        "ar_name": "تلمسان",
-        "longitude": "34.8959491",
-        "latitude": "-1.3501175",
-        "code": "13"
-    },
-    {
-        "id": "393",
-        "post_code": "13002",
-        "name": "Beni Mester",
-        "ar_name": "بني مستار",
-        "longitude": "34.8639575",
-        "latitude": "-1.4356042",
-        "code": "13"
-    },
-    {
-        "id": "394",
-        "post_code": "13003",
-        "name": "Ain Tallout",
-        "ar_name": "عين تالوت",
-        "longitude": "34.9238688",
-        "latitude": "-0.9667326",
-        "code": "13"
-    },
-    {
-        "id": "395",
-        "post_code": "13004",
-        "name": "Remchi",
-        "ar_name": "الرمشي",
-        "longitude": "35.0550485",
-        "latitude": "-1.4635847",
-        "code": "13"
-    },
-    {
-        "id": "396",
-        "post_code": "13005",
-        "name": "El Fehoul",
-        "ar_name": "الفحول",
-        "longitude": "35.1166788",
-        "latitude": "-1.2970948",
-        "code": "13"
-    },
-    {
-        "id": "397",
-        "post_code": "13006",
-        "name": "Sabra",
-        "ar_name": "صبرة",
-        "longitude": "34.8255654",
-        "latitude": "-1.5368414",
-        "code": "13"
-    },
-    {
-        "id": "398",
-        "post_code": "13007",
-        "name": "Ghazaouet",
-        "ar_name": "الغزوات",
-        "longitude": "35.0934337",
-        "latitude": "-1.8720748",
-        "code": "13"
-    },
-    {
-        "id": "399",
-        "post_code": "13008",
-        "name": "Souani",
-        "ar_name": "السواني",
-        "longitude": "34.9184687",
-        "latitude": "-1.92235",
-        "code": "13"
-    },
-    {
-        "id": "400",
-        "post_code": "13009",
-        "name": "Djebala",
-        "ar_name": "جبالة",
-        "longitude": "34.9775481",
-        "latitude": "-1.8940714",
-        "code": "13"
-    },
-    {
-        "id": "401",
-        "post_code": "13010",
-        "name": "El Gor",
-        "ar_name": "الغور",
-        "longitude": "34.6356392",
-        "latitude": "-1.1625071",
-        "code": "13"
-    },
-    {
-        "id": "402",
-        "post_code": "13011",
-        "name": "Oued Chouly",
-        "ar_name": "وادى الشولى",
-        "longitude": "34.8666661",
-        "latitude": "-1.1420878",
-        "code": "13"
-    },
-    {
-        "id": "403",
-        "post_code": "13012",
-        "name": "Ain Fezza",
-        "ar_name": "عين فزّة",
-        "longitude": "34.8794264",
-        "latitude": "-1.2421418",
-        "code": "13"
-    },
-    {
-        "id": "404",
-        "post_code": "13013",
-        "name": "Ouled Mimoun",
-        "ar_name": "أولاد ميمون",
-        "longitude": "34.9018053",
-        "latitude": "-1.0442162",
-        "code": "13"
-    },
-    {
-        "id": "405",
-        "post_code": "13014",
-        "name": "Amieur",
-        "ar_name": "عمير",
-        "longitude": "34.8959541",
-        "latitude": "-1.3150979",
-        "code": "13"
-    },
-    {
-        "id": "406",
-        "post_code": "13015",
-        "name": "Ain Youcef",
-        "ar_name": "عين يوسف",
-        "longitude": "35.048443",
-        "latitude": "-1.3841379",
-        "code": "13"
-    },
-    {
-        "id": "407",
-        "post_code": "13016",
-        "name": "Zenata",
-        "ar_name": "زناتة",
-        "longitude": "34.9849042",
-        "latitude": "-1.4760198",
-        "code": "13"
-    },
-    {
-        "id": "408",
-        "post_code": "13017",
-        "name": "Beni Snous",
-        "ar_name": "بنى سنوس",
-        "longitude": "34.6593315",
-        "latitude": "-1.5615608",
-        "code": "13"
-    },
-    {
-        "id": "409",
-        "post_code": "13018",
-        "name": "Bab El Assa",
-        "ar_name": "باب العسة",
-        "longitude": "34.9654779",
-        "latitude": "-2.0399109",
-        "code": "13"
-    },
-    {
-        "id": "410",
-        "post_code": "13019",
-        "name": "Dar Yaghmouracene",
-        "ar_name": "دار يغمراسن",
-        "longitude": "34.8959541",
-        "latitude": "-1.3150979",
-        "code": "13"
-    },
-    {
-        "id": "411",
-        "post_code": "13020",
-        "name": "Fellaoucene",
-        "ar_name": "فلاوسن",
-        "longitude": "35.013723",
-        "latitude": "-1.6538313",
-        "code": "13"
-    },
-    {
-        "id": "412",
-        "post_code": "13021",
-        "name": "Azails",
-        "ar_name": "العزايل",
-        "longitude": "34.8959541",
-        "latitude": "-1.3150979",
-        "code": "13"
-    },
-    {
-        "id": "413",
-        "post_code": "13022",
-        "name": "Sebbaa Chioukh",
-        "ar_name": "سبعة شيوخ",
-        "longitude": "35.1563716",
-        "latitude": "-1.3705445",
-        "code": "13"
-    },
-    {
-        "id": "414",
-        "post_code": "13023",
-        "name": "Terni Beni Hediel",
-        "ar_name": "تيرني بني هديل",
-        "longitude": "34.7966361",
-        "latitude": "-1.3623785",
-        "code": "13"
-    },
-    {
-        "id": "415",
-        "post_code": "13024",
-        "name": "Bensekrane",
-        "ar_name": "بن سكران",
-        "longitude": "35.0745555",
-        "latitude": "-1.2362705",
-        "code": "13"
-    },
-    {
-        "id": "416",
-        "post_code": "13025",
-        "name": "Ain Nehala",
-        "ar_name": "عين نحالة",
-        "longitude": "35.0273782",
-        "latitude": "-0.9359407",
-        "code": "13"
-    },
-    {
-        "id": "417",
-        "post_code": "13026",
-        "name": "Hennaya",
-        "ar_name": "الحناية",
-        "longitude": "34.9490231",
-        "latitude": "-1.3866808",
-        "code": "13"
-    },
-    {
-        "id": "418",
-        "post_code": "13027",
-        "name": "Maghnia",
-        "ar_name": "مغنية",
-        "longitude": "34.8481781",
-        "latitude": "-1.780215",
-        "code": "13"
-    },
-    {
-        "id": "419",
-        "post_code": "13028",
-        "name": "Hammam Boughrara",
-        "ar_name": "حمام بوغرارة",
-        "longitude": "34.8904539",
-        "latitude": "-1.6555881",
-        "code": "13"
-    },
-    {
-        "id": "420",
-        "post_code": "13029",
-        "name": "Souahlia",
-        "ar_name": "تونان",
-        "longitude": "35.0438386",
-        "latitude": "-1.9086172",
-        "code": "13"
-    },
-    {
-        "id": "421",
-        "post_code": "13030",
-        "name": "Msirda Fouaga",
-        "ar_name": "مسيردة الفواقة",
-        "longitude": "35.0142663",
-        "latitude": "-2.073219",
-        "code": "13"
-    },
-    {
-        "id": "422",
-        "post_code": "13031",
-        "name": "Ain Fetah",
-        "ar_name": "عين فتاح",
-        "longitude": "36.0036103",
-        "latitude": "0.3170785",
-        "code": "13"
-    },
-    {
-        "id": "423",
-        "post_code": "13032",
-        "name": "El Aricha",
-        "ar_name": "العريشة",
-        "longitude": "34.2202108",
-        "latitude": "-1.2723972",
-        "code": "13"
-    },
-    {
-        "id": "424",
-        "post_code": "13033",
-        "name": "Souk Thlata",
-        "ar_name": "سوق الثلاثاء",
-        "longitude": "35.0194848",
-        "latitude": "-2.0213987",
-        "code": "13"
-    },
-    {
-        "id": "425",
-        "post_code": "13034",
-        "name": "Sidi Abdelli",
-        "ar_name": "سيدي العبدلي",
-        "longitude": "35.0652344",
-        "latitude": "-1.1432004",
-        "code": "13"
-    },
-    {
-        "id": "426",
-        "post_code": "13035",
-        "name": "Sebdou",
-        "ar_name": "سبدو",
-        "longitude": "34.6392357",
-        "latitude": "-1.3469271",
-        "code": "13"
-    },
-    {
-        "id": "427",
-        "post_code": "13036",
-        "name": "Beni Ouarsous",
-        "ar_name": "برج عريمة",
-        "longitude": "35.0818832",
-        "latitude": "-1.5645648",
-        "code": "13"
-    },
-    {
-        "id": "428",
-        "post_code": "13037",
-        "name": "Sidi Medjahed",
-        "ar_name": "سيدي مجاهد",
-        "longitude": "34.77568",
-        "latitude": "-1.6426706",
-        "code": "13"
-    },
-    {
-        "id": "429",
-        "post_code": "13038",
-        "name": "Beni Boussaid",
-        "ar_name": "بني بوسعيد",
-        "longitude": "34.6490781",
-        "latitude": "-1.762104",
-        "code": "13"
-    },
-    {
-        "id": "430",
-        "post_code": "13039",
-        "name": "Marsa Ben Mhidi",
-        "ar_name": "مرسى بن مھيدي",
-        "longitude": "35.0790982",
-        "latitude": "-2.2135629",
-        "code": "13"
-    },
-    {
-        "id": "431",
-        "post_code": "13040",
-        "name": "Nedroma",
-        "ar_name": "ندرومة",
-        "longitude": "35.0141436",
-        "latitude": "-1.769829",
-        "code": "13"
-    },
-    {
-        "id": "432",
-        "post_code": "13041",
-        "name": "Sidi Djillali",
-        "ar_name": "سيدي الجيلالي",
-        "longitude": "34.4459186",
-        "latitude": "-1.5761732",
-        "code": "13"
-    },
-    {
-        "id": "433",
-        "post_code": "13042",
-        "name": "Beni Bahdel",
-        "ar_name": "بني بهدل",
-        "longitude": "34.7114024",
-        "latitude": "-1.5174008",
-        "code": "13"
-    },
-    {
-        "id": "434",
-        "post_code": "13043",
-        "name": "El Bouihi",
-        "ar_name": "البويھي",
-        "longitude": "34.8959541",
-        "latitude": "-1.3150979",
-        "code": "13"
-    },
-    {
-        "id": "435",
-        "post_code": "13044",
-        "name": "Honaine",
-        "ar_name": "هنين",
-        "longitude": "35.1800515",
-        "latitude": "-1.657691",
-        "code": "13"
-    },
-    {
-        "id": "436",
-        "post_code": "13045",
-        "name": "Tianet",
-        "ar_name": "تيانت",
-        "longitude": "35.0491084",
-        "latitude": "-1.8584921",
-        "code": "13"
-    },
-    {
-        "id": "437",
-        "post_code": "13046",
-        "name": "Ouled Riyah",
-        "ar_name": "أولاد رياح",
-        "longitude": "34.9615122",
-        "latitude": "-1.5020585",
-        "code": "13"
-    },
-    {
-        "id": "438",
-        "post_code": "13047",
-        "name": "Bouhlou",
-        "ar_name": "بوحلو",
-        "longitude": "34.7787462",
-        "latitude": "-1.5850461",
-        "code": "13"
-    },
-    {
-        "id": "439",
-        "post_code": "13048",
-        "name": "Souk El Khemis",
-        "ar_name": "سوق الخميس",
-        "longitude": "35.1732293",
-        "latitude": "-1.5607239",
-        "code": "13"
-    },
-    {
-        "id": "440",
-        "post_code": "13049",
-        "name": "Ain Ghoraba",
-        "ar_name": "عين غرابة",
-        "longitude": "34.7147251",
-        "latitude": "-1.4039435",
-        "code": "13"
-    },
-    {
-        "id": "441",
-        "post_code": "13050",
-        "name": "Chetouane",
-        "ar_name": "شتوان",
-        "longitude": "34.9175348",
-        "latitude": "-1.3164927",
-        "code": "13"
-    },
-    {
-        "id": "442",
-        "post_code": "13051",
-        "name": "Mansourah",
-        "ar_name": "المنصورة",
-        "longitude": "34.8704299",
-        "latitude": "-1.389299",
-        "code": "13"
-    },
-    {
-        "id": "443",
-        "post_code": "13052",
-        "name": "Beni Semiel",
-        "ar_name": "بني مستار",
-        "longitude": "34.8639575",
-        "latitude": "-1.4356042",
-        "code": "13"
-    },
-    {
-        "id": "444",
-        "post_code": "13053",
-        "name": "Ain Kebira",
-        "ar_name": "عين الكبيرة",
-        "longitude": "35.0317001",
-        "latitude": "-1.686101",
-        "code": "13"
-    },
-    {
-        "id": "445",
-        "post_code": "14001",
-        "name": "Tiaret",
-        "ar_name": "تيارت‎",
-        "longitude": "35.3599696",
-        "latitude": "1.3215754",
-        "code": "14"
-    },
-    {
-        "id": "446",
-        "post_code": "14002",
-        "name": "Medroussa",
-        "ar_name": "مدروسة",
-        "longitude": "35.1752197",
-        "latitude": "1.1979175",
-        "code": "14"
-    },
-    {
-        "id": "447",
-        "post_code": "14003",
-        "name": "Ain Bouchekif",
-        "ar_name": "بوشقيف",
-        "longitude": "35.3543704",
-        "latitude": "1.5036248",
-        "code": "14"
-    },
-    {
-        "id": "448",
-        "post_code": "14004",
-        "name": "Sidi Ali Mellal",
-        "ar_name": "سيدي علي ملال",
-        "longitude": "35.5635054",
-        "latitude": "1.2199974",
-        "code": "14"
-    },
-    {
-        "id": "449",
-        "post_code": "14005",
-        "name": "Ain Zarit",
-        "ar_name": "عين زاريت",
-        "longitude": "35.351973",
-        "latitude": "1.6572618",
-        "code": "14"
-    },
-    {
-        "id": "450",
-        "post_code": "14006",
-        "name": "Ain Deheb",
-        "ar_name": "عين الذهب",
-        "longitude": "34.847125",
-        "latitude": "1.530876",
-        "code": "14"
-    },
-    {
-        "id": "451",
-        "post_code": "14007",
-        "name": "Sidi Bakhti",
-        "ar_name": "سيدي بختي",
-        "longitude": "35.2393277",
-        "latitude": "0.9755382",
-        "code": "14"
-    },
-    {
-        "id": "452",
-        "post_code": "14008",
-        "name": "Medrissa",
-        "ar_name": "مدريسة",
-        "longitude": "34.8949768",
-        "latitude": "1.2315845",
-        "code": "14"
-    },
-    {
-        "id": "453",
-        "post_code": "14009",
-        "name": "Zmalet El Emir Aek",
-        "ar_name": "زمالة الأمير عبد القادر",
-        "longitude": "34.899755",
-        "latitude": "2.279362",
-        "code": "14"
-    },
-    {
-        "id": "454",
-        "post_code": "14010",
-        "name": "Madna",
-        "ar_name": "مادنة",
-        "longitude": "35.3599899",
-        "latitude": "1.3916159",
-        "code": "14"
-    },
-    {
-        "id": "455",
-        "post_code": "14011",
-        "name": "Sebt",
-        "ar_name": "السبت",
-        "longitude": "35.3599899",
-        "latitude": "1.3916159",
-        "code": "14"
-    },
-    {
-        "id": "456",
-        "post_code": "14012",
-        "name": "Mellakou",
-        "ar_name": "ملاكو",
-        "longitude": "35.2514714",
-        "latitude": "1.2272501",
-        "code": "14"
-    },
-    {
-        "id": "457",
-        "post_code": "14013",
-        "name": "Dahmouni",
-        "ar_name": "دحموني",
-        "longitude": "35.4166137",
-        "latitude": "1.4674473",
-        "code": "14"
-    },
-    {
-        "id": "458",
-        "post_code": "14014",
-        "name": "Rahouia",
-        "ar_name": "رحوية",
-        "longitude": "35.5308956",
-        "latitude": "1.0130642",
-        "code": "14"
-    },
-    {
-        "id": "459",
-        "post_code": "14015",
-        "name": "Mahdia",
-        "ar_name": "المھدية",
-        "longitude": "35.4312648",
-        "latitude": "1.7415474",
-        "code": "14"
-    },
-    {
-        "id": "460",
-        "post_code": "14016",
-        "name": "Sougueur",
-        "ar_name": "سوقر",
-        "longitude": "35.1812014",
-        "latitude": "1.4648287",
-        "code": "14"
-    },
-    {
-        "id": "461",
-        "post_code": "14017",
-        "name": "Sidi Abdelghani",
-        "ar_name": "سيدي عبد الغنى",
-        "longitude": "35.2355935",
-        "latitude": "1.6199474",
-        "code": "14"
-    },
-    {
-        "id": "462",
-        "post_code": "14018",
-        "name": "Ain El Hadid",
-        "ar_name": "عين الحديد",
-        "longitude": "35.0604573",
-        "latitude": "0.8713103",
-        "code": "14"
-    },
-    {
-        "id": "463",
-        "post_code": "14019",
-        "name": "Ouled Djerad",
-        "ar_name": "اولاد جراد",
-        "longitude": "35.3599899",
-        "latitude": "1.3916159",
-        "code": "14"
-    },
-    {
-        "id": "464",
-        "post_code": "14020",
-        "name": "Naima",
-        "ar_name": "نعيمة",
-        "longitude": "35.092594",
-        "latitude": "1.4729726",
-        "code": "14"
-    },
-    {
-        "id": "465",
-        "post_code": "14021",
-        "name": "Meghila",
-        "ar_name": "مغيلة",
-        "longitude": "35.3633423",
-        "latitude": "1.3249683",
-        "code": "14"
-    },
-    {
-        "id": "466",
-        "post_code": "14022",
-        "name": "Guertoufa",
-        "ar_name": "قرطوفة",
-        "longitude": "35.3929502",
-        "latitude": "1.246283",
-        "code": "14"
-    },
-    {
-        "id": "467",
-        "post_code": "14023",
-        "name": "Sidi Hosni",
-        "ar_name": "سيدي حسني",
-        "longitude": "35.4697136",
-        "latitude": "1.5114355",
-        "code": "14"
-    },
-    {
-        "id": "468",
-        "post_code": "14024",
-        "name": "Djillali Ben Amar",
-        "ar_name": "جيلالي بن عمار",
-        "longitude": "35.4442917",
-        "latitude": "0.8475566",
-        "code": "14"
-    },
-    {
-        "id": "469",
-        "post_code": "14025",
-        "name": "Sebaine",
-        "ar_name": "سبعين",
-        "longitude": "35.4574363",
-        "latitude": "1.5985322",
-        "code": "14"
-    },
-    {
-        "id": "470",
-        "post_code": "14026",
-        "name": "Tousnina",
-        "ar_name": "توسنينة",
-        "longitude": "35.1140017",
-        "latitude": "1.2658846",
-        "code": "14"
-    },
-    {
-        "id": "471",
-        "post_code": "14027",
-        "name": "Frenda",
-        "ar_name": "فرندة",
-        "longitude": "35.0625636",
-        "latitude": "1.0403751",
-        "code": "14"
-    },
-    {
-        "id": "472",
-        "post_code": "14028",
-        "name": "Ain Kermes",
-        "ar_name": "عين كرمس",
-        "longitude": "34.9297691",
-        "latitude": "1.00103",
-        "code": "14"
-    },
-    {
-        "id": "473",
-        "post_code": "14029",
-        "name": "Ksar Chellala",
-        "ar_name": "قصر الشلالة",
-        "longitude": "35.2197113",
-        "latitude": "2.3002837",
-        "code": "14"
-    },
-    {
-        "id": "474",
-        "post_code": "14030",
-        "name": "Rechaiga",
-        "ar_name": "الرشايقة",
-        "longitude": "35.4099423",
-        "latitude": "1.9612956",
-        "code": "14"
-    },
-    {
-        "id": "475",
-        "post_code": "14031",
-        "name": "Nadorah",
-        "ar_name": "ملاكو",
-        "longitude": "35.2514714",
-        "latitude": "1.2272501",
-        "code": "14"
-    },
-    {
-        "id": "476",
-        "post_code": "14032",
-        "name": "Tagdemt",
-        "ar_name": "تاقدمت",
-        "longitude": "35.3354988",
-        "latitude": "1.2243641",
-        "code": "14"
-    },
-    {
-        "id": "477",
-        "post_code": "14033",
-        "name": "Oued Lilli",
-        "ar_name": "وادى ليلى",
-        "longitude": "35.5119281",
-        "latitude": "1.2582952",
-        "code": "14"
-    },
-    {
-        "id": "478",
-        "post_code": "14034",
-        "name": "Mechraa Safa",
-        "ar_name": "مشرع الصفاء",
-        "longitude": "35.3599899",
-        "latitude": "1.3916159",
-        "code": "14"
-    },
-    {
-        "id": "479",
-        "post_code": "14035",
-        "name": "Hamadia",
-        "ar_name": "الحمادية",
-        "longitude": "35.4612984",
-        "latitude": "1.8652296",
-        "code": "14"
-    },
-    {
-        "id": "480",
-        "post_code": "14036",
-        "name": "Chehaima",
-        "ar_name": "شحيمة",
-        "longitude": "34.897482",
-        "latitude": "1.2948222",
-        "code": "14"
-    },
-    {
-        "id": "481",
-        "post_code": "14037",
-        "name": "Takhemaret",
-        "ar_name": "تاخمرت",
-        "longitude": "35.1048114",
-        "latitude": "0.6649302",
-        "code": "14"
-    },
-    {
-        "id": "482",
-        "post_code": "14038",
-        "name": "Sidi Abderrahmane",
-        "ar_name": "سيدي عبدالرحمان",
-        "longitude": "34.7996374",
-        "latitude": "1.1235237",
-        "code": "14"
-    },
-    {
-        "id": "483",
-        "post_code": "14039",
-        "name": "Serghine",
-        "ar_name": "سرغين",
-        "longitude": "35.2557642",
-        "latitude": "2.4738335",
-        "code": "14"
-    },
-    {
-        "id": "484",
-        "post_code": "14040",
-        "name": "Bougara",
-        "ar_name": "بوقرة",
-        "longitude": "35.5542945",
-        "latitude": "1.9566606",
-        "code": "14"
-    },
-    {
-        "id": "485",
-        "post_code": "14041",
-        "name": "Faidja",
-        "ar_name": "الفايجة",
-        "longitude": "35.3599899",
-        "latitude": "1.3916159",
-        "code": "14"
-    },
-    {
-        "id": "486",
-        "post_code": "14042",
-        "name": "Tidda",
-        "ar_name": "تيدة",
-        "longitude": "35.583236",
-        "latitude": "1.263181",
-        "code": "14"
-    },
-    {
-        "id": "487",
-        "post_code": "15001",
-        "name": "Tizi Ouzou",
-        "ar_name": "تيزي وزو",
-        "longitude": "36.7001863",
-        "latitude": "4.0059166",
-        "code": "15"
-    },
-    {
-        "id": "488",
-        "post_code": "15002",
-        "name": "Ain El Hammam",
-        "ar_name": "عين الحمام",
-        "longitude": "36.5725501",
-        "latitude": "4.246757",
-        "code": "15"
-    },
-    {
-        "id": "489",
-        "post_code": "15003",
-        "name": "Akbil",
-        "ar_name": "أقبيل",
-        "longitude": "36.5045347",
-        "latitude": "4.2789395",
-        "code": "15"
-    },
-    {
-        "id": "490",
-        "post_code": "15004",
-        "name": "Freha",
-        "ar_name": "فريحة",
-        "longitude": "36.7609641",
-        "latitude": "4.1820964",
-        "code": "15"
-    },
-    {
-        "id": "491",
-        "post_code": "15005",
-        "name": "Souamaa",
-        "ar_name": "صوامع",
-        "longitude": "36.6699749",
-        "latitude": "4.2847082",
-        "code": "15"
-    },
-    {
-        "id": "492",
-        "post_code": "15006",
-        "name": "Mechtrass",
-        "ar_name": "مشطراس",
-        "longitude": "36.5543756",
-        "latitude": "3.9810203",
-        "code": "15"
-    },
-    {
-        "id": "493",
-        "post_code": "15007",
-        "name": "Irdjen",
-        "ar_name": "إرجن",
-        "longitude": "36.6675039",
-        "latitude": "4.1060517",
-        "code": "15"
-    },
-    {
-        "id": "494",
-        "post_code": "15008",
-        "name": "Timizart",
-        "ar_name": "تيميزارت",
-        "longitude": "36.7971206",
-        "latitude": "4.1694482",
-        "code": "15"
-    },
-    {
-        "id": "495",
-        "post_code": "15009",
-        "name": "Makouda",
-        "ar_name": "ماكودة",
-        "longitude": "36.7937385",
-        "latitude": "4.0162747",
-        "code": "15"
-    },
-    {
-        "id": "496",
-        "post_code": "15010",
-        "name": "Draa El Mizan",
-        "ar_name": "ذراع الميزان",
-        "longitude": "36.5470073",
-        "latitude": "3.7377549",
-        "code": "15"
-    },
-    {
-        "id": "497",
-        "post_code": "15011",
-        "name": "Tizi Ghenif",
-        "ar_name": "تيزي غنيف",
-        "longitude": "36.5902982",
-        "latitude": "3.7422175",
-        "code": "15"
-    },
-    {
-        "id": "498",
-        "post_code": "15012",
-        "name": "Bounouh",
-        "ar_name": "بونوح",
-        "longitude": "36.4936137",
-        "latitude": "3.9005751",
-        "code": "15"
-    },
-    {
-        "id": "499",
-        "post_code": "15013",
-        "name": "Ait Chaffaa",
-        "ar_name": "آيت شفعة",
-        "longitude": "36.8274474",
-        "latitude": "4.4618199",
-        "code": "15"
-    },
-    {
-        "id": "500",
-        "post_code": "15014",
-        "name": "Frikat",
-        "ar_name": "فريقات",
-        "longitude": "36.4984125",
-        "latitude": "3.8441856",
-        "code": "15"
-    },
-    {
-        "id": "501",
-        "post_code": "15015",
-        "name": "Beni Aissi",
-        "ar_name": "بني عيسي",
-        "longitude": "36.6547723",
-        "latitude": "4.0545452",
-        "code": "15"
-    },
-    {
-        "id": "502",
-        "post_code": "15016",
-        "name": "Beni Zmenzer",
-        "ar_name": "أيت زمنزر",
-        "longitude": "36.6377976",
-        "latitude": "4.0034",
-        "code": "15"
-    },
-    {
-        "id": "503",
-        "post_code": "15017",
-        "name": "Iferhounene",
-        "ar_name": "إيفرحونن",
-        "longitude": "36.5212265",
-        "latitude": "4.3082031",
-        "code": "15"
-    },
-    {
-        "id": "504",
-        "post_code": "15018",
-        "name": "Azazga",
-        "ar_name": "عزازقة",
-        "longitude": "36.7422819",
-        "latitude": "4.3001578",
-        "code": "15"
-    },
-    {
-        "id": "505",
-        "post_code": "15019",
-        "name": "Iloula Oumalou",
-        "ar_name": "إيلولة أمالو",
-        "longitude": "36.5648402",
-        "latitude": "4.3743839",
-        "code": "15"
-    },
-    {
-        "id": "506",
-        "post_code": "15020",
-        "name": "Yakouren",
-        "ar_name": "اعكورن",
-        "longitude": "36.7370677",
-        "latitude": "4.3947111",
-        "code": "15"
-    },
-    {
-        "id": "507",
-        "post_code": "15021",
-        "name": "Larba Nait Irathen",
-        "ar_name": "الأربعاء نايت إيراثن",
-        "longitude": "36.6369786",
-        "latitude": "4.1448706",
-        "code": "15"
-    },
-    {
-        "id": "508",
-        "post_code": "15022",
-        "name": "Tizi Rached",
-        "ar_name": "تيزي راشد",
-        "longitude": "36.6869348",
-        "latitude": "4.1508398",
-        "code": "15"
-    },
-    {
-        "id": "509",
-        "post_code": "15023",
-        "name": "Zekri",
-        "ar_name": "زكري",
-        "longitude": "36.7845712",
-        "latitude": "4.5092844",
-        "code": "15"
-    },
-    {
-        "id": "510",
-        "post_code": "15024",
-        "name": "Ouaguenoun",
-        "ar_name": "واقنون",
-        "longitude": "36.75758",
-        "latitude": "4.1374033",
-        "code": "15"
-    },
-    {
-        "id": "511",
-        "post_code": "15025",
-        "name": "Ain Zaouia",
-        "ar_name": "عين الزاوية",
-        "longitude": "36.576394",
-        "latitude": "3.8364146",
-        "code": "15"
-    },
-    {
-        "id": "512",
-        "post_code": "15026",
-        "name": "Mkira",
-        "ar_name": "مكيرة",
-        "longitude": "36.6308053",
-        "latitude": "3.7426895",
-        "code": "15"
-    },
-    {
-        "id": "513",
-        "post_code": "15027",
-        "name": "Ait Yahia",
-        "ar_name": "أيت يحي",
-        "longitude": "36.5983865",
-        "latitude": "4.2844951",
-        "code": "15"
-    },
-    {
-        "id": "514",
-        "post_code": "15028",
-        "name": "Ait Mahmoud",
-        "ar_name": "أيت محمود",
-        "longitude": "36.6099011",
-        "latitude": "4.0829223",
-        "code": "15"
-    },
-    {
-        "id": "515",
-        "post_code": "15029",
-        "name": "Maatka",
-        "ar_name": "المعاتقة",
-        "longitude": "36.6103742",
-        "latitude": "3.9321607",
-        "code": "15"
-    },
-    {
-        "id": "516",
-        "post_code": "15030",
-        "name": "Ait Boumehdi",
-        "ar_name": "آيت بومھدى",
-        "longitude": "36.4881938",
-        "latitude": "4.1571444",
-        "code": "15"
-    },
-    {
-        "id": "517",
-        "post_code": "15031",
-        "name": "Abi Youcef",
-        "ar_name": "أبي يوسف",
-        "longitude": "36.524679",
-        "latitude": "4.3011139",
-        "code": "15"
-    },
-    {
-        "id": "518",
-        "post_code": "15032",
-        "name": "Beni Douala",
-        "ar_name": "بني دوالة",
-        "longitude": "36.6234865",
-        "latitude": "4.0457361",
-        "code": "15"
-    },
-    {
-        "id": "519",
-        "post_code": "15033",
-        "name": "Illilten",
-        "ar_name": "إليلتن",
-        "longitude": "36.5107269",
-        "latitude": "4.3705193",
-        "code": "15"
-    },
-    {
-        "id": "520",
-        "post_code": "15034",
-        "name": "Bouzguen",
-        "ar_name": "بوزقن",
-        "longitude": "36.6175618",
-        "latitude": "4.4228207",
-        "code": "15"
-    },
-    {
-        "id": "521",
-        "post_code": "15035",
-        "name": "Ait Aggouacha",
-        "ar_name": "أيت أقواشة",
-        "longitude": "36.6198894",
-        "latitude": "4.2120707",
-        "code": "15"
-    },
-    {
-        "id": "522",
-        "post_code": "15036",
-        "name": "Ouadhia",
-        "ar_name": "واضية",
-        "longitude": "36.5677265",
-        "latitude": "4.0785704",
-        "code": "15"
-    },
-    {
-        "id": "523",
-        "post_code": "15037",
-        "name": "Azzefoun",
-        "ar_name": "أزفون",
-        "longitude": "36.8702256",
-        "latitude": "4.3178818",
-        "code": "15"
-    },
-    {
-        "id": "524",
-        "post_code": "15038",
-        "name": "Tigzirt",
-        "ar_name": "تقزيرت",
-        "longitude": "36.8639518",
-        "latitude": "4.1020626",
-        "code": "15"
-    },
-    {
-        "id": "525",
-        "post_code": "15039",
-        "name": "Ait Aissa Mimoun",
-        "ar_name": "آيت عيسى ميمون",
-        "longitude": "36.7514348",
-        "latitude": "4.0819593",
-        "code": "15"
-    },
-    {
-        "id": "526",
-        "post_code": "15040",
-        "name": "Boghni",
-        "ar_name": "بوغني",
-        "longitude": "36.5145938",
-        "latitude": "3.9000151",
-        "code": "15"
-    },
-    {
-        "id": "527",
-        "post_code": "15041",
-        "name": "Ifigha",
-        "ar_name": "ايفيغاء",
-        "longitude": "36.6655524",
-        "latitude": "4.3826971",
-        "code": "15"
-    },
-    {
-        "id": "528",
-        "post_code": "15042",
-        "name": "Ait Oumalou",
-        "ar_name": "آيت أومالو",
-        "longitude": "36.6546349",
-        "latitude": "4.1929358",
-        "code": "15"
-    },
-    {
-        "id": "529",
-        "post_code": "15043",
-        "name": "Tirmitine",
-        "ar_name": "ترمتين",
-        "longitude": "36.6686122",
-        "latitude": "3.9267051",
-        "code": "15"
-    },
-    {
-        "id": "530",
-        "post_code": "15044",
-        "name": "Akerrou",
-        "ar_name": "أقرو",
-        "longitude": "36.8097183",
-        "latitude": "4.4087242",
-        "code": "15"
-    },
-    {
-        "id": "531",
-        "post_code": "15045",
-        "name": "Yatafen",
-        "ar_name": "يطافن",
-        "longitude": "36.5076873",
-        "latitude": "4.2052774",
-        "code": "15"
-    },
-    {
-        "id": "532",
-        "post_code": "15046",
-        "name": "Beni Ziki",
-        "ar_name": "بنى زيكى",
-        "longitude": "36.5577577",
-        "latitude": "4.4700776",
-        "code": "15"
-    },
-    {
-        "id": "533",
-        "post_code": "15047",
-        "name": "Draa Ben Khedda",
-        "ar_name": "ذراع بن خدة",
-        "longitude": "36.7218395",
-        "latitude": "3.9216358",
-        "code": "15"
-    },
-    {
-        "id": "534",
-        "post_code": "15048",
-        "name": "Ouacif",
-        "ar_name": "واسيف",
-        "longitude": "36.518106",
-        "latitude": "4.1780763",
-        "code": "15"
-    },
-    {
-        "id": "535",
-        "post_code": "15049",
-        "name": "Idjeur",
-        "ar_name": "آجر",
-        "longitude": "36.6731533",
-        "latitude": "4.4981712",
-        "code": "15"
-    },
-    {
-        "id": "536",
-        "post_code": "15050",
-        "name": "Mekla",
-        "ar_name": "مقلع",
-        "longitude": "36.6754811",
-        "latitude": "4.1969679",
-        "code": "15"
-    },
-    {
-        "id": "537",
-        "post_code": "15051",
-        "name": "Tizi Nthlata",
-        "ar_name": "تيزي نثلاثة",
-        "longitude": "36.5614012",
-        "latitude": "4.0110525",
-        "code": "15"
-    },
-    {
-        "id": "538",
-        "post_code": "15052",
-        "name": "Beni Yenni",
-        "ar_name": "بني يني",
-        "longitude": "36.5780655",
-        "latitude": "4.1617148",
-        "code": "15"
-    },
-    {
-        "id": "539",
-        "post_code": "15053",
-        "name": "Aghrib",
-        "ar_name": "أغريب",
-        "longitude": "36.8198487",
-        "latitude": "4.2726598",
-        "code": "15"
-    },
-    {
-        "id": "540",
-        "post_code": "15054",
-        "name": "Iflissen",
-        "ar_name": "إفليسن",
-        "longitude": "36.8728441",
-        "latitude": "4.1818421",
-        "code": "15"
-    },
-    {
-        "id": "541",
-        "post_code": "15055",
-        "name": "Boudjima",
-        "ar_name": "بوجيمة",
-        "longitude": "36.8046355",
-        "latitude": "4.1193574",
-        "code": "15"
-    },
-    {
-        "id": "542",
-        "post_code": "15056",
-        "name": "Ait Yahia Moussa",
-        "ar_name": "أيت يحي موسى",
-        "longitude": "36.6423405",
-        "latitude": "3.8041329",
-        "code": "15"
-    },
-    {
-        "id": "543",
-        "post_code": "15057",
-        "name": "Souk El Thenine",
-        "ar_name": "سوق الإثنين",
-        "longitude": "36.6035414",
-        "latitude": "3.9314975",
-        "code": "15"
-    },
-    {
-        "id": "544",
-        "post_code": "15058",
-        "name": "Ait Khelil",
-        "ar_name": "أيت خليلي",
-        "longitude": "36.6760946",
-        "latitude": "4.2387675",
-        "code": "15"
-    },
-    {
-        "id": "545",
-        "post_code": "15059",
-        "name": "Sidi Naamane",
-        "ar_name": "سيدي نعمان",
-        "longitude": "36.7771939",
-        "latitude": "3.9208277",
-        "code": "15"
-    },
-    {
-        "id": "546",
-        "post_code": "15060",
-        "name": "Iboudraren",
-        "ar_name": "أبودرارن",
-        "longitude": "36.5115392",
-        "latitude": "4.1786226",
-        "code": "15"
-    },
-    {
-        "id": "547",
-        "post_code": "15061",
-        "name": "Agouni Gueghrane",
-        "ar_name": "آقنى قغران",
-        "longitude": "36.5042565",
-        "latitude": "4.0879622",
-        "code": "15"
-    },
-    {
-        "id": "548",
-        "post_code": "15062",
-        "name": "Mizrana",
-        "ar_name": "مزرانة",
-        "longitude": "36.8631777",
-        "latitude": "4.0352004",
-        "code": "15"
-    },
-    {
-        "id": "549",
-        "post_code": "15063",
-        "name": "Imsouhal",
-        "ar_name": "إمسوحال",
-        "longitude": "36.5781164",
-        "latitude": "4.3630843",
-        "code": "15"
-    },
-    {
-        "id": "550",
-        "post_code": "15064",
-        "name": "Tadmait",
-        "ar_name": "تادمايت",
-        "longitude": "36.7209434",
-        "latitude": "3.8253437",
-        "code": "15"
-    },
-    {
-        "id": "551",
-        "post_code": "15065",
-        "name": "Ait Bouadou",
-        "ar_name": "أيت بوعدو",
-        "longitude": "36.5074837",
-        "latitude": "4.0215722",
-        "code": "15"
-    },
-    {
-        "id": "552",
-        "post_code": "15066",
-        "name": "Assi Youcef",
-        "ar_name": "أسي يوسف",
-        "longitude": "36.5028276",
-        "latitude": "3.9916789",
-        "code": "15"
-    },
-    {
-        "id": "553",
-        "post_code": "15067",
-        "name": "Ait Toudert",
-        "ar_name": "أيت تودرت",
-        "longitude": "36.5308324",
-        "latitude": "4.1318418",
-        "code": "15"
-    },
-    {
-        "id": "554",
-        "post_code": "16001",
-        "name": "Alger Centre",
-        "ar_name": "الجزائر الوسطى",
-        "longitude": "36.7681618",
-        "latitude": "3.0404258",
-        "code": "16"
-    },
-    {
-        "id": "555",
-        "post_code": "16002",
-        "name": "Sidi Mhamed",
-        "ar_name": "سيدي امحمد",
-        "longitude": "36.759285",
-        "latitude": "3.0467857",
-        "code": "16"
-    },
-    {
-        "id": "556",
-        "post_code": "16003",
-        "name": "El Madania",
-        "ar_name": "المدنية",
-        "longitude": "36.7422816",
-        "latitude": "3.0604942",
-        "code": "16"
-    },
-    {
-        "id": "557",
-        "post_code": "16004",
-        "name": "Belouizdad",
-        "ar_name": "بلوزداد",
-        "longitude": "36.7504548",
-        "latitude": "3.0639145",
-        "code": "16"
-    },
-    {
-        "id": "558",
-        "post_code": "16005",
-        "name": "Bab El Oued",
-        "ar_name": "باب الواد",
-        "longitude": "36.7917802",
-        "latitude": "3.0445432",
-        "code": "16"
-    },
-    {
-        "id": "559",
-        "post_code": "16006",
-        "name": "Bologhine",
-        "ar_name": "بولوغين",
-        "longitude": "36.8039256",
-        "latitude": "3.0296193",
-        "code": "16"
-    },
-    {
-        "id": "560",
-        "post_code": "16007",
-        "name": "Casbah",
-        "ar_name": "القصبة",
-        "longitude": "36.7847303",
-        "latitude": "3.0504945",
-        "code": "16"
-    },
-    {
-        "id": "561",
-        "post_code": "16008",
-        "name": "Oued Koriche",
-        "ar_name": "وادي قريش",
-        "longitude": "36.7850295",
-        "latitude": "3.0243678",
-        "code": "16"
-    },
-    {
-        "id": "562",
-        "post_code": "16009",
-        "name": "Bir Mourad Rais",
-        "ar_name": "بير مراد رايس",
-        "longitude": "36.730271",
-        "latitude": "3.0257462",
-        "code": "16"
-    },
-    {
-        "id": "563",
-        "post_code": "16010",
-        "name": "El Biar",
-        "ar_name": "الآبيار",
-        "longitude": "36.7671977",
-        "latitude": "3.0119382",
-        "code": "16"
-    },
-    {
-        "id": "564",
-        "post_code": "16011",
-        "name": "Bouzareah",
-        "ar_name": "بوزريعة",
-        "longitude": "36.7891132",
-        "latitude": "2.9938601",
-        "code": "16"
-    },
-    {
-        "id": "565",
-        "post_code": "16012",
-        "name": "Birkhadem",
-        "ar_name": "بئر خادم",
-        "longitude": "36.7146375",
-        "latitude": "3.0311349",
-        "code": "16"
-    },
-    {
-        "id": "566",
-        "post_code": "16013",
-        "name": "El Harrach",
-        "ar_name": "الحراش",
-        "longitude": "36.7120702",
-        "latitude": "3.1217531",
-        "code": "16"
-    },
-    {
-        "id": "567",
-        "post_code": "16014",
-        "name": "Baraki",
-        "ar_name": "براقي",
-        "longitude": "36.6701186",
-        "latitude": "3.0635219",
-        "code": "16"
-    },
-    {
-        "id": "568",
-        "post_code": "16015",
-        "name": "Oued Smar",
-        "ar_name": "وادي سمار",
-        "longitude": "36.7098628",
-        "latitude": "3.1596368",
-        "code": "16"
-    },
-    {
-        "id": "569",
-        "post_code": "16016",
-        "name": "Bourouba",
-        "ar_name": "بوروبة",
-        "longitude": "36.7166963",
-        "latitude": "3.0955372",
-        "code": "16"
-    },
-    {
-        "id": "570",
-        "post_code": "16017",
-        "name": "Hussein Dey",
-        "ar_name": "حسين داي",
-        "longitude": "36.7402922",
-        "latitude": "3.0914013",
-        "code": "16"
-    },
-    {
-        "id": "571",
-        "post_code": "16018",
-        "name": "Kouba",
-        "ar_name": "القبة",
-        "longitude": "36.7241467",
-        "latitude": "3.0598317",
-        "code": "16"
-    },
-    {
-        "id": "572",
-        "post_code": "16019",
-        "name": "Bachedjerah",
-        "ar_name": "باش جراح",
-        "longitude": "36.723121",
-        "latitude": "3.0940781",
-        "code": "16"
-    },
-    {
-        "id": "573",
-        "post_code": "16020",
-        "name": "Dar El Beida",
-        "ar_name": "الدار البيضاء",
-        "longitude": "36.7024372",
-        "latitude": "3.1766575",
-        "code": "16"
-    },
-    {
-        "id": "574",
-        "post_code": "16021",
-        "name": "Bab Azzouar",
-        "ar_name": "باب الزوار",
-        "longitude": "36.7228311",
-        "latitude": "3.1689279",
-        "code": "16"
-    },
-    {
-        "id": "575",
-        "post_code": "16022",
-        "name": "Ben Aknoun",
-        "ar_name": "بن عكنون",
-        "longitude": "36.7571759",
-        "latitude": "2.9946244",
-        "code": "16"
-    },
-    {
-        "id": "576",
-        "post_code": "16023",
-        "name": "Dely Ibrahim",
-        "ar_name": "دالي ابراهيم",
-        "longitude": "36.7567281",
-        "latitude": "2.962446",
-        "code": "16"
-    },
-    {
-        "id": "577",
-        "post_code": "16024",
-        "name": "El Hammamet",
-        "ar_name": "الحمامات",
-        "longitude": "36.8024015",
-        "latitude": "2.9559659",
-        "code": "16"
-    },
-    {
-        "id": "578",
-        "post_code": "16025",
-        "name": "Rais Hamidou",
-        "ar_name": "الرايس حميدو",
-        "longitude": "36.8077359",
-        "latitude": "2.9921434",
-        "code": "16"
-    },
-    {
-        "id": "579",
-        "post_code": "16026",
-        "name": "Djasr Kasentina",
-        "ar_name": "جسر قسنطينة",
-        "longitude": "36.6927735",
-        "latitude": "3.0610977",
-        "code": "16"
-    },
-    {
-        "id": "580",
-        "post_code": "16027",
-        "name": "El Mouradia",
-        "ar_name": "المرادية",
-        "longitude": "36.7490236",
-        "latitude": "3.0384439",
-        "code": "16"
-    },
-    {
-        "id": "581",
-        "post_code": "16028",
-        "name": "Hydra",
-        "ar_name": "حيدرة",
-        "longitude": "36.7407683",
-        "latitude": "3.0079149",
-        "code": "16"
-    },
-    {
-        "id": "582",
-        "post_code": "16029",
-        "name": "Mohammadia",
-        "ar_name": "المحمدية",
-        "longitude": "36.7353224",
-        "latitude": "3.1359743",
-        "code": "16"
-    },
-    {
-        "id": "583",
-        "post_code": "16030",
-        "name": "Bordj El Kiffan",
-        "ar_name": "برج الكيفان",
-        "longitude": "36.7533604",
-        "latitude": "3.1868338",
-        "code": "16"
-    },
-    {
-        "id": "584",
-        "post_code": "16031",
-        "name": "El Magharia",
-        "ar_name": "المقرية",
-        "longitude": "36.7305475",
-        "latitude": "3.1026854",
-        "code": "16"
-    },
-    {
-        "id": "585",
-        "post_code": "16032",
-        "name": "Beni Messous",
-        "ar_name": "بني مسوس",
-        "longitude": "36.7844574",
-        "latitude": "2.9591524",
-        "code": "16"
-    },
-    {
-        "id": "586",
-        "post_code": "16033",
-        "name": "Les Eucalyptus",
-        "ar_name": "الكليتوس",
-        "longitude": "36.668168",
-        "latitude": "3.1306093",
-        "code": "16"
-    },
-    {
-        "id": "587",
-        "post_code": "16034",
-        "name": "Birtouta",
-        "ar_name": "بئر توتة",
-        "longitude": "36.6424589",
-        "latitude": "2.9745906",
-        "code": "16"
-    },
-    {
-        "id": "588",
-        "post_code": "16035",
-        "name": "Tassala El Merdja",
-        "ar_name": "تسالة المرجة",
-        "longitude": "36.6277781",
-        "latitude": "2.8848547",
-        "code": "16"
-    },
-    {
-        "id": "589",
-        "post_code": "16036",
-        "name": "Ouled Chebel",
-        "ar_name": "أولاد الشبل",
-        "longitude": "36.6082831",
-        "latitude": "2.9737753",
-        "code": "16"
-    },
-    {
-        "id": "590",
-        "post_code": "16037",
-        "name": "Sidi Moussa",
-        "ar_name": "سيدي موسى",
-        "longitude": "36.6162931",
-        "latitude": "3.0682748",
-        "code": "16"
-    },
-    {
-        "id": "591",
-        "post_code": "16038",
-        "name": "Ain Taya",
-        "ar_name": "عين طاية",
-        "longitude": "36.7880614",
-        "latitude": "3.2742797",
-        "code": "16"
-    },
-    {
-        "id": "592",
-        "post_code": "16039",
-        "name": "Bordj El Bahri",
-        "ar_name": "برج البحري",
-        "longitude": "36.7880016",
-        "latitude": "3.2321689",
-        "code": "16"
-    },
-    {
-        "id": "593",
-        "post_code": "16040",
-        "name": "Marsa",
-        "ar_name": "المرسى",
-        "longitude": "36.8081013",
-        "latitude": "3.2263432",
-        "code": "16"
-    },
-    {
-        "id": "594",
-        "post_code": "16041",
-        "name": "Haraoua",
-        "ar_name": "هراوة",
-        "longitude": "36.7726194",
-        "latitude": "3.3006834",
-        "code": "16"
-    },
-    {
-        "id": "595",
-        "post_code": "16042",
-        "name": "Rouiba",
-        "ar_name": "رويبة",
-        "longitude": "36.7375877",
-        "latitude": "3.2491683",
-        "code": "16"
-    },
-    {
-        "id": "596",
-        "post_code": "16043",
-        "name": "Reghaia",
-        "ar_name": "الرغاية",
-        "longitude": "36.7538466",
-        "latitude": "3.312152",
-        "code": "16"
-    },
-    {
-        "id": "597",
-        "post_code": "16044",
-        "name": "Ain Benian",
-        "ar_name": "عين بنيان",
-        "longitude": "36.7941279",
-        "latitude": "2.9099606",
-        "code": "16"
-    },
-    {
-        "id": "598",
-        "post_code": "16045",
-        "name": "Staoueli",
-        "ar_name": "سطاوالي",
-        "longitude": "36.7426531",
-        "latitude": "2.8372776",
-        "code": "16"
-    },
-    {
-        "id": "599",
-        "post_code": "16046",
-        "name": "Zeralda",
-        "ar_name": "زرالدة",
-        "longitude": "36.6995503",
-        "latitude": "2.8049892",
-        "code": "16"
-    },
-    {
-        "id": "600",
-        "post_code": "16047",
-        "name": "Mahelma",
-        "ar_name": "محالمة",
-        "longitude": "36.6721514",
-        "latitude": "2.8158789",
-        "code": "16"
-    },
-    {
-        "id": "601",
-        "post_code": "16048",
-        "name": "Rahmania",
-        "ar_name": "رحمانية",
-        "longitude": "36.6805606",
-        "latitude": "2.8805201",
-        "code": "16"
-    },
-    {
-        "id": "602",
-        "post_code": "16049",
-        "name": "Souidania",
-        "ar_name": "سويدانية",
-        "longitude": "36.7112067",
-        "latitude": "2.8684395",
-        "code": "16"
-    },
-    {
-        "id": "603",
-        "post_code": "16050",
-        "name": "Cheraga",
-        "ar_name": "شراقة",
-        "longitude": "36.7596098",
-        "latitude": "2.8933198",
-        "code": "16"
-    },
-    {
-        "id": "604",
-        "post_code": "16051",
-        "name": "Ouled Fayet",
-        "ar_name": "أولاد فايت",
-        "longitude": "36.725135",
-        "latitude": "2.9078787",
-        "code": "16"
-    },
-    {
-        "id": "605",
-        "post_code": "16052",
-        "name": "El Achour",
-        "ar_name": "العاشور",
-        "longitude": "36.7269712",
-        "latitude": "2.9530471",
-        "code": "16"
-    },
-    {
-        "id": "606",
-        "post_code": "16053",
-        "name": "Draria",
-        "ar_name": "درارية",
-        "longitude": "36.7132847",
-        "latitude": "2.9677778",
-        "code": "16"
-    },
-    {
-        "id": "607",
-        "post_code": "16054",
-        "name": "Douera",
-        "ar_name": "دويرة",
-        "longitude": "36.6681547",
-        "latitude": "2.8979868",
-        "code": "16"
-    },
-    {
-        "id": "608",
-        "post_code": "16055",
-        "name": "Baba Hassen",
-        "ar_name": "بابا حسن",
-        "longitude": "36.6959627",
-        "latitude": "2.9591094",
-        "code": "16"
-    },
-    {
-        "id": "609",
-        "post_code": "16056",
-        "name": "Khracia",
-        "ar_name": "خرايسية",
-        "longitude": "36.6691421",
-        "latitude": "2.9639691",
-        "code": "16"
-    },
-    {
-        "id": "610",
-        "post_code": "16057",
-        "name": "Saoula",
-        "ar_name": "السحاولة",
-        "longitude": "36.6866758",
-        "latitude": "3.0056614",
-        "code": "16"
-    },
-    {
-        "id": "611",
-        "post_code": "17001",
-        "name": "Djelfa",
-        "ar_name": "الجلفة",
-        "longitude": "34.6741226",
-        "latitude": "3.2504381",
-        "code": "17"
-    },
-    {
-        "id": "612",
-        "post_code": "17002",
-        "name": "Moudjebara",
-        "ar_name": "مجبرة",
-        "longitude": "34.5040006",
-        "latitude": "3.4597278",
-        "code": "17"
-    },
-    {
-        "id": "613",
-        "post_code": "17003",
-        "name": "El Guedid",
-        "ar_name": "القديد",
-        "longitude": "34.646898",
-        "latitude": "2.6057338",
-        "code": "17"
-    },
-    {
-        "id": "614",
-        "post_code": "17004",
-        "name": "Hassi Bahbah",
-        "ar_name": "حاسي بحبح",
-        "longitude": "35.0764297",
-        "latitude": "2.9959141",
-        "code": "17"
-    },
-    {
-        "id": "615",
-        "post_code": "17005",
-        "name": "Ain Maabed",
-        "ar_name": "عين معبد",
-        "longitude": "34.8059782",
-        "latitude": "3.1152247",
-        "code": "17"
-    },
-    {
-        "id": "616",
-        "post_code": "17006",
-        "name": "Sed Rahal",
-        "ar_name": "سد رحال",
-        "longitude": "33.9518497",
-        "latitude": "3.2188654",
-        "code": "17"
-    },
-    {
-        "id": "617",
-        "post_code": "17007",
-        "name": "Feidh El Botma",
-        "ar_name": "فيض البطمة",
-        "longitude": "34.5303577",
-        "latitude": "3.7719368",
-        "code": "17"
-    },
-    {
-        "id": "618",
-        "post_code": "17008",
-        "name": "Birine",
-        "ar_name": "البيرين",
-        "longitude": "35.6315904",
-        "latitude": "3.2060765",
-        "code": "17"
-    },
-    {
-        "id": "619",
-        "post_code": "17009",
-        "name": "Bouira Lahdeb",
-        "ar_name": "بويرة الأحداب",
-        "longitude": "35.2444181",
-        "latitude": "3.1338179",
-        "code": "17"
-    },
-    {
-        "id": "620",
-        "post_code": "17010",
-        "name": "Zaccar",
-        "ar_name": "زكار",
-        "longitude": "34.4305669",
-        "latitude": "3.3213472",
-        "code": "17"
-    },
-    {
-        "id": "621",
-        "post_code": "17011",
-        "name": "El Khemis",
-        "ar_name": "الخميس",
-        "longitude": "35.2876616",
-        "latitude": "2.5915396",
-        "code": "17"
-    },
-    {
-        "id": "622",
-        "post_code": "17012",
-        "name": "Sidi Baizid",
-        "ar_name": "سيدي بايزيد",
-        "longitude": "35.0582537",
-        "latitude": "3.425889",
-        "code": "17"
-    },
-    {
-        "id": "623",
-        "post_code": "17013",
-        "name": "M'Liliha",
-        "ar_name": "المليليحة",
-        "longitude": "34.7546461",
-        "latitude": "3.4761",
-        "code": "17"
-    },
-    {
-        "id": "624",
-        "post_code": "17014",
-        "name": "El Idrissia",
-        "ar_name": "الإدريسية",
-        "longitude": "34.4515826",
-        "latitude": "2.5095583",
-        "code": "17"
-    },
-    {
-        "id": "625",
-        "post_code": "17015",
-        "name": "Douis",
-        "ar_name": "الدويس",
-        "longitude": "34.3739232",
-        "latitude": "2.6978792",
-        "code": "17"
-    },
-    {
-        "id": "626",
-        "post_code": "17016",
-        "name": "Hassi El Euch",
-        "ar_name": "حاسي العش",
-        "longitude": "35.1540377",
-        "latitude": "3.2426298",
-        "code": "17"
-    },
-    {
-        "id": "627",
-        "post_code": "17017",
-        "name": "Messaad",
-        "ar_name": "مسعد",
-        "longitude": "34.1658932",
-        "latitude": "3.4682458",
-        "code": "17"
-    },
-    {
-        "id": "628",
-        "post_code": "17018",
-        "name": "Guettara",
-        "ar_name": "قتارة",
-        "longitude": "33.1614178",
-        "latitude": "4.6788776",
-        "code": "17"
-    },
-    {
-        "id": "629",
-        "post_code": "17019",
-        "name": "Sidi Ladjel",
-        "ar_name": "سيدي لعجال",
-        "longitude": "35.4433626",
-        "latitude": "2.4941109",
-        "code": "17"
-    },
-    {
-        "id": "630",
-        "post_code": "17020",
-        "name": "Had Sahary",
-        "ar_name": "حد الصحاري",
-        "longitude": "35.3538344",
-        "latitude": "3.3463044",
-        "code": "17"
-    },
-    {
-        "id": "631",
-        "post_code": "17021",
-        "name": "Guernini",
-        "ar_name": "القرنيني",
-        "longitude": "35.2001485",
-        "latitude": "2.6780462",
-        "code": "17"
-    },
-    {
-        "id": "632",
-        "post_code": "17022",
-        "name": "Selmana",
-        "ar_name": "سلمانة",
-        "longitude": "34.1762848",
-        "latitude": "3.5904298",
-        "code": "17"
-    },
-    {
-        "id": "633",
-        "post_code": "17023",
-        "name": "Ain Chouhada",
-        "ar_name": "عين الشهداء",
-        "longitude": "34.2421928",
-        "latitude": "2.510569",
-        "code": "17"
-    },
-    {
-        "id": "634",
-        "post_code": "17024",
-        "name": "Oum Laadham",
-        "ar_name": "ام العظام",
-        "longitude": "33.7195744",
-        "latitude": "4.5251226",
-        "code": "17"
-    },
-    {
-        "id": "635",
-        "post_code": "17025",
-        "name": "Dar Chouikh",
-        "ar_name": "دار الشيوخ",
-        "longitude": "34.8946674",
-        "latitude": "3.4691904",
-        "code": "17"
-    },
-    {
-        "id": "636",
-        "post_code": "17026",
-        "name": "Charef",
-        "ar_name": "الشارف",
-        "longitude": "34.619593",
-        "latitude": "2.792244",
-        "code": "17"
-    },
-    {
-        "id": "637",
-        "post_code": "17027",
-        "name": "Beni Yacoub",
-        "ar_name": "بن يعقوب",
-        "longitude": "34.4666662",
-        "latitude": "2.7745782",
-        "code": "17"
-    },
-    {
-        "id": "638",
-        "post_code": "17028",
-        "name": "Zaafrane",
-        "ar_name": "الزعفران",
-        "longitude": "34.8540509",
-        "latitude": "2.8442416",
-        "code": "17"
-    },
-    {
-        "id": "639",
-        "post_code": "17029",
-        "name": "Deldoul",
-        "ar_name": "دلدول",
-        "longitude": "34.6672467",
-        "latitude": "3.2993118",
-        "code": "17"
-    },
-    {
-        "id": "640",
-        "post_code": "17030",
-        "name": "Ain El Ibel",
-        "ar_name": "عين الابل",
-        "longitude": "34.3539985",
-        "latitude": "3.2157325",
-        "code": "17"
-    },
-    {
-        "id": "641",
-        "post_code": "17031",
-        "name": "Ain Oussera",
-        "ar_name": "عين وسارة",
-        "longitude": "35.4466401",
-        "latitude": "2.8711647",
-        "code": "17"
-    },
-    {
-        "id": "642",
-        "post_code": "17032",
-        "name": "Benhar",
-        "ar_name": "بنهار",
-        "longitude": "35.4848362",
-        "latitude": "3.0055036",
-        "code": "17"
-    },
-    {
-        "id": "643",
-        "post_code": "17033",
-        "name": "Hassi Fedoul",
-        "ar_name": "حاسي فدول",
-        "longitude": "35.4392023",
-        "latitude": "2.1992396",
-        "code": "17"
-    },
-    {
-        "id": "644",
-        "post_code": "17034",
-        "name": "Amourah",
-        "ar_name": "عمورة",
-        "longitude": "34.3553852",
-        "latitude": "3.8660287",
-        "code": "17"
-    },
-    {
-        "id": "645",
-        "post_code": "17035",
-        "name": "Ain Fekka",
-        "ar_name": "عين افقة",
-        "longitude": "35.429667",
-        "latitude": "3.4118023",
-        "code": "17"
-    },
-    {
-        "id": "646",
-        "post_code": "17036",
-        "name": "Tadmit",
-        "ar_name": "تعضميت",
-        "longitude": "34.2833322",
-        "latitude": "2.9745782",
-        "code": "17"
-    },
-    {
-        "id": "647",
-        "post_code": "18001",
-        "name": "Jijel",
-        "ar_name": "جيجل",
-        "longitude": "36.7962663",
-        "latitude": "5.715465",
-        "code": "18"
-    },
-    {
-        "id": "648",
-        "post_code": "18002",
-        "name": "Erraguene",
-        "ar_name": "إراڨن",
-        "longitude": "36.7962714",
-        "latitude": "5.7504845",
-        "code": "18"
-    },
-    {
-        "id": "649",
-        "post_code": "18003",
-        "name": "El Aouana",
-        "ar_name": "العوانة",
-        "longitude": "36.7383739",
-        "latitude": "5.5575774",
-        "code": "18"
-    },
-    {
-        "id": "650",
-        "post_code": "18004",
-        "name": "Ziamma Mansouriah",
-        "ar_name": "زيامة منصورية",
-        "longitude": "36.6501629",
-        "latitude": "5.4284118",
-        "code": "18"
-    },
-    {
-        "id": "651",
-        "post_code": "18005",
-        "name": "Taher",
-        "ar_name": "الطاهير",
-        "longitude": "36.7775912",
-        "latitude": "5.8348749",
-        "code": "18"
-    },
-    {
-        "id": "652",
-        "post_code": "18006",
-        "name": "Emir Abdelkader",
-        "ar_name": "الامير عبد القادر",
-        "longitude": "36.7557894",
-        "latitude": "5.778586",
-        "code": "18"
-    },
-    {
-        "id": "653",
-        "post_code": "18007",
-        "name": "Chekfa",
-        "ar_name": "الشقفة",
-        "longitude": "36.7728541",
-        "latitude": "5.9468436",
-        "code": "18"
-    },
-    {
-        "id": "654",
-        "post_code": "18008",
-        "name": "Chahna",
-        "ar_name": "الشحنة",
-        "longitude": "36.6772642",
-        "latitude": "5.9446441",
-        "code": "18"
-    },
-    {
-        "id": "655",
-        "post_code": "18009",
-        "name": "El Milia",
-        "ar_name": "الميلية",
-        "longitude": "36.7469209",
-        "latitude": "6.2451046",
-        "code": "18"
-    },
-    {
-        "id": "656",
-        "post_code": "18010",
-        "name": "Sidi Maarouf",
-        "ar_name": "سيدي معروف",
-        "longitude": "36.6373452",
-        "latitude": "6.2617134",
-        "code": "18"
-    },
-    {
-        "id": "657",
-        "post_code": "18011",
-        "name": "Settara",
-        "ar_name": "السطارة",
-        "longitude": "36.7183649",
-        "latitude": "6.324544",
-        "code": "18"
-    },
-    {
-        "id": "658",
-        "post_code": "18012",
-        "name": "El Ancer",
-        "ar_name": "العنصر",
-        "longitude": "36.7982581",
-        "latitude": "6.1523866",
-        "code": "18"
-    },
-    {
-        "id": "659",
-        "post_code": "18013",
-        "name": "Sidi Abdelaziz",
-        "ar_name": "سيدي عبد العزيز",
-        "longitude": "36.8535179",
-        "latitude": "6.0439396",
-        "code": "18"
-    },
-    {
-        "id": "660",
-        "post_code": "18014",
-        "name": "Kaous",
-        "ar_name": "قاوس",
-        "longitude": "36.7590016",
-        "latitude": "5.7313651",
-        "code": "18"
-    },
-    {
-        "id": "661",
-        "post_code": "18015",
-        "name": "Ghebala",
-        "ar_name": "غبالة",
-        "longitude": "36.6290636",
-        "latitude": "6.3831317",
-        "code": "18"
-    },
-    {
-        "id": "662",
-        "post_code": "18016",
-        "name": "Bouraoui Belhadef",
-        "ar_name": "بوراوي بلهادف",
-        "longitude": "36.6979904",
-        "latitude": "6.0968648",
-        "code": "18"
-    },
-    {
-        "id": "663",
-        "post_code": "18017",
-        "name": "Djmila",
-        "ar_name": "جيملة",
-        "longitude": "36.5827122",
-        "latitude": "5.8287487",
-        "code": "18"
-    },
-    {
-        "id": "664",
-        "post_code": "18018",
-        "name": "Selma Benziada",
-        "ar_name": "سلمى بن زيادة",
-        "longitude": "36.6505425",
-        "latitude": "5.5628345",
-        "code": "18"
-    },
-    {
-        "id": "665",
-        "post_code": "18019",
-        "name": "Boussif Ouled Askeur",
-        "ar_name": "أولاد عسكر",
-        "longitude": "36.6455063",
-        "latitude": "6.0109806",
-        "code": "18"
-    },
-    {
-        "id": "666",
-        "post_code": "18020",
-        "name": "El Kennar Nouchfi",
-        "ar_name": "القنار",
-        "longitude": "36.8243495",
-        "latitude": "5.9558128",
-        "code": "18"
-    },
-    {
-        "id": "667",
-        "post_code": "18021",
-        "name": "Ouled Yahia Khadrouch",
-        "ar_name": "اولاد يحيى",
-        "longitude": "36.7223204",
-        "latitude": "6.1822341",
-        "code": "18"
-    },
-    {
-        "id": "668",
-        "post_code": "18022",
-        "name": "Boudria Beni Yadjis",
-        "ar_name": "بودريعة بن ياجيس",
-        "longitude": "36.5902781",
-        "latitude": "5.6954215",
-        "code": "18"
-    },
-    {
-        "id": "669",
-        "post_code": "18023",
-        "name": "Kemir Oued Adjoul",
-        "ar_name": "بني بلعيد",
-        "longitude": "36.8774044",
-        "latitude": "6.1179255",
-        "code": "18"
-    },
-    {
-        "id": "670",
-        "post_code": "18024",
-        "name": "Texena",
-        "ar_name": "تاكسنة",
-        "longitude": "36.6702895",
-        "latitude": "5.6987689",
-        "code": "18"
-    },
-    {
-        "id": "671",
-        "post_code": "18025",
-        "name": "Djemaa Beni Habibi",
-        "ar_name": "الجمعة بني حبيبي",
-        "longitude": "36.809857",
-        "latitude": "6.1050402",
-        "code": "18"
-    },
-    {
-        "id": "672",
-        "post_code": "18026",
-        "name": "Bordj T'her",
-        "ar_name": "برج الطهر",
-        "longitude": "36.7484784",
-        "latitude": "6.0248638",
-        "code": "18"
-    },
-    {
-        "id": "673",
-        "post_code": "18027",
-        "name": "Ouled Rabah",
-        "ar_name": "ولاد رابح",
-        "longitude": "36.5974059",
-        "latitude": "6.1619139",
-        "code": "18"
-    },
-    {
-        "id": "674",
-        "post_code": "18028",
-        "name": "Ouadjana",
-        "ar_name": "وجانة",
-        "longitude": "36.675",
-        "latitude": "5.8128487",
-        "code": "18"
-    },
-    {
-        "id": "675",
-        "post_code": "19001",
-        "name": "Setif",
-        "ar_name": "سطيف‎",
-        "longitude": "36.1904969",
-        "latitude": "5.350173",
-        "code": "19"
-    },
-    {
-        "id": "676",
-        "post_code": "19002",
-        "name": "Ain El Kebira",
-        "ar_name": "عين الكبيرة",
-        "longitude": "36.3773932",
-        "latitude": "5.4503964",
-        "code": "19"
-    },
-    {
-        "id": "677",
-        "post_code": "19003",
-        "name": "Beni Aziz",
-        "ar_name": "بني عزيز",
-        "longitude": "36.4732335",
-        "latitude": "5.5735848",
-        "code": "19"
-    },
-    {
-        "id": "678",
-        "post_code": "19004",
-        "name": "Ouled Sidi Ahmed",
-        "ar_name": "أولاد سي أحمد",
-        "longitude": "35.907478",
-        "latitude": "5.1083824",
-        "code": "19"
-    },
-    {
-        "id": "679",
-        "post_code": "19005",
-        "name": "Boutaleb",
-        "ar_name": "بوطالب",
-        "longitude": "35.6858444",
-        "latitude": "5.1806519",
-        "code": "19"
-    },
-    {
-        "id": "680",
-        "post_code": "19006",
-        "name": "Ain Roua",
-        "ar_name": "عين الروى",
-        "longitude": "36.3210122",
-        "latitude": "5.1291535",
-        "code": "19"
-    },
-    {
-        "id": "681",
-        "post_code": "19007",
-        "name": "Draa Kebila",
-        "ar_name": "ذراع قبيلة",
-        "longitude": "36.4219572",
-        "latitude": "4.9356912",
-        "code": "19"
-    },
-    {
-        "id": "682",
-        "post_code": "19008",
-        "name": "Bir El Arch",
-        "ar_name": "بئر العرش",
-        "longitude": "36.1012237",
-        "latitude": "5.7440447",
-        "code": "19"
-    },
-    {
-        "id": "683",
-        "post_code": "19009",
-        "name": "Beni Chebana",
-        "ar_name": "بني شبانة",
-        "longitude": "36.4681034",
-        "latitude": "4.8420284",
-        "code": "19"
-    },
-    {
-        "id": "684",
-        "post_code": "19010",
-        "name": "Ouled Tebben",
-        "ar_name": "أولاد تبــان",
-        "longitude": "35.787273",
-        "latitude": "5.0449536",
-        "code": "19"
-    },
-    {
-        "id": "685",
-        "post_code": "19011",
-        "name": "Hamma",
-        "ar_name": "حــامة",
-        "longitude": "35.6877227",
-        "latitude": "5.31252",
-        "code": "19"
-    },
-    {
-        "id": "686",
-        "post_code": "19012",
-        "name": "Maaouia",
-        "ar_name": "معـاويـة",
-        "longitude": "36.3748054",
-        "latitude": "5.6401895",
-        "code": "19"
-    },
-    {
-        "id": "687",
-        "post_code": "19013",
-        "name": "Ain Legraj",
-        "ar_name": "عين لڨراج",
-        "longitude": "36.4102318",
-        "latitude": "4.7998641",
-        "code": "19"
-    },
-    {
-        "id": "688",
-        "post_code": "19014",
-        "name": "Ain Abessa",
-        "ar_name": "عين عباسـة",
-        "longitude": "36.3045155",
-        "latitude": "5.1522342",
-        "code": "19"
-    },
-    {
-        "id": "689",
-        "post_code": "19015",
-        "name": "Dehamcha",
-        "ar_name": "الدهامشة",
-        "longitude": "36.3786819",
-        "latitude": "5.5425141",
-        "code": "19"
-    },
-    {
-        "id": "690",
-        "post_code": "19016",
-        "name": "Babor",
-        "ar_name": "بابور",
-        "longitude": "36.5019013",
-        "latitude": "5.3674976",
-        "code": "19"
-    },
-    {
-        "id": "691",
-        "post_code": "19017",
-        "name": "Guidjel",
-        "ar_name": "قجــال",
-        "longitude": "36.0807516",
-        "latitude": "5.4235957",
-        "code": "19"
-    },
-    {
-        "id": "692",
-        "post_code": "19018",
-        "name": "Ain Lahdjar",
-        "ar_name": "عين لحجـر",
-        "longitude": "35.960213",
-        "latitude": "5.4198543",
-        "code": "19"
-    },
-    {
-        "id": "693",
-        "post_code": "19019",
-        "name": "Bousselam",
-        "ar_name": "بوسلام",
-        "longitude": "36.4937736",
-        "latitude": "4.9369786",
-        "code": "19"
-    },
-    {
-        "id": "694",
-        "post_code": "19020",
-        "name": "El Eulma",
-        "ar_name": "العلمة",
-        "longitude": "36.1657394",
-        "latitude": "5.620148",
-        "code": "19"
-    },
-    {
-        "id": "695",
-        "post_code": "19021",
-        "name": "Djemila",
-        "ar_name": "جميلـة",
-        "longitude": "36.3469977",
-        "latitude": "5.6877397",
-        "code": "19"
-    },
-    {
-        "id": "696",
-        "post_code": "19022",
-        "name": "Beni Ouartilane",
-        "ar_name": "بني ورتيلان",
-        "longitude": "36.4307623",
-        "latitude": "4.7427652",
-        "code": "19"
-    },
-    {
-        "id": "697",
-        "post_code": "19023",
-        "name": "Rosfa",
-        "ar_name": "الرصفة",
-        "longitude": "35.7790515",
-        "latitude": "5.182669",
-        "code": "19"
-    },
-    {
-        "id": "698",
-        "post_code": "19024",
-        "name": "Ouled Addouane",
-        "ar_name": "أولاد عدوان",
-        "longitude": "36.3363273",
-        "latitude": "5.4260439",
-        "code": "19"
-    },
-    {
-        "id": "699",
-        "post_code": "19025",
-        "name": "Belaa",
-        "ar_name": "البلاعة",
-        "longitude": "36.2217494",
-        "latitude": "5.7975172",
-        "code": "19"
-    },
-    {
-        "id": "700",
-        "post_code": "19026",
-        "name": "Ain Arnat",
-        "ar_name": "عين أرنـات",
-        "longitude": "36.1756548",
-        "latitude": "5.173013",
-        "code": "19"
-    },
-    {
-        "id": "701",
-        "post_code": "19027",
-        "name": "Amoucha",
-        "ar_name": "عموشة",
-        "longitude": "36.3748316",
-        "latitude": "5.3447173",
-        "code": "19"
-    },
-    {
-        "id": "702",
-        "post_code": "19028",
-        "name": "Ain Oulmane",
-        "ar_name": "عين ولمان",
-        "longitude": "35.9239262",
-        "latitude": "5.2415487",
-        "code": "19"
-    },
-    {
-        "id": "703",
-        "post_code": "19029",
-        "name": "Beidha Bordj",
-        "ar_name": "بيضاء برج",
-        "longitude": "35.8379281",
-        "latitude": "5.5996773",
-        "code": "19"
-    },
-    {
-        "id": "704",
-        "post_code": "19030",
-        "name": "Bouandas",
-        "ar_name": "بوعنداس",
-        "longitude": "36.5042094",
-        "latitude": "5.0698679",
-        "code": "19"
-    },
-    {
-        "id": "705",
-        "post_code": "19031",
-        "name": "Bazer Sakhra",
-        "ar_name": "بازر الصخرة",
-        "longitude": "36.0795448",
-        "latitude": "5.6140969",
-        "code": "19"
-    },
-    {
-        "id": "706",
-        "post_code": "19032",
-        "name": "Hammam Essokhna",
-        "ar_name": "حمــام السخنة",
-        "longitude": "35.9499435",
-        "latitude": "5.6908217",
-        "code": "19"
-    },
-    {
-        "id": "707",
-        "post_code": "19033",
-        "name": "Mezloug",
-        "ar_name": "مزلوق",
-        "longitude": "36.1050372",
-        "latitude": "5.2373002",
-        "code": "19"
-    },
-    {
-        "id": "708",
-        "post_code": "19034",
-        "name": "Bir Haddada",
-        "ar_name": "بئر حدادة",
-        "longitude": "35.9625421",
-        "latitude": "5.3953788",
-        "code": "19"
-    },
-    {
-        "id": "709",
-        "post_code": "19035",
-        "name": "Serdj El Ghoul",
-        "ar_name": "سرج الغول",
-        "longitude": "36.475214",
-        "latitude": "5.5168507",
-        "code": "19"
-    },
-    {
-        "id": "710",
-        "post_code": "19036",
-        "name": "Harbil",
-        "ar_name": "حربيل",
-        "longitude": "36.3471017",
-        "latitude": "4.8497854",
-        "code": "19"
-    },
-    {
-        "id": "711",
-        "post_code": "19037",
-        "name": "El Ouricia",
-        "ar_name": "الأورسية",
-        "longitude": "36.2706726",
-        "latitude": "5.3148483",
-        "code": "19"
-    },
-    {
-        "id": "712",
-        "post_code": "19038",
-        "name": "Tizi Nbechar",
-        "ar_name": "تيزي نبشار",
-        "longitude": "36.4317298",
-        "latitude": "5.2875111",
-        "code": "19"
-    },
-    {
-        "id": "713",
-        "post_code": "19039",
-        "name": "Salah Bey",
-        "ar_name": "صـالح باي",
-        "longitude": "35.8237361",
-        "latitude": "5.2648518",
-        "code": "19"
-    },
-    {
-        "id": "714",
-        "post_code": "19040",
-        "name": "Ain Azal",
-        "ar_name": "عين أزال",
-        "longitude": "35.8195556",
-        "latitude": "5.4648373",
-        "code": "19"
-    },
-    {
-        "id": "715",
-        "post_code": "19041",
-        "name": "Guenzet",
-        "ar_name": "ڨنزات",
-        "longitude": "36.3357504",
-        "latitude": "4.7548888",
-        "code": "19"
-    },
-    {
-        "id": "716",
-        "post_code": "19042",
-        "name": "Talaifacene",
-        "ar_name": "تالة إيفاسن",
-        "longitude": "35.9637883",
-        "latitude": "5.6440518",
-        "code": "19"
-    },
-    {
-        "id": "717",
-        "post_code": "19043",
-        "name": "Bougaa",
-        "ar_name": "بوقاعـة",
-        "longitude": "36.3394384",
-        "latitude": "5.0449321",
-        "code": "19"
-    },
-    {
-        "id": "718",
-        "post_code": "19044",
-        "name": "Beni Fouda",
-        "ar_name": "بني فودة",
-        "longitude": "36.2770368",
-        "latitude": "5.4987834",
-        "code": "19"
-    },
-    {
-        "id": "719",
-        "post_code": "19045",
-        "name": "Tachouda",
-        "ar_name": "تاشودة",
-        "longitude": "36.2670155",
-        "latitude": "5.6616471",
-        "code": "19"
-    },
-    {
-        "id": "720",
-        "post_code": "19046",
-        "name": "Beni Mouhli",
-        "ar_name": "إيث موحلي",
-        "longitude": "36.5137668",
-        "latitude": "4.858188",
-        "code": "19"
-    },
-    {
-        "id": "721",
-        "post_code": "19047",
-        "name": "Ouled Sabor",
-        "ar_name": "أولاد صـابر",
-        "longitude": "36.180991",
-        "latitude": "5.4739354",
-        "code": "19"
-    },
-    {
-        "id": "722",
-        "post_code": "19048",
-        "name": "Guellal",
-        "ar_name": "قلال",
-        "longitude": "36.036461",
-        "latitude": "5.2209924",
-        "code": "19"
-    },
-    {
-        "id": "723",
-        "post_code": "19049",
-        "name": "Ain Sebt",
-        "ar_name": "عين السبت",
-        "longitude": "36.4924439",
-        "latitude": "5.649352",
-        "code": "19"
-    },
-    {
-        "id": "724",
-        "post_code": "19050",
-        "name": "Hammam Guergour",
-        "ar_name": "حمام قرقور",
-        "longitude": "36.3463283",
-        "latitude": "4.932553",
-        "code": "19"
-    },
-    {
-        "id": "725",
-        "post_code": "19051",
-        "name": "Ait Naoual Mezada",
-        "ar_name": "آيت نوال مزادة",
-        "longitude": "36.5453859",
-        "latitude": "5.0547929",
-        "code": "19"
-    },
-    {
-        "id": "726",
-        "post_code": "19052",
-        "name": "Ksar El Abtal",
-        "ar_name": "قصرالأبطال",
-        "longitude": "35.9761631",
-        "latitude": "5.1490233",
-        "code": "19"
-    },
-    {
-        "id": "727",
-        "post_code": "19053",
-        "name": "Beni Hocine",
-        "ar_name": "بني حسين",
-        "longitude": "36.2590992",
-        "latitude": "5.0521419",
-        "code": "19"
-    },
-    {
-        "id": "728",
-        "post_code": "19054",
-        "name": "Ait Tizi",
-        "ar_name": "آيت تيزي",
-        "longitude": "36.5360367",
-        "latitude": "5.1052087",
-        "code": "19"
-    },
-    {
-        "id": "729",
-        "post_code": "19055",
-        "name": "Maouklane",
-        "ar_name": "موكلان",
-        "longitude": "36.4012018",
-        "latitude": "5.0266852",
-        "code": "19"
-    },
-    {
-        "id": "730",
-        "post_code": "19056",
-        "name": "Guelta Zerka",
-        "ar_name": "القلتة الزرقاء",
-        "longitude": "36.2047344",
-        "latitude": "5.6012867",
-        "code": "19"
-    },
-    {
-        "id": "731",
-        "post_code": "19057",
-        "name": "Oued El Barad",
-        "ar_name": "واد البارد",
-        "longitude": "36.4982198",
-        "latitude": "5.3679794",
-        "code": "19"
-    },
-    {
-        "id": "732",
-        "post_code": "19058",
-        "name": "Taya",
-        "ar_name": "طاية",
-        "longitude": "35.9253339",
-        "latitude": "5.8147183",
-        "code": "19"
-    },
-    {
-        "id": "733",
-        "post_code": "19059",
-        "name": "El Ouldja",
-        "ar_name": "الولجـة",
-        "longitude": "36.0876231",
-        "latitude": "5.8494875",
-        "code": "19"
-    },
-    {
-        "id": "734",
-        "post_code": "19060",
-        "name": "Tella",
-        "ar_name": "التلة",
-        "longitude": "35.9637883",
-        "latitude": "5.6440518",
-        "code": "19"
-    },
-    {
-        "id": "735",
-        "post_code": "20001",
-        "name": "Saida",
-        "ar_name": "سعيدة",
-        "longitude": "34.84194",
-        "latitude": "0.1133388",
-        "code": "20"
-    },
-    {
-        "id": "736",
-        "post_code": "20002",
-        "name": "Doui Thabet",
-        "ar_name": "دوى ثابت",
-        "longitude": "34.8926538",
-        "latitude": "-0.0842",
-        "code": "20"
-    },
-    {
-        "id": "737",
-        "post_code": "20003",
-        "name": "Ain El Hadjar",
-        "ar_name": "عين الحجر",
-        "longitude": "34.7609324",
-        "latitude": "0.1333378",
-        "code": "20"
-    },
-    {
-        "id": "738",
-        "post_code": "20004",
-        "name": "Ouled Khaled",
-        "ar_name": "أولاد خالد",
-        "longitude": "34.841945",
-        "latitude": "0.1483583",
-        "code": "20"
-    },
-    {
-        "id": "739",
-        "post_code": "20005",
-        "name": "Moulay Larbi",
-        "ar_name": "موالي العربي",
-        "longitude": "34.6487428",
-        "latitude": "0.0046133",
-        "code": "20"
-    },
-    {
-        "id": "740",
-        "post_code": "20006",
-        "name": "Youb",
-        "ar_name": "يوب",
-        "longitude": "34.9207469",
-        "latitude": "-0.2177601",
-        "code": "20"
-    },
-    {
-        "id": "741",
-        "post_code": "20007",
-        "name": "Hounet",
-        "ar_name": "هونت",
-        "longitude": "35.1193494",
-        "latitude": "-0.1492344",
-        "code": "20"
-    },
-    {
-        "id": "742",
-        "post_code": "20008",
-        "name": "Sidi Amar",
-        "ar_name": "يدي عمر",
-        "longitude": "35.0264293",
-        "latitude": "0.1049602",
-        "code": "20"
-    },
-    {
-        "id": "743",
-        "post_code": "20009",
-        "name": "Sidi Boubekeur",
-        "ar_name": "سيدي بوبكر",
-        "longitude": "35.0307334",
-        "latitude": "0.0453185",
-        "code": "20"
-    },
-    {
-        "id": "744",
-        "post_code": "20010",
-        "name": "El Hassasna",
-        "ar_name": "حساسنة",
-        "longitude": "34.8248463",
-        "latitude": "0.3121231",
-        "code": "20"
-    },
-    {
-        "id": "745",
-        "post_code": "20011",
-        "name": "Maamora",
-        "ar_name": "معمورة",
-        "longitude": "34.68074",
-        "latitude": "0.4905867",
-        "code": "20"
-    },
-    {
-        "id": "746",
-        "post_code": "20012",
-        "name": "Sidi Ahmed",
-        "ar_name": "سيدي أحمد",
-        "longitude": "34.5499905",
-        "latitude": "0.2527392",
-        "code": "20"
-    },
-    {
-        "id": "747",
-        "post_code": "20013",
-        "name": "Ain Sekhouna",
-        "ar_name": "العين السخونة",
-        "longitude": "34.5044436",
-        "latitude": "0.8354119",
-        "code": "20"
-    },
-    {
-        "id": "748",
-        "post_code": "20014",
-        "name": "Ouled Brahim",
-        "ar_name": "أولاد ابراھيم",
-        "longitude": "34.986248",
-        "latitude": "0.4696722",
-        "code": "20"
-    },
-    {
-        "id": "749",
-        "post_code": "20015",
-        "name": "Tircine",
-        "ar_name": "تيرسين",
-        "longitude": "34.9016504",
-        "latitude": "0.549488",
-        "code": "20"
-    },
-    {
-        "id": "750",
-        "post_code": "20016",
-        "name": "Ain Soltane",
-        "ar_name": "عين السلطان",
-        "longitude": "34.9675528",
-        "latitude": "0.3012402",
-        "code": "20"
-    },
-    {
-        "id": "751",
-        "post_code": "21001",
-        "name": "Skikda",
-        "ar_name": "سكيكدة",
-        "longitude": "36.8777706",
-        "latitude": "6.86568",
-        "code": "21"
-    },
-    {
-        "id": "752",
-        "post_code": "21002",
-        "name": "Ain Zouit",
-        "ar_name": "عين زويت",
-        "longitude": "36.8887165",
-        "latitude": "6.7802703",
-        "code": "21"
-    },
-    {
-        "id": "753",
-        "post_code": "21003",
-        "name": "El Hadaik",
-        "ar_name": "الحدايق",
-        "longitude": "36.8244178",
-        "latitude": "6.878085",
-        "code": "21"
-    },
-    {
-        "id": "754",
-        "post_code": "21004",
-        "name": "Azzaba",
-        "ar_name": "عزابة",
-        "longitude": "36.7430777",
-        "latitude": "7.0997212",
-        "code": "21"
-    },
-    {
-        "id": "755",
-        "post_code": "21005",
-        "name": "Djendel",
-        "ar_name": "جندل",
-        "longitude": "36.7814565",
-        "latitude": "7.1617769",
-        "code": "21"
-    },
-    {
-        "id": "756",
-        "post_code": "21006",
-        "name": "Ain Cherchar",
-        "ar_name": "عين شرشار",
-        "longitude": "36.7329798",
-        "latitude": "7.2109578",
-        "code": "21"
-    },
-    {
-        "id": "757",
-        "post_code": "21007",
-        "name": "Bekkouche Lakhdar",
-        "ar_name": "بكوش لخضر",
-        "longitude": "36.7011643",
-        "latitude": "7.2953939",
-        "code": "21"
-    },
-    {
-        "id": "758",
-        "post_code": "21008",
-        "name": "Ben Azzouz",
-        "ar_name": "بن عزوز",
-        "longitude": "36.8648574",
-        "latitude": "7.2885273",
-        "code": "21"
-    },
-    {
-        "id": "759",
-        "post_code": "21009",
-        "name": "Es Sebt",
-        "ar_name": "السبت",
-        "longitude": "36.659999",
-        "latitude": "7.0612452",
-        "code": "21"
-    },
-    {
-        "id": "760",
-        "post_code": "21010",
-        "name": "Collo",
-        "ar_name": "القل",
-        "longitude": "37.0006567",
-        "latitude": "6.537659",
-        "code": "21"
-    },
-    {
-        "id": "761",
-        "post_code": "21011",
-        "name": "Beni Zid",
-        "ar_name": "بنى زيد",
-        "longitude": "36.8166662",
-        "latitude": "6.4912452",
-        "code": "21"
-    },
-    {
-        "id": "762",
-        "post_code": "21012",
-        "name": "Kerkera",
-        "ar_name": "كركرة",
-        "longitude": "36.9297905",
-        "latitude": "6.5761113",
-        "code": "21"
-    },
-    {
-        "id": "763",
-        "post_code": "21013",
-        "name": "Ouled Attia",
-        "ar_name": "أولاد عطية",
-        "longitude": "35.5368952",
-        "latitude": "2.1427722",
-        "code": "21"
-    },
-    {
-        "id": "764",
-        "post_code": "21014",
-        "name": "Oued Zehour",
-        "ar_name": "وادي الزهور",
-        "longitude": "36.922037",
-        "latitude": "6.3040281",
-        "code": "21"
-    },
-    {
-        "id": "765",
-        "post_code": "21015",
-        "name": "Zitouna",
-        "ar_name": "الزيتونة",
-        "longitude": "36.9888779",
-        "latitude": "6.4497961",
-        "code": "21"
-    },
-    {
-        "id": "766",
-        "post_code": "21016",
-        "name": "El Harrouch",
-        "ar_name": "الحروش",
-        "longitude": "36.6547652",
-        "latitude": "6.8234108",
-        "code": "21"
-    },
-    {
-        "id": "767",
-        "post_code": "21017",
-        "name": "Zerdazas",
-        "ar_name": "زردازة",
-        "longitude": "36.8777912",
-        "latitude": "6.9357204",
-        "code": "21"
-    },
-    {
-        "id": "768",
-        "post_code": "21018",
-        "name": "Ouled Hebaba",
-        "ar_name": "أولاد حبابة",
-        "longitude": "36.8777912",
-        "latitude": "6.9357204",
-        "code": "21"
-    },
-    {
-        "id": "769",
-        "post_code": "21019",
-        "name": "Sidi Mezghiche",
-        "ar_name": "سيدي مزغيش",
-        "longitude": "36.6779093",
-        "latitude": "6.7110264",
-        "code": "21"
-    },
-    {
-        "id": "770",
-        "post_code": "21020",
-        "name": "Emdjez Edchich",
-        "ar_name": "مجاز الدشيش",
-        "longitude": "36.7047297",
-        "latitude": "6.7961489",
-        "code": "21"
-    },
-    {
-        "id": "771",
-        "post_code": "21021",
-        "name": "Beni Oulbane",
-        "ar_name": "بني والبان",
-        "longitude": "36.6282861",
-        "latitude": "6.6174172",
-        "code": "21"
-    },
-    {
-        "id": "772",
-        "post_code": "21022",
-        "name": "Ain Bouziane",
-        "ar_name": "عين بوزيان",
-        "longitude": "36.6036397",
-        "latitude": "6.6793845",
-        "code": "21"
-    },
-    {
-        "id": "773",
-        "post_code": "21023",
-        "name": "Ramdane Djamel",
-        "ar_name": "رمضان جمال",
-        "longitude": "36.7585337",
-        "latitude": "6.8745445",
-        "code": "21"
-    },
-    {
-        "id": "774",
-        "post_code": "21024",
-        "name": "Beni Bachir",
-        "ar_name": "بني بشير",
-        "longitude": "36.7833322",
-        "latitude": "6.9245782",
-        "code": "21"
-    },
-    {
-        "id": "775",
-        "post_code": "21025",
-        "name": "Salah Bouchaour",
-        "ar_name": "صالح بوالشعور",
-        "longitude": "36.6997005",
-        "latitude": "6.8379484",
-        "code": "21"
-    },
-    {
-        "id": "776",
-        "post_code": "21026",
-        "name": "Tamalous",
-        "ar_name": "تمالوس",
-        "longitude": "36.8366625",
-        "latitude": "6.6275453",
-        "code": "21"
-    },
-    {
-        "id": "777",
-        "post_code": "21027",
-        "name": "Ain Kechra",
-        "ar_name": "عين قشرة",
-        "longitude": "36.745039",
-        "latitude": "6.423676",
-        "code": "21"
-    },
-    {
-        "id": "778",
-        "post_code": "21028",
-        "name": "Oum Toub",
-        "ar_name": "أم الطوب",
-        "longitude": "36.6889452",
-        "latitude": "6.5584944",
-        "code": "21"
-    },
-    {
-        "id": "779",
-        "post_code": "21029",
-        "name": "Bein El Ouiden",
-        "ar_name": "بين الويدان",
-        "longitude": "36.8057424",
-        "latitude": "6.5480875",
-        "code": "21"
-    },
-    {
-        "id": "780",
-        "post_code": "21030",
-        "name": "Filfila",
-        "ar_name": "فلفلة",
-        "longitude": "36.8880361",
-        "latitude": "7.0082877",
-        "code": "21"
-    },
-    {
-        "id": "781",
-        "post_code": "21031",
-        "name": "Cheraia",
-        "ar_name": "الشرايع",
-        "longitude": "37.0030051",
-        "latitude": "6.4972247",
-        "code": "21"
-    },
-    {
-        "id": "782",
-        "post_code": "21032",
-        "name": "Kanoua",
-        "ar_name": "قنواع",
-        "longitude": "37.0381362",
-        "latitude": "6.4001584",
-        "code": "21"
-    },
-    {
-        "id": "783",
-        "post_code": "21033",
-        "name": "El Ghedir",
-        "ar_name": "الغدير",
-        "longitude": "36.6870219",
-        "latitude": "6.9730998",
-        "code": "21"
-    },
-    {
-        "id": "784",
-        "post_code": "21034",
-        "name": "Bouchtata",
-        "ar_name": "بوشطاطة",
-        "longitude": "36.7833322",
-        "latitude": "6.7912452",
-        "code": "21"
-    },
-    {
-        "id": "785",
-        "post_code": "21035",
-        "name": "Ouldja Boulbalout",
-        "ar_name": "الولجة بو البلوط",
-        "longitude": "36.73896",
-        "latitude": "6.344292",
-        "code": "21"
-    },
-    {
-        "id": "786",
-        "post_code": "21036",
-        "name": "Kheneg Mayoum",
-        "ar_name": "خنق مايوم",
-        "longitude": "36.8777912",
-        "latitude": "6.9357204",
-        "code": "21"
-    },
-    {
-        "id": "787",
-        "post_code": "21037",
-        "name": "Hamadi Krouma",
-        "ar_name": "حمادي كرومة",
-        "longitude": "36.8471689",
-        "latitude": "6.9208716",
-        "code": "21"
-    },
-    {
-        "id": "788",
-        "post_code": "21038",
-        "name": "El Marsa",
-        "ar_name": "المرسى",
-        "longitude": "37.0091437",
-        "latitude": "7.116813",
-        "code": "21"
-    },
-    {
-        "id": "789",
-        "post_code": "22001",
-        "name": "Sidi Bel Abbes",
-        "ar_name": "سيدي بلعباس",
-        "longitude": "35.2063139",
-        "latitude": "-0.7001772",
-        "code": "22"
-    },
-    {
-        "id": "790",
-        "post_code": "22002",
-        "name": "Tessala",
-        "ar_name": "تسالة",
-        "longitude": "35.2714294",
-        "latitude": "-0.8558205",
-        "code": "22"
-    },
-    {
-        "id": "791",
-        "post_code": "22003",
-        "name": "Sidi Brahim",
-        "ar_name": "سيدي ابراهيم",
-        "longitude": "35.2591019",
-        "latitude": "-0.5991847",
-        "code": "22"
-    },
-    {
-        "id": "792",
-        "post_code": "22004",
-        "name": "Mostefa Ben Brahim",
-        "ar_name": "مصطفى بن ابراهيم",
-        "longitude": "35.1721396",
-        "latitude": "-0.4142215",
-        "code": "22"
-    },
-    {
-        "id": "793",
-        "post_code": "22005",
-        "name": "Telagh",
-        "ar_name": "تلاغ",
-        "longitude": "34.8036693",
-        "latitude": "-0.6044224",
-        "code": "22"
-    },
-    {
-        "id": "794",
-        "post_code": "22006",
-        "name": "Mezaourou",
-        "ar_name": "مزاورو",
-        "longitude": "34.834391",
-        "latitude": "-0.795146",
-        "code": "22"
-    },
-    {
-        "id": "795",
-        "post_code": "22007",
-        "name": "Boukhanafis",
-        "ar_name": "بوخنفيس",
-        "longitude": "35.046047",
-        "latitude": "-0.7594111",
-        "code": "22"
-    },
-    {
-        "id": "796",
-        "post_code": "22008",
-        "name": "Sidi Ali Boussidi",
-        "ar_name": "سيدي علي بوسيدي",
-        "longitude": "35.1040625",
-        "latitude": "-0.8716112",
-        "code": "22"
-    },
-    {
-        "id": "797",
-        "post_code": "22009",
-        "name": "Badredine El Mokrani",
-        "ar_name": "بدر الدين المقراني",
-        "longitude": "35.0098106",
-        "latitude": "-0.8547677",
-        "code": "22"
-    },
-    {
-        "id": "798",
-        "post_code": "22010",
-        "name": "Marhoum",
-        "ar_name": "مرحوم",
-        "longitude": "34.4457418",
-        "latitude": "-0.2038049",
-        "code": "22"
-    },
-    {
-        "id": "799",
-        "post_code": "22011",
-        "name": "Tafissour",
-        "ar_name": "تفسور",
-        "longitude": "34.6926458",
-        "latitude": "-0.2074045",
-        "code": "22"
-    },
-    {
-        "id": "800",
-        "post_code": "22012",
-        "name": "Amarnas",
-        "ar_name": "العمارنة",
-        "longitude": "35.0999604",
-        "latitude": "-0.6567147",
-        "code": "22"
-    },
-    {
-        "id": "801",
-        "post_code": "22013",
-        "name": "Tilmouni",
-        "ar_name": "تلموني",
-        "longitude": "35.1832214",
-        "latitude": "-0.5905178",
-        "code": "22"
-    },
-    {
-        "id": "802",
-        "post_code": "22014",
-        "name": "Sidi Lahcene",
-        "ar_name": "سيدي لحسن",
-        "longitude": "35.1925854",
-        "latitude": "-0.8112957",
-        "code": "22"
-    },
-    {
-        "id": "803",
-        "post_code": "22015",
-        "name": "Ain Thrid",
-        "ar_name": "عين التريد",
-        "longitude": "35.284671",
-        "latitude": "-0.6782448",
-        "code": "22"
-    },
-    {
-        "id": "804",
-        "post_code": "22016",
-        "name": "Makedra",
-        "ar_name": "مكدرة",
-        "longitude": "35.4412149",
-        "latitude": "-0.4348398",
-        "code": "22"
-    },
-    {
-        "id": "805",
-        "post_code": "22017",
-        "name": "Tenira",
-        "ar_name": "تنيرة",
-        "longitude": "35.0063927",
-        "latitude": "-0.5771282",
-        "code": "22"
-    },
-    {
-        "id": "806",
-        "post_code": "22018",
-        "name": "Moulay Slissen",
-        "ar_name": "مولاي سليسن",
-        "longitude": "34.821448",
-        "latitude": "-0.769794",
-        "code": "22"
-    },
-    {
-        "id": "807",
-        "post_code": "22019",
-        "name": "El Hacaiba",
-        "ar_name": "الحصيبة",
-        "longitude": "34.699542",
-        "latitude": "-0.7694292",
-        "code": "22"
-    },
-    {
-        "id": "808",
-        "post_code": "22020",
-        "name": "Hassi Zehana",
-        "ar_name": "حاسي زهانة",
-        "longitude": "35.0251892",
-        "latitude": "-0.8964662",
-        "code": "22"
-    },
-    {
-        "id": "809",
-        "post_code": "22021",
-        "name": "Tabia",
-        "ar_name": "طابية",
-        "longitude": "35.0181729",
-        "latitude": "-0.7786567",
-        "code": "22"
-    },
-    {
-        "id": "810",
-        "post_code": "22022",
-        "name": "Merine",
-        "ar_name": "مرين",
-        "longitude": "34.7805884",
-        "latitude": "-0.4548597",
-        "code": "22"
-    },
-    {
-        "id": "811",
-        "post_code": "22023",
-        "name": "Ras El Ma",
-        "ar_name": "رأس الماء",
-        "longitude": "34.5039368",
-        "latitude": "-0.8212282",
-        "code": "22"
-    },
-    {
-        "id": "812",
-        "post_code": "22024",
-        "name": "Ain Tindamine",
-        "ar_name": "عين تندامين",
-        "longitude": "34.6890805",
-        "latitude": "-0.7245612",
-        "code": "22"
-    },
-    {
-        "id": "813",
-        "post_code": "22025",
-        "name": "Ain Kada",
-        "ar_name": "عين قادة",
-        "longitude": "35.1368876",
-        "latitude": "-0.8607745",
-        "code": "22"
-    },
-    {
-        "id": "814",
-        "post_code": "22026",
-        "name": "Mcid",
-        "ar_name": "مسيد",
-        "longitude": "35.139035",
-        "latitude": "-0.2525651",
-        "code": "22"
-    },
-    {
-        "id": "815",
-        "post_code": "22027",
-        "name": "Sidi Khaled",
-        "ar_name": "سيدي خالد",
-        "longitude": "35.1200723",
-        "latitude": "-0.7417066",
-        "code": "22"
-    },
-    {
-        "id": "816",
-        "post_code": "22028",
-        "name": "Ain El Berd",
-        "ar_name": "عين البرد",
-        "longitude": "35.3828523",
-        "latitude": "-0.5661419",
-        "code": "22"
-    },
-    {
-        "id": "817",
-        "post_code": "22029",
-        "name": "Sfissef",
-        "ar_name": "سفيزف",
-        "longitude": "35.2442317",
-        "latitude": "-0.3162029",
-        "code": "22"
-    },
-    {
-        "id": "818",
-        "post_code": "22030",
-        "name": "Ain Adden",
-        "ar_name": "عين عدان",
-        "longitude": "35.330304",
-        "latitude": "-0.2660537",
-        "code": "22"
-    },
-    {
-        "id": "819",
-        "post_code": "22031",
-        "name": "Oued Taourira",
-        "ar_name": "واد تاوريرة",
-        "longitude": "34.8024792",
-        "latitude": "-0.3307029",
-        "code": "22"
-    },
-    {
-        "id": "820",
-        "post_code": "22032",
-        "name": "Dhaya",
-        "ar_name": "الظاية",
-        "longitude": "34.6752163",
-        "latitude": "-0.6322849",
-        "code": "22"
-    },
-    {
-        "id": "821",
-        "post_code": "22033",
-        "name": "Zerouala",
-        "ar_name": "زروالة",
-        "longitude": "35.2429835",
-        "latitude": "-0.5271103",
-        "code": "22"
-    },
-    {
-        "id": "822",
-        "post_code": "22034",
-        "name": "Lamtar",
-        "ar_name": "لمطار",
-        "longitude": "35.0592826",
-        "latitude": "-0.8357771",
-        "code": "22"
-    },
-    {
-        "id": "823",
-        "post_code": "22035",
-        "name": "Sidi Chaib",
-        "ar_name": "سيدي شعيب",
-        "longitude": "34.5927664",
-        "latitude": "-0.555625",
-        "code": "22"
-    },
-    {
-        "id": "824",
-        "post_code": "22036",
-        "name": "Sidi Dahou",
-        "ar_name": "سيدي دحو",
-        "longitude": "35.1171744",
-        "latitude": "-0.9150603",
-        "code": "22"
-    },
-    {
-        "id": "825",
-        "post_code": "22037",
-        "name": "Oued Sbaa",
-        "ar_name": "واد السبع",
-        "longitude": "34.5903826",
-        "latitude": "-0.717178",
-        "code": "22"
-    },
-    {
-        "id": "826",
-        "post_code": "22038",
-        "name": "Boudjebaa El Bordj",
-        "ar_name": "بوجبهة البرج",
-        "longitude": "35.3519121",
-        "latitude": "-0.3280353",
-        "code": "22"
-    },
-    {
-        "id": "827",
-        "post_code": "22039",
-        "name": "Sehala Thaoura",
-        "ar_name": "سهالة الثورة",
-        "longitude": "35.2240535",
-        "latitude": "-0.929592",
-        "code": "22"
-    },
-    {
-        "id": "828",
-        "post_code": "22040",
-        "name": "Sidi Yacoub",
-        "ar_name": "سيدي يعقوب",
-        "longitude": "35.1557033",
-        "latitude": "-0.8069145",
-        "code": "22"
-    },
-    {
-        "id": "829",
-        "post_code": "22041",
-        "name": "Sidi Hamadouche",
-        "ar_name": "سيدي حمادوش",
-        "longitude": "35.3114849",
-        "latitude": "-0.5885866",
-        "code": "22"
-    },
-    {
-        "id": "830",
-        "post_code": "22042",
-        "name": "Belarbi",
-        "ar_name": "بلعربي",
-        "longitude": "35.1309933",
-        "latitude": "-0.5169609",
-        "code": "22"
-    },
-    {
-        "id": "831",
-        "post_code": "22043",
-        "name": "Oued Sefioun",
-        "ar_name": "واد سفيون",
-        "longitude": "35.0664471",
-        "latitude": "-0.3616477",
-        "code": "22"
-    },
-    {
-        "id": "832",
-        "post_code": "22044",
-        "name": "Teghalimet",
-        "ar_name": "تغاليمت",
-        "longitude": "34.8852137",
-        "latitude": "-0.563019",
-        "code": "22"
-    },
-    {
-        "id": "833",
-        "post_code": "22045",
-        "name": "Ben Badis",
-        "ar_name": "ابن باديس",
-        "longitude": "34.92614",
-        "latitude": "-0.9757259",
-        "code": "22"
-    },
-    {
-        "id": "834",
-        "post_code": "22046",
-        "name": "Sidi Ali Benyoub",
-        "ar_name": "سيدي علي بن يوب",
-        "longitude": "34.9488777",
-        "latitude": "-0.794194",
-        "code": "22"
-    },
-    {
-        "id": "835",
-        "post_code": "22047",
-        "name": "Chetouane Belaila",
-        "ar_name": "شطوان بلايلة",
-        "longitude": "34.950063",
-        "latitude": "-0.8453465",
-        "code": "22"
-    },
-    {
-        "id": "836",
-        "post_code": "22048",
-        "name": "Bir El Hammam",
-        "ar_name": "بئر الحمام",
-        "longitude": "34.4187435",
-        "latitude": "-0.5031502",
-        "code": "22"
-    },
-    {
-        "id": "837",
-        "post_code": "22049",
-        "name": "Taoudmout",
-        "ar_name": "تاودموت",
-        "longitude": "34.5881382",
-        "latitude": "-0.1211071",
-        "code": "22"
-    },
-    {
-        "id": "838",
-        "post_code": "22050",
-        "name": "Redjem Demouche",
-        "ar_name": "رجم دموش",
-        "longitude": "34.4269826",
-        "latitude": "-0.8185673",
-        "code": "22"
-    },
-    {
-        "id": "839",
-        "post_code": "22051",
-        "name": "Benachiba Chelia",
-        "ar_name": "بن عشيبة شلية",
-        "longitude": "34.9637049",
-        "latitude": "-0.6169817",
-        "code": "22"
-    },
-    {
-        "id": "840",
-        "post_code": "22052",
-        "name": "Hassi Dahou",
-        "ar_name": "حاسي دحو",
-        "longitude": "35.108878",
-        "latitude": "-0.5963542",
-        "code": "22"
-    },
-    {
-        "id": "841",
-        "post_code": "23001",
-        "name": "Annaba",
-        "ar_name": "عنابة",
-        "longitude": "36.9184139",
-        "latitude": "7.6752351",
-        "code": "23"
-    },
-    {
-        "id": "842",
-        "post_code": "23002",
-        "name": "Berrahel",
-        "ar_name": "برحال",
-        "longitude": "36.8106093",
-        "latitude": "7.4170564",
-        "code": "23"
-    },
-    {
-        "id": "843",
-        "post_code": "23003",
-        "name": "El Hadjar",
-        "ar_name": "الحجار",
-        "longitude": "36.7742133",
-        "latitude": "7.6264832",
-        "code": "23"
-    },
-    {
-        "id": "844",
-        "post_code": "23004",
-        "name": "Eulma",
-        "ar_name": "العلمة",
-        "longitude": "36.7095806",
-        "latitude": "7.3636267",
-        "code": "23"
-    },
-    {
-        "id": "845",
-        "post_code": "23005",
-        "name": "El Bouni",
-        "ar_name": "البوني",
-        "longitude": "36.8404084",
-        "latitude": "7.6381562",
-        "code": "23"
-    },
-    {
-        "id": "846",
-        "post_code": "23006",
-        "name": "Oued El Aneb",
-        "ar_name": "وادي العنب",
-        "longitude": "36.936216",
-        "latitude": "7.4220268",
-        "code": "23"
-    },
-    {
-        "id": "847",
-        "post_code": "23007",
-        "name": "Cheurfa",
-        "ar_name": "الشرفة",
-        "longitude": "36.721776",
-        "latitude": "7.5026509",
-        "code": "23"
-    },
-    {
-        "id": "848",
-        "post_code": "23008",
-        "name": "Seraidi",
-        "ar_name": "سرايدي",
-        "longitude": "36.9465799",
-        "latitude": "7.5518106",
-        "code": "23"
-    },
-    {
-        "id": "849",
-        "post_code": "23009",
-        "name": "Ain Berda",
-        "ar_name": "عين الباردة",
-        "longitude": "36.6718947",
-        "latitude": "7.5182507",
-        "code": "23"
-    },
-    {
-        "id": "850",
-        "post_code": "23010",
-        "name": "Chetaibi",
-        "ar_name": "شطايبي",
-        "longitude": "37.0130857",
-        "latitude": "7.3259042",
-        "code": "23"
-    },
-    {
-        "id": "851",
-        "post_code": "23011",
-        "name": "Sidi Amer",
-        "ar_name": "سيدي عمار",
-        "longitude": "36.8079881",
-        "latitude": "7.5912068",
-        "code": "23"
-    },
-    {
-        "id": "852",
-        "post_code": "23012",
-        "name": "Treat",
-        "ar_name": "التريعات",
-        "longitude": "36.933511",
-        "latitude": "7.3342297",
-        "code": "23"
-    },
-    {
-        "id": "853",
-        "post_code": "24001",
-        "name": "Guelma",
-        "ar_name": "قالمة",
-        "longitude": "36.4569037",
-        "latitude": "7.3984116",
-        "code": "24"
-    },
-    {
-        "id": "854",
-        "post_code": "24002",
-        "name": "Nechmaya",
-        "ar_name": "نشماية",
-        "longitude": "36.611178",
-        "latitude": "7.5036084",
-        "code": "24"
-    },
-    {
-        "id": "855",
-        "post_code": "24003",
-        "name": "Bouati Mahmoud",
-        "ar_name": "بوعاتي محمود",
-        "longitude": "36.5895674",
-        "latitude": "7.3207353",
-        "code": "24"
-    },
-    {
-        "id": "856",
-        "post_code": "24004",
-        "name": "Oued Zenati",
-        "ar_name": "وادي الزناتي",
-        "longitude": "36.3153995",
-        "latitude": "7.1469496",
-        "code": "24"
-    },
-    {
-        "id": "857",
-        "post_code": "24005",
-        "name": "Tamlouka",
-        "ar_name": "تاملوكة",
-        "longitude": "36.1569512",
-        "latitude": "7.1315431",
-        "code": "24"
-    },
-    {
-        "id": "858",
-        "post_code": "24006",
-        "name": "Oued Fragha",
-        "ar_name": "وادي فراغة",
-        "longitude": "36.5567569",
-        "latitude": "7.7080895",
-        "code": "24"
-    },
-    {
-        "id": "859",
-        "post_code": "24007",
-        "name": "Ain Sandel",
-        "ar_name": "عين صندل",
-        "longitude": "36.2432261",
-        "latitude": "7.5088549",
-        "code": "24"
-    },
-    {
-        "id": "860",
-        "post_code": "24008",
-        "name": "Ras El Agba",
-        "ar_name": "راس العقبة",
-        "longitude": "36.3734915",
-        "latitude": "7.2205067",
-        "code": "24"
-    },
-    {
-        "id": "861",
-        "post_code": "24009",
-        "name": "Dahouara",
-        "ar_name": "الدهوارة",
-        "longitude": "36.3509675",
-        "latitude": "7.728399",
-        "code": "24"
-    },
-    {
-        "id": "862",
-        "post_code": "24010",
-        "name": "Belkhir",
-        "ar_name": "بلخير",
-        "longitude": "36.4607299",
-        "latitude": "7.4686431",
-        "code": "24"
-    },
-    {
-        "id": "863",
-        "post_code": "24011",
-        "name": "Ben Djarah",
-        "ar_name": "بن جراح",
-        "longitude": "36.4323579",
-        "latitude": "7.3656034",
-        "code": "24"
-    },
-    {
-        "id": "864",
-        "post_code": "24012",
-        "name": "Bou Hamdane",
-        "ar_name": "بوحمدان",
-        "longitude": "36.4607875",
-        "latitude": "7.0672535",
-        "code": "24"
-    },
-    {
-        "id": "865",
-        "post_code": "24013",
-        "name": "Ain Makhlouf",
-        "ar_name": "عين مخلوف",
-        "longitude": "36.2433466",
-        "latitude": "7.2423719",
-        "code": "24"
-    },
-    {
-        "id": "866",
-        "post_code": "24014",
-        "name": "Ain Ben Beida",
-        "ar_name": "عين بن بيضاء",
-        "longitude": "36.6166662",
-        "latitude": "7.6912452",
-        "code": "24"
-    },
-    {
-        "id": "867",
-        "post_code": "24015",
-        "name": "Khezara",
-        "ar_name": "خزارة",
-        "longitude": "36.3706489",
-        "latitude": "7.5256133",
-        "code": "24"
-    },
-    {
-        "id": "868",
-        "post_code": "24016",
-        "name": "Beni Mezline",
-        "ar_name": "بني مزلين",
-        "longitude": "36.4813374",
-        "latitude": "7.5999319",
-        "code": "24"
-    },
-    {
-        "id": "869",
-        "post_code": "24017",
-        "name": "Bou Hachana",
-        "ar_name": "بوحشانة",
-        "longitude": "36.3062461",
-        "latitude": "7.5039195",
-        "code": "24"
-    },
-    {
-        "id": "870",
-        "post_code": "24018",
-        "name": "Guelaat Bou Sbaa",
-        "ar_name": "قلعة بوصبع",
-        "longitude": "36.5487411",
-        "latitude": "7.4658322",
-        "code": "24"
-    },
-    {
-        "id": "871",
-        "post_code": "24019",
-        "name": "Hammam Maskhoutine",
-        "ar_name": "حمام مسخوطين",
-        "longitude": "36.4599991",
-        "latitude": "7.2612452",
-        "code": "24"
-    },
-    {
-        "id": "872",
-        "post_code": "24020",
-        "name": "El Fedjoudj",
-        "ar_name": "الفجوج",
-        "longitude": "36.5092883",
-        "latitude": "7.3712466",
-        "code": "24"
-    },
-    {
-        "id": "873",
-        "post_code": "24021",
-        "name": "Bordj Sabat",
-        "ar_name": "برج صباط",
-        "longitude": "36.4020468",
-        "latitude": "7.038288",
-        "code": "24"
-    },
-    {
-        "id": "874",
-        "post_code": "24022",
-        "name": "Hamman Nbail",
-        "ar_name": "حمام النبايل",
-        "longitude": "36.3240283",
-        "latitude": "7.6336956",
-        "code": "24"
-    },
-    {
-        "id": "875",
-        "post_code": "24023",
-        "name": "Ain Larbi",
-        "ar_name": "عين العربى",
-        "longitude": "36.4569088",
-        "latitude": "7.4334312",
-        "code": "24"
-    },
-    {
-        "id": "876",
-        "post_code": "24024",
-        "name": "Medjez Amar",
-        "ar_name": "مجاز عمار",
-        "longitude": "36.4453028",
-        "latitude": "7.3073994",
-        "code": "24"
-    },
-    {
-        "id": "877",
-        "post_code": "24025",
-        "name": "Bouchegouf",
-        "ar_name": "بوشقوف",
-        "longitude": "36.4698174",
-        "latitude": "7.7139471",
-        "code": "24"
-    },
-    {
-        "id": "878",
-        "post_code": "24026",
-        "name": "Heliopolis",
-        "ar_name": "ھيليوبوليس",
-        "longitude": "36.5051137",
-        "latitude": "7.4183462",
-        "code": "24"
-    },
-    {
-        "id": "879",
-        "post_code": "24027",
-        "name": "Houari Boumediene",
-        "ar_name": "هواري بومدين",
-        "longitude": "36.4170552",
-        "latitude": "7.2737237",
-        "code": "24"
-    },
-    {
-        "id": "880",
-        "post_code": "24028",
-        "name": "Roknia",
-        "ar_name": "الركنية",
-        "longitude": "36.5448453",
-        "latitude": "7.2242832",
-        "code": "24"
-    },
-    {
-        "id": "881",
-        "post_code": "24029",
-        "name": "Salaoua Announa",
-        "ar_name": "سلاوة عنونة",
-        "longitude": "36.3864653",
-        "latitude": "7.2468782",
-        "code": "24"
-    },
-    {
-        "id": "882",
-        "post_code": "24030",
-        "name": "Medjez Sfa",
-        "ar_name": "مجاز الصفاء",
-        "longitude": "36.4343861",
-        "latitude": "7.7743936",
-        "code": "24"
-    },
-    {
-        "id": "883",
-        "post_code": "24031",
-        "name": "Boumahra Ahmed",
-        "ar_name": "بومهرة أحمد",
-        "longitude": "36.4588487",
-        "latitude": "7.5044774",
-        "code": "24"
-    },
-    {
-        "id": "884",
-        "post_code": "24032",
-        "name": "Ain Reggada",
-        "ar_name": "عين رقادة",
-        "longitude": "36.2606161",
-        "latitude": "7.0637584",
-        "code": "24"
-    },
-    {
-        "id": "885",
-        "post_code": "24033",
-        "name": "Oued Cheham",
-        "ar_name": "وادي الشحم",
-        "longitude": "36.3814206",
-        "latitude": "7.75918",
-        "code": "24"
-    },
-    {
-        "id": "886",
-        "post_code": "24034",
-        "name": "Djeballah Khemissi",
-        "ar_name": "جبالة لخميسي",
-        "longitude": "36.4642865",
-        "latitude": "7.5646019",
-        "code": "24"
-    },
-    {
-        "id": "887",
-        "post_code": "25001",
-        "name": "Constantine",
-        "ar_name": "قسنطينة",
-        "longitude": "36.3539041",
-        "latitude": "6.5073908",
-        "code": "25"
-    },
-    {
-        "id": "888",
-        "post_code": "25002",
-        "name": "Hamma Bouziane",
-        "ar_name": "حامة بوزيان",
-        "longitude": "36.4279139",
-        "latitude": "6.4871452",
-        "code": "25"
-    },
-    {
-        "id": "889",
-        "post_code": "25003",
-        "name": "Ibn Badis",
-        "ar_name": "إبن باديس",
-        "longitude": "36.3480237",
-        "latitude": "6.7097178",
-        "code": "25"
-    },
-    {
-        "id": "890",
-        "post_code": "25004",
-        "name": "Zighoud Youcef",
-        "ar_name": "زيغود يوسف",
-        "longitude": "36.5297763",
-        "latitude": "6.5941469",
-        "code": "25"
-    },
-    {
-        "id": "891",
-        "post_code": "25005",
-        "name": "Didouche Mourad",
-        "ar_name": "ديدوش مراد",
-        "longitude": "36.4639526",
-        "latitude": "6.5927385",
-        "code": "25"
-    },
-    {
-        "id": "892",
-        "post_code": "25006",
-        "name": "El Khroub",
-        "ar_name": "الخروب",
-        "longitude": "36.2838625",
-        "latitude": "6.5156439",
-        "code": "25"
-    },
-    {
-        "id": "893",
-        "post_code": "25007",
-        "name": "Ain Abid",
-        "ar_name": "عين عبيد",
-        "longitude": "36.2465349",
-        "latitude": "6.7979518",
-        "code": "25"
-    },
-    {
-        "id": "894",
-        "post_code": "25008",
-        "name": "Beni Hamiden",
-        "ar_name": "بني حميدان",
-        "longitude": "36.5203461",
-        "latitude": "6.4731762",
-        "code": "25"
-    },
-    {
-        "id": "895",
-        "post_code": "25009",
-        "name": "Ouled Rahmoune",
-        "ar_name": "أولاد رحمون",
-        "longitude": "36.1816075",
-        "latitude": "6.5482917",
-        "code": "25"
-    },
-    {
-        "id": "896",
-        "post_code": "25010",
-        "name": "Ain Smara",
-        "ar_name": "عين سمارة",
-        "longitude": "36.2946549",
-        "latitude": "6.4221713",
-        "code": "25"
-    },
-    {
-        "id": "897",
-        "post_code": "25011",
-        "name": "Mesaoud Boudjeriou",
-        "ar_name": "مسعود بوجريو",
-        "longitude": "36.4463789",
-        "latitude": "6.3586781",
-        "code": "25"
-    },
-    {
-        "id": "898",
-        "post_code": "25012",
-        "name": "Ibn Ziad",
-        "ar_name": "ابن زياد",
-        "longitude": "36.3691447",
-        "latitude": "6.3523267",
-        "code": "25"
-    },
-    {
-        "id": "899",
-        "post_code": "26001",
-        "name": "Medea",
-        "ar_name": "المدية",
-        "longitude": "36.2838204",
-        "latitude": "2.7028058",
-        "code": "26"
-    },
-    {
-        "id": "900",
-        "post_code": "26002",
-        "name": "Ouzera",
-        "ar_name": "وزرة",
-        "longitude": "36.2615351",
-        "latitude": "2.8073906",
-        "code": "26"
-    },
-    {
-        "id": "901",
-        "post_code": "26003",
-        "name": "Ouled Maaref",
-        "ar_name": "أولاد معرف",
-        "longitude": "35.7948583",
-        "latitude": "2.9102508",
-        "code": "26"
-    },
-    {
-        "id": "902",
-        "post_code": "26004",
-        "name": "Ain Boucif",
-        "ar_name": "عين بوسيف",
-        "longitude": "35.8347645",
-        "latitude": "3.0031194",
-        "code": "26"
-    },
-    {
-        "id": "903",
-        "post_code": "26005",
-        "name": "Aissaouia",
-        "ar_name": "العيساوية",
-        "longitude": "36.4109256",
-        "latitude": "3.1566785",
-        "code": "26"
-    },
-    {
-        "id": "904",
-        "post_code": "26006",
-        "name": "Ouled Deide",
-        "ar_name": "أولاد دايد",
-        "longitude": "36.1013316",
-        "latitude": "2.9097357",
-        "code": "26"
-    },
-    {
-        "id": "905",
-        "post_code": "26007",
-        "name": "El Omaria",
-        "ar_name": "العمارية",
-        "longitude": "36.3025098",
-        "latitude": "2.9355786",
-        "code": "26"
-    },
-    {
-        "id": "906",
-        "post_code": "26008",
-        "name": "Derrag",
-        "ar_name": "دراڨ",
-        "longitude": "35.8431534",
-        "latitude": "2.2165241",
-        "code": "26"
-    },
-    {
-        "id": "907",
-        "post_code": "26009",
-        "name": "El Guelbelkebir",
-        "ar_name": "القلب الكبير",
-        "longitude": "36.2477512",
-        "latitude": "3.3416865",
-        "code": "26"
-    },
-    {
-        "id": "908",
-        "post_code": "26010",
-        "name": "Bouaiche",
-        "ar_name": "بوعيش",
-        "longitude": "35.6097793",
-        "latitude": "2.1731367",
-        "code": "26"
-    },
-    {
-        "id": "909",
-        "post_code": "26011",
-        "name": "Mezerena",
-        "ar_name": "مزغنة",
-        "longitude": "36.3467956",
-        "latitude": "3.2758115",
-        "code": "26"
-    },
-    {
-        "id": "910",
-        "post_code": "26012",
-        "name": "Ouled Brahim",
-        "ar_name": "أولاد إبراهيم",
-        "longitude": "36.2195223",
-        "latitude": "2.8815053",
-        "code": "26"
-    },
-    {
-        "id": "911",
-        "post_code": "26013",
-        "name": "Tizi Mahdi",
-        "ar_name": "تيزي المهدي",
-        "longitude": "36.2131052",
-        "latitude": "2.7286213",
-        "code": "26"
-    },
-    {
-        "id": "912",
-        "post_code": "26014",
-        "name": "Sidi Ziane",
-        "ar_name": "سيدي زيان",
-        "longitude": "36.0275429",
-        "latitude": "3.1710122",
-        "code": "26"
-    },
-    {
-        "id": "913",
-        "post_code": "26015",
-        "name": "Tamesguida",
-        "ar_name": "تمزڨيدة",
-        "longitude": "36.3206865",
-        "latitude": "2.6122974",
-        "code": "26"
-    },
-    {
-        "id": "914",
-        "post_code": "26016",
-        "name": "El Hamdania",
-        "ar_name": "الحمدانية",
-        "longitude": "36.3465239",
-        "latitude": "2.7878641",
-        "code": "26"
-    },
-    {
-        "id": "915",
-        "post_code": "26017",
-        "name": "Kef Lakhdar",
-        "ar_name": "الكاف الأخضر",
-        "longitude": "35.9218925",
-        "latitude": "3.1958172",
-        "code": "26"
-    },
-    {
-        "id": "916",
-        "post_code": "26018",
-        "name": "Chelalet El Adhaoura",
-        "ar_name": "شلالة العذاورة",
-        "longitude": "35.9605086",
-        "latitude": "3.3358071",
-        "code": "26"
-    },
-    {
-        "id": "917",
-        "post_code": "26019",
-        "name": "Bouskene",
-        "ar_name": "بوسكن",
-        "longitude": "36.1950571",
-        "latitude": "3.1348775",
-        "code": "26"
-    },
-    {
-        "id": "918",
-        "post_code": "26020",
-        "name": "Rebaia",
-        "ar_name": "الربعية",
-        "longitude": "36.0223957",
-        "latitude": "3.0759976",
-        "code": "26"
-    },
-    {
-        "id": "919",
-        "post_code": "26021",
-        "name": "Bouchrahil",
-        "ar_name": "بوشراحيل",
-        "longitude": "36.2735556",
-        "latitude": "3.1350492",
-        "code": "26"
-    },
-    {
-        "id": "920",
-        "post_code": "26022",
-        "name": "Ouled Hellal",
-        "ar_name": "أولاد هلال",
-        "longitude": "36.0034964",
-        "latitude": "2.3924341",
-        "code": "26"
-    },
-    {
-        "id": "921",
-        "post_code": "26023",
-        "name": "Tafraout",
-        "ar_name": "تافراوت",
-        "longitude": "35.9953336",
-        "latitude": "3.2743524",
-        "code": "26"
-    },
-    {
-        "id": "922",
-        "post_code": "26024",
-        "name": "Baata",
-        "ar_name": "بعطة",
-        "longitude": "36.3720772",
-        "latitude": "3.059561",
-        "code": "26"
-    },
-    {
-        "id": "923",
-        "post_code": "26025",
-        "name": "Boghar",
-        "ar_name": "بوغار",
-        "longitude": "35.9371699",
-        "latitude": "2.6326821",
-        "code": "26"
-    },
-    {
-        "id": "924",
-        "post_code": "26026",
-        "name": "Sidi Naamane",
-        "ar_name": "سيدي نعمان",
-        "longitude": "36.2654589",
-        "latitude": "3.0135987",
-        "code": "26"
-    },
-    {
-        "id": "925",
-        "post_code": "26027",
-        "name": "Ouled Bouachra",
-        "ar_name": "أولاد بوعشرة",
-        "longitude": "36.0987018",
-        "latitude": "2.6346133",
-        "code": "26"
-    },
-    {
-        "id": "926",
-        "post_code": "26028",
-        "name": "Sidi Zahar",
-        "ar_name": "سيدي زهار",
-        "longitude": "36.0709876",
-        "latitude": "3.2656834",
-        "code": "26"
-    },
-    {
-        "id": "927",
-        "post_code": "26029",
-        "name": "Oued Harbil",
-        "ar_name": "وادي حربيل",
-        "longitude": "36.2397747",
-        "latitude": "2.5734161",
-        "code": "26"
-    },
-    {
-        "id": "928",
-        "post_code": "26030",
-        "name": "Benchicao",
-        "ar_name": "بن شكاو",
-        "longitude": "36.1913329",
-        "latitude": "2.7682088",
-        "code": "26"
-    },
-    {
-        "id": "929",
-        "post_code": "26031",
-        "name": "Sidi Damed",
-        "ar_name": "سيدي دامد",
-        "longitude": "35.8219378",
-        "latitude": "3.2306644",
-        "code": "26"
-    },
-    {
-        "id": "930",
-        "post_code": "26032",
-        "name": "Aziz",
-        "ar_name": "عزيز",
-        "longitude": "35.7544258",
-        "latitude": "2.2227155",
-        "code": "26"
-    },
-    {
-        "id": "931",
-        "post_code": "26033",
-        "name": "Souagui",
-        "ar_name": "السواڨي",
-        "longitude": "36.1114893",
-        "latitude": "3.1635449",
-        "code": "26"
-    },
-    {
-        "id": "932",
-        "post_code": "26034",
-        "name": "Zoubiria",
-        "ar_name": "الزبيرية",
-        "longitude": "36.065692",
-        "latitude": "2.7869199",
-        "code": "26"
-    },
-    {
-        "id": "933",
-        "post_code": "26035",
-        "name": "Ksar El Boukhari",
-        "ar_name": "قصر البخاري",
-        "longitude": "35.8750361",
-        "latitude": "2.6861545",
-        "code": "26"
-    },
-    {
-        "id": "934",
-        "post_code": "26036",
-        "name": "El Azizia",
-        "ar_name": "العزيزية",
-        "longitude": "36.3151797",
-        "latitude": "3.4549421",
-        "code": "26"
-    },
-    {
-        "id": "935",
-        "post_code": "26037",
-        "name": "Djouab",
-        "ar_name": "جواب",
-        "longitude": "36.1117003",
-        "latitude": "3.3535741",
-        "code": "26"
-    },
-    {
-        "id": "936",
-        "post_code": "26038",
-        "name": "Chahbounia",
-        "ar_name": "الشهبونية",
-        "longitude": "35.5846723",
-        "latitude": "2.4968901",
-        "code": "26"
-    },
-    {
-        "id": "937",
-        "post_code": "26039",
-        "name": "Meghraoua",
-        "ar_name": "مغراوة",
-        "longitude": "36.3822217",
-        "latitude": "3.4680723",
-        "code": "26"
-    },
-    {
-        "id": "938",
-        "post_code": "26040",
-        "name": "Cheniguel",
-        "ar_name": "شنيڨل",
-        "longitude": "35.9572465",
-        "latitude": "3.4658406",
-        "code": "26"
-    },
-    {
-        "id": "939",
-        "post_code": "26041",
-        "name": "Ain Ouksir",
-        "ar_name": "عين القصير",
-        "longitude": "35.7760055",
-        "latitude": "3.3282462",
-        "code": "26"
-    },
-    {
-        "id": "940",
-        "post_code": "26042",
-        "name": "Oum El Djalil",
-        "ar_name": "أم الجليل",
-        "longitude": "35.8304434",
-        "latitude": "2.6069329",
-        "code": "26"
-    },
-    {
-        "id": "941",
-        "post_code": "26043",
-        "name": "Ouamri",
-        "ar_name": "عوامري",
-        "longitude": "36.2537814",
-        "latitude": "2.4798606",
-        "code": "26"
-    },
-    {
-        "id": "942",
-        "post_code": "26044",
-        "name": "Si Mahdjoub",
-        "ar_name": "سى المحجوب",
-        "longitude": "36.1691158",
-        "latitude": "2.7172917",
-        "code": "26"
-    },
-    {
-        "id": "943",
-        "post_code": "26045",
-        "name": "Tlatet Eddouair",
-        "ar_name": "ثلاثة الدوائر",
-        "longitude": "35.9963494",
-        "latitude": "2.8731719",
-        "code": "26"
-    },
-    {
-        "id": "944",
-        "post_code": "26046",
-        "name": "Beni Slimane",
-        "ar_name": "بني سليمان",
-        "longitude": "36.2181313",
-        "latitude": "3.2412217",
-        "code": "26"
-    },
-    {
-        "id": "945",
-        "post_code": "26047",
-        "name": "Berrouaghia",
-        "ar_name": "البرواڨية",
-        "longitude": "36.1528037",
-        "latitude": "2.8436539",
-        "code": "26"
-    },
-    {
-        "id": "946",
-        "post_code": "26048",
-        "name": "Seghouane",
-        "ar_name": "سغوان",
-        "longitude": "35.9968593",
-        "latitude": "2.8356717",
-        "code": "26"
-    },
-    {
-        "id": "947",
-        "post_code": "26049",
-        "name": "Meftaha",
-        "ar_name": "المفاتحة",
-        "longitude": "35.8821773",
-        "latitude": ",2.8140852",
-        "code": "26"
-    },
-    {
-        "id": "948",
-        "post_code": "26050",
-        "name": "Mihoub",
-        "ar_name": "ميهوب",
-        "longitude": "36.3861353",
-        "latitude": "3.3691094",
-        "code": "26"
-    },
-    {
-        "id": "949",
-        "post_code": "26051",
-        "name": "Boughezoul",
-        "ar_name": "بوغزول",
-        "longitude": "35.6795297",
-        "latitude": "2.6264943",
-        "code": "26"
-    },
-    {
-        "id": "950",
-        "post_code": "26052",
-        "name": "Tablat",
-        "ar_name": "تابلاط",
-        "longitude": "36.4231476",
-        "latitude": "3.2734726",
-        "code": "26"
-    },
-    {
-        "id": "951",
-        "post_code": "26053",
-        "name": "Deux Bassins",
-        "ar_name": "فج الحوضين",
-        "longitude": "36.4676678",
-        "latitude": "3.2670586",
-        "code": "26"
-    },
-    {
-        "id": "952",
-        "post_code": "26054",
-        "name": "Draa Essamar",
-        "ar_name": "ذراع السمار",
-        "longitude": "36.2689828",
-        "latitude": "2.6257727",
-        "code": "26"
-    },
-    {
-        "id": "953",
-        "post_code": "26055",
-        "name": "Sidi Errabia",
-        "ar_name": "سيدي الربيع",
-        "longitude": "36.282548",
-        "latitude": "3.2951253",
-        "code": "26"
-    },
-    {
-        "id": "954",
-        "post_code": "26056",
-        "name": "Bir Ben Laabed",
-        "ar_name": "بئر بن العابد",
-        "longitude": "36.1905774",
-        "latitude": "3.3408711",
-        "code": "26"
-    },
-    {
-        "id": "955",
-        "post_code": "26057",
-        "name": "El Ouinet",
-        "ar_name": "العوينات",
-        "longitude": "35.8638348",
-        "latitude": "2.9963896",
-        "code": "26"
-    },
-    {
-        "id": "956",
-        "post_code": "26058",
-        "name": "Ouled Antar",
-        "ar_name": "أولاد عنتر",
-        "longitude": "35.9546472",
-        "latitude": "2.5264159",
-        "code": "26"
-    },
-    {
-        "id": "957",
-        "post_code": "26059",
-        "name": "Bouaichoune",
-        "ar_name": "بوعيشون",
-        "longitude": "36.1351828",
-        "latitude": "2.5703691",
-        "code": "26"
-    },
-    {
-        "id": "958",
-        "post_code": "26060",
-        "name": "Hannacha",
-        "ar_name": "حناشة",
-        "longitude": "36.1693058",
-        "latitude": "2.5216172",
-        "code": "26"
-    },
-    {
-        "id": "959",
-        "post_code": "26061",
-        "name": "Sedraia",
-        "ar_name": "سدراية",
-        "longitude": "36.2330914",
-        "latitude": "3.4389756",
-        "code": "26"
-    },
-    {
-        "id": "960",
-        "post_code": "26062",
-        "name": "Medjebar",
-        "ar_name": "مجبر",
-        "longitude": "35.9562974",
-        "latitude": "2.7541324",
-        "code": "26"
-    },
-    {
-        "id": "961",
-        "post_code": "26063",
-        "name": "Khams Djouamaa",
-        "ar_name": "خمس جوامع",
-        "longitude": "36.1478178",
-        "latitude": "3.0538534",
-        "code": "26"
-    },
-    {
-        "id": "962",
-        "post_code": "26064",
-        "name": "Saneg",
-        "ar_name": "سانڨ",
-        "longitude": "35.8406053",
-        "latitude": "2.760999",
-        "code": "26"
-    },
-    {
-        "id": "963",
-        "post_code": "27001",
-        "name": "Mostaganem",
-        "ar_name": "مستغانم",
-        "longitude": "35.9751637",
-        "latitude": "0.0448868",
-        "code": "27"
-    },
-    {
-        "id": "964",
-        "post_code": "27002",
-        "name": "Sayada",
-        "ar_name": "صيادة",
-        "longitude": "35.9321147",
-        "latitude": "0.0894758",
-        "code": "27"
-    },
-    {
-        "id": "965",
-        "post_code": "27003",
-        "name": "Fornaka",
-        "ar_name": "فرناكة",
-        "longitude": "35.7604979",
-        "latitude": "-0.0327569",
-        "code": "27"
-    },
-    {
-        "id": "966",
-        "post_code": "27004",
-        "name": "Stidia",
-        "ar_name": "ستيدية",
-        "longitude": "35.8286516",
-        "latitude": "-0.0143553",
-        "code": "27"
-    },
-    {
-        "id": "967",
-        "post_code": "27005",
-        "name": "Ain Nouissy",
-        "ar_name": "عين نويسي",
-        "longitude": "35.8032737",
-        "latitude": "0.0398253",
-        "code": "27"
-    },
-    {
-        "id": "968",
-        "post_code": "27006",
-        "name": "Hassi Maameche",
-        "ar_name": "حاسي مماش",
-        "longitude": "35.8606343",
-        "latitude": "0.0229141",
-        "code": "27"
-    },
-    {
-        "id": "969",
-        "post_code": "27007",
-        "name": "Ain Tadles",
-        "ar_name": "عين تادلس",
-        "longitude": "35.9940136",
-        "latitude": "0.2932405",
-        "code": "27"
-    },
-    {
-        "id": "970",
-        "post_code": "27008",
-        "name": "Sour",
-        "ar_name": "صور",
-        "longitude": "36.0006026",
-        "latitude": "0.3356516",
-        "code": "27"
-    },
-    {
-        "id": "971",
-        "post_code": "27009",
-        "name": "Oued El Kheir",
-        "ar_name": "واد الخير",
-        "longitude": "35.9498792",
-        "latitude": "0.3768825",
-        "code": "27"
-    },
-    {
-        "id": "972",
-        "post_code": "27010",
-        "name": "Sidi Bellater",
-        "ar_name": "سيدي بلعاتر",
-        "longitude": "36.0267851",
-        "latitude": "0.2672123",
-        "code": "27"
-    },
-    {
-        "id": "973",
-        "post_code": "27011",
-        "name": "Kheiredine",
-        "ar_name": "خير الدين",
-        "longitude": "35.9549081",
-        "latitude": "0.1016209",
-        "code": "27"
-    },
-    {
-        "id": "974",
-        "post_code": "27012",
-        "name": "Sidi Ali",
-        "ar_name": "سيدي علي",
-        "longitude": "36.0968612",
-        "latitude": "0.3972458",
-        "code": "27"
-    },
-    {
-        "id": "975",
-        "post_code": "27013",
-        "name": "Abdelmalek Ramdane",
-        "ar_name": "عبد المالك رمضان",
-        "longitude": "36.1034611",
-        "latitude": "0.2672312",
-        "code": "27"
-    },
-    {
-        "id": "976",
-        "post_code": "27014",
-        "name": "Hadjadj",
-        "ar_name": "حجاج",
-        "longitude": "36.0963942",
-        "latitude": "0.3163505",
-        "code": "27"
-    },
-    {
-        "id": "977",
-        "post_code": "27015",
-        "name": "Nekmaria",
-        "ar_name": "نقمارية",
-        "longitude": "36.1880382",
-        "latitude": "0.6165754",
-        "code": "27"
-    },
-    {
-        "id": "978",
-        "post_code": "27016",
-        "name": "Sidi Lakhdar",
-        "ar_name": "سيدي لخضر",
-        "longitude": "36.1633785",
-        "latitude": "0.4315995",
-        "code": "27"
-    },
-    {
-        "id": "979",
-        "post_code": "27017",
-        "name": "Achaacha",
-        "ar_name": "عشعاشة",
-        "longitude": "36.2449302",
-        "latitude": "0.6235599",
-        "code": "27"
-    },
-    {
-        "id": "980",
-        "post_code": "27018",
-        "name": "Khadra",
-        "ar_name": "خضراء",
-        "longitude": "36.2538598",
-        "latitude": "0.5688214",
-        "code": "27"
-    },
-    {
-        "id": "981",
-        "post_code": "27019",
-        "name": "Bouguirat",
-        "ar_name": "بوقيراط",
-        "longitude": "35.751283",
-        "latitude": "0.2465079",
-        "code": "27"
-    },
-    {
-        "id": "982",
-        "post_code": "27020",
-        "name": "Sirat",
-        "ar_name": "سيرات",
-        "longitude": "35.780582",
-        "latitude": "0.183571",
-        "code": "27"
-    },
-    {
-        "id": "983",
-        "post_code": "27021",
-        "name": "Ain Sidi Cherif",
-        "ar_name": "عين سيدي شريف",
-        "longitude": "35.8358105",
-        "latitude": "0.1163113",
-        "code": "27"
-    },
-    {
-        "id": "984",
-        "post_code": "27022",
-        "name": "Mesra",
-        "ar_name": "ماسرة",
-        "longitude": "35.8389326",
-        "latitude": "0.1574992",
-        "code": "27"
-    },
-    {
-        "id": "985",
-        "post_code": "27023",
-        "name": "Mansourah",
-        "ar_name": "منصورة",
-        "longitude": "35.8432384",
-        "latitude": "0.2285671",
-        "code": "27"
-    },
-    {
-        "id": "986",
-        "post_code": "27024",
-        "name": "Souaflia",
-        "ar_name": "سوافلية",
-        "longitude": "35.8616131",
-        "latitude": "0.3271866",
-        "code": "27"
-    },
-    {
-        "id": "987",
-        "post_code": "27025",
-        "name": "Ouled Boughalem",
-        "ar_name": "أوالد بوغالم",
-        "longitude": "36.3160232",
-        "latitude": "0.661025",
-        "code": "27"
-    },
-    {
-        "id": "988",
-        "post_code": "27026",
-        "name": "Ouled Maallah",
-        "ar_name": "أولاد مع اللّه",
-        "longitude": "36.0072076",
-        "latitude": "0.5870175",
-        "code": "27"
-    },
-    {
-        "id": "989",
-        "post_code": "27027",
-        "name": "Mezghrane",
-        "ar_name": "مزغران",
-        "longitude": "35.8844492",
-        "latitude": "0.0250619",
-        "code": "27"
-    },
-    {
-        "id": "990",
-        "post_code": "27028",
-        "name": "Ain Boudinar",
-        "ar_name": "عين بودينار",
-        "longitude": "36.0091691",
-        "latitude": "0.1825405",
-        "code": "27"
-    },
-    {
-        "id": "991",
-        "post_code": "27029",
-        "name": "Tazgait",
-        "ar_name": "تزقايت",
-        "longitude": "36.0944945",
-        "latitude": "0.5438018",
-        "code": "27"
-    },
-    {
-        "id": "992",
-        "post_code": "27030",
-        "name": "Safsaf",
-        "ar_name": "صفصاف",
-        "longitude": "35.8436642",
-        "latitude": "0.3698229",
-        "code": "27"
-    },
-    {
-        "id": "993",
-        "post_code": "27031",
-        "name": "Touahria",
-        "ar_name": "طواھيرية",
-        "longitude": "35.8109224",
-        "latitude": "0.2054358",
-        "code": "27"
-    },
-    {
-        "id": "994",
-        "post_code": "27032",
-        "name": "El Hassiane",
-        "ar_name": "الحسيان",
-        "longitude": "35.7530845",
-        "latitude": "0.1155925",
-        "code": "27"
-    },
-    {
-        "id": "995",
-        "post_code": "28001",
-        "name": "Msila",
-        "ar_name": "المسيلة",
-        "longitude": "35.7210664",
-        "latitude": "4.3786421",
-        "code": "28"
-    },
-    {
-        "id": "996",
-        "post_code": "28002",
-        "name": "Maadid",
-        "ar_name": "المعاضيد",
-        "longitude": "35.7973219",
-        "latitude": "4.6873829",
-        "code": "28"
-    },
-    {
-        "id": "997",
-        "post_code": "28003",
-        "name": "Hammam Dhalaa",
-        "ar_name": "حمـام الضلعة",
-        "longitude": "35.9303231",
-        "latitude": "4.2004576",
-        "code": "28"
-    },
-    {
-        "id": "998",
-        "post_code": "28004",
-        "name": "Ouled Derradj",
-        "ar_name": "أولاد دراج",
-        "longitude": "35.6715243",
-        "latitude": "4.6290103",
-        "code": "28"
-    },
-    {
-        "id": "999",
-        "post_code": "28005",
-        "name": "Tarmount",
-        "ar_name": "تارمونت",
-        "longitude": "35.8174498",
-        "latitude": "4.1865609",
-        "code": "28"
-    },
-    {
-        "id": "1000",
-        "post_code": "28006",
-        "name": "Mtarfa",
-        "ar_name": "مطارفة",
-        "longitude": "35.6887798",
-        "latitude": "4.5064011",
-        "code": "28"
-    },
-    {
-        "id": "1001",
-        "post_code": "28007",
-        "name": "Khoubana",
-        "ar_name": "خبانة",
-        "longitude": "35.3114022",
-        "latitude": "4.3378725",
-        "code": "28"
-    },
-    {
-        "id": "1002",
-        "post_code": "28008",
-        "name": "M'cif",
-        "ar_name": "مسيف",
-        "longitude": "35.315",
-        "latitude": "4.5858374",
-        "code": "28"
-    },
-    {
-        "id": "1003",
-        "post_code": "28009",
-        "name": "Chellal",
-        "ar_name": "شلال",
-        "longitude": "35.5134267",
-        "latitude": ",4.2335024",
-        "code": "28"
-    },
-    {
-        "id": "1004",
-        "post_code": "28010",
-        "name": "Ouled Madhi",
-        "ar_name": "أولاد مـاضي",
-        "longitude": "35.524776",
-        "latitude": "4.4095411",
-        "code": "28"
-    },
-    {
-        "id": "1005",
-        "post_code": "28011",
-        "name": "Magra",
-        "ar_name": "مقرة",
-        "longitude": "35.6076161",
-        "latitude": "4.9762812",
-        "code": "28"
-    },
-    {
-        "id": "1006",
-        "post_code": "28012",
-        "name": "Berhoum",
-        "ar_name": "برهوم",
-        "longitude": "35.6351693",
-        "latitude": "4.9263356",
-        "code": "28"
-    },
-    {
-        "id": "1007",
-        "post_code": "28013",
-        "name": "Ain Khadra",
-        "ar_name": "عين الخضراء",
-        "longitude": "35.5456141",
-        "latitude": "4.8777554",
-        "code": "28"
-    },
-    {
-        "id": "1008",
-        "post_code": "28014",
-        "name": "Ouled Addi Guebala",
-        "ar_name": "اولاد عدي لقبالة",
-        "longitude": "35.676541",
-        "latitude": "4.7484866",
-        "code": "28"
-    },
-    {
-        "id": "1009",
-        "post_code": "28015",
-        "name": "Belaiba",
-        "ar_name": "بلعايبة",
-        "longitude": "35.5682674",
-        "latitude": "5.1394531",
-        "code": "28"
-    },
-    {
-        "id": "1010",
-        "post_code": "28016",
-        "name": "Sidi Aissa",
-        "ar_name": "سيدي عيسى",
-        "longitude": "35.8255783",
-        "latitude": "3.6556044",
-        "code": "28"
-    },
-    {
-        "id": "1011",
-        "post_code": "28017",
-        "name": "Ain El Hadjel",
-        "ar_name": "عين الحجل",
-        "longitude": "35.6184864",
-        "latitude": "3.6830434",
-        "code": "28"
-    },
-    {
-        "id": "1012",
-        "post_code": "28018",
-        "name": "Sidi Hadjeres",
-        "ar_name": "سيدي ھجرس",
-        "longitude": "35.7020457",
-        "latitude": "3.7978373",
-        "code": "28"
-    },
-    {
-        "id": "1013",
-        "post_code": "28019",
-        "name": "Ouanougha",
-        "ar_name": "ونوغة",
-        "longitude": "35.9310253",
-        "latitude": "4.041585",
-        "code": "28"
-    },
-    {
-        "id": "1014",
-        "post_code": "28020",
-        "name": "Bou Saada",
-        "ar_name": "بوسعادة",
-        "longitude": "35.2131065",
-        "latitude": "4.0429152",
-        "code": "28"
-    },
-    {
-        "id": "1015",
-        "post_code": "28021",
-        "name": "Ouled Sidi Brahim",
-        "ar_name": "أولاد سيدي ابراهيم",
-        "longitude": "35.3495826",
-        "latitude": "3.9983262",
-        "code": "28"
-    },
-    {
-        "id": "1016",
-        "post_code": "28022",
-        "name": "Sidi Ameur",
-        "ar_name": "سيدي عامر",
-        "longitude": "35.3659746",
-        "latitude": "3.6834134",
-        "code": "28"
-    },
-    {
-        "id": "1017",
-        "post_code": "28023",
-        "name": "Tamsa",
-        "ar_name": "تامسة",
-        "longitude": "35.2027774",
-        "latitude": "3.7451258",
-        "code": "28"
-    },
-    {
-        "id": "1018",
-        "post_code": "28024",
-        "name": "Ben Srour",
-        "ar_name": "بن سرور",
-        "longitude": "34.9930313",
-        "latitude": "4.4258488",
-        "code": "28"
-    },
-    {
-        "id": "1019",
-        "post_code": "28025",
-        "name": "Ouled Slimane",
-        "ar_name": "أولاد سليمان",
-        "longitude": "34.9246808",
-        "latitude": "4.7197332",
-        "code": "28"
-    },
-    {
-        "id": "1020",
-        "post_code": "28026",
-        "name": "El Houamed",
-        "ar_name": "الحوامد",
-        "longitude": "35.1664895",
-        "latitude": "4.3637934",
-        "code": "28"
-    },
-    {
-        "id": "1021",
-        "post_code": "28027",
-        "name": "El Hamel",
-        "ar_name": "الهامل",
-        "longitude": "35.1212832",
-        "latitude": "3.9996217",
-        "code": "28"
-    },
-    {
-        "id": "1022",
-        "post_code": "28028",
-        "name": "Ouled Mansour",
-        "ar_name": "أولاد منصور",
-        "longitude": "35.7319531",
-        "latitude": "4.2625131",
-        "code": "28"
-    },
-    {
-        "id": "1023",
-        "post_code": "28029",
-        "name": "Maarif",
-        "ar_name": "المعاريف",
-        "longitude": "35.360452",
-        "latitude": "4.1652669",
-        "code": "28"
-    },
-    {
-        "id": "1024",
-        "post_code": "28030",
-        "name": "Dehahna",
-        "ar_name": "الدهاهنة",
-        "longitude": "35.7328552",
-        "latitude": "4.9668048",
-        "code": "28"
-    },
-    {
-        "id": "1025",
-        "post_code": "28031",
-        "name": "Bouti Sayah",
-        "ar_name": "بوطي السايح",
-        "longitude": "35.6757367",
-        "latitude": "3.4628716",
-        "code": "28"
-    },
-    {
-        "id": "1026",
-        "post_code": "28032",
-        "name": "Khettouti Sed Djir",
-        "ar_name": "خطوطي سد الجير",
-        "longitude": "35.679121",
-        "latitude": "4.0557899",
-        "code": "28"
-    },
-    {
-        "id": "1027",
-        "post_code": "28033",
-        "name": "Zarzour",
-        "ar_name": "الزرزور",
-        "longitude": "35.0536128",
-        "latitude": "4.7163",
-        "code": "28"
-    },
-    {
-        "id": "1028",
-        "post_code": "28034",
-        "name": "Oued Chair",
-        "ar_name": "محمد بوضياف",
-        "longitude": "34.8994154",
-        "latitude": "4.3559827",
-        "code": "28"
-    },
-    {
-        "id": "1029",
-        "post_code": "28035",
-        "name": "Benzouh",
-        "ar_name": "بن الزوه",
-        "longitude": "35.4561038",
-        "latitude": "3.9870825",
-        "code": "28"
-    },
-    {
-        "id": "1030",
-        "post_code": "28036",
-        "name": "Bir Foda",
-        "ar_name": "بير الفضة",
-        "longitude": "34.8183094",
-        "latitude": "3.7172307",
-        "code": "28"
-    },
-    {
-        "id": "1031",
-        "post_code": "28037",
-        "name": "Ain Fares",
-        "ar_name": "عين فارس",
-        "longitude": "34.742717",
-        "latitude": "4.3576134",
-        "code": "28"
-    },
-    {
-        "id": "1032",
-        "post_code": "28038",
-        "name": "Sidi Mhamed",
-        "ar_name": "سيدي محمد",
-        "longitude": "34.7726262",
-        "latitude": "4.1440667",
-        "code": "28"
-    },
-    {
-        "id": "1033",
-        "post_code": "28039",
-        "name": "Ouled Atia",
-        "ar_name": "منعة",
-        "longitude": "35.1324378",
-        "latitude": "3.455394",
-        "code": "28"
-    },
-    {
-        "id": "1034",
-        "post_code": "28040",
-        "name": "Souamaa",
-        "ar_name": "الصوامع",
-        "longitude": "35.5173258",
-        "latitude": "4.5889058",
-        "code": "28"
-    },
-    {
-        "id": "1035",
-        "post_code": "28041",
-        "name": "Ain El Melh",
-        "ar_name": "عين الملح",
-        "longitude": "34.7887663",
-        "latitude": "4.0208139",
-        "code": "28"
-    },
-    {
-        "id": "1036",
-        "post_code": "28042",
-        "name": "Medjedel",
-        "ar_name": "مجدل",
-        "longitude": "35.0618873",
-        "latitude": "3.3440071",
-        "code": "28"
-    },
-    {
-        "id": "1037",
-        "post_code": "28043",
-        "name": "Slim",
-        "ar_name": "سليم",
-        "longitude": "34.9545036",
-        "latitude": "3.7464989",
-        "code": "28"
-    },
-    {
-        "id": "1038",
-        "post_code": "28044",
-        "name": "Ain Errich",
-        "ar_name": "عين الريش",
-        "longitude": "34.4919894",
-        "latitude": "3.8159469",
-        "code": "28"
-    },
-    {
-        "id": "1039",
-        "post_code": "28045",
-        "name": "Beni Ilmane",
-        "ar_name": "بنى يلمان",
-        "longitude": "35.9460168",
-        "latitude": "3.934125",
-        "code": "28"
-    },
-    {
-        "id": "1040",
-        "post_code": "28046",
-        "name": "Oultene",
-        "ar_name": "ولتام",
-        "longitude": "35.1127067",
-        "latitude": "4.1979763",
-        "code": "28"
-    },
-    {
-        "id": "1041",
-        "post_code": "28047",
-        "name": "Djebel Messaad",
-        "ar_name": "جبل مساعد",
-        "longitude": "34.9863778",
-        "latitude": "4.0131749",
-        "code": "28"
-    },
-    {
-        "id": "1042",
-        "post_code": "29001",
-        "name": "Mascara",
-        "ar_name": "مـعـسـكـر",
-        "longitude": "35.3185",
-        "latitude": "0.1511",
-        "code": "29"
-    },
-    {
-        "id": "1043",
-        "post_code": "29002",
-        "name": "Bou Hanifia",
-        "ar_name": "بوحنيفية",
-        "longitude": "35.2512",
-        "latitude": "-0.0494",
-        "code": "29"
-    },
-    {
-        "id": "1044",
-        "post_code": "29003",
-        "name": "Tizi",
-        "ar_name": "تيزي",
-        "longitude": "35.2512",
-        "latitude": "0.0714",
-        "code": "29"
-    },
-    {
-        "id": "1045",
-        "post_code": "29004",
-        "name": "Hacine",
-        "ar_name": "حسين",
-        "longitude": "35.3969",
-        "latitude": "-0.0055",
-        "code": "29"
-    },
-    {
-        "id": "1046",
-        "post_code": "29005",
-        "name": "Maoussa",
-        "ar_name": "ماوسة",
-        "longitude": "35.314",
-        "latitude": "0.2472",
-        "code": "29"
-    },
-    {
-        "id": "1047",
-        "post_code": "29006",
-        "name": "Teghennif",
-        "ar_name": "تيغنيف",
-        "longitude": "35.3521",
-        "latitude": "0.3323",
-        "code": "29"
-    },
-    {
-        "id": "1048",
-        "post_code": "29007",
-        "name": "El Hachem",
-        "ar_name": "الهاشم",
-        "longitude": "35.3028",
-        "latitude": "0.4834",
-        "code": "29"
-    },
-    {
-        "id": "1049",
-        "post_code": "29008",
-        "name": "Sidi Kada",
-        "ar_name": "سيدي قادة",
-        "longitude": "35.2692",
-        "latitude": "0.3488",
-        "code": "29"
-    },
-    {
-        "id": "1050",
-        "post_code": "29009",
-        "name": "Zelmata",
-        "ar_name": "زلماطة",
-        "longitude": "35.2266",
-        "latitude": "0.4752",
-        "code": "29"
-    },
-    {
-        "id": "1051",
-        "post_code": "29010",
-        "name": "Oued El Abtal",
-        "ar_name": "واد الأبطال",
-        "longitude": "35.3924",
-        "latitude": "0.6894",
-        "code": "29"
-    },
-    {
-        "id": "1052",
-        "post_code": "29011",
-        "name": "Ain Ferah",
-        "ar_name": "عين فراح",
-        "longitude": "35.3162",
-        "latitude": "0.7828",
-        "code": "29"
-    },
-    {
-        "id": "1053",
-        "post_code": "29012",
-        "name": "Ghriss",
-        "ar_name": "غريس",
-        "longitude": "35.1839",
-        "latitude": "0.162",
-        "code": "29"
-    },
-    {
-        "id": "1054",
-        "post_code": "29013",
-        "name": "Froha",
-        "ar_name": "فروحة",
-        "longitude": "35.24",
-        "latitude": "0.1263",
-        "code": "29"
-    },
-    {
-        "id": "1055",
-        "post_code": "29014",
-        "name": "Matemore",
-        "ar_name": "مطمور",
-        "longitude": "35.2624",
-        "latitude": "0.2142",
-        "code": "29"
-    },
-    {
-        "id": "1056",
-        "post_code": "29015",
-        "name": "Makdha",
-        "ar_name": "ماقضة",
-        "longitude": "35.1076",
-        "latitude": "0.2966",
-        "code": "29"
-    },
-    {
-        "id": "1057",
-        "post_code": "29016",
-        "name": "Sidi Boussaid",
-        "ar_name": "سيدي بوسعيد",
-        "longitude": "35.2266",
-        "latitude": "0.2966",
-        "code": "29"
-    },
-    {
-        "id": "1058",
-        "post_code": "29017",
-        "name": "El Bordj",
-        "ar_name": "البرج",
-        "longitude": "35.4528",
-        "latitude": "0.3021",
-        "code": "29"
-    },
-    {
-        "id": "1059",
-        "post_code": "29018",
-        "name": "Ain Fekan",
-        "ar_name": "عين فكان",
-        "longitude": "35.1615",
-        "latitude": "-0.0027",
-        "code": "29"
-    },
-    {
-        "id": "1060",
-        "post_code": "29019",
-        "name": "Benian",
-        "ar_name": "بنيان",
-        "longitude": "35.0356",
-        "latitude": "0.2307",
-        "code": "29"
-    },
-    {
-        "id": "1061",
-        "post_code": "29020",
-        "name": "Khalouia",
-        "ar_name": "خلوية",
-        "longitude": "35.3991",
-        "latitude": "0.2966",
-        "code": "29"
-    },
-    {
-        "id": "1062",
-        "post_code": "29021",
-        "name": "El Menaouer",
-        "ar_name": "المناور",
-        "longitude": "35.4797",
-        "latitude": "0.4037",
-        "code": "29"
-    },
-    {
-        "id": "1063",
-        "post_code": "29022",
-        "name": "Oued Taria",
-        "ar_name": "واد التاغية",
-        "longitude": "35.0514",
-        "latitude": "0.0879",
-        "code": "29"
-    },
-    {
-        "id": "1064",
-        "post_code": "29023",
-        "name": "Aouf",
-        "ar_name": "عوف",
-        "longitude": "35.0334",
-        "latitude": "0.3571",
-        "code": "29"
-    },
-    {
-        "id": "1065",
-        "post_code": "29024",
-        "name": "Ain Fares",
-        "ar_name": "عين فارس",
-        "longitude": "35.417",
-        "latitude": "0.2444",
-        "code": "29"
-    },
-    {
-        "id": "1066",
-        "post_code": "29025",
-        "name": "Ain Frass",
-        "ar_name": "عين فراس",
-        "longitude": "35.1255",
-        "latitude": "-0.1511",
-        "code": "29"
-    },
-    {
-        "id": "1067",
-        "post_code": "29026",
-        "name": "Sig",
-        "ar_name": "سيڨ",
-        "longitude": "35.4685",
-        "latitude": "-0.184",
-        "code": "29"
-    },
-    {
-        "id": "1068",
-        "post_code": "29027",
-        "name": "Oggaz",
-        "ar_name": "عقاز",
-        "longitude": "35.502",
-        "latitude": "-0.2664",
-        "code": "29"
-    },
-    {
-        "id": "1069",
-        "post_code": "29028",
-        "name": "Alaimia",
-        "ar_name": "العلايمية",
-        "longitude": "35.6115",
-        "latitude": "-0.2197",
-        "code": "29"
-    },
-    {
-        "id": "1070",
-        "post_code": "29029",
-        "name": "El Gaada",
-        "ar_name": "القعدة",
-        "longitude": "35.4685",
-        "latitude": "-0.184",
-        "code": "29"
-    },
-    {
-        "id": "1071",
-        "post_code": "29030",
-        "name": "Zahana",
-        "ar_name": "زھانة",
-        "longitude": "35.4551",
-        "latitude": "-0.412",
-        "code": "29"
-    },
-    {
-        "id": "1072",
-        "post_code": "29031",
-        "name": "Mohammadia",
-        "ar_name": "المحمدية",
-        "longitude": "35.5266",
-        "latitude": "0.0687",
-        "code": "29"
-    },
-    {
-        "id": "1073",
-        "post_code": "29032",
-        "name": "Sidi Abdelmoumene",
-        "ar_name": "سيدي عبد المومن",
-        "longitude": "35.5713",
-        "latitude": "0.0522",
-        "code": "29"
-    },
-    {
-        "id": "1074",
-        "post_code": "29033",
-        "name": "Ferraguig",
-        "ar_name": "فرقيق",
-        "longitude": "35.4685",
-        "latitude": "0.1538",
-        "code": "29"
-    },
-    {
-        "id": "1075",
-        "post_code": "29034",
-        "name": "El Ghomri",
-        "ar_name": "الغمري",
-        "longitude": "35.6205",
-        "latitude": "0.2005",
-        "code": "29"
-    },
-    {
-        "id": "1076",
-        "post_code": "29035",
-        "name": "Sedjerara",
-        "ar_name": "سجرارة",
-        "longitude": "35.6138",
-        "latitude": "0.3433",
-        "code": "29"
-    },
-    {
-        "id": "1077",
-        "post_code": "29036",
-        "name": "Moctadouz",
-        "ar_name": "مقطع الدوز",
-        "longitude": "35.5356",
-        "latitude": "-0.0494",
-        "code": "29"
-    },
-    {
-        "id": "1078",
-        "post_code": "29037",
-        "name": "Bou Henni",
-        "ar_name": "بوهني",
-        "longitude": "35.4976",
-        "latitude": "-0.0851",
-        "code": "29"
-    },
-    {
-        "id": "1079",
-        "post_code": "29038",
-        "name": "Guettena",
-        "ar_name": "القيطنة",
-        "longitude": "35.3207",
-        "latitude": "-0.2032",
-        "code": "29"
-    },
-    {
-        "id": "1080",
-        "post_code": "29039",
-        "name": "El Mamounia",
-        "ar_name": "المامونية",
-        "longitude": "35.3611",
-        "latitude": "0.1401",
-        "code": "29"
-    },
-    {
-        "id": "1081",
-        "post_code": "29040",
-        "name": "El Keurt",
-        "ar_name": "الكرط",
-        "longitude": "35.3162",
-        "latitude": "0.0906",
-        "code": "29"
-    },
-    {
-        "id": "1082",
-        "post_code": "29041",
-        "name": "Gharrous",
-        "ar_name": "غروس",
-        "longitude": "35.1323",
-        "latitude": "0.401",
-        "code": "29"
-    },
-    {
-        "id": "1083",
-        "post_code": "29042",
-        "name": "Gherdjoum",
-        "ar_name": "ڤرجوم",
-        "longitude": "35.1143",
-        "latitude": "0.0714",
-        "code": "29"
-    },
-    {
-        "id": "1084",
-        "post_code": "29043",
-        "name": "Chorfa",
-        "ar_name": "الشرفة",
-        "longitude": "35.3678",
-        "latitude": "-0.2444",
-        "code": "29"
-    },
-    {
-        "id": "1085",
-        "post_code": "29044",
-        "name": "Ras Ain Amirouche",
-        "ar_name": "رأس العين عميروش",
-        "longitude": "35.5289",
-        "latitude": "-0.2115",
-        "code": "29"
-    },
-    {
-        "id": "1086",
-        "post_code": "29045",
-        "name": "Nesmot",
-        "ar_name": "نسموط",
-        "longitude": "35.1862",
-        "latitude": "0.3845",
-        "code": "29"
-    },
-    {
-        "id": "1087",
-        "post_code": "29046",
-        "name": "Sidi Abdeldjebar",
-        "ar_name": "سيدي عبد الجبار",
-        "longitude": "35.379",
-        "latitude": "0.5246",
-        "code": "29"
-    },
-    {
-        "id": "1088",
-        "post_code": "29047",
-        "name": "Sehailia",
-        "ar_name": "سحايلية",
-        "longitude": "35.4484",
-        "latitude": "0.3818",
-        "code": "29"
-    },
-    {
-        "id": "1089",
-        "post_code": "30001",
-        "name": "Ouargla",
-        "ar_name": "ورڨلة",
-        "longitude": "31.8974",
-        "latitude": "5.3421",
-        "code": "30"
-    },
-    {
-        "id": "1090",
-        "post_code": "30002",
-        "name": "Ain Beida",
-        "ar_name": "عين البيضاء",
-        "longitude": "31.8717",
-        "latitude": "5.3888",
-        "code": "30"
-    },
-    {
-        "id": "1091",
-        "post_code": "30003",
-        "name": "Ngoussa",
-        "ar_name": "نقوسة",
-        "longitude": "32.0744",
-        "latitude": "5.3091",
-        "code": "30"
-    },
-    {
-        "id": "1092",
-        "post_code": "30004",
-        "name": "Hassi Messaoud",
-        "ar_name": "حاسي مسعود",
-        "longitude": "31.6148",
-        "latitude": "6.0727",
-        "code": "30"
-    },
-    {
-        "id": "1093",
-        "post_code": "30005",
-        "name": "Rouissat",
-        "ar_name": "الرويسات",
-        "longitude": "31.8694",
-        "latitude": "5.3366",
-        "code": "30"
-    },
-    {
-        "id": "1094",
-        "post_code": "30006",
-        "name": "Balidat Ameur",
-        "ar_name": "بليدة عامر",
-        "longitude": "32.8854",
-        "latitude": "5.9793",
-        "code": "30"
-    },
-    {
-        "id": "1095",
-        "post_code": "30007",
-        "name": "Tebesbest",
-        "ar_name": "تبسبست",
-        "longitude": "33.0536",
-        "latitude": "6.0809",
-        "code": "30"
-    },
-    {
-        "id": "1096",
-        "post_code": "30008",
-        "name": "Nezla",
-        "ar_name": "نزلة",
-        "longitude": "33.0167",
-        "latitude": "6.0507",
-        "code": "30"
-    },
-    {
-        "id": "1097",
-        "post_code": "30009",
-        "name": "Zaouia El Abidia",
-        "ar_name": "الزاوية العابدية",
-        "longitude": "33.072",
-        "latitude": "6.0809",
-        "code": "30"
-    },
-    {
-        "id": "1098",
-        "post_code": "30010",
-        "name": "Sidi Slimane",
-        "ar_name": "سيدي سليمان",
-        "longitude": "33.2238",
-        "latitude": "6.0919",
-        "code": "30"
-    },
-    {
-        "id": "1099",
-        "post_code": "30011",
-        "name": "Sidi Khouiled",
-        "ar_name": "سيدي خويلد",
-        "longitude": "31.9137",
-        "latitude": "5.419",
-        "code": "30"
-    },
-    {
-        "id": "1100",
-        "post_code": "30012",
-        "name": "Hassi Ben Abdellah",
-        "ar_name": "حاسي بن عبد ﷲ",
-        "longitude": "31.9603",
-        "latitude": "5.4684",
-        "code": "30"
-    },
-    {
-        "id": "1101",
-        "post_code": "30013",
-        "name": "Touggourt",
-        "ar_name": "توقرت",
-        "longitude": "33.0351",
-        "latitude": "6.0672",
-        "code": "30"
-    },
-    {
-        "id": "1102",
-        "post_code": "30014",
-        "name": "El Hadjira",
-        "ar_name": "الحجيرة",
-        "longitude": "32.548",
-        "latitude": "5.5124",
-        "code": "30"
-    },
-    {
-        "id": "1103",
-        "post_code": "30015",
-        "name": "Taibet",
-        "ar_name": "الطيبات",
-        "longitude": "33.019",
-        "latitude": "6.3995",
-        "code": "30"
-    },
-    {
-        "id": "1104",
-        "post_code": "30016",
-        "name": "Tamacine",
-        "ar_name": "تماسين",
-        "longitude": "32.9568",
-        "latitude": "6.0233",
-        "code": "30"
-    },
-    {
-        "id": "1105",
-        "post_code": "30017",
-        "name": "Benaceur",
-        "ar_name": "بن ناصر",
-        "longitude": "33.0444",
-        "latitude": "6.4407",
-        "code": "30"
-    },
-    {
-        "id": "1106",
-        "post_code": "30018",
-        "name": "Mnaguer",
-        "ar_name": "المنقر",
-        "longitude": "33.0467",
-        "latitude": "6.405",
-        "code": "30"
-    },
-    {
-        "id": "1107",
-        "post_code": "30019",
-        "name": "Megarine",
-        "ar_name": "المقارين",
-        "longitude": "33.1272",
-        "latitude": "6.0947",
-        "code": "30"
-    },
-    {
-        "id": "1108",
-        "post_code": "30020",
-        "name": "El Allia",
-        "ar_name": "العالية",
-        "longitude": "32.6313",
-        "latitude": "5.4245",
-        "code": "30"
-    },
-    {
-        "id": "1109",
-        "post_code": "30021",
-        "name": "El Borma",
-        "ar_name": "البرمة",
-        "longitude": "31.5891",
-        "latitude": "9.1791",
-        "code": "30"
-    },
-    {
-        "id": "1110",
-        "post_code": "31001",
-        "name": "Oran",
-        "ar_name": "وهران",
-        "longitude": "35.6372",
-        "latitude": "-0.6482",
-        "code": "31"
-    },
-    {
-        "id": "1111",
-        "post_code": "31002",
-        "name": "Gdyel",
-        "ar_name": "ڨديل",
-        "longitude": "35.7175",
-        "latitude": "-0.423",
-        "code": "31"
-    },
-    {
-        "id": "1112",
-        "post_code": "31003",
-        "name": "Bir El Djir",
-        "ar_name": "بئر الجير",
-        "longitude": "35.6729",
-        "latitude": "-0.5548",
-        "code": "31"
-    },
-    {
-        "id": "1113",
-        "post_code": "31004",
-        "name": "Hassi Bounif",
-        "ar_name": "حاسيْ بُونِيف",
-        "longitude": "35.635",
-        "latitude": "-0.4999",
-        "code": "31"
-    },
-    {
-        "id": "1114",
-        "post_code": "31005",
-        "name": "Es Senia",
-        "ar_name": "السانية",
-        "longitude": "35.5859",
-        "latitude": "-0.618",
-        "code": "31"
-    },
-    {
-        "id": "1115",
-        "post_code": "31006",
-        "name": "Arzew",
-        "ar_name": "أرزيو",
-        "longitude": "35.8044",
-        "latitude": "-0.3214",
-        "code": "31"
-    },
-    {
-        "id": "1116",
-        "post_code": "31007",
-        "name": "Bethioua",
-        "ar_name": "ﺑﻃﻴﻭة",
-        "longitude": "35.7398",
-        "latitude": "-0.2609",
-        "code": "31"
-    },
-    {
-        "id": "1117",
-        "post_code": "31008",
-        "name": "Marsat El Hadjadj",
-        "ar_name": "مَرس ألحَجَاج",
-        "longitude": "35.7198",
-        "latitude": "-0.1675",
-        "code": "31"
-    },
-    {
-        "id": "1118",
-        "post_code": "31009",
-        "name": "Ain Turk",
-        "ar_name": "عيْن التُرْكْ",
-        "longitude": "35.6662",
-        "latitude": "-0.7498",
-        "code": "31"
-    },
-    {
-        "id": "1119",
-        "post_code": "31010",
-        "name": "El Ancar",
-        "ar_name": "العنصر",
-        "longitude": "35.6216",
-        "latitude": "-0.8679",
-        "code": "31"
-    },
-    {
-        "id": "1120",
-        "post_code": "31011",
-        "name": "Oued Tlelat",
-        "ar_name": "وادى تليلات",
-        "longitude": "35.4853",
-        "latitude": "-0.4504",
-        "code": "31"
-    },
-    {
-        "id": "1121",
-        "post_code": "31012",
-        "name": "Tafraoui",
-        "ar_name": "طفراوي",
-        "longitude": "35.4182",
-        "latitude": "-0.5273",
-        "code": "31"
-    },
-    {
-        "id": "1122",
-        "post_code": "31013",
-        "name": "Sidi Chami",
-        "ar_name": "سيدي الشحمي",
-        "longitude": "35.5859",
-        "latitude": "-0.5191",
-        "code": "31"
-    },
-    {
-        "id": "1123",
-        "post_code": "31014",
-        "name": "Boufatis",
-        "ar_name": "بوفاطيس",
-        "longitude": "35.6149",
-        "latitude": "-0.412",
-        "code": "31"
-    },
-    {
-        "id": "1124",
-        "post_code": "31015",
-        "name": "Mers El Kebir",
-        "ar_name": "المرسى الكبير",
-        "longitude": "35.6751",
-        "latitude": "-0.7196",
-        "code": "31"
-    },
-    {
-        "id": "1125",
-        "post_code": "31016",
-        "name": "Bousfer",
-        "ar_name": "بوسفر",
-        "longitude": "35.6461",
-        "latitude": "-0.8102",
-        "code": "31"
-    },
-    {
-        "id": "1126",
-        "post_code": "31017",
-        "name": "El Karma",
-        "ar_name": "الكرمة",
-        "longitude": "35.5479",
-        "latitude": "-0.5795",
-        "code": "31"
-    },
-    {
-        "id": "1127",
-        "post_code": "31018",
-        "name": "El Braya",
-        "ar_name": "ألبْرَيَ",
-        "longitude": "35.5657",
-        "latitude": "-0.5191",
-        "code": "31"
-    },
-    {
-        "id": "1128",
-        "post_code": "31019",
-        "name": "Hassi Ben Okba",
-        "ar_name": "حاسي بن عقبة",
-        "longitude": "35.664",
-        "latitude": "-0.4669",
-        "code": "31"
-    },
-    {
-        "id": "1129",
-        "post_code": "31020",
-        "name": "Ben Freha",
-        "ar_name": "بن فريحة",
-        "longitude": "35.6283",
-        "latitude": "-0.4202",
-        "code": "31"
-    },
-    {
-        "id": "1130",
-        "post_code": "31021",
-        "name": "Hassi Mefsoukh",
-        "ar_name": "حاسي مفسوخ",
-        "longitude": "35.7376",
-        "latitude": "-0.3735",
-        "code": "31"
-    },
-    {
-        "id": "1131",
-        "post_code": "31022",
-        "name": "Sidi Ben Yabka",
-        "ar_name": "سيدي بن يبقى",
-        "longitude": "35.7643",
-        "latitude": "-0.3955",
-        "code": "31"
-    },
-    {
-        "id": "1132",
-        "post_code": "31023",
-        "name": "Messerghin",
-        "ar_name": "مسرغين",
-        "longitude": "35.5546",
-        "latitude": "-0.7306",
-        "code": "31"
-    },
-    {
-        "id": "1133",
-        "post_code": "31024",
-        "name": "Boutlelis",
-        "ar_name": "بوتليليس",
-        "longitude": "35.5076",
-        "latitude": "-0.9009",
-        "code": "31"
-    },
-    {
-        "id": "1134",
-        "post_code": "31025",
-        "name": "Ain Kerma",
-        "ar_name": "عين الكرمة",
-        "longitude": "35.5836",
-        "latitude": "-0.975",
-        "code": "31"
-    },
-    {
-        "id": "1135",
-        "post_code": "31026",
-        "name": "Ain Biya",
-        "ar_name": "عين البية",
-        "longitude": "35.751",
-        "latitude": "-0.2829",
-        "code": "31"
-    },
-    {
-        "id": "1136",
-        "post_code": "32001",
-        "name": "El Bayadh",
-        "ar_name": "الـبـيـض",
-        "longitude": "33.6146",
-        "latitude": "1.019",
-        "code": "32"
-    },
-    {
-        "id": "1137",
-        "post_code": "32002",
-        "name": "Rogassa",
-        "ar_name": "روقاصة",
-        "longitude": "33.9525",
-        "latitude": "0.9256",
-        "code": "32"
-    },
-    {
-        "id": "1138",
-        "post_code": "32003",
-        "name": "Stitten",
-        "ar_name": "ستيتين",
-        "longitude": "33.6924",
-        "latitude": "1.2222",
-        "code": "32"
-    },
-    {
-        "id": "1139",
-        "post_code": "32004",
-        "name": "Brezina",
-        "ar_name": "بريزينة",
-        "longitude": "33.0317",
-        "latitude": "1.2607",
-        "code": "32"
-    },
-    {
-        "id": "1140",
-        "post_code": "32005",
-        "name": "Ghassoul",
-        "ar_name": "غسول",
-        "longitude": "33.3099",
-        "latitude": "1.203",
-        "code": "32"
-    },
-    {
-        "id": "1141",
-        "post_code": "32006",
-        "name": "Boualem",
-        "ar_name": "بوعلام",
-        "longitude": "33.6626",
-        "latitude": "1.5353",
-        "code": "32"
-    },
-    {
-        "id": "1142",
-        "post_code": "32007",
-        "name": "El Abiodh Sidi Cheikh",
-        "ar_name": "الابيض سيدي الشيخ",
-        "longitude": "32.8311",
-        "latitude": "0.5383",
-        "code": "32"
-    },
-    {
-        "id": "1143",
-        "post_code": "32008",
-        "name": "Ain El Orak",
-        "ar_name": "عين العراك",
-        "longitude": "33.3443",
-        "latitude": "0.7388",
-        "code": "32"
-    },
-    {
-        "id": "1144",
-        "post_code": "32009",
-        "name": "Arbaouat",
-        "ar_name": "أربوات",
-        "longitude": "33.0225",
-        "latitude": "0.5823",
-        "code": "32"
-    },
-    {
-        "id": "1145",
-        "post_code": "32010",
-        "name": "Bougtoub",
-        "ar_name": "بوقطب",
-        "longitude": "33.9775",
-        "latitude": "0.0879",
-        "code": "32"
-    },
-    {
-        "id": "1146",
-        "post_code": "32011",
-        "name": "El Kheither",
-        "ar_name": "الخيثر",
-        "longitude": "34.0777",
-        "latitude": "0.0742",
-        "code": "32"
-    },
-    {
-        "id": "1147",
-        "post_code": "32012",
-        "name": "Kef El Ahmar",
-        "ar_name": "الكاف الاحمر",
-        "longitude": "33.7837",
-        "latitude": "0.6317",
-        "code": "32"
-    },
-    {
-        "id": "1148",
-        "post_code": "32013",
-        "name": "Boussemghoun",
-        "ar_name": "بوسمغون",
-        "longitude": "32.7965",
-        "latitude": "0.0192",
-        "code": "32"
-    },
-    {
-        "id": "1149",
-        "post_code": "32014",
-        "name": "Chellala",
-        "ar_name": "شلالة",
-        "longitude": "32.9672",
-        "latitude": "0.0549",
-        "code": "32"
-    },
-    {
-        "id": "1150",
-        "post_code": "32015",
-        "name": "Krakda",
-        "ar_name": "كراكدة",
-        "longitude": "33.2525",
-        "latitude": "0.9586",
-        "code": "32"
-    },
-    {
-        "id": "1151",
-        "post_code": "32016",
-        "name": "El Bnoud",
-        "ar_name": "البنود",
-        "longitude": "32.2453",
-        "latitude": "0.2444",
-        "code": "32"
-    },
-    {
-        "id": "1152",
-        "post_code": "32017",
-        "name": "Cheguig",
-        "ar_name": "الشقيق",
-        "longitude": "34.1027",
-        "latitude": "1.2277",
-        "code": "32"
-    },
-    {
-        "id": "1153",
-        "post_code": "32018",
-        "name": "Sidi Ameur",
-        "ar_name": "سيدي عامر",
-        "longitude": "33.7015",
-        "latitude": "1.4337",
-        "code": "32"
-    },
-    {
-        "id": "1154",
-        "post_code": "32019",
-        "name": "El Mehara",
-        "ar_name": "المھارة",
-        "longitude": "33.2456",
-        "latitude": "0.3653",
-        "code": "32"
-    },
-    {
-        "id": "1155",
-        "post_code": "32020",
-        "name": "Tousmouline",
-        "ar_name": "توسمولين",
-        "longitude": "33.5849",
-        "latitude": "0.3076",
-        "code": "32"
-    },
-    {
-        "id": "1156",
-        "post_code": "32021",
-        "name": "Sidi Slimane",
-        "ar_name": "سيدي سليمان",
-        "longitude": "33.7814",
-        "latitude": "1.7303",
-        "code": "32"
-    },
-    {
-        "id": "1157",
-        "post_code": "32022",
-        "name": "Sidi Tifour",
-        "ar_name": "سيدي طيفور",
-        "longitude": "33.6512",
-        "latitude": "1.6837",
-        "code": "32"
-    },
-    {
-        "id": "1158",
-        "post_code": "33001",
-        "name": "Illizi",
-        "ar_name": "إلـيـزي",
-        "longitude": "26.4361",
-        "latitude": "8.4842",
-        "code": "33"
-    },
-    {
-        "id": "1159",
-        "post_code": "33002",
-        "name": "Djanet",
-        "ar_name": "جانت",
-        "longitude": "24.4821",
-        "latitude": "9.4839",
-        "code": "33"
-    },
-    {
-        "id": "1160",
-        "post_code": "33003",
-        "name": "Debdeb",
-        "ar_name": "دبداب",
-        "longitude": "29.8978",
-        "latitude": "9.4208",
-        "code": "33"
-    },
-    {
-        "id": "1161",
-        "post_code": "33004",
-        "name": "Bordj Omar Driss",
-        "ar_name": "برج عمر ادريس",
-        "longitude": "28.0793",
-        "latitude": "6.817",
-        "code": "33"
-    },
-    {
-        "id": "1162",
-        "post_code": "33005",
-        "name": "Bordj El Haouasse",
-        "ar_name": "برج الحواس",
-        "longitude": "24.5146",
-        "latitude": "9.451",
-        "code": "33"
-    },
-    {
-        "id": "1163",
-        "post_code": "33006",
-        "name": "In Amenas",
-        "ar_name": "إن أميناس",
-        "longitude": "27.9677",
-        "latitude": "9.5663",
-        "code": "33"
-    },
-    {
-        "id": "1164",
-        "post_code": "34001",
-        "name": "Bordj Bou Arreridj",
-        "ar_name": "برج بوعريريج",
-        "longitude": "36.0025",
-        "latitude": "4.7653",
-        "code": "34"
-    },
-    {
-        "id": "1165",
-        "post_code": "34002",
-        "name": "Ras El Oued",
-        "ar_name": "رأس الوادي",
-        "longitude": "35.8846",
-        "latitude": "5.0372",
-        "code": "34"
-    },
-    {
-        "id": "1166",
-        "post_code": "34003",
-        "name": "Bordj Zemoura",
-        "ar_name": "برج زمورة",
-        "longitude": "36.2288",
-        "latitude": "4.856",
-        "code": "34"
-    },
-    {
-        "id": "1167",
-        "post_code": "34004",
-        "name": "Mansoura",
-        "ar_name": "منصورة",
-        "longitude": "36.018",
-        "latitude": "4.4604",
-        "code": "34"
-    },
-    {
-        "id": "1168",
-        "post_code": "34005",
-        "name": "El Mhir",
-        "ar_name": "المھير",
-        "longitude": "36.0535",
-        "latitude": "4.3835",
-        "code": "34"
-    },
-    {
-        "id": "1169",
-        "post_code": "34006",
-        "name": "Ben Daoud",
-        "ar_name": "بن داود",
-        "longitude": "36.0757",
-        "latitude": "4.1721",
-        "code": "34"
-    },
-    {
-        "id": "1170",
-        "post_code": "34007",
-        "name": "El Achir",
-        "ar_name": "العشير",
-        "longitude": "36.0025",
-        "latitude": "4.6335",
-        "code": "34"
-    },
-    {
-        "id": "1171",
-        "post_code": "34008",
-        "name": "Ain Taghrout",
-        "ar_name": "عين تاغروت",
-        "longitude": "36.0646",
-        "latitude": "5.0757",
-        "code": "34"
-    },
-    {
-        "id": "1172",
-        "post_code": "34009",
-        "name": "Bordj Ghdir",
-        "ar_name": "برج غدير",
-        "longitude": "35.8356",
-        "latitude": "4.8889",
-        "code": "34"
-    },
-    {
-        "id": "1173",
-        "post_code": "34010",
-        "name": "Sidi Embarek",
-        "ar_name": "سيدي مبارك",
-        "longitude": "36.0402",
-        "latitude": "4.9109",
-        "code": "34"
-    },
-    {
-        "id": "1174",
-        "post_code": "34011",
-        "name": "El Hamadia",
-        "ar_name": "الحمادية",
-        "longitude": "35.9157",
-        "latitude": "4.7461",
-        "code": "34"
-    },
-    {
-        "id": "1175",
-        "post_code": "34012",
-        "name": "Belimour",
-        "ar_name": "بليمور",
-        "longitude": "35.9157",
-        "latitude": "4.8807",
-        "code": "34"
-    },
-    {
-        "id": "1176",
-        "post_code": "34013",
-        "name": "Medjana",
-        "ar_name": "مجانة",
-        "longitude": "36.0669",
-        "latitude": "4.6692",
-        "code": "34"
-    },
-    {
-        "id": "1177",
-        "post_code": "34014",
-        "name": "Teniet En Nasr",
-        "ar_name": "ثنية النصر",
-        "longitude": "36.1667",
-        "latitude": "4.6005",
-        "code": "34"
-    },
-    {
-        "id": "1178",
-        "post_code": "34015",
-        "name": "Djaafra",
-        "ar_name": "جعافرة",
-        "longitude": "36.2288",
-        "latitude": "4.6637",
-        "code": "34"
-    },
-    {
-        "id": "1179",
-        "post_code": "34016",
-        "name": "El Main",
-        "ar_name": "إلماين",
-        "longitude": "36.3018",
-        "latitude": "4.7488",
-        "code": "34"
-    },
-    {
-        "id": "1180",
-        "post_code": "34017",
-        "name": "Ouled Brahem",
-        "ar_name": "أولاد ابراھم",
-        "longitude": "35.8067",
-        "latitude": "5.0757",
-        "code": "34"
-    },
-    {
-        "id": "1181",
-        "post_code": "34018",
-        "name": "Ouled Dahmane",
-        "ar_name": "أولاد دحمان",
-        "longitude": "36.3018",
-        "latitude": "3.4662",
-        "code": "34"
-    },
-    {
-        "id": "1182",
-        "post_code": "34019",
-        "name": "Hasnaoua",
-        "ar_name": "حسناوة",
-        "longitude": "36.0891",
-        "latitude": "4.7955",
-        "code": "34"
-    },
-    {
-        "id": "1183",
-        "post_code": "34020",
-        "name": "Khelil",
-        "ar_name": "خليل",
-        "longitude": "36.1113",
-        "latitude": "5.029",
-        "code": "34"
-    },
-    {
-        "id": "1184",
-        "post_code": "34021",
-        "name": "Taglait",
-        "ar_name": "تاقلعيت",
-        "longitude": "35.7064",
-        "latitude": "4.9988",
-        "code": "34"
-    },
-    {
-        "id": "1185",
-        "post_code": "34022",
-        "name": "Ksour",
-        "ar_name": "القصور",
-        "longitude": "35.9269",
-        "latitude": "4.5978",
-        "code": "34"
-    },
-    {
-        "id": "1186",
-        "post_code": "34023",
-        "name": "Ouled Sidi Brahim",
-        "ar_name": "آث سيذى پراهم.",
-        "longitude": "36.1645",
-        "latitude": "4.3341",
-        "code": "34"
-    },
-    {
-        "id": "1187",
-        "post_code": "34024",
-        "name": "Tafreg",
-        "ar_name": "تفرڨ",
-        "longitude": "36.2531",
-        "latitude": "4.7324",
-        "code": "34"
-    },
-    {
-        "id": "1188",
-        "post_code": "34025",
-        "name": "Colla",
-        "ar_name": "القلة",
-        "longitude": "36.1977",
-        "latitude": "4.6609",
-        "code": "34"
-    },
-    {
-        "id": "1189",
-        "post_code": "34026",
-        "name": "Tixter",
-        "ar_name": "تقصطر",
-        "longitude": "35.9825",
-        "latitude": "5.0812",
-        "code": "34"
-    },
-    {
-        "id": "1190",
-        "post_code": "34027",
-        "name": "El Ach",
-        "ar_name": "العش",
-        "longitude": "35.8846",
-        "latitude": "4.6829",
-        "code": "34"
-    },
-    {
-        "id": "1191",
-        "post_code": "34028",
-        "name": "El Anseur",
-        "ar_name": "العناصر",
-        "longitude": "36.1357",
-        "latitude": "4.4907",
-        "code": "34"
-    },
-    {
-        "id": "1192",
-        "post_code": "34029",
-        "name": "Tesmart",
-        "ar_name": "تسمارت",
-        "longitude": "36.2044",
-        "latitude": "4.823",
-        "code": "34"
-    },
-    {
-        "id": "1193",
-        "post_code": "34030",
-        "name": "Ain Tesra",
-        "ar_name": "عين تسرة",
-        "longitude": "35.9713",
-        "latitude": "5.0015",
-        "code": "34"
-    },
-    {
-        "id": "1194",
-        "post_code": "34031",
-        "name": "Bir Kasdali",
-        "ar_name": "بئر قصد علي",
-        "longitude": "36.0846",
-        "latitude": "5.0345",
-        "code": "34"
-    },
-    {
-        "id": "1195",
-        "post_code": "34032",
-        "name": "Ghilassa",
-        "ar_name": "غيلاسة",
-        "longitude": "35.8067",
-        "latitude": "4.9054",
-        "code": "34"
-    },
-    {
-        "id": "1196",
-        "post_code": "34033",
-        "name": "Rabta",
-        "ar_name": "الرابطة",
-        "longitude": "35.8579",
-        "latitude": "4.7488",
-        "code": "34"
-    },
-    {
-        "id": "1197",
-        "post_code": "34034",
-        "name": "Haraza",
-        "ar_name": "الحرازة",
-        "longitude": "36.0913",
-        "latitude": "4.2242",
-        "code": "34"
-    },
-    {
-        "id": "1198",
-        "post_code": "35001",
-        "name": "Boumerdes",
-        "ar_name": "بومرداس",
-        "longitude": "36.7048",
-        "latitude": "3.4662",
-        "code": "35"
-    },
-    {
-        "id": "1199",
-        "post_code": "35002",
-        "name": "Boudouaou",
-        "ar_name": "بودواو",
-        "longitude": "36.6695",
-        "latitude": "3.4058",
-        "code": "35"
-    },
-    {
-        "id": "1200",
-        "post_code": "35004",
-        "name": "Afir",
-        "ar_name": "أفير",
-        "longitude": "36.7048",
-        "latitude": "3.7024",
-        "code": "35"
-    },
-    {
-        "id": "1201",
-        "post_code": "35005",
-        "name": "Bordj Menaiel",
-        "ar_name": "برج منايل",
-        "longitude": "36.6783",
-        "latitude": "3.7244",
-        "code": "35"
-    },
-    {
-        "id": "1202",
-        "post_code": "35006",
-        "name": "Baghlia",
-        "ar_name": "بغلية",
-        "longitude": "36.7532",
-        "latitude": "3.8617",
-        "code": "35"
-    },
-    {
-        "id": "1203",
-        "post_code": "35007",
-        "name": "Sidi Daoud",
-        "ar_name": "سيدي داود",
-        "longitude": "36.7884",
-        "latitude": "3.8507",
-        "code": "35"
-    },
-    {
-        "id": "1204",
-        "post_code": "35008",
-        "name": "Naciria",
-        "ar_name": "الناصرية",
-        "longitude": "36.6849",
-        "latitude": "3.8287",
-        "code": "35"
-    },
-    {
-        "id": "1205",
-        "post_code": "35009",
-        "name": "Djinet",
-        "ar_name": "جنات",
-        "longitude": "36.8148",
-        "latitude": "3.7244",
-        "code": "35"
-    },
-    {
-        "id": "1206",
-        "post_code": "35010",
-        "name": "Isser",
-        "ar_name": "يسر",
-        "longitude": "36.6607",
-        "latitude": "3.6667",
-        "code": "35"
-    },
-    {
-        "id": "1207",
-        "post_code": "35011",
-        "name": "Zemmouri",
-        "ar_name": "زموري",
-        "longitude": "36.7202",
-        "latitude": "3.6008",
-        "code": "35"
-    },
-    {
-        "id": "1208",
-        "post_code": "35012",
-        "name": "Si Mustapha",
-        "ar_name": "سي مصطفى",
-        "longitude": "36.6629",
-        "latitude": "3.6145",
-        "code": "35"
-    },
-    {
-        "id": "1209",
-        "post_code": "35013",
-        "name": "Tidjelabine",
-        "ar_name": "تيجلابين",
-        "longitude": "36.6651",
-        "latitude": "3.4964",
-        "code": "35"
-    },
-    {
-        "id": "1210",
-        "post_code": "35014",
-        "name": "Chabet El Ameur",
-        "ar_name": "شعبة العامر",
-        "longitude": "36.5703",
-        "latitude": "3.6996",
-        "code": "35"
-    },
-    {
-        "id": "1211",
-        "post_code": "35015",
-        "name": "Thenia",
-        "ar_name": "الثنية",
-        "longitude": "36.6651",
-        "latitude": "3.5541",
-        "code": "35"
-    },
-    {
-        "id": "1212",
-        "post_code": "35018",
-        "name": "Timezrit",
-        "ar_name": "تمزريت",
-        "longitude": "36.61",
-        "latitude": "3.8068",
-        "code": "35"
-    },
-    {
-        "id": "1213",
-        "post_code": "35019",
-        "name": "Corso",
-        "ar_name": "قورصو",
-        "longitude": "36.6937",
-        "latitude": "3.4332",
-        "code": "35"
-    },
-    {
-        "id": "1214",
-        "post_code": "35020",
-        "name": "Ouled Moussa",
-        "ar_name": "أولاد موسى",
-        "longitude": "36.621",
-        "latitude": "3.3673",
-        "code": "35"
-    },
-    {
-        "id": "1215",
-        "post_code": "35021",
-        "name": "Larbatache",
-        "ar_name": "الأربعطاش",
-        "longitude": "36.5725",
-        "latitude": "3.3728",
-        "code": "35"
-    },
-    {
-        "id": "1216",
-        "post_code": "35022",
-        "name": "Bouzegza Keddara",
-        "ar_name": "بوزقزة قدارة",
-        "longitude": "36.5615",
-        "latitude": "3.4799",
-        "code": "35"
-    },
-    {
-        "id": "1217",
-        "post_code": "35025",
-        "name": "Taourga",
-        "ar_name": "تورقة",
-        "longitude": "36.7312",
-        "latitude": "3.9468",
-        "code": "35"
-    },
-    {
-        "id": "1218",
-        "post_code": "35026",
-        "name": "Ouled Aissa",
-        "ar_name": "أولاد عيسى",
-        "longitude": "36.7444",
-        "latitude": "3.815",
-        "code": "35"
-    },
-    {
-        "id": "1219",
-        "post_code": "35027",
-        "name": "Ben Choud",
-        "ar_name": "بن شود",
-        "longitude": "36.7994",
-        "latitude": "3.8809",
-        "code": "35"
-    },
-    {
-        "id": "1220",
-        "post_code": "35028",
-        "name": "Dellys",
-        "ar_name": "دلس",
-        "longitude": "36.85",
-        "latitude": "3.9139",
-        "code": "35"
-    },
-    {
-        "id": "1221",
-        "post_code": "35029",
-        "name": "Ammal",
-        "ar_name": "عمال",
-        "longitude": "36.5725",
-        "latitude": "3.5898",
-        "code": "35"
-    },
-    {
-        "id": "1222",
-        "post_code": "35030",
-        "name": "Beni Amrane",
-        "ar_name": "بنى عمران",
-        "longitude": "36.6056",
-        "latitude": "3.5925",
-        "code": "35"
-    },
-    {
-        "id": "1223",
-        "post_code": "35031",
-        "name": "Souk El Had",
-        "ar_name": "سوق الحد",
-        "longitude": "36.6277",
-        "latitude": "3.5898",
-        "code": "35"
-    },
-    {
-        "id": "1224",
-        "post_code": "35032",
-        "name": "Boudouaou El Bahri",
-        "ar_name": "بودواو البحرى",
-        "longitude": "36.7114",
-        "latitude": "3.3865",
-        "code": "35"
-    },
-    {
-        "id": "1225",
-        "post_code": "35033",
-        "name": "Ouled Hedadj",
-        "ar_name": "أولاد ھداج",
-        "longitude": "36.6563",
-        "latitude": "3.3508",
-        "code": "35"
-    },
-    {
-        "id": "1226",
-        "post_code": "35035",
-        "name": "Laghata",
-        "ar_name": "لقاطة",
-        "longitude": "36.6871",
-        "latitude": "3.6832",
-        "code": "35"
-    },
-    {
-        "id": "1227",
-        "post_code": "35036",
-        "name": "Hammedi",
-        "ar_name": "حمادى",
-        "longitude": "36.6144",
-        "latitude": "3.2684",
-        "code": "35"
-    },
-    {
-        "id": "1228",
-        "post_code": "35037",
-        "name": "Khemis El Khechna",
-        "ar_name": "خميس الخشنة",
-        "longitude": "36.5858",
-        "latitude": "3.3289",
-        "code": "35"
-    },
-    {
-        "id": "1229",
-        "post_code": "35038",
-        "name": "El Kharrouba",
-        "ar_name": "الخروبة",
-        "longitude": "36.5946",
-        "latitude": "3.4058",
-        "code": "35"
-    },
-    {
-        "id": "1230",
-        "post_code": "36001",
-        "name": "El Tarf",
-        "ar_name": "الطارف",
-        "longitude": "36.7048",
-        "latitude": "8.3139",
-        "code": "36"
-    },
-    {
-        "id": "1231",
-        "post_code": "36002",
-        "name": "Bouhadjar",
-        "ar_name": "بوحجار",
-        "longitude": "36.4401",
-        "latitude": "8.1052",
-        "code": "36"
-    },
-    {
-        "id": "1232",
-        "post_code": "36003",
-        "name": "Ben Mhidi",
-        "ar_name": "بن مهيدى",
-        "longitude": "36.7092",
-        "latitude": "7.9047",
-        "code": "36"
-    },
-    {
-        "id": "1233",
-        "post_code": "36004",
-        "name": "Bougous",
-        "ar_name": "بوقوس",
-        "longitude": "36.5968",
-        "latitude": "8.3688",
-        "code": "36"
-    },
-    {
-        "id": "1234",
-        "post_code": "36005",
-        "name": "El Kala",
-        "ar_name": "القالة",
-        "longitude": "36.8324",
-        "latitude": "8.443",
-        "code": "36"
-    },
-    {
-        "id": "1235",
-        "post_code": "36006",
-        "name": "Ain El Assel",
-        "ar_name": "عين العسل",
-        "longitude": "36.7246",
-        "latitude": "8.3826",
-        "code": "36"
-    },
-    {
-        "id": "1236",
-        "post_code": "36007",
-        "name": "El Aioun",
-        "ar_name": "العيون",
-        "longitude": "36.8082",
-        "latitude": "8.5968",
-        "code": "36"
-    },
-    {
-        "id": "1237",
-        "post_code": "36008",
-        "name": "Bouteldja",
-        "ar_name": "بوثلجة",
-        "longitude": "36.4401",
-        "latitude": "8.1052",
-        "code": "36"
-    },
-    {
-        "id": "1238",
-        "post_code": "36009",
-        "name": "Souarekh",
-        "ar_name": "السوارخ",
-        "longitude": "36.8192",
-        "latitude": "8.5638",
-        "code": "36"
-    },
-    {
-        "id": "1239",
-        "post_code": "36010",
-        "name": "Berrihane",
-        "ar_name": "برحان",
-        "longitude": "36.7752",
-        "latitude": "8.1244",
-        "code": "36"
-    },
-    {
-        "id": "1240",
-        "post_code": "36011",
-        "name": "Lac Des Oiseaux",
-        "ar_name": "بحيرة الطيور",
-        "longitude": "36.7136",
-        "latitude": "8.1189",
-        "code": "36"
-    },
-    {
-        "id": "1241",
-        "post_code": "36012",
-        "name": "Chefia",
-        "ar_name": "الشافية",
-        "longitude": "36.5483",
-        "latitude": "8.0392",
-        "code": "36"
-    },
-    {
-        "id": "1242",
-        "post_code": "36013",
-        "name": "Drean",
-        "ar_name": "الذرعان",
-        "longitude": "36.621",
-        "latitude": "7.7509",
-        "code": "36"
-    },
-    {
-        "id": "1243",
-        "post_code": "36014",
-        "name": "Chihani",
-        "ar_name": "شهانى",
-        "longitude": "36.5836",
-        "latitude": "7.7756",
-        "code": "36"
-    },
-    {
-        "id": "1244",
-        "post_code": "36015",
-        "name": "Chebaita Mokhtar",
-        "ar_name": "شبيطة مختار",
-        "longitude": "36.6937",
-        "latitude": "7.7426",
-        "code": "36"
-    },
-    {
-        "id": "1245",
-        "post_code": "36016",
-        "name": "Besbes",
-        "ar_name": "البسباس",
-        "longitude": "36.6387",
-        "latitude": "7.847",
-        "code": "36"
-    },
-    {
-        "id": "1246",
-        "post_code": "36017",
-        "name": "Asfour",
-        "ar_name": "عصفور",
-        "longitude": "36.6122",
-        "latitude": "7.9761",
-        "code": "36"
-    },
-    {
-        "id": "1247",
-        "post_code": "36018",
-        "name": "Echatt",
-        "ar_name": "الشط",
-        "longitude": "36.7664",
-        "latitude": "7.8745",
-        "code": "36"
-    },
-    {
-        "id": "1248",
-        "post_code": "36019",
-        "name": "Zerizer",
-        "ar_name": "زريزر",
-        "longitude": "36.6651",
-        "latitude": "7.8937",
-        "code": "36"
-    },
-    {
-        "id": "1249",
-        "post_code": "36020",
-        "name": "Zitouna",
-        "ar_name": "الزيتونة",
-        "longitude": "36.6056",
-        "latitude": "8.2343",
-        "code": "36"
-    },
-    {
-        "id": "1250",
-        "post_code": "36021",
-        "name": "Ain Kerma",
-        "ar_name": "عين الكرمة",
-        "longitude": "36.5306",
-        "latitude": "8.2013",
-        "code": "36"
-    },
-    {
-        "id": "1251",
-        "post_code": "36022",
-        "name": "Oued Zitoun",
-        "ar_name": "وادى الزيتون",
-        "longitude": "36.4025",
-        "latitude": "8.0585",
-        "code": "36"
-    },
-    {
-        "id": "1252",
-        "post_code": "36023",
-        "name": "Hammam Beni Salah",
-        "ar_name": "حمام بنى صالح",
-        "longitude": "36.4577",
-        "latitude": "8.0338",
-        "code": "36"
-    },
-    {
-        "id": "1253",
-        "post_code": "36024",
-        "name": "Raml Souk",
-        "ar_name": "رمل سوق",
-        "longitude": "36.7224",
-        "latitude": "8.5364",
-        "code": "36"
-    },
-    {
-        "id": "1254",
-        "post_code": "37001",
-        "name": "Tindouf",
-        "ar_name": "تندوف",
-        "longitude": "27.5972",
-        "latitude": "-8.1491",
-        "code": "37"
-    },
-    {
-        "id": "1255",
-        "post_code": "37002",
-        "name": "Oum El Assel",
-        "ar_name": "أم العسل",
-        "longitude": "28.2983",
-        "latitude": "-6.5341",
-        "code": "37"
-    },
-    {
-        "id": "1256",
-        "post_code": "38001",
-        "name": "Tissemsilt",
-        "ar_name": "تـيـسـمـسـيـلـت",
-        "longitude": "35.5445",
-        "latitude": "1.8127",
-        "code": "38"
-    },
-    {
-        "id": "1257",
-        "post_code": "38002",
-        "name": "Bordj Bou Naama",
-        "ar_name": "برج بونعامة",
-        "longitude": "35.7855",
-        "latitude": "1.6177",
-        "code": "38"
-    },
-    {
-        "id": "1258",
-        "post_code": "38003",
-        "name": "Theniet El Had",
-        "ar_name": "ثنية الاحد",
-        "longitude": "35.8078",
-        "latitude": "2.0297",
-        "code": "38"
-    },
-    {
-        "id": "1259",
-        "post_code": "38004",
-        "name": "Lazharia",
-        "ar_name": "الازھرية",
-        "longitude": "35.8746",
-        "latitude": "1.5601",
-        "code": "38"
-    },
-    {
-        "id": "1260",
-        "post_code": "38005",
-        "name": "Beni Chaib",
-        "ar_name": "بنى شعيب",
-        "longitude": "35.7565",
-        "latitude": "1.799",
-        "code": "38"
-    },
-    {
-        "id": "1261",
-        "post_code": "38006",
-        "name": "Lardjem",
-        "ar_name": "لارجم",
-        "longitude": "35.6852",
-        "latitude": "1.5491",
-        "code": "38"
-    },
-    {
-        "id": "1262",
-        "post_code": "38007",
-        "name": "Melaab",
-        "ar_name": "ملعب",
-        "longitude": "35.6517",
-        "latitude": "1.3321",
-        "code": "38"
-    },
-    {
-        "id": "1263",
-        "post_code": "38008",
-        "name": "Sidi Lantri",
-        "ar_name": "سيدي العنترى",
-        "longitude": "35.6383",
-        "latitude": "1.4035",
-        "code": "38"
-    },
-    {
-        "id": "1264",
-        "post_code": "38009",
-        "name": "Bordj El Emir Abdelkader",
-        "ar_name": "برج الامير عبد القادر",
-        "longitude": "35.8523",
-        "latitude": "2.2714",
-        "code": "38"
-    },
-    {
-        "id": "1265",
-        "post_code": "38010",
-        "name": "Layoune",
-        "ar_name": "العيون",
-        "longitude": "35.6316",
-        "latitude": "1.9995",
-        "code": "38"
-    },
-    {
-        "id": "1266",
-        "post_code": "38011",
-        "name": "Khemisti",
-        "ar_name": "خميستى",
-        "longitude": "35.6026",
-        "latitude": "1.9501",
-        "code": "38"
-    },
-    {
-        "id": "1267",
-        "post_code": "38012",
-        "name": "Ouled Bessem",
-        "ar_name": "أولاد بسام",
-        "longitude": "35.6227",
-        "latitude": "1.8649",
-        "code": "38"
-    },
-    {
-        "id": "1268",
-        "post_code": "38013",
-        "name": "Ammari",
-        "ar_name": "عمارى",
-        "longitude": "35.5132",
-        "latitude": "1.6617",
-        "code": "38"
-    },
-    {
-        "id": "1269",
-        "post_code": "38014",
-        "name": "Youssoufia",
-        "ar_name": "اليوسفية",
-        "longitude": "35.8857",
-        "latitude": "2.1121",
-        "code": "38"
-    },
-    {
-        "id": "1270",
-        "post_code": "38015",
-        "name": "Sidi Boutouchent",
-        "ar_name": "سيدي بوتوشنت",
-        "longitude": "35.761",
-        "latitude": "1.9501",
-        "code": "38"
-    },
-    {
-        "id": "1271",
-        "post_code": "38016",
-        "name": "Larbaa",
-        "ar_name": "الاربعاء",
-        "longitude": "35.8501",
-        "latitude": "1.4749",
-        "code": "38"
-    },
-    {
-        "id": "1272",
-        "post_code": "38017",
-        "name": "Maasem",
-        "ar_name": "المعاصم",
-        "longitude": "35.5959",
-        "latitude": "1.5546",
-        "code": "38"
-    },
-    {
-        "id": "1273",
-        "post_code": "38018",
-        "name": "Sidi Abed",
-        "ar_name": "سيدي عابد",
-        "longitude": "35.6807",
-        "latitude": "1.7056",
-        "code": "38"
-    },
-    {
-        "id": "1274",
-        "post_code": "38019",
-        "name": "Tamalaht",
-        "ar_name": "تاملاحت",
-        "longitude": "35.7499",
-        "latitude": "1.6232",
-        "code": "38"
-    },
-    {
-        "id": "1275",
-        "post_code": "38020",
-        "name": "Sidi Slimane",
-        "ar_name": "سيدي سليمان",
-        "longitude": "35.7967",
-        "latitude": "1.6809",
-        "code": "38"
-    },
-    {
-        "id": "1276",
-        "post_code": "38021",
-        "name": "Boucaid",
-        "ar_name": "بوقايد",
-        "longitude": "35.8278",
-        "latitude": "1.6205",
-        "code": "38"
-    },
-    {
-        "id": "1277",
-        "post_code": "38022",
-        "name": "Beni Lahcene",
-        "ar_name": "بنى لحسن",
-        "longitude": "35.7499",
-        "latitude": "1.6891",
-        "code": "38"
-    },
-    {
-        "id": "1278",
-        "post_code": "39001",
-        "name": "El Oued",
-        "ar_name": "الوادي",
-        "longitude": "33.3018",
-        "latitude": "6.8665",
-        "code": "39"
-    },
-    {
-        "id": "1279",
-        "post_code": "39002",
-        "name": "Robbah",
-        "ar_name": "رباح",
-        "longitude": "33.2146",
-        "latitude": "6.9104",
-        "code": "39"
-    },
-    {
-        "id": "1280",
-        "post_code": "39003",
-        "name": "Oued El Alenda",
-        "ar_name": "وادى العلندة",
-        "longitude": "33.164",
-        "latitude": "6.7566",
-        "code": "39"
-    },
-    {
-        "id": "1281",
-        "post_code": "39004",
-        "name": "Bayadha",
-        "ar_name": "البياضة",
-        "longitude": "33.2697",
-        "latitude": "6.9159",
-        "code": "39"
-    },
-    {
-        "id": "1282",
-        "post_code": "39005",
-        "name": "Nakhla",
-        "ar_name": "النخلة",
-        "longitude": "33.2123",
-        "latitude": "6.9516",
-        "code": "39"
-    },
-    {
-        "id": "1283",
-        "post_code": "39006",
-        "name": "Guemar",
-        "ar_name": "ڨمار",
-        "longitude": "33.428",
-        "latitude": "6.7978",
-        "code": "39"
-    },
-    {
-        "id": "1284",
-        "post_code": "39007",
-        "name": "Kouinine",
-        "ar_name": "كوينين",
-        "longitude": "33.3386",
-        "latitude": "6.8253",
-        "code": "39"
-    },
-    {
-        "id": "1285",
-        "post_code": "39008",
-        "name": "Reguiba",
-        "ar_name": "الرڨيبة",
-        "longitude": "33.499",
-        "latitude": "6.7126",
-        "code": "39"
-    },
-    {
-        "id": "1286",
-        "post_code": "39009",
-        "name": "Hamraia",
-        "ar_name": "الحمراية",
-        "longitude": "34.047",
-        "latitude": "6.2292",
-        "code": "39"
-    },
-    {
-        "id": "1287",
-        "post_code": "39010",
-        "name": "Taghzout",
-        "ar_name": "تغزوت",
-        "longitude": "33.4097",
-        "latitude": "6.795",
-        "code": "39"
-    },
-    {
-        "id": "1288",
-        "post_code": "39011",
-        "name": "Debila",
-        "ar_name": "الدبيلة",
-        "longitude": "33.4418",
-        "latitude": "6.9379",
-        "code": "39"
-    },
-    {
-        "id": "1289",
-        "post_code": "39012",
-        "name": "Hassani Abdelkrim",
-        "ar_name": "بلدية حساني عبد الكريم",
-        "longitude": "33.412",
-        "latitude": "6.8939",
-        "code": "39"
-    },
-    {
-        "id": "1290",
-        "post_code": "39013",
-        "name": "Hassi Khelifa",
-        "ar_name": "حاسى خليفة",
-        "longitude": "33.5357",
-        "latitude": "7.0285",
-        "code": "39"
-    },
-    {
-        "id": "1291",
-        "post_code": "39014",
-        "name": "Taleb Larbi",
-        "ar_name": "طالب العربي",
-        "longitude": "33.6615",
-        "latitude": "7.5174",
-        "code": "39"
-    },
-    {
-        "id": "1292",
-        "post_code": "39015",
-        "name": "Douar El Ma",
-        "ar_name": "دوار الماء",
-        "longitude": "33.1962",
-        "latitude": "7.3746",
-        "code": "39"
-    },
-    {
-        "id": "1293",
-        "post_code": "39016",
-        "name": "Sidi Aoun",
-        "ar_name": "سيدي عون",
-        "longitude": "33.4761",
-        "latitude": "6.9022",
-        "code": "39"
-    },
-    {
-        "id": "1294",
-        "post_code": "39017",
-        "name": "Trifaoui",
-        "ar_name": "تريفاوى",
-        "longitude": "33.3569",
-        "latitude": "6.9351",
-        "code": "39"
-    },
-    {
-        "id": "1295",
-        "post_code": "39018",
-        "name": "Magrane",
-        "ar_name": "المڨرن",
-        "longitude": "33.5174",
-        "latitude": "6.9489",
-        "code": "39"
-    },
-    {
-        "id": "1296",
-        "post_code": "39019",
-        "name": "Beni Guecha",
-        "ar_name": "بن ڨشة",
-        "longitude": "33.9331",
-        "latitude": "7.3361",
-        "code": "39"
-    },
-    {
-        "id": "1297",
-        "post_code": "39020",
-        "name": "Ourmas",
-        "ar_name": "أورماس",
-        "longitude": "33.3477",
-        "latitude": "6.7813",
-        "code": "39"
-    },
-    {
-        "id": "1298",
-        "post_code": "39021",
-        "name": "Still",
-        "ar_name": "سطيل",
-        "longitude": "34.1948",
-        "latitude": "5.9134",
-        "code": "39"
-    },
-    {
-        "id": "1299",
-        "post_code": "39022",
-        "name": "Mrara",
-        "ar_name": "مرارة",
-        "longitude": "33.5883",
-        "latitude": "5.2872",
-        "code": "39"
-    },
-    {
-        "id": "1300",
-        "post_code": "39023",
-        "name": "Sidi Khellil",
-        "ar_name": "سيدي خليل",
-        "longitude": "33.7734",
-        "latitude": "5.9601",
-        "code": "39"
-    },
-    {
-        "id": "1301",
-        "post_code": "39024",
-        "name": "Tendla",
-        "ar_name": "تندلة",
-        "longitude": "33.6112",
-        "latitude": "6.0342",
-        "code": "39"
-    },
-    {
-        "id": "1302",
-        "post_code": "39025",
-        "name": "El Ogla",
-        "ar_name": "العقلة",
-        "longitude": "33.1801",
-        "latitude": "6.9461",
-        "code": "39"
-    },
-    {
-        "id": "1303",
-        "post_code": "39026",
-        "name": "Mih Ouansa",
-        "ar_name": "مية ونسة",
-        "longitude": "33.1318",
-        "latitude": "6.7044",
-        "code": "39"
-    },
-    {
-        "id": "1304",
-        "post_code": "39027",
-        "name": "El Mghair",
-        "ar_name": "المغير",
-        "longitude": "33.8852",
-        "latitude": "5.9244",
-        "code": "39"
-    },
-    {
-        "id": "1305",
-        "post_code": "39028",
-        "name": "Djamaa",
-        "ar_name": "جامعة",
-        "longitude": "33.467",
-        "latitude": "5.9903",
-        "code": "39"
-    },
-    {
-        "id": "1306",
-        "post_code": "39029",
-        "name": "Oum Touyour",
-        "ar_name": "أم الطيور",
-        "longitude": "34.0879",
-        "latitude": "5.8337",
-        "code": "39"
-    },
-    {
-        "id": "1307",
-        "post_code": "39030",
-        "name": "Sidi Amrane",
-        "ar_name": "سيدي عمران",
-        "longitude": "33.4303",
-        "latitude": "6.0123",
-        "code": "39"
-    },
-    {
-        "id": "1308",
-        "post_code": "40001",
-        "name": "Khenchela",
-        "ar_name": "خنشلة",
-        "longitude": "35.3678",
-        "latitude": "7.1439",
-        "code": "40"
-    },
-    {
-        "id": "1309",
-        "post_code": "40002",
-        "name": "Mtoussa",
-        "ar_name": "متوسة",
-        "longitude": "35.5356",
-        "latitude": "7.2455",
-        "code": "40"
-    },
-    {
-        "id": "1310",
-        "post_code": "40003",
-        "name": "Kais",
-        "ar_name": "قايس",
-        "longitude": "35.4305",
-        "latitude": "6.9241",
-        "code": "40"
-    },
-    {
-        "id": "1311",
-        "post_code": "40004",
-        "name": "Baghai",
-        "ar_name": "بغاي",
-        "longitude": "35.4573",
-        "latitude": "7.1136",
-        "code": "40"
-    },
-    {
-        "id": "1312",
-        "post_code": "40005",
-        "name": "El Hamma",
-        "ar_name": "الحامة",
-        "longitude": "35.3991",
-        "latitude": "7.0834",
-        "code": "40"
-    },
-    {
-        "id": "1313",
-        "post_code": "40006",
-        "name": "Ain Touila",
-        "ar_name": "عين الطويلة",
-        "longitude": "35.3723",
-        "latitude": "7.3526",
-        "code": "40"
-    },
-    {
-        "id": "1314",
-        "post_code": "40007",
-        "name": "Taouzianat",
-        "ar_name": "تاوزيانت",
-        "longitude": "35.4506",
-        "latitude": "6.7538",
-        "code": "40"
-    },
-    {
-        "id": "1315",
-        "post_code": "40008",
-        "name": "Bouhmama",
-        "ar_name": "بوحمامة",
-        "longitude": "35.2557",
-        "latitude": "6.7456",
-        "code": "40"
-    },
-    {
-        "id": "1316",
-        "post_code": "40009",
-        "name": "El Oueldja",
-        "ar_name": "الولجة",
-        "longitude": "34.851",
-        "latitude": "6.6797",
-        "code": "40"
-    },
-    {
-        "id": "1317",
-        "post_code": "40010",
-        "name": "Remila",
-        "ar_name": "الرميلة",
-        "longitude": "35.5065",
-        "latitude": "6.9351",
-        "code": "40"
-    },
-    {
-        "id": "1318",
-        "post_code": "40011",
-        "name": "Cherchar",
-        "ar_name": "ششار",
-        "longitude": "34.9749",
-        "latitude": "7.0038",
-        "code": "40"
-    },
-    {
-        "id": "1319",
-        "post_code": "40012",
-        "name": "Djellal",
-        "ar_name": "جلال",
-        "longitude": "34.8533",
-        "latitude": "6.8994",
-        "code": "40"
-    },
-    {
-        "id": "1320",
-        "post_code": "40013",
-        "name": "Babar",
-        "ar_name": "بابار",
-        "longitude": "35.1053",
-        "latitude": "7.0999",
-        "code": "40"
-    },
-    {
-        "id": "1321",
-        "post_code": "40014",
-        "name": "Tamza",
-        "ar_name": "تامزة",
-        "longitude": "35.2535",
-        "latitude": "6.8335",
-        "code": "40"
-    },
-    {
-        "id": "1322",
-        "post_code": "40015",
-        "name": "Ensigha",
-        "ar_name": "انسيغة",
-        "longitude": "35.3342",
-        "latitude": "7.1439",
-        "code": "40"
-    },
-    {
-        "id": "1323",
-        "post_code": "40016",
-        "name": "Ouled Rechache",
-        "ar_name": "أولاد رشاش",
-        "longitude": "35.2333",
-        "latitude": "7.3526",
-        "code": "40"
-    },
-    {
-        "id": "1324",
-        "post_code": "40017",
-        "name": "El Mahmal",
-        "ar_name": "المحمل",
-        "longitude": "35.3095",
-        "latitude": "7.2125",
-        "code": "40"
-    },
-    {
-        "id": "1325",
-        "post_code": "40018",
-        "name": "Msara",
-        "ar_name": "أمصارة",
-        "longitude": "35.1749",
-        "latitude": "6.5726",
-        "code": "40"
-    },
-    {
-        "id": "1326",
-        "post_code": "40019",
-        "name": "Yabous",
-        "ar_name": "يابوس",
-        "longitude": "35.3454",
-        "latitude": "6.6412",
-        "code": "40"
-    },
-    {
-        "id": "1327",
-        "post_code": "40020",
-        "name": "Khirane",
-        "ar_name": "خيران",
-        "longitude": "34.9344",
-        "latitude": "6.7593",
-        "code": "40"
-    },
-    {
-        "id": "1328",
-        "post_code": "40021",
-        "name": "Chelia",
-        "ar_name": "شلية",
-        "longitude": "35.3006",
-        "latitude": "6.7786",
-        "code": "40"
-    },
-    {
-        "id": "1329",
-        "post_code": "41001",
-        "name": "Souk Ahras",
-        "ar_name": "سوق أهراس",
-        "longitude": "36.2232",
-        "latitude": "7.9541",
-        "code": "41"
-    },
-    {
-        "id": "1330",
-        "post_code": "41002",
-        "name": "Sedrata",
-        "ar_name": "سدراتة",
-        "longitude": "36.0658",
-        "latitude": "7.5311",
-        "code": "41"
-    },
-    {
-        "id": "1331",
-        "post_code": "41003",
-        "name": "Hanancha",
-        "ar_name": "الحنانشة",
-        "longitude": "36.1545",
-        "latitude": "7.8333",
-        "code": "41"
-    },
-    {
-        "id": "1332",
-        "post_code": "41004",
-        "name": "Mechroha",
-        "ar_name": "المشروحة",
-        "longitude": "36.2941",
-        "latitude": "7.836",
-        "code": "41"
-    },
-    {
-        "id": "1333",
-        "post_code": "41005",
-        "name": "Ouled Driss",
-        "ar_name": "أولاد ادريس",
-        "longitude": "36.2875",
-        "latitude": "8.0173",
-        "code": "41"
-    },
-    {
-        "id": "1334",
-        "post_code": "41006",
-        "name": "Tiffech",
-        "ar_name": "تيفاش",
-        "longitude": "36.0924",
-        "latitude": "7.6987",
-        "code": "41"
-    },
-    {
-        "id": "1335",
-        "post_code": "41007",
-        "name": "Zaarouria",
-        "ar_name": "الزعرورية",
-        "longitude": "36.1634",
-        "latitude": "7.9568",
-        "code": "41"
-    },
-    {
-        "id": "1336",
-        "post_code": "41008",
-        "name": "Taoura",
-        "ar_name": "تاورة",
-        "longitude": "36.1057",
-        "latitude": "8.042",
-        "code": "41"
-    },
-    {
-        "id": "1337",
-        "post_code": "41009",
-        "name": "Drea",
-        "ar_name": "الدريعة",
-        "longitude": "36.0524",
-        "latitude": "7.8827",
-        "code": "41"
-    },
-    {
-        "id": "1338",
-        "post_code": "41010",
-        "name": "Haddada",
-        "ar_name": "الحدادة",
-        "longitude": "36.1678",
-        "latitude": "8.3386",
-        "code": "41"
-    },
-    {
-        "id": "1339",
-        "post_code": "41011",
-        "name": "Khedara",
-        "ar_name": "لخضارة",
-        "longitude": "36.221",
-        "latitude": "8.3167",
-        "code": "41"
-    },
-    {
-        "id": "1340",
-        "post_code": "41012",
-        "name": "Merahna",
-        "ar_name": "المراهنة",
-        "longitude": "36.1345",
-        "latitude": "8.1738",
-        "code": "41"
-    },
-    {
-        "id": "1341",
-        "post_code": "41013",
-        "name": "Ouled Moumen",
-        "ar_name": "أولاد مؤمن",
-        "longitude": "36.3472",
-        "latitude": "8.399",
-        "code": "41"
-    },
-    {
-        "id": "1342",
-        "post_code": "41014",
-        "name": "Bir Bouhouche",
-        "ar_name": "بئر بوحوش",
-        "longitude": "35.9858",
-        "latitude": "7.468",
-        "code": "41"
-    },
-    {
-        "id": "1343",
-        "post_code": "41015",
-        "name": "Mdaourouche",
-        "ar_name": "مداوروش",
-        "longitude": "36.0124",
-        "latitude": "7.8195",
-        "code": "41"
-    },
-    {
-        "id": "1344",
-        "post_code": "41016",
-        "name": "Oum El Adhaim",
-        "ar_name": "أم العظائم",
-        "longitude": "35.9702",
-        "latitude": "7.6025",
-        "code": "41"
-    },
-    {
-        "id": "1345",
-        "post_code": "41017",
-        "name": "Ain Zana",
-        "ar_name": "عين الزانة",
-        "longitude": "36.3384",
-        "latitude": "8.1903",
-        "code": "41"
-    },
-    {
-        "id": "1346",
-        "post_code": "41018",
-        "name": "Ain Soltane",
-        "ar_name": "عين السلطان",
-        "longitude": "36.1146",
-        "latitude": "7.3691",
-        "code": "41"
-    },
-    {
-        "id": "1347",
-        "post_code": "41019",
-        "name": "Quillen",
-        "ar_name": "ويلان",
-        "longitude": "36.2653",
-        "latitude": "8.1216",
-        "code": "41"
-    },
-    {
-        "id": "1348",
-        "post_code": "41020",
-        "name": "Sidi Fredj",
-        "ar_name": "سيدي فرج",
-        "longitude": "36.0902",
-        "latitude": "8.1958",
-        "code": "41"
-    },
-    {
-        "id": "1349",
-        "post_code": "41021",
-        "name": "Safel El Ouiden",
-        "ar_name": "سافل الويدان",
-        "longitude": "35.9213",
-        "latitude": "7.4625",
-        "code": "41"
-    },
-    {
-        "id": "1350",
-        "post_code": "41022",
-        "name": "Ragouba",
-        "ar_name": "الرقوبة",
-        "longitude": "36.0191",
-        "latitude": "7.7179",
-        "code": "41"
-    },
-    {
-        "id": "1351",
-        "post_code": "41023",
-        "name": "Khemissa",
-        "ar_name": "خميسة",
-        "longitude": "36.1257",
-        "latitude": "7.6602",
-        "code": "41"
-    },
-    {
-        "id": "1352",
-        "post_code": "41024",
-        "name": "Oued Keberit",
-        "ar_name": "وادى الكبريت",
-        "longitude": "35.8701",
-        "latitude": "7.9156",
-        "code": "41"
-    },
-    {
-        "id": "1353",
-        "post_code": "41025",
-        "name": "Terraguelt",
-        "ar_name": "ترقالت",
-        "longitude": "35.839",
-        "latitude": "7.5613",
-        "code": "41"
-    },
-    {
-        "id": "1354",
-        "post_code": "41026",
-        "name": "Zouabi",
-        "ar_name": "الزوابى",
-        "longitude": "36.0524",
-        "latitude": "7.4432",
-        "code": "41"
-    },
-    {
-        "id": "1355",
-        "post_code": "42001",
-        "name": "Tipaza",
-        "ar_name": "تيبازة",
-        "longitude": "36.5284",
-        "latitude": "2.45",
-        "code": "42"
-    },
-    {
-        "id": "1356",
-        "post_code": "42002",
-        "name": "Menaceur",
-        "ar_name": "مناصر",
-        "longitude": "36.4312",
-        "latitude": "2.2412",
-        "code": "42"
-    },
-    {
-        "id": "1357",
-        "post_code": "42003",
-        "name": "Larhat",
-        "ar_name": "الأرهاط",
-        "longitude": "36.4953",
-        "latitude": "1.8018",
-        "code": "42"
-    },
-    {
-        "id": "1358",
-        "post_code": "42004",
-        "name": "Douaouda",
-        "ar_name": "دواودة",
-        "longitude": "36.6034",
-        "latitude": "2.7823",
-        "code": "42"
-    },
-    {
-        "id": "1359",
-        "post_code": "42005",
-        "name": "Bourkika",
-        "ar_name": "بورقيقة",
-        "longitude": "36.4312",
-        "latitude": "2.4747",
-        "code": "42"
-    },
-    {
-        "id": "1360",
-        "post_code": "42006",
-        "name": "Khemisti",
-        "ar_name": "خميستي",
-        "longitude": "36.5637",
-        "latitude": "2.6807",
-        "code": "42"
-    },
-    {
-        "id": "1361",
-        "post_code": "42010",
-        "name": "Aghabal",
-        "ar_name": "أغابال",
-        "longitude": "36.429",
-        "latitude": "1.8402",
-        "code": "42"
-    },
-    {
-        "id": "1362",
-        "post_code": "42012",
-        "name": "Hadjout",
-        "ar_name": "حجوط",
-        "longitude": "36.4489",
-        "latitude": "2.4142",
-        "code": "42"
-    },
-    {
-        "id": "1363",
-        "post_code": "42013",
-        "name": "Sidi Amar",
-        "ar_name": "سيدي عمر",
-        "longitude": "36.4798",
-        "latitude": "2.3071",
-        "code": "42"
-    },
-    {
-        "id": "1364",
-        "post_code": "42014",
-        "name": "Gouraya",
-        "ar_name": "ڨورايا",
-        "longitude": "36.5041",
-        "latitude": "1.9061",
-        "code": "42"
-    },
-    {
-        "id": "1365",
-        "post_code": "42015",
-        "name": "Nodor",
-        "ar_name": "الناظور",
-        "longitude": "36.5063",
-        "latitude": "2.3923",
-        "code": "42"
-    },
-    {
-        "id": "1366",
-        "post_code": "42016",
-        "name": "Chaiba",
-        "ar_name": "الشعيبة",
-        "longitude": "36.5615",
-        "latitude": "2.7301",
-        "code": "42"
-    },
-    {
-        "id": "1367",
-        "post_code": "42017",
-        "name": "Ain Tagourait",
-        "ar_name": "عين تڨورايت",
-        "longitude": "36.5416",
-        "latitude": "2.6093",
-        "code": "42"
-    },
-    {
-        "id": "1368",
-        "post_code": "42022",
-        "name": "Cherchel",
-        "ar_name": "شرشال",
-        "longitude": "36.5461",
-        "latitude": "2.1973",
-        "code": "42"
-    },
-    {
-        "id": "1369",
-        "post_code": "42023",
-        "name": "Damous",
-        "ar_name": "الداموس",
-        "longitude": "36.4865",
-        "latitude": "1.7056",
-        "code": "42"
-    },
-    {
-        "id": "1370",
-        "post_code": "42024",
-        "name": "Meurad",
-        "ar_name": "مراد",
-        "longitude": "36.4135",
-        "latitude": "2.428",
-        "code": "42"
-    },
-    {
-        "id": "1371",
-        "post_code": "42025",
-        "name": "Fouka",
-        "ar_name": "فوكة",
-        "longitude": "36.6034",
-        "latitude": "2.7493",
-        "code": "42"
-    },
-    {
-        "id": "1372",
-        "post_code": "42026",
-        "name": "Bou Ismail",
-        "ar_name": "بو اسماعيل",
-        "longitude": "36.5791",
-        "latitude": "2.6889",
-        "code": "42"
-    },
-    {
-        "id": "1373",
-        "post_code": "42027",
-        "name": "Ahmer El Ain",
-        "ar_name": "أحمر العين",
-        "longitude": "36.4158",
-        "latitude": "2.5626",
-        "code": "42"
-    },
-    {
-        "id": "1374",
-        "post_code": "42030",
-        "name": "Bou Haroun",
-        "ar_name": "بوهارون",
-        "longitude": "36.5615",
-        "latitude": "2.6559",
-        "code": "42"
-    },
-    {
-        "id": "1375",
-        "post_code": "42032",
-        "name": "Sidi Ghiles",
-        "ar_name": "سيدي غيلاس",
-        "longitude": "36.5196",
-        "latitude": "2.1231",
-        "code": "42"
-    },
-    {
-        "id": "1376",
-        "post_code": "42033",
-        "name": "Messelmoun",
-        "ar_name": "مسلمون",
-        "longitude": "36.4997",
-        "latitude": "2.0023",
-        "code": "42"
-    },
-    {
-        "id": "1377",
-        "post_code": "42034",
-        "name": "Sidi Rached",
-        "ar_name": "سيدي راشد",
-        "longitude": "36.4997",
-        "latitude": "2.5323",
-        "code": "42"
-    },
-    {
-        "id": "1378",
-        "post_code": "42035",
-        "name": "Kolea",
-        "ar_name": "القليعة",
-        "longitude": "36.5769",
-        "latitude": "2.7658",
-        "code": "42"
-    },
-    {
-        "id": "1379",
-        "post_code": "42036",
-        "name": "Attatba",
-        "ar_name": "الحطاطبة",
-        "longitude": "36.5107",
-        "latitude": "2.6752",
-        "code": "42"
-    },
-    {
-        "id": "1380",
-        "post_code": "42040",
-        "name": "Sidi Semiane",
-        "ar_name": "سيدي سميان",
-        "longitude": "36.4401",
-        "latitude": "2.0984",
-        "code": "42"
-    },
-    {
-        "id": "1381",
-        "post_code": "42041",
-        "name": "Beni Milleuk",
-        "ar_name": "بني ميلك",
-        "longitude": "36.3538",
-        "latitude": "1.7496",
-        "code": "42"
-    },
-    {
-        "id": "1382",
-        "post_code": "42042",
-        "name": "Hadjerat Ennous",
-        "ar_name": "حجرة النص",
-        "longitude": "36.5107",
-        "latitude": "2.0517",
-        "code": "42"
-    },
-    {
-        "id": "1383",
-        "post_code": "43001",
-        "name": "Mila",
-        "ar_name": "ميلة",
-        "longitude": "36.387",
-        "latitude": "6.2677",
-        "code": "43"
-    },
-    {
-        "id": "1384",
-        "post_code": "43002",
-        "name": "Ferdjioua",
-        "ar_name": "فرجيوة",
-        "longitude": "36.345",
-        "latitude": "5.9464",
-        "code": "43"
-    },
-    {
-        "id": "1385",
-        "post_code": "43003",
-        "name": "Chelghoum Laid",
-        "ar_name": "شلغوم العيد",
-        "longitude": "36.1035",
-        "latitude": "6.1661",
-        "code": "43"
-    },
-    {
-        "id": "1386",
-        "post_code": "43004",
-        "name": "Oued Athmenia",
-        "ar_name": "وادي العثمانية",
-        "longitude": "36.1856",
-        "latitude": "6.2869",
-        "code": "43"
-    },
-    {
-        "id": "1387",
-        "post_code": "43005",
-        "name": "Ain Mellouk",
-        "ar_name": "عين ملوك",
-        "longitude": "36.2121",
-        "latitude": "6.1771",
-        "code": "43"
-    },
-    {
-        "id": "1388",
-        "post_code": "43006",
-        "name": "Telerghma",
-        "ar_name": "تلاغمة",
-        "longitude": "36.0524",
-        "latitude": "6.3638",
-        "code": "43"
-    },
-    {
-        "id": "1389",
-        "post_code": "43007",
-        "name": "Oued Seguen",
-        "ar_name": "وادى سقان",
-        "longitude": "36.1079",
-        "latitude": "6.4188",
-        "code": "43"
-    },
-    {
-        "id": "1390",
-        "post_code": "43008",
-        "name": "Tadjenanet",
-        "ar_name": "تاجنانت",
-        "longitude": "36.0524",
-        "latitude": "6.0013",
-        "code": "43"
-    },
-    {
-        "id": "1391",
-        "post_code": "43009",
-        "name": "Benyahia Abderrahmane",
-        "ar_name": "بن يحيى عبد الرحمان",
-        "longitude": "36.17",
-        "latitude": "6.0123",
-        "code": "43"
-    },
-    {
-        "id": "1392",
-        "post_code": "43010",
-        "name": "Oued Endja",
-        "ar_name": "وادى النجاء",
-        "longitude": "36.3671",
-        "latitude": "6.1221",
-        "code": "43"
-    },
-    {
-        "id": "1393",
-        "post_code": "43011",
-        "name": "Ahmed Rachedi",
-        "ar_name": "أحمد راشدي",
-        "longitude": "36.3273",
-        "latitude": "6.1249",
-        "code": "43"
-    },
-    {
-        "id": "1394",
-        "post_code": "43012",
-        "name": "Ouled Khalouf",
-        "ar_name": "أولاد خلوف",
-        "longitude": "35.9947",
-        "latitude": "6.1386",
-        "code": "43"
-    },
-    {
-        "id": "1395",
-        "post_code": "43013",
-        "name": "Tiberguent",
-        "ar_name": "تيبرقنت",
-        "longitude": "36.3472",
-        "latitude": "6.0397",
-        "code": "43"
-    },
-    {
-        "id": "1396",
-        "post_code": "43014",
-        "name": "Bouhatem",
-        "ar_name": "بوحاتم",
-        "longitude": "36.241",
-        "latitude": "6.015",
-        "code": "43"
-    },
-    {
-        "id": "1397",
-        "post_code": "43015",
-        "name": "Rouached",
-        "ar_name": "رواشد",
-        "longitude": "36.2121",
-        "latitude": "6.2677",
-        "code": "43"
-    },
-    {
-        "id": "1398",
-        "post_code": "43016",
-        "name": "Tessala Lamatai",
-        "ar_name": "تسالة لمطاي",
-        "longitude": "36.2786",
-        "latitude": "5.5893",
-        "code": "43"
-    },
-    {
-        "id": "1399",
-        "post_code": "43017",
-        "name": "Grarem Gouga",
-        "ar_name": "القرارم قوقة",
-        "longitude": "36.4533",
-        "latitude": "6.3336",
-        "code": "43"
-    },
-    {
-        "id": "1400",
-        "post_code": "43018",
-        "name": "Sidi Merouane",
-        "ar_name": "سيدي مروان",
-        "longitude": "36.4577",
-        "latitude": "6.2622",
-        "code": "43"
-    },
-    {
-        "id": "1401",
-        "post_code": "43019",
-        "name": "Tassadane Haddada",
-        "ar_name": "تسدان حدادة",
-        "longitude": "36.345",
-        "latitude": "5.9464",
-        "code": "43"
-    },
-    {
-        "id": "1402",
-        "post_code": "43020",
-        "name": "Derradji Bousselah",
-        "ar_name": "دراحي بوصلاح",
-        "longitude": "36.2764",
-        "latitude": "5.9573",
-        "code": "43"
-    },
-    {
-        "id": "1403",
-        "post_code": "43021",
-        "name": "Minar Zarza",
-        "ar_name": "مينار زرزة",
-        "longitude": "36.2542",
-        "latitude": "5.5399",
-        "code": "43"
-    },
-    {
-        "id": "1404",
-        "post_code": "43022",
-        "name": "Amira Arras",
-        "ar_name": "عميرة أراس",
-        "longitude": "36.2587",
-        "latitude": "6.3968",
-        "code": "43"
-    },
-    {
-        "id": "1405",
-        "post_code": "43023",
-        "name": "Terrai Bainen",
-        "ar_name": "ترعى بينان",
-        "longitude": "36.4688",
-        "latitude": "6.1221",
-        "code": "43"
-    },
-    {
-        "id": "1406",
-        "post_code": "43024",
-        "name": "Hamala",
-        "ar_name": "حمالة",
-        "longitude": "36.5085",
-        "latitude": "6.3391",
-        "code": "43"
-    },
-    {
-        "id": "1407",
-        "post_code": "43025",
-        "name": "Ain Tine",
-        "ar_name": "عين التين",
-        "longitude": "36.3339",
-        "latitude": "6.3254",
-        "code": "43"
-    },
-    {
-        "id": "1408",
-        "post_code": "43026",
-        "name": "El Mechira",
-        "ar_name": "المشيرة",
-        "longitude": "35.948",
-        "latitude": "6.232",
-        "code": "43"
-    },
-    {
-        "id": "1409",
-        "post_code": "43027",
-        "name": "Sidi Khelifa",
-        "ar_name": "سيدي خليفة",
-        "longitude": "36.2875",
-        "latitude": "6.3007",
-        "code": "43"
-    },
-    {
-        "id": "1410",
-        "post_code": "43028",
-        "name": "Zeghaia",
-        "ar_name": "زغاية",
-        "longitude": "36.4047",
-        "latitude": "6.1716",
-        "code": "43"
-    },
-    {
-        "id": "1411",
-        "post_code": "43029",
-        "name": "Elayadi Barbes",
-        "ar_name": "العياضى برباس",
-        "longitude": "36.3782",
-        "latitude": "5.8804",
-        "code": "43"
-    },
-    {
-        "id": "1412",
-        "post_code": "43030",
-        "name": "Ain Beida Harriche",
-        "ar_name": "عين البيضاء حريش",
-        "longitude": "36.3361",
-        "latitude": "5.8997",
-        "code": "43"
-    },
-    {
-        "id": "1413",
-        "post_code": "43031",
-        "name": "Yahia Beniguecha",
-        "ar_name": "يحيى بنى قشة",
-        "longitude": "36.1722",
-        "latitude": "5.592",
-        "code": "43"
-    },
-    {
-        "id": "1414",
-        "post_code": "43032",
-        "name": "Chigara",
-        "ar_name": "الشيقارة",
-        "longitude": "36.4975",
-        "latitude": "6.221",
-        "code": "43"
-    },
-    {
-        "id": "1415",
-        "post_code": "44001",
-        "name": "Ain Defla",
-        "ar_name": "عين دفلة - عين الدفلى",
-        "longitude": "36.2",
-        "latitude": "1.9693",
-        "code": "44"
-    },
-    {
-        "id": "1416",
-        "post_code": "44002",
-        "name": "Miliana",
-        "ar_name": "مليانة",
-        "longitude": "36.2266",
-        "latitude": "2.211",
-        "code": "44"
-    },
-    {
-        "id": "1417",
-        "post_code": "44003",
-        "name": "Boumedfaa",
-        "ar_name": "بومدفع",
-        "longitude": "36.3063",
-        "latitude": "2.4774",
-        "code": "44"
-    },
-    {
-        "id": "1418",
-        "post_code": "44004",
-        "name": "Khemis Miliana",
-        "ar_name": "خميس مليانة",
-        "longitude": "36.1955",
-        "latitude": "2.2",
-        "code": "44"
-    },
-    {
-        "id": "1419",
-        "post_code": "44005",
-        "name": "Hammam Righa",
-        "ar_name": "حمام ريغة",
-        "longitude": "36.3196",
-        "latitude": "2.4005",
-        "code": "44"
-    },
-    {
-        "id": "1420",
-        "post_code": "44006",
-        "name": "Arib",
-        "ar_name": "عريب",
-        "longitude": "36.2199",
-        "latitude": "2.0654",
-        "code": "44"
-    },
-    {
-        "id": "1421",
-        "post_code": "44007",
-        "name": "Djelida",
-        "ar_name": "جليدة",
-        "longitude": "36.1357",
-        "latitude": "2.0847",
-        "code": "44"
-    },
-    {
-        "id": "1422",
-        "post_code": "44008",
-        "name": "El Amra",
-        "ar_name": "العامرة",
-        "longitude": "36.2398",
-        "latitude": "1.8457",
-        "code": "44"
-    },
-    {
-        "id": "1423",
-        "post_code": "44009",
-        "name": "Bourached",
-        "ar_name": "بوراشد",
-        "longitude": "36.1046",
-        "latitude": "1.9281",
-        "code": "44"
-    },
-    {
-        "id": "1424",
-        "post_code": "44010",
-        "name": "El Attaf",
-        "ar_name": "العطاف",
-        "longitude": "36.1578",
-        "latitude": "1.6699",
-        "code": "44"
-    },
-    {
-        "id": "1425",
-        "post_code": "44011",
-        "name": "El Abadia",
-        "ar_name": "العبادية",
-        "longitude": "36.2044",
-        "latitude": "1.6837",
-        "code": "44"
-    },
-    {
-        "id": "1426",
-        "post_code": "44012",
-        "name": "Djendel",
-        "ar_name": "جندل",
-        "longitude": "36.1534",
-        "latitude": "2.4088",
-        "code": "44"
-    },
-    {
-        "id": "1427",
-        "post_code": "44013",
-        "name": "Oued Chorfa",
-        "ar_name": "وادى الشرفاء",
-        "longitude": "36.1357",
-        "latitude": "2.5159",
-        "code": "44"
-    },
-    {
-        "id": "1428",
-        "post_code": "44014",
-        "name": "Ain Lechiakh",
-        "ar_name": "عين االشياخ",
-        "longitude": "36.0935",
-        "latitude": "2.4033",
-        "code": "44"
-    },
-    {
-        "id": "1429",
-        "post_code": "44015",
-        "name": "Oued Djemaa",
-        "ar_name": "وادى جمعة",
-        "longitude": "35.7354",
-        "latitude": "0.6839",
-        "code": "44"
-    },
-    {
-        "id": "1430",
-        "post_code": "44016",
-        "name": "Rouina",
-        "ar_name": "روينة",
-        "longitude": "36.1867",
-        "latitude": "1.8155",
-        "code": "44"
-    },
-    {
-        "id": "1431",
-        "post_code": "44017",
-        "name": "Zeddine",
-        "ar_name": "زدين",
-        "longitude": "36.1024",
-        "latitude": "1.8512",
-        "code": "44"
-    },
-    {
-        "id": "1432",
-        "post_code": "44018",
-        "name": "El Hassania",
-        "ar_name": "الحسنية",
-        "longitude": "35.8824",
-        "latitude": "1.9171",
-        "code": "44"
-    },
-    {
-        "id": "1433",
-        "post_code": "44019",
-        "name": "Bir Ouled Khelifa",
-        "ar_name": "بئر ولد خليفة",
-        "longitude": "36.1179",
-        "latitude": "2.233",
-        "code": "44"
-    },
-    {
-        "id": "1434",
-        "post_code": "44020",
-        "name": "Ain Soltane",
-        "ar_name": "عين السلطان",
-        "longitude": "36.1822",
-        "latitude": "2.2961",
-        "code": "44"
-    },
-    {
-        "id": "1435",
-        "post_code": "44021",
-        "name": "Tarik Ibn Ziad",
-        "ar_name": "طارق بن زياد",
-        "longitude": "35.9358",
-        "latitude": "2.1506",
-        "code": "44"
-    },
-    {
-        "id": "1436",
-        "post_code": "44022",
-        "name": "Bordj Emir Khaled",
-        "ar_name": "برج الأمير خالد",
-        "longitude": "36.058",
-        "latitude": "2.2055",
-        "code": "44"
-    },
-    {
-        "id": "1437",
-        "post_code": "44023",
-        "name": "Ain Torki",
-        "ar_name": "عين التركى",
-        "longitude": "36.2686",
-        "latitude": "2.3016",
-        "code": "44"
-    },
-    {
-        "id": "1438",
-        "post_code": "44024",
-        "name": "Sidi Lakhdar",
-        "ar_name": "سيدي لخضر",
-        "longitude": "36.2022",
-        "latitude": "2.1616",
-        "code": "44"
-    },
-    {
-        "id": "1439",
-        "post_code": "44025",
-        "name": "Ben Allal",
-        "ar_name": "بن علال",
-        "longitude": "36.2465",
-        "latitude": "2.1588",
-        "code": "44"
-    },
-    {
-        "id": "1440",
-        "post_code": "44026",
-        "name": "Ain Benian",
-        "ar_name": "عين البنيان",
-        "longitude": "36.291",
-        "latitude": "2.472",
-        "code": "44"
-    },
-    {
-        "id": "1441",
-        "post_code": "44027",
-        "name": "Hoceinia",
-        "ar_name": "حسينية",
-        "longitude": "36.2531",
-        "latitude": "2.4005",
-        "code": "44"
-    },
-    {
-        "id": "1442",
-        "post_code": "44028",
-        "name": "Barbouche",
-        "ar_name": "بربوش",
-        "longitude": "36.0358",
-        "latitude": "2.4829",
-        "code": "44"
-    },
-    {
-        "id": "1443",
-        "post_code": "44029",
-        "name": "Djemaa Ouled Chikh",
-        "ar_name": "جمعة أولاد الشيخ",
-        "longitude": "36.0136",
-        "latitude": "2.005",
-        "code": "44"
-    },
-    {
-        "id": "1444",
-        "post_code": "44030",
-        "name": "Mekhatria",
-        "ar_name": "المخاطرية",
-        "longitude": "36.2376",
-        "latitude": "1.9611",
-        "code": "44"
-    },
-    {
-        "id": "1445",
-        "post_code": "44031",
-        "name": "Bathia",
-        "ar_name": "بطحية",
-        "longitude": "35.8512",
-        "latitude": "1.8402",
-        "code": "44"
-    },
-    {
-        "id": "1446",
-        "post_code": "44032",
-        "name": "Tachta Zegagha",
-        "ar_name": "تاشتة زقاغة",
-        "longitude": "36.2863",
-        "latitude": "1.6507",
-        "code": "44"
-    },
-    {
-        "id": "1447",
-        "post_code": "44033",
-        "name": "Ain Bouyahia",
-        "ar_name": "عين بويحى",
-        "longitude": "36.2199",
-        "latitude": "1.7661",
-        "code": "44"
-    },
-    {
-        "id": "1448",
-        "post_code": "44034",
-        "name": "El Maine",
-        "ar_name": "الماين",
-        "longitude": "35.9869",
-        "latitude": "1.7578",
-        "code": "44"
-    },
-    {
-        "id": "1449",
-        "post_code": "44035",
-        "name": "Tiberkanine",
-        "ar_name": "تبركانين",
-        "longitude": "36.1024",
-        "latitude": "1.6342",
-        "code": "44"
-    },
-    {
-        "id": "1450",
-        "post_code": "44036",
-        "name": "Belaas",
-        "ar_name": "بالعاص",
-        "longitude": "35.918",
-        "latitude": "1.8512",
-        "code": "44"
-    },
-    {
-        "id": "1451",
-        "post_code": "45001",
-        "name": "Naama",
-        "ar_name": "النــعـامـة",
-        "longitude": "33.195",
-        "latitude": "-0.3131",
-        "code": "45"
-    },
-    {
-        "id": "1452",
-        "post_code": "45002",
-        "name": "Mechria",
-        "ar_name": "مشرية",
-        "longitude": "33.4841",
-        "latitude": "-0.2829",
-        "code": "45"
-    },
-    {
-        "id": "1453",
-        "post_code": "45003",
-        "name": "Ain Sefra",
-        "ar_name": "عين الصفراء",
-        "longitude": "32.6879",
-        "latitude": "-0.585",
-        "code": "45"
-    },
-    {
-        "id": "1454",
-        "post_code": "45004",
-        "name": "Tiout",
-        "ar_name": "تيوت",
-        "longitude": "32.7041",
-        "latitude": "-0.4202",
-        "code": "45"
-    },
-    {
-        "id": "1455",
-        "post_code": "45005",
-        "name": "Sfissifa",
-        "ar_name": "صفيصيفة",
-        "longitude": "32.6648",
-        "latitude": "-0.8679",
-        "code": "45"
-    },
-    {
-        "id": "1456",
-        "post_code": "45006",
-        "name": "Moghrar",
-        "ar_name": "مغرار",
-        "longitude": "32.4495",
-        "latitude": "-0.5795",
-        "code": "45"
-    },
-    {
-        "id": "1457",
-        "post_code": "45007",
-        "name": "Assela",
-        "ar_name": "عسلة",
-        "longitude": "32.9372",
-        "latitude": "-0.0769",
-        "code": "45"
-    },
-    {
-        "id": "1458",
-        "post_code": "45008",
-        "name": "Djeniane Bourzeg",
-        "ar_name": "جنين بورزق",
-        "longitude": "32.3057",
-        "latitude": "-0.8047",
-        "code": "45"
-    },
-    {
-        "id": "1459",
-        "post_code": "45009",
-        "name": "Ain Ben Khelil",
-        "ar_name": "عين بن خليل",
-        "longitude": "33.2226",
-        "latitude": "-0.7635",
-        "code": "45"
-    },
-    {
-        "id": "1460",
-        "post_code": "45010",
-        "name": "Makman Ben Amer",
-        "ar_name": "مكمن بن عمر",
-        "longitude": "33.6512",
-        "latitude": "-0.7278",
-        "code": "45"
-    },
-    {
-        "id": "1461",
-        "post_code": "45011",
-        "name": "Kasdir",
-        "ar_name": "قصدير",
-        "longitude": "33.6443",
-        "latitude": "-1.3596",
-        "code": "45"
-    },
-    {
-        "id": "1462",
-        "post_code": "45012",
-        "name": "El Biod",
-        "ar_name": "البيوض",
-        "longitude": "33.6969",
-        "latitude": "-0.1346",
-        "code": "45"
-    },
-    {
-        "id": "1463",
-        "post_code": "46001",
-        "name": "Ain Temouchent",
-        "ar_name": "عـيـن تـمـوشـنـت",
-        "longitude": "35.2254",
-        "latitude": "-1.1398",
-        "code": "46"
-    },
-    {
-        "id": "1464",
-        "post_code": "46002",
-        "name": "Chaabet El Ham",
-        "ar_name": "شعبة اللحم",
-        "longitude": "35.2703",
-        "latitude": "-1.1014",
-        "code": "46"
-    },
-    {
-        "id": "1465",
-        "post_code": "46003",
-        "name": "Ain Kihal",
-        "ar_name": "عين الكيحل",
-        "longitude": "35.1401",
-        "latitude": "-1.1948",
-        "code": "46"
-    },
-    {
-        "id": "1466",
-        "post_code": "46004",
-        "name": "Hammam Bouhadjar",
-        "ar_name": "حمام بو حجر",
-        "longitude": "35.3151",
-        "latitude": "-0.9695",
-        "code": "46"
-    },
-    {
-        "id": "1467",
-        "post_code": "46005",
-        "name": "Bou Zedjar",
-        "ar_name": "بوزجار",
-        "longitude": "35.5099",
-        "latitude": "-1.1673",
-        "code": "46"
-    },
-    {
-        "id": "1468",
-        "post_code": "46006",
-        "name": "Oued Berkeche",
-        "ar_name": "وادى برقش",
-        "longitude": "35.1581",
-        "latitude": "-0.9833",
-        "code": "46"
-    },
-    {
-        "id": "1469",
-        "post_code": "46007",
-        "name": "Aghlal",
-        "ar_name": "أغلال",
-        "longitude": "35.1356",
-        "latitude": "-1.0684",
-        "code": "46"
-    },
-    {
-        "id": "1470",
-        "post_code": "46008",
-        "name": "Terga",
-        "ar_name": "تارقة",
-        "longitude": "35.3532",
-        "latitude": "-1.1783",
-        "code": "46"
-    },
-    {
-        "id": "1471",
-        "post_code": "46009",
-        "name": "Ain El Arbaa",
-        "ar_name": "عين الاربعاء",
-        "longitude": "35.342",
-        "latitude": "-0.8817",
-        "code": "46"
-    },
-    {
-        "id": "1472",
-        "post_code": "46010",
-        "name": "Tamzoura",
-        "ar_name": "تامزوغة",
-        "longitude": "35.3443",
-        "latitude": "-0.6564",
-        "code": "46"
-    },
-    {
-        "id": "1473",
-        "post_code": "46011",
-        "name": "Chentouf",
-        "ar_name": "شنتوف",
-        "longitude": "35.2389",
-        "latitude": "-1.03",
-        "code": "46"
-    },
-    {
-        "id": "1474",
-        "post_code": "46012",
-        "name": "Sidi Ben Adda",
-        "ar_name": "سيدي بن عدة",
-        "longitude": "35.2411",
-        "latitude": "-1.181",
-        "code": "46"
-    },
-    {
-        "id": "1475",
-        "post_code": "46013",
-        "name": "Aoubellil",
-        "ar_name": "عقب الليل",
-        "longitude": "35.0705",
-        "latitude": "-0.9915",
-        "code": "46"
-    },
-    {
-        "id": "1476",
-        "post_code": "46014",
-        "name": "El Malah",
-        "ar_name": "المالح",
-        "longitude": "35.3286",
-        "latitude": "-1.0931",
-        "code": "46"
-    },
-    {
-        "id": "1477",
-        "post_code": "46015",
-        "name": "Sidi Boumediene",
-        "ar_name": "سيدي بومدين",
-        "longitude": "35.2882",
-        "latitude": "-0.8926",
-        "code": "46"
-    },
-    {
-        "id": "1478",
-        "post_code": "46016",
-        "name": "Oued Sabah",
-        "ar_name": "وادى الصباح",
-        "longitude": "35.3084",
-        "latitude": "-0.8102",
-        "code": "46"
-    },
-    {
-        "id": "1479",
-        "post_code": "46017",
-        "name": "Ouled Boudjemaa",
-        "ar_name": "أولاد بوجمعة",
-        "longitude": "35.4092",
-        "latitude": "-1.192",
-        "code": "46"
-    },
-    {
-        "id": "1480",
-        "post_code": "46018",
-        "name": "Ain Tolba",
-        "ar_name": "عين الطلبة",
-        "longitude": "35.1828",
-        "latitude": "-1.2497",
-        "code": "46"
-    },
-    {
-        "id": "1481",
-        "post_code": "46019",
-        "name": "El Amria",
-        "ar_name": "العامرية",
-        "longitude": "35.4607",
-        "latitude": "-1.0162",
-        "code": "46"
-    },
-    {
-        "id": "1482",
-        "post_code": "46020",
-        "name": "Hassi El Ghella",
-        "ar_name": "حاسى الغلة",
-        "longitude": "35.389",
-        "latitude": "-1.0519",
-        "code": "46"
-    },
-    {
-        "id": "1483",
-        "post_code": "46021",
-        "name": "Hassasna",
-        "ar_name": "الحساسنة",
-        "longitude": "35.2075",
-        "latitude": "-0.986",
-        "code": "46"
-    },
-    {
-        "id": "1484",
-        "post_code": "46022",
-        "name": "Ouled Kihal",
-        "ar_name": "أولاد الكيحل",
-        "longitude": "35.3039",
-        "latitude": "-1.236",
-        "code": "46"
-    },
-    {
-        "id": "1485",
-        "post_code": "46023",
-        "name": "Beni Saf",
-        "ar_name": "بني صاف",
-        "longitude": "35.2366",
-        "latitude": "-1.3843",
-        "code": "46"
-    },
-    {
-        "id": "1486",
-        "post_code": "46024",
-        "name": "Sidi Safi",
-        "ar_name": "سيدي الصافي",
-        "longitude": "35.2165",
-        "latitude": "-1.3129",
-        "code": "46"
-    },
-    {
-        "id": "1487",
-        "post_code": "46025",
-        "name": "Oulhaca El Gheraba",
-        "ar_name": "ولهاصة الغرابة",
-        "longitude": "35.1671",
-        "latitude": "-1.5051",
-        "code": "46"
-    },
-    {
-        "id": "1488",
-        "post_code": "46026",
-        "name": "Sidi Ouriache",
-        "ar_name": "سيدي وريلش",
-        "longitude": "35.1244",
-        "latitude": "-1.5051",
-        "code": "46"
-    },
-    {
-        "id": "1489",
-        "post_code": "46027",
-        "name": "El Emir Abdelkader",
-        "ar_name": "الأمير عبد القادر",
-        "longitude": "35.1603",
-        "latitude": "-1.4035",
-        "code": "46"
-    },
-    {
-        "id": "1490",
-        "post_code": "46028",
-        "name": "El Messaid",
-        "ar_name": "المساعيد",
-        "longitude": "35.4763",
-        "latitude": "-1.1234",
-        "code": "46"
-    },
-    {
-        "id": "1491",
-        "post_code": "47001",
-        "name": "Ghardaia",
-        "ar_name": "غرداية",
-        "longitude": "32.4171",
-        "latitude": "3.6832",
-        "code": "47"
-    },
-    {
-        "id": "1492",
-        "post_code": "47002",
-        "name": "El Meniaa",
-        "ar_name": "المنيعة",
-        "longitude": "30.5197",
-        "latitude": "2.8812",
-        "code": "47"
-    },
-    {
-        "id": "1493",
-        "post_code": "47003",
-        "name": "Dhayet Bendhahoua",
-        "ar_name": "ضاية بن ضحوة",
-        "longitude": "32.4704",
-        "latitude": "3.6063",
-        "code": "47"
-    },
-    {
-        "id": "1494",
-        "post_code": "47004",
-        "name": "Berriane",
-        "ar_name": "بريان",
-        "longitude": "32.7919",
-        "latitude": "3.7628",
-        "code": "47"
-    },
-    {
-        "id": "1495",
-        "post_code": "47005",
-        "name": "Metlili",
-        "ar_name": "متليلي الشعانبة",
-        "longitude": "32.2058",
-        "latitude": "3.6282",
-        "code": "47"
-    },
-    {
-        "id": "1496",
-        "post_code": "47006",
-        "name": "El Guerrara",
-        "ar_name": "الڨرارة",
-        "longitude": "32.7226",
-        "latitude": "4.4934",
-        "code": "47"
-    },
-    {
-        "id": "1497",
-        "post_code": "47007",
-        "name": "El Atteuf",
-        "ar_name": "العطف",
-        "longitude": "32.4101",
-        "latitude": "3.7491",
-        "code": "47"
-    },
-    {
-        "id": "1498",
-        "post_code": "47008",
-        "name": "Zelfana",
-        "ar_name": "زلفانة",
-        "longitude": "32.612",
-        "latitude": "3.312",
-        "code": "47"
-    },
-    {
-        "id": "1499",
-        "post_code": "47009",
-        "name": "Sebseb",
-        "ar_name": "سبسب",
-        "longitude": "32.0965",
-        "latitude": "3.5898",
-        "code": "47"
-    },
-    {
-        "id": "1500",
-        "post_code": "47010",
-        "name": "Bounoura",
-        "ar_name": "بونورة",
-        "longitude": "32.4194",
-        "latitude": "3.7079",
-        "code": "47"
-    },
-    {
-        "id": "1501",
-        "post_code": "47011",
-        "name": "Hassi Fehal",
-        "ar_name": "حاسي الفحل",
-        "longitude": "31.5364",
-        "latitude": "3.6749",
-        "code": "47"
-    },
-    {
-        "id": "1502",
-        "post_code": "47012",
-        "name": "Hassi Gara",
-        "ar_name": "حاسي قارة",
-        "longitude": "30.4842",
-        "latitude": "2.9141",
-        "code": "47"
-    },
-    {
-        "id": "1503",
-        "post_code": "47013",
-        "name": "Mansoura",
-        "ar_name": "منصورة",
-        "longitude": "31.9125",
-        "latitude": "3.7463",
-        "code": "47"
-    },
-    {
-        "id": "1504",
-        "post_code": "48001",
-        "name": "Relizane",
-        "ar_name": "غيليزان",
-        "longitude": "35.6696",
-        "latitude": "0.5493",
-        "code": "48"
-    },
-    {
-        "id": "1505",
-        "post_code": "48002",
-        "name": "Oued Rhiou",
-        "ar_name": "وادي رهيو",
-        "longitude": "35.9035",
-        "latitude": "0.9174",
-        "code": "48"
-    },
-    {
-        "id": "1506",
-        "post_code": "48003",
-        "name": "Belaassel Bouzegza",
-        "ar_name": "بلعسل بوزقزة",
-        "longitude": "35.7766",
-        "latitude": "0.4999",
-        "code": "48"
-    },
-    {
-        "id": "1507",
-        "post_code": "48004",
-        "name": "Sidi Saada",
-        "ar_name": "سيدي سعادة",
-        "longitude": "35.6227",
-        "latitude": "0.206",
-        "code": "48"
-    },
-    {
-        "id": "1508",
-        "post_code": "48005",
-        "name": "Ouled Aiche",
-        "ar_name": "أولاد يعيش",
-        "longitude": "35.7788",
-        "latitude": "0.9998",
-        "code": "48"
-    },
-    {
-        "id": "1509",
-        "post_code": "48006",
-        "name": "Sidi Lazreg",
-        "ar_name": "سيدي لزرق",
-        "longitude": "35.5803",
-        "latitude": "0.7745",
-        "code": "48"
-    },
-    {
-        "id": "1510",
-        "post_code": "48007",
-        "name": "El Hamadna",
-        "ar_name": "الحمادنة",
-        "longitude": "35.8367",
-        "latitude": "0.7498",
-        "code": "48"
-    },
-    {
-        "id": "1511",
-        "post_code": "48008",
-        "name": "Sidi Mhamed Ben Ali",
-        "ar_name": "سيدي امحمد بن علي",
-        "longitude": "36.0791",
-        "latitude": "0.8432",
-        "code": "48"
-    },
-    {
-        "id": "1512",
-        "post_code": "48009",
-        "name": "Mediouna",
-        "ar_name": "مديونة",
-        "longitude": "36.0524",
-        "latitude": "0.7498",
-        "code": "48"
-    },
-    {
-        "id": "1513",
-        "post_code": "48010",
-        "name": "Sidi Khettab",
-        "ar_name": "سيدي خطاب",
-        "longitude": "35.8479",
-        "latitude": "0.5109",
-        "code": "48"
-    },
-    {
-        "id": "1514",
-        "post_code": "48011",
-        "name": "Ammi Moussa",
-        "ar_name": "عمي موسى",
-        "longitude": "35.8033",
-        "latitude": "1.1179",
-        "code": "48"
-    },
-    {
-        "id": "1515",
-        "post_code": "48012",
-        "name": "Zemmoura",
-        "ar_name": "زمورة",
-        "longitude": "35.6539",
-        "latitude": "0.7498",
-        "code": "48"
-    },
-    {
-        "id": "1516",
-        "post_code": "48013",
-        "name": "Beni Dergoun",
-        "ar_name": "بني درقن",
-        "longitude": "35.7164",
-        "latitude": "0.7993",
-        "code": "48"
-    },
-    {
-        "id": "1517",
-        "post_code": "48014",
-        "name": "Djidiouia",
-        "ar_name": "جيديوة",
-        "longitude": "35.8657",
-        "latitude": "0.8295",
-        "code": "48"
-    },
-    {
-        "id": "1518",
-        "post_code": "48015",
-        "name": "El Guettar",
-        "ar_name": "القطارة",
-        "longitude": "36.0236",
-        "latitude": "0.8157",
-        "code": "48"
-    },
-    {
-        "id": "1519",
-        "post_code": "48016",
-        "name": "Hamri",
-        "ar_name": "الحمري",
-        "longitude": "36.042",
-        "latitude": "-0.379",
-        "code": "48"
-    },
-    {
-        "id": "1520",
-        "post_code": "48017",
-        "name": "El Matmar",
-        "ar_name": "المطمار",
-        "longitude": "35.6673",
-        "latitude": "0.4614",
-        "code": "48"
-    },
-    {
-        "id": "1521",
-        "post_code": "48018",
-        "name": "Sidi Mhamed Ben Aouda",
-        "ar_name": "سيدي بن عودة",
-        "longitude": "35.54",
-        "latitude": "0.5878",
-        "code": "48"
-    },
-    {
-        "id": "1522",
-        "post_code": "48019",
-        "name": "Ain Tarek",
-        "ar_name": "عين طارق",
-        "longitude": "35.7164",
-        "latitude": "1.1316",
-        "code": "48"
-    },
-    {
-        "id": "1523",
-        "post_code": "48020",
-        "name": "Oued Essalem",
-        "ar_name": "وادي السلام",
-        "longitude": "35.5155",
-        "latitude": "0.9256",
-        "code": "48"
-    },
-    {
-        "id": "1524",
-        "post_code": "48021",
-        "name": "Ouarizane",
-        "ar_name": "ﻭﺍﺭﻳﺯﺍﻥ",
-        "longitude": "35.9813",
-        "latitude": "0.8981",
-        "code": "48"
-    },
-    {
-        "id": "1525",
-        "post_code": "48022",
-        "name": "Mazouna",
-        "ar_name": "مازونة",
-        "longitude": "36.0635",
-        "latitude": "0.8762",
-        "code": "48"
-    },
-    {
-        "id": "1526",
-        "post_code": "48023",
-        "name": "Kalaa",
-        "ar_name": "قلعة",
-        "longitude": "35.5177",
-        "latitude": "0.3296",
-        "code": "48"
-    },
-    {
-        "id": "1527",
-        "post_code": "48024",
-        "name": "Ain Rahma",
-        "ar_name": "عين الرحمة",
-        "longitude": "35.5602",
-        "latitude": "0.3928",
-        "code": "48"
-    },
-    {
-        "id": "1528",
-        "post_code": "48025",
-        "name": "Yellel",
-        "ar_name": "يلل",
-        "longitude": "35.6584",
-        "latitude": "0.3543",
-        "code": "48"
-    },
-    {
-        "id": "1529",
-        "post_code": "48026",
-        "name": "Oued El Djemaa",
-        "ar_name": "وادى الجمعة",
-        "longitude": "35.7343",
-        "latitude": "0.6812",
-        "code": "48"
-    },
-    {
-        "id": "1530",
-        "post_code": "48027",
-        "name": "Ramka",
-        "ar_name": "رمكة",
-        "longitude": "35.7922",
-        "latitude": "1.3321",
-        "code": "48"
-    },
-    {
-        "id": "1531",
-        "post_code": "48028",
-        "name": "Mendes",
-        "ar_name": "مندس",
-        "longitude": "35.587",
-        "latitude": "0.8624",
-        "code": "48"
-    },
-    {
-        "id": "1532",
-        "post_code": "48029",
-        "name": "Lahlef",
-        "ar_name": "لحلاف",
-        "longitude": "35.8301",
-        "latitude": "0.9805",
-        "code": "48"
-    },
-    {
-        "id": "1533",
-        "post_code": "48030",
-        "name": "Beni Zentis",
-        "ar_name": "بني زنتيس",
-        "longitude": "36.048",
-        "latitude": "0.6647",
-        "code": "48"
-    },
-    {
-        "id": "1534",
-        "post_code": "48031",
-        "name": "Souk El Haad",
-        "ar_name": "سوق الحد",
-        "longitude": "35.8924",
-        "latitude": "1.2469",
-        "code": "48"
-    },
-    {
-        "id": "1535",
-        "post_code": "48032",
-        "name": "Dar Ben Abdellah",
-        "ar_name": "دار بن عبد الله",
-        "longitude": "35.6383",
-        "latitude": "0.6866",
-        "code": "48"
-    },
-    {
-        "id": "1536",
-        "post_code": "48033",
-        "name": "El Hassi",
-        "ar_name": "الحاسى",
-        "longitude": "35.7075",
-        "latitude": "1.0547",
-        "code": "48"
-    },
-    {
-        "id": "1537",
-        "post_code": "48034",
-        "name": "Had Echkalla",
-        "ar_name": "حد الشقالة",
-        "longitude": "35.616",
-        "latitude": "1.1481",
-        "code": "48"
-    },
-    {
-        "id": "1538",
-        "post_code": "48035",
-        "name": "Bendaoud",
-        "ar_name": "بن داود",
-        "longitude": "35.6562",
-        "latitude": "0.5191",
-        "code": "48"
-    },
-    {
-        "id": "1539",
-        "post_code": "48036",
-        "name": "El Ouldja",
-        "ar_name": "العلجة",
-        "longitude": "35.8479",
-        "latitude": "1.1206",
-        "code": "48"
-    },
-    {
-        "id": "1540",
-        "post_code": "48037",
-        "name": "Merdja Sidi Abed",
-        "ar_name": "مرجة سيدي عابد",
-        "longitude": "36.013883",
-        "latitude": "0.989746",
-        "code": "48"
-    },
-    {
-        "id": "1541",
-        "post_code": "48038",
-        "name": "Ouled Sidi Mihoub",
-        "ar_name": "أولاد سيدي ميهوب",
-        "longitude": "35.9752",
-        "latitude": "0.6916",
-        "code": "48"
+cities =[
+    {
+        "id": 1,
+        "name": "Adrar - Adrar",
+        "name_ar": "أدرار - أدرار",
+        "wilaya_code": "01"
+    },
+    {
+        "id": 2,
+        "name": "Aoulef - Akabli",
+        "name_ar": "أولف - اقبلي",
+        "wilaya_code": "01"
+    },
+    {
+        "id": 3,
+        "name": "Aougrout - Aougrout",
+        "name_ar": "أوقروت - أوقروت",
+        "wilaya_code": "49"
+    },
+    {
+        "id": 4,
+        "name": "Aoulef - Aoulef",
+        "name_ar": "أولف - أولف",
+        "wilaya_code": "01"
+    },
+    {
+        "id": 5,
+        "name": "Bordj Badji Mokhtar - Bordj Badji Mokhtar",
+        "name_ar": "برج باجي مختار - برج باجي مختار",
+        "wilaya_code": "50"
+    },
+    {
+        "id": 6,
+        "name": "Adrar - Bouda",
+        "name_ar": "أدرار - بودة",
+        "wilaya_code": "01"
+    },
+    {
+        "id": 7,
+        "name": "Charouine - Charouine",
+        "name_ar": "شروين - شروين",
+        "wilaya_code": "49"
+    },
+    {
+        "id": 8,
+        "name": "Aougrout - Deldoul",
+        "name_ar": "أوقروت - دلدول",
+        "wilaya_code": "49"
+    },
+    {
+        "id": 9,
+        "name": "Fenoughil - Fenoughil",
+        "name_ar": "فنوغيل - فنوغيل",
+        "wilaya_code": "01"
+    },
+    {
+        "id": 10,
+        "name": "Zaouiat Kounta - In Zghmir",
+        "name_ar": "زاوية كنتة - إن زغمير",
+        "wilaya_code": "01"
+    },
+    {
+        "id": 11,
+        "name": "Tinerkouk - Ksar Kaddour",
+        "name_ar": "تنركوك - قصر قدور",
+        "wilaya_code": "49"
+    },
+    {
+        "id": 12,
+        "name": "Aougrout - Metarfa",
+        "name_ar": "أوقروت - المطارفة",
+        "wilaya_code": "49"
+    },
+    {
+        "id": 13,
+        "name": "Adrar - Ouled Ahmed Timmi",
+        "name_ar": "أدرار - أولاد أحمد تيمي",
+        "wilaya_code": "01"
+    },
+    {
+        "id": 14,
+        "name": "Charouine - Ouled Aissa",
+        "name_ar": "شروين - أولاد عيسى",
+        "wilaya_code": "49"
+    },
+    {
+        "id": 15,
+        "name": "Timimoun - Ouled Said",
+        "name_ar": "تيميمون - أولاد السعيد",
+        "wilaya_code": "49"
+    },
+    {
+        "id": 16,
+        "name": "Reggane - Reggane",
+        "name_ar": "رقان - رقان",
+        "wilaya_code": "01"
+    },
+    {
+        "id": 17,
+        "name": "Reggane - Sali",
+        "name_ar": "رقان - سالي",
+        "wilaya_code": "01"
+    },
+    {
+        "id": 18,
+        "name": "Tsabit - Sebaa",
+        "name_ar": "تسابيت - السبع",
+        "wilaya_code": "01"
+    },
+    {
+        "id": 19,
+        "name": "Charouine - Talmine",
+        "name_ar": "شروين - طالمين",
+        "wilaya_code": "49"
+    },
+    {
+        "id": 20,
+        "name": "Fenoughil - Tamantit",
+        "name_ar": "فنوغيل - تامنطيط",
+        "wilaya_code": "01"
+    },
+    {
+        "id": 21,
+        "name": "Fenoughil - Tamest",
+        "name_ar": "فنوغيل - تامست",
+        "wilaya_code": "01"
+    },
+    {
+        "id": 22,
+        "name": "Aoulef - Timekten",
+        "name_ar": "أولف - تيمقتن",
+        "wilaya_code": "01"
+    },
+    {
+        "id": 23,
+        "name": "Bordj Badji Mokhtar - Timiaouine",
+        "name_ar": "برج باجي مختار - تيمياوين",
+        "wilaya_code": "50"
+    },
+    {
+        "id": 24,
+        "name": "Timimoun - Timimoun",
+        "name_ar": "تيميمون - تيميمون",
+        "wilaya_code": "49"
+    },
+    {
+        "id": 25,
+        "name": "Tinerkouk - Tinerkouk",
+        "name_ar": "تنركوك - تنركوك",
+        "wilaya_code": "49"
+    },
+    {
+        "id": 26,
+        "name": "Aoulef - Tit",
+        "name_ar": "أولف - تيت",
+        "wilaya_code": "01"
+    },
+    {
+        "id": 27,
+        "name": "Tsabit - Tsabit",
+        "name_ar": "تسابيت - تسابيت",
+        "wilaya_code": "01"
+    },
+    {
+        "id": 28,
+        "name": "Zaouiat Kounta - Zaouiet Kounta",
+        "name_ar": "زاوية كنتة - زاوية كنتة",
+        "wilaya_code": "01"
+    },
+    {
+        "id": 29,
+        "name": "Abou El Hassane - Abou El Hassane",
+        "name_ar": "أبو الحسن - أبو الحسن",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 30,
+        "name": "Ain Merane - Ain Merane",
+        "name_ar": "عين مران - عين مران",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 31,
+        "name": "Zeboudja - Benairia",
+        "name_ar": "الزبوجة - بنايرية",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 32,
+        "name": "El Karimia - Beni  Bouattab",
+        "name_ar": "الكريمية - بني بوعتاب",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 33,
+        "name": "Beni Haoua - Beni Haoua",
+        "name_ar": "بني حواء - بني حواء",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 34,
+        "name": "Oued Fodda - Beni Rached",
+        "name_ar": "وادي الفضة - بني راشد",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 35,
+        "name": "Boukadir - Boukadir",
+        "name_ar": "بوقادير - بوقادير",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 36,
+        "name": "Zeboudja - Bouzeghaia",
+        "name_ar": "الزبوجة - بوزغاية",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 37,
+        "name": "Beni Haoua - Breira",
+        "name_ar": "بني حواء - بريرة",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 38,
+        "name": "Ouled Fares - Chettia",
+        "name_ar": "أولاد فارس - الشطية",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 39,
+        "name": "Chlef - Chlef",
+        "name_ar": "الشلف - الشلف",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 40,
+        "name": "Taougrit - Dahra",
+        "name_ar": "تاوقريت - الظهرة",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 41,
+        "name": "Ouled Ben Abdelkader - El Hadjadj",
+        "name_ar": "أولاد بن عبد القادر - الحجاج",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 42,
+        "name": "El Karimia - El Karimia",
+        "name_ar": "الكريمية - الكريمية",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 43,
+        "name": "El Marsa - El Marsa",
+        "name_ar": "المرسى - المرسى",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 44,
+        "name": "El Karimia - Harchoun",
+        "name_ar": "الكريمية - حرشون",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 45,
+        "name": "Ain Merane - Herenfa",
+        "name_ar": "عين مران - الهرانفة",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 46,
+        "name": "Ouled Fares - Labiod Medjadja",
+        "name_ar": "أولاد فارس - الأبيض مجاجة",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 47,
+        "name": "El Marsa - Moussadek",
+        "name_ar": "المرسى - مصدق",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 48,
+        "name": "Oued Fodda - Oued Fodda",
+        "name_ar": "وادي الفضة - وادي الفضة",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 49,
+        "name": "Beni Haoua - Oued Goussine",
+        "name_ar": "بني حواء - وادي قوسين",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 50,
+        "name": "Boukadir - Oued Sly",
+        "name_ar": "بوقادير - وادي سلي",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 51,
+        "name": "Oued Fodda - Ouled Abbes",
+        "name_ar": "وادي الفضة - أولاد عباس",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 52,
+        "name": "Ouled Ben Abdelkader - Ouled Ben Abdelkader",
+        "name_ar": "أولاد بن عبد القادر - أولاد بن عبد القادر",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 53,
+        "name": "Ouled Fares - Ouled Fares",
+        "name_ar": "أولاد فارس - أولاد فارس",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 54,
+        "name": "Chlef - Oum Drou",
+        "name_ar": "الشلف - أم الدروع",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 55,
+        "name": "Chlef - Sendjas",
+        "name_ar": "الشلف - سنجاس",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 56,
+        "name": "Tenes - Sidi Abderrahmane",
+        "name_ar": "تنس - سيدي عبد الرحمن",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 57,
+        "name": "Tenes - Sidi Akkacha",
+        "name_ar": "تنس - سيدي عكاشة",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 58,
+        "name": "Boukadir - Sobha",
+        "name_ar": "بوقادير - الصبحة",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 59,
+        "name": "Abou El Hassane - Tadjena",
+        "name_ar": "أبو الحسن - تاجنة",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 60,
+        "name": "Abou El Hassane - Talassa",
+        "name_ar": "أبو الحسن - تلعصة",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 61,
+        "name": "Taougrit - Taougrit",
+        "name_ar": "تاوقريت - تاوقريت",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 62,
+        "name": "Tenes - Tenes",
+        "name_ar": "تنس - تنس",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 63,
+        "name": "Zeboudja - Zeboudja",
+        "name_ar": "الزبوجة - الزبوجة",
+        "wilaya_code": "02"
+    },
+    {
+        "id": 64,
+        "name": "Aflou - Aflou",
+        "name_ar": "أفلو - أفلو",
+        "wilaya_code": "03"
+    },
+    {
+        "id": 65,
+        "name": "Ain Madhi - Ain Madhi",
+        "name_ar": "عين ماضي - عين ماضي",
+        "wilaya_code": "03"
+    },
+    {
+        "id": 66,
+        "name": "Gueltat Sidi Saad - Ain Sidi Ali",
+        "name_ar": "قتلة سيدي سعيد - عين سيدي علي",
+        "wilaya_code": "03"
+    },
+    {
+        "id": 67,
+        "name": "Gueltat Sidi Saad - El Beidha",
+        "name_ar": "قتلة سيدي سعيد - البيضاء",
+        "wilaya_code": "03"
+    },
+    {
+        "id": 68,
+        "name": "Ksar El Hirane - Benacer Benchohra",
+        "name_ar": "قصر الحيران - بن ناصر بن شهرة",
+        "wilaya_code": "03"
+    },
+    {
+        "id": 69,
+        "name": "Brida - Brida",
+        "name_ar": "بريدة - بريدة",
+        "wilaya_code": "03"
+    },
+    {
+        "id": 70,
+        "name": "Sidi Makhlouf - El Assafia",
+        "name_ar": "سيدي مخلوف - العسافية",
+        "wilaya_code": "03"
+    },
+    {
+        "id": 71,
+        "name": "El Ghicha - El Ghicha",
+        "name_ar": "الغيشة - الغيشة",
+        "wilaya_code": "03"
+    },
+    {
+        "id": 72,
+        "name": "Ain Madhi - El Haouaita",
+        "name_ar": "عين ماضي - الحويطة",
+        "wilaya_code": "03"
+    },
+    {
+        "id": 73,
+        "name": "Gueltat Sidi Saad - Gueltat Sidi Saad",
+        "name_ar": "قتلة سيدي سعيد - قلتة سيدي سعد",
+        "wilaya_code": "03"
+    },
+    {
+        "id": 74,
+        "name": "Brida - Hadj Mechri",
+        "name_ar": "بريدة - الحاج مشري",
+        "wilaya_code": "03"
+    },
+    {
+        "id": 75,
+        "name": "Hassi R'mel - Hassi Delaa",
+        "name_ar": "حاسي الرمل - حاسي الدلاعة",
+        "wilaya_code": "03"
+    },
+    {
+        "id": 76,
+        "name": "Hassi R'mel - Hassi R'mel",
+        "name_ar": "حاسي الرمل - حاسي الرمل",
+        "wilaya_code": "03"
+    },
+    {
+        "id": 77,
+        "name": "Ain Madhi - Kheneg",
+        "name_ar": "عين ماضي - الخنق",
+        "wilaya_code": "03"
+    },
+    {
+        "id": 78,
+        "name": "Ksar El Hirane - Ksar El Hirane",
+        "name_ar": "قصر الحيران - قصر الحيران",
+        "wilaya_code": "03"
+    },
+    {
+        "id": 79,
+        "name": "Laghouat - Laghouat",
+        "name_ar": "الأغواط - الأغواط",
+        "wilaya_code": "03"
+    },
+    {
+        "id": 80,
+        "name": "Oued Morra - Oued Morra",
+        "name_ar": "وادي مرة - وادي مرة",
+        "wilaya_code": "03"
+    },
+    {
+        "id": 81,
+        "name": "Oued Morra - Oued M'zi",
+        "name_ar": "وادي مرة - وادي مزي",
+        "wilaya_code": "03"
+    },
+    {
+        "id": 82,
+        "name": "Aflou - Sebgag",
+        "name_ar": "أفلو - سبقاق",
+        "wilaya_code": "03"
+    },
+    {
+        "id": 83,
+        "name": "Aflou - Sidi Bouzid",
+        "name_ar": "أفلو - سيدي بوزيد",
+        "wilaya_code": "03"
+    },
+    {
+        "id": 84,
+        "name": "Sidi Makhlouf - Sidi Makhlouf",
+        "name_ar": "سيدي مخلوف - سيدي مخلوف",
+        "wilaya_code": "03"
+    },
+    {
+        "id": 85,
+        "name": "Ain Madhi - Tadjemout",
+        "name_ar": "عين ماضي - تاجموت",
+        "wilaya_code": "03"
+    },
+    {
+        "id": 86,
+        "name": "Ain Madhi - Tadjrouna",
+        "name_ar": "عين ماضي - تاجرونة",
+        "wilaya_code": "03"
+    },
+    {
+        "id": 87,
+        "name": "Brida - Taouiala",
+        "name_ar": "بريدة - تاويالة",
+        "wilaya_code": "03"
+    },
+    {
+        "id": 88,
+        "name": "Ain Babouche - Ain Babouche",
+        "name_ar": "عين ببوش - عين ببوش",
+        "wilaya_code": "04"
+    },
+    {
+        "id": 89,
+        "name": "Ain Beida - Ain Beida",
+        "name_ar": "عين البيضاء - عين البيضاء",
+        "wilaya_code": "04"
+    },
+    {
+        "id": 90,
+        "name": "Ain Babouche - Ain Diss",
+        "name_ar": "عين ببوش - عين الديس",
+        "wilaya_code": "04"
+    },
+    {
+        "id": 91,
+        "name": "Ain Fekroun - Ain Fekroun",
+        "name_ar": "عين فكرون - عين فكرون",
+        "wilaya_code": "04"
+    },
+    {
+        "id": 92,
+        "name": "Ain Kercha - Ain Kercha",
+        "name_ar": "عين كرشة - عين كرشة",
+        "wilaya_code": "04"
+    },
+    {
+        "id": 93,
+        "name": "Ain M'lila - Ain M'lila",
+        "name_ar": "عين مليلة - عين مليلة",
+        "wilaya_code": "04"
+    },
+    {
+        "id": 94,
+        "name": "Oum El Bouaghi - Ain Zitoun",
+        "name_ar": "أم البواقي - عين الزيتون",
+        "wilaya_code": "04"
+    },
+    {
+        "id": 95,
+        "name": "Meskiana - Behir Chergui",
+        "name_ar": "مسكيانة - بحير الشرقي",
+        "wilaya_code": "04"
+    },
+    {
+        "id": 96,
+        "name": "Ain Beida - Berriche",
+        "name_ar": "عين البيضاء - بريش",
+        "wilaya_code": "04"
+    },
+    {
+        "id": 97,
+        "name": "Souk Naamane - Bir Chouhada",
+        "name_ar": "سوق نعمان - بئر الشهداء",
+        "wilaya_code": "04"
+    },
+    {
+        "id": 98,
+        "name": "Dhalaa - Dhalaa",
+        "name_ar": "الضلعة - الضلعة",
+        "wilaya_code": "04"
+    },
+    {
+        "id": 99,
+        "name": "Sigus - El Amiria",
+        "name_ar": "سيقوس - العامرية",
+        "wilaya_code": "04"
+    },
+    {
+        "id": 100,
+        "name": "Meskiana - El Belala",
+        "name_ar": "مسكيانة - البلالة",
+        "wilaya_code": "04"
+    },
+    {
+        "id": 101,
+        "name": "Dhalaa - El Djazia",
+        "name_ar": "الضلعة - الجازية",
+        "wilaya_code": "04"
+    },
+    {
+        "id": 102,
+        "name": "Ain Fekroun - El Fedjoudj Boughrara Sa",
+        "name_ar": "عين فكرون - الفجوج بوغرارة سعودي",
+        "wilaya_code": "04"
+    },
+    {
+        "id": 103,
+        "name": "Ain Kercha - El Harmilia",
+        "name_ar": "عين كرشة - الحرملية",
+        "wilaya_code": "04"
+    },
+    {
+        "id": 104,
+        "name": "F'kirina - Fkirina",
+        "name_ar": "فكيرينة - فكيرينة",
+        "wilaya_code": "04"
+    },
+    {
+        "id": 105,
+        "name": "Ain Kercha - Hanchir Toumghani",
+        "name_ar": "عين كرشة - هنشير تومغني",
+        "wilaya_code": "04"
+    },
+    {
+        "id": 106,
+        "name": "Ksar Sbahi - Ksar Sbahi",
+        "name_ar": "قصر الصباحي - قصر الصباحي",
+        "wilaya_code": "04"
+    },
+    {
+        "id": 107,
+        "name": "Meskiana - Meskiana",
+        "name_ar": "مسكيانة - مسكيانة",
+        "wilaya_code": "04"
+    },
+    {
+        "id": 108,
+        "name": "F'kirina - Oued Nini",
+        "name_ar": "فكيرينة - وادي نيني",
+        "wilaya_code": "04"
+    },
+    {
+        "id": 109,
+        "name": "Ain M'lila - Ouled Gacem",
+        "name_ar": "عين مليلة - أولاد قاسم",
+        "wilaya_code": "04"
+    },
+    {
+        "id": 110,
+        "name": "Ain M'lila - Ouled Hamla",
+        "name_ar": "عين مليلة - أولاد حملة",
+        "wilaya_code": "04"
+    },
+    {
+        "id": 111,
+        "name": "Souk Naamane - Ouled Zouai",
+        "name_ar": "سوق نعمان - أولاد زواي",
+        "wilaya_code": "04"
+    },
+    {
+        "id": 112,
+        "name": "Oum El Bouaghi - Oum El Bouaghi",
+        "name_ar": "أم البواقي - أم البواقي",
+        "wilaya_code": "04"
+    },
+    {
+        "id": 113,
+        "name": "Meskiana - Rahia",
+        "name_ar": "مسكيانة - الرحية",
+        "wilaya_code": "04"
+    },
+    {
+        "id": 114,
+        "name": "Sigus - Sigus",
+        "name_ar": "سيقوس - سيقوس",
+        "wilaya_code": "04"
+    },
+    {
+        "id": 115,
+        "name": "Souk Naamane - Souk Naamane",
+        "name_ar": "سوق نعمان - سوق نعمان",
+        "wilaya_code": "04"
+    },
+    {
+        "id": 116,
+        "name": "Ain Beida - Zorg",
+        "name_ar": "عين البيضاء - الزرق",
+        "wilaya_code": "04"
+    },
+    {
+        "id": 117,
+        "name": "Ain Djasser - Ain Djasser",
+        "name_ar": "عين جاسر - عين جاسر",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 118,
+        "name": "Ain Touta - Ain Touta",
+        "name_ar": "عين التوتة - عين التوتة",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 119,
+        "name": "El Madher - Ain Yagout",
+        "name_ar": "المعذر - عين ياقوت",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 120,
+        "name": "Arris - Arris",
+        "name_ar": "أريس - أريس",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 121,
+        "name": "Djezzar - Azil Abedelkader",
+        "name_ar": "الجزار - عزيل عبد القادر",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 122,
+        "name": "Barika - Barika",
+        "name_ar": "بريكة - بريكة",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 123,
+        "name": "Batna - Batna",
+        "name_ar": "باتنة - باتنة",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 124,
+        "name": "Ain Touta - Beni Foudhala El Hakania",
+        "name_ar": "عين التوتة - بني فضالة الحقانية",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 125,
+        "name": "Barika - Bitam",
+        "name_ar": "بريكة - بيطام",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 126,
+        "name": "Chemora - Boulhilat",
+        "name_ar": "الشمرة - بولهيلات",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 127,
+        "name": "N'gaous - Boumagueur",
+        "name_ar": "نقاوس - بومقر",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 128,
+        "name": "El Madher - Boumia",
+        "name_ar": "المعذر - بومية",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 129,
+        "name": "Bouzina - Bouzina",
+        "name_ar": "بوزينة - بوزينة",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 130,
+        "name": "Chemora - Chemora",
+        "name_ar": "الشمرة - الشمرة",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 131,
+        "name": "Theniet El Abed - Chir",
+        "name_ar": "ثنية العابد - شير",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 132,
+        "name": "El Madher - Djerma",
+        "name_ar": "المعذر - جرمة",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 133,
+        "name": "Djezzar - Djezzar",
+        "name_ar": "الجزار - الجزار",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 134,
+        "name": "Ain Djasser - El Hassi",
+        "name_ar": "عين جاسر - الحاسي",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 135,
+        "name": "El Madher - El Madher",
+        "name_ar": "المعذر - المعذر",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 136,
+        "name": "Batna - Fesdis",
+        "name_ar": "باتنة - فسديس",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 137,
+        "name": "Ichemoul - Foum Toub",
+        "name_ar": "إشمول - فم الطوب",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 138,
+        "name": "Tkout - Ghassira",
+        "name_ar": "تكوت - غسيرة",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 139,
+        "name": "Ras El Aioun - Gosbat",
+        "name_ar": "رأس العيون - القصبات",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 140,
+        "name": "Ras El Aioun - Guigba",
+        "name_ar": "رأس العيون - القيقبة",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 141,
+        "name": "Merouana - Hidoussa",
+        "name_ar": "مروانة - حيدوسة",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 142,
+        "name": "Ichemoul - Ichemoul",
+        "name_ar": "إشمول - إشمول",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 143,
+        "name": "Ichemoul - Inoughissen",
+        "name_ar": "إشمول - إينوغيسن",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 144,
+        "name": "Tkout - Kimmel",
+        "name_ar": "تكوت - كيمل",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 145,
+        "name": "Merouana - Ksar Bellezma",
+        "name_ar": "مروانة - قصر بلزمة",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 146,
+        "name": "Bouzina - Larbaa",
+        "name_ar": "بوزينة - لارباع",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 147,
+        "name": "Seriana - Lazrou",
+        "name_ar": "سريانة - لازرو",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 148,
+        "name": "Ouled Si Slimane - Lemcene",
+        "name_ar": "أولاد سي سليمان - لمسان",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 149,
+        "name": "Barika - M Doukal",
+        "name_ar": "بريكة - إمدوكل",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 150,
+        "name": "Ain Touta - Maafa",
+        "name_ar": "عين التوتة - معافة",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 151,
+        "name": "Menaa - Menaa",
+        "name_ar": "منعة - منعة",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 152,
+        "name": "Merouana - Merouana",
+        "name_ar": "مروانة - مروانة",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 153,
+        "name": "N'gaous - N Gaous",
+        "name_ar": "نقاوس - نقاوس",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 154,
+        "name": "Batna - Oued Chaaba",
+        "name_ar": "باتنة - وادي الشعبة",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 155,
+        "name": "Merouana - Oued El Ma",
+        "name_ar": "مروانة - وادي الماء",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 156,
+        "name": "Theniet El Abed - Oued Taga",
+        "name_ar": "ثنية العابد - وادي الطاقة",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 157,
+        "name": "Djezzar - Ouled Ammar",
+        "name_ar": "الجزار - أولاد عمار",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 158,
+        "name": "Ain Touta - Ouled Aouf",
+        "name_ar": "عين التوتة - أولاد عوف",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 159,
+        "name": "Timgad - Ouled Fadel",
+        "name_ar": "تيمقاد - أولاد فاضل",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 160,
+        "name": "Ras El Aioun - Ouled Sellem",
+        "name_ar": "رأس العيون - أولاد سلام",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 161,
+        "name": "Ouled Si Slimane - Ouled Si Slimane",
+        "name_ar": "أولاد سي سليمان - أولاد سي سليمان",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 162,
+        "name": "Tazoult - Ouyoun El Assafir",
+        "name_ar": "تازولت - عيون العصافير",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 163,
+        "name": "Ras El Aioun - Rahbat",
+        "name_ar": "رأس العيون - الرحبات",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 164,
+        "name": "Ras El Aioun - Ras El Aioun",
+        "name_ar": "رأس العيون - رأس العيون",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 165,
+        "name": "N'gaous - Sefiane",
+        "name_ar": "نقاوس - سفيان",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 166,
+        "name": "Seggana - Seggana",
+        "name_ar": "سقانة - سقانة",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 167,
+        "name": "Seriana - Seriana",
+        "name_ar": "سريانة - سريانة",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 168,
+        "name": "Tkout - T Kout",
+        "name_ar": "تكوت - تكوت",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 169,
+        "name": "Ras El Aioun - Talkhamt",
+        "name_ar": "رأس العيون - تالخمت",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 170,
+        "name": "Ouled Si Slimane - Taxlent",
+        "name_ar": "أولاد سي سليمان - تاكسلانت",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 171,
+        "name": "Tazoult - Tazoult",
+        "name_ar": "تازولت - تازولت",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 172,
+        "name": "Theniet El Abed - Teniet El Abed",
+        "name_ar": "ثنية العابد - ثنية العابد",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 173,
+        "name": "Arris - Tighanimine",
+        "name_ar": "أريس - تيغانمين",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 174,
+        "name": "Menaa - Tigharghar",
+        "name_ar": "منعة - تغرغار",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 175,
+        "name": "Seggana - Tilatou",
+        "name_ar": "سقانة - تيلاطو",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 176,
+        "name": "Timgad - Timgad",
+        "name_ar": "تيمقاد - تيمقاد",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 177,
+        "name": "Seriana - Zanet El Beida",
+        "name_ar": "سريانة - زانة البيضاء",
+        "wilaya_code": "05"
+    },
+    {
+        "id": 178,
+        "name": "Adekar - Adekar",
+        "name_ar": "أدكار - أدكار",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 179,
+        "name": "Ighil Ali - Ait R'zine",
+        "name_ar": "إغيل علي - أيت رزين",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 180,
+        "name": "Darguina - Ait-Smail",
+        "name_ar": "درقينة - أيت إسماعيل",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 181,
+        "name": "Akbou - Akbou",
+        "name_ar": "أقبو - أقبو",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 182,
+        "name": "Chemini - Akfadou",
+        "name_ar": "شميني - أكفادو",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 183,
+        "name": "Seddouk - Amalou",
+        "name_ar": "صدوق - أمالو",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 184,
+        "name": "Amizour - Amizour",
+        "name_ar": "أميزور - أميزور",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 185,
+        "name": "Aokas - Aokas",
+        "name_ar": "أوقاس - أوقاس",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 186,
+        "name": "Barbacha - Barbacha",
+        "name_ar": "برباشة - برباشة",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 187,
+        "name": "Bejaia - Bejaia",
+        "name_ar": "بجاية - بجاية",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 188,
+        "name": "Amizour - Beni Djellil",
+        "name_ar": "أميزور - بني جليل",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 189,
+        "name": "Adekar - Beni K'sila",
+        "name_ar": "أدكار - بني كسيلة",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 190,
+        "name": "Tazmalt - Beni-Mallikeche",
+        "name_ar": "تازملت - بني مليكش",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 191,
+        "name": "Beni Maouche - Benimaouche",
+        "name_ar": "بني معوش - بني معوش",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 192,
+        "name": "Tazmalt - Boudjellil",
+        "name_ar": "تازملت - بو جليل",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 193,
+        "name": "Seddouk - Bouhamza",
+        "name_ar": "صدوق - بوحمزة",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 194,
+        "name": "Tichy - Boukhelifa",
+        "name_ar": "تيشي - بوخليفة",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 195,
+        "name": "Akbou - Chellata",
+        "name_ar": "أقبو - شلاطة",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 196,
+        "name": "Chemini - Chemini",
+        "name_ar": "شميني - شميني",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 197,
+        "name": "Darguina - Darguina",
+        "name_ar": "درقينة - درقينة",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 198,
+        "name": "Kherrata - Dra El Caid",
+        "name_ar": "خراطة - ذراع القايد",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 199,
+        "name": "Sidi Aich - Leflaye",
+        "name_ar": "سيدي عيش - الفلاي",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 200,
+        "name": "El Kseur - El Kseur",
+        "name_ar": "القصر - القصر",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 201,
+        "name": "El Kseur - Fenaia Il Maten",
+        "name_ar": "القصر - فناية الماثن",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 202,
+        "name": "Amizour - Feraoun",
+        "name_ar": "أميزور - فرعون",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 203,
+        "name": "Ifri Ouzellaguene - Ouzellaguen",
+        "name_ar": "إفري أوزلاقن - أوزلاقن",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 204,
+        "name": "Ighil Ali - Ighil-Ali",
+        "name_ar": "إغيل علي - إغيل علي",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 205,
+        "name": "Akbou - Ighram",
+        "name_ar": "أقبو - اغرم",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 206,
+        "name": "Barbacha - Kendira",
+        "name_ar": "برباشة - كنديرة",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 207,
+        "name": "Kherrata - Kherrata",
+        "name_ar": "خراطة - خراطة",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 208,
+        "name": "Seddouk - M'cisna",
+        "name_ar": "صدوق - مسيسنة",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 209,
+        "name": "Souk El Tenine - Melbou",
+        "name_ar": "سوق الإثنين - مالبو",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 210,
+        "name": "Bejaia - Oued Ghir",
+        "name_ar": "بجاية - وادي غير",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 211,
+        "name": "Seddouk - Seddouk",
+        "name_ar": "صدوق - صدوق",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 212,
+        "name": "Sidi Aich - Sidi Ayad",
+        "name_ar": "سيدي عيش - سيدي عياد",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 213,
+        "name": "Sidi Aich - Sidi-Aich",
+        "name_ar": "سيدي عيش - سيدي عيش",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 214,
+        "name": "Amizour - Smaoun",
+        "name_ar": "أميزور - سمعون",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 215,
+        "name": "Souk El Tenine - Souk El Tenine",
+        "name_ar": "سوق الإثنين - سوق لإثنين",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 216,
+        "name": "Chemini - Souk Oufella",
+        "name_ar": "شميني - سوق اوفلا",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 217,
+        "name": "Tichy - Tala Hamza",
+        "name_ar": "تيشي - تالة حمزة",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 218,
+        "name": "Akbou - Tamokra",
+        "name_ar": "أقبو - تامقرة",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 219,
+        "name": "Souk El Tenine - Tamridjet",
+        "name_ar": "سوق الإثنين - تامريجت",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 220,
+        "name": "Adekar - Taourit Ighil",
+        "name_ar": "أدكار - تاوريرت إغيل",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 221,
+        "name": "Darguina - Taskriout",
+        "name_ar": "درقينة - تاسكريوت",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 222,
+        "name": "Tazmalt - Tazmalt",
+        "name_ar": "تازملت - تازمالت",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 223,
+        "name": "Chemini - Tibane",
+        "name_ar": "شميني - طيبان",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 224,
+        "name": "Tichy - Tichy",
+        "name_ar": "تيشي - تيشي",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 225,
+        "name": "Sidi Aich - Tifra",
+        "name_ar": "سيدي عيش - تيفرة",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 226,
+        "name": "Timezrit - Timezrit",
+        "name_ar": "تيمزريت - تيمزريت",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 227,
+        "name": "Sidi Aich - Tinebdar",
+        "name_ar": "سيدي عيش - تينبدار",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 228,
+        "name": "Aokas - Tizi-N'berber",
+        "name_ar": "أوقاس - تيزي نبربر",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 229,
+        "name": "El Kseur - Toudja",
+        "name_ar": "القصر - توجة",
+        "wilaya_code": "06"
+    },
+    {
+        "id": 230,
+        "name": "Sidi Okba - Ain Naga",
+        "name_ar": "سيدي عقبة - عين الناقة",
+        "wilaya_code": "07"
+    },
+    {
+        "id": 231,
+        "name": "El Kantara - Ain Zaatout",
+        "name_ar": "القنطرة - عين زعطوط",
+        "wilaya_code": "07"
+    },
+    {
+        "id": 232,
+        "name": "Sidi Khaled - Besbes",
+        "name_ar": "سيدي  خالد - بسباس",
+        "wilaya_code": "51"
+    },
+    {
+        "id": 233,
+        "name": "Biskra - Biskra",
+        "name_ar": "بسكرة - بسكرة",
+        "wilaya_code": "07"
+    },
+    {
+        "id": 234,
+        "name": "Tolga - Bordj Ben Azzouz",
+        "name_ar": "طولقة - برج بن عزوز",
+        "wilaya_code": "07"
+    },
+    {
+        "id": 235,
+        "name": "Tolga - Bouchakroun",
+        "name_ar": "طولقة - بوشقرون",
+        "wilaya_code": "07"
+    },
+    {
+        "id": 236,
+        "name": "Djemorah - Branis",
+        "name_ar": "جمورة - برانيس",
+        "wilaya_code": "07"
+    },
+    {
+        "id": 237,
+        "name": "Ouled Djellal - Chaiba",
+        "name_ar": "أولاد جلال - الشعيبة",
+        "wilaya_code": "51"
+    },
+    {
+        "id": 238,
+        "name": "Sidi Okba - Chetma",
+        "name_ar": "سيدي عقبة - شتمة",
+        "wilaya_code": "07"
+    },
+    {
+        "id": 239,
+        "name": "Djemorah - Djemorah",
+        "name_ar": "جمورة - جمورة",
+        "wilaya_code": "07"
+    },
+    {
+        "id": 240,
+        "name": "Ouled Djellal - Doucen",
+        "name_ar": "أولاد جلال - الدوسن",
+        "wilaya_code": "51"
+    },
+    {
+        "id": 241,
+        "name": "Zeribet El Oued - El Feidh",
+        "name_ar": "زريبة الوادي - الفيض",
+        "wilaya_code": "07"
+    },
+    {
+        "id": 242,
+        "name": "Foughala - El Ghrous",
+        "name_ar": "فوغالة - الغروس",
+        "wilaya_code": "07"
+    },
+    {
+        "id": 243,
+        "name": "Biskra - El Hadjab",
+        "name_ar": "بسكرة - الحاجب",
+        "wilaya_code": "07"
+    },
+    {
+        "id": 244,
+        "name": "Sidi Okba - El Haouch",
+        "name_ar": "سيدي عقبة - الحوش",
+        "wilaya_code": "07"
+    },
+    {
+        "id": 245,
+        "name": "El Kantara - El Kantara",
+        "name_ar": "القنطرة - القنطرة",
+        "wilaya_code": "07"
+    },
+    {
+        "id": 246,
+        "name": "El Outaya - El Outaya",
+        "name_ar": "الوطاية - الوطاية",
+        "wilaya_code": "07"
+    },
+    {
+        "id": 247,
+        "name": "Foughala - Foughala",
+        "name_ar": "فوغالة - فوغالة",
+        "wilaya_code": "07"
+    },
+    {
+        "id": 248,
+        "name": "Zeribet El Oued - Khenguet Sidi Nadji",
+        "name_ar": "زريبة الوادي - خنقة سيدي ناجي",
+        "wilaya_code": "07"
+    },
+    {
+        "id": 249,
+        "name": "Tolga - Lichana",
+        "name_ar": "طولقة - ليشانة",
+        "wilaya_code": "07"
+    },
+    {
+        "id": 250,
+        "name": "Ourlal - Lioua",
+        "name_ar": "أورلال - ليوة",
+        "wilaya_code": "07"
+    },
+    {
+        "id": 251,
+        "name": "Mechouneche - M'chouneche",
+        "name_ar": "مشونش - مشونش",
+        "wilaya_code": "07"
+    },
+    {
+        "id": 252,
+        "name": "Ourlal - Mekhadma",
+        "name_ar": "أورلال - مخادمة",
+        "wilaya_code": "07"
+    },
+    {
+        "id": 253,
+        "name": "Zeribet El Oued - Meziraa",
+        "name_ar": "زريبة الوادي - المزيرعة",
+        "wilaya_code": "07"
+    },
+    {
+        "id": 254,
+        "name": "Ourlal - M'lili",
+        "name_ar": "أورلال - مليلي",
+        "wilaya_code": "07"
+    },
+    {
+        "id": 255,
+        "name": "Ouled Djellal - Ouled Djellal",
+        "name_ar": "أولاد جلال - أولاد جلال",
+        "wilaya_code": "51"
+    },
+    {
+        "id": 256,
+        "name": "Ourlal - Oumache",
+        "name_ar": "أورلال - أوماش",
+        "wilaya_code": "07"
+    },
+    {
+        "id": 257,
+        "name": "Ourlal - Ourlal",
+        "name_ar": "أورلال - أورلال",
+        "wilaya_code": "07"
+    },
+    {
+        "id": 258,
+        "name": "Sidi Khaled - Ras El Miad",
+        "name_ar": "سيدي  خالد - رأس الميعاد",
+        "wilaya_code": "51"
+    },
+    {
+        "id": 259,
+        "name": "Sidi Khaled - Sidi Khaled",
+        "name_ar": "سيدي  خالد - سيدي  خالد",
+        "wilaya_code": "51"
+    },
+    {
+        "id": 260,
+        "name": "Sidi Okba - Sidi Okba",
+        "name_ar": "سيدي عقبة - سيدي عقبة",
+        "wilaya_code": "07"
+    },
+    {
+        "id": 261,
+        "name": "Tolga - Tolga",
+        "name_ar": "طولقة - طولقة",
+        "wilaya_code": "07"
+    },
+    {
+        "id": 262,
+        "name": "Zeribet El Oued - Zeribet El Oued",
+        "name_ar": "زريبة الوادي - زريبة الوادي",
+        "wilaya_code": "07"
+    },
+    {
+        "id": 263,
+        "name": "Abadla - Abadla",
+        "name_ar": "العبادلة - العبادلة",
+        "wilaya_code": "08"
+    },
+    {
+        "id": 264,
+        "name": "Bechar - Bechar",
+        "name_ar": "بشار - بشار",
+        "wilaya_code": "08"
+    },
+    {
+        "id": 265,
+        "name": "Beni Abbes - Beni-Abbes",
+        "name_ar": "بني عباس - بني عباس",
+        "wilaya_code": "52"
+    },
+    {
+        "id": 266,
+        "name": "Kerzaz - Beni-Ikhlef",
+        "name_ar": "كرزاز - بن يخلف",
+        "wilaya_code": "52"
+    },
+    {
+        "id": 267,
+        "name": "Beni Ounif - Beni-Ounif",
+        "name_ar": "بني ونيف - بني ونيف",
+        "wilaya_code": "08"
+    },
+    {
+        "id": 268,
+        "name": "Lahmar - Boukais",
+        "name_ar": "لحمر - بوكايس",
+        "wilaya_code": "08"
+    },
+    {
+        "id": 269,
+        "name": "El Ouata - El Ouata",
+        "name_ar": "الواتة - الواتة",
+        "wilaya_code": "52"
+    },
+    {
+        "id": 270,
+        "name": "Abadla - Erg-Ferradj",
+        "name_ar": "العبادلة - عرق فراج",
+        "wilaya_code": "08"
+    },
+    {
+        "id": 271,
+        "name": "Igli - Igli",
+        "name_ar": "إقلي - إقلي",
+        "wilaya_code": "52"
+    },
+    {
+        "id": 272,
+        "name": "Kenadsa - Kenadsa",
+        "name_ar": "القنادسة - القنادسة",
+        "wilaya_code": "08"
+    },
+    {
+        "id": 273,
+        "name": "Kerzaz - Kerzaz",
+        "name_ar": "كرزاز - كرزاز",
+        "wilaya_code": "52"
+    },
+    {
+        "id": 274,
+        "name": "Ouled Khodeir - Ksabi",
+        "name_ar": "أولاد خضير - القصابي",
+        "wilaya_code": "52"
+    },
+    {
+        "id": 275,
+        "name": "Lahmar - Lahmar",
+        "name_ar": "لحمر - لحمر",
+        "wilaya_code": "08"
+    },
+    {
+        "id": 276,
+        "name": "Abadla - Machraa-Houari-Boumediene",
+        "name_ar": "العبادلة - مشرع هواري بومدين",
+        "wilaya_code": "08"
+    },
+    {
+        "id": 277,
+        "name": "Kenadsa - Meridja",
+        "name_ar": "القنادسة - المريجة",
+        "wilaya_code": "08"
+    },
+    {
+        "id": 278,
+        "name": "Lahmar - Mogheul",
+        "name_ar": "لحمر - موغل",
+        "wilaya_code": "08"
+    },
+    {
+        "id": 279,
+        "name": "Ouled Khodeir - Ouled-Khodeir",
+        "name_ar": "أولاد خضير - أولاد خضير",
+        "wilaya_code": "52"
+    },
+    {
+        "id": 280,
+        "name": "Tabelbala - Tabelbala",
+        "name_ar": "تبلبالة - تبلبالة",
+        "wilaya_code": "08"
+    },
+    {
+        "id": 281,
+        "name": "Taghit - Taghit",
+        "name_ar": "تاغيت - تاغيت",
+        "wilaya_code": "08"
+    },
+    {
+        "id": 282,
+        "name": "Beni Abbes - Tamtert",
+        "name_ar": "بني عباس - تامترت",
+        "wilaya_code": "52"
+    },
+    {
+        "id": 283,
+        "name": "Kerzaz - Timoudi",
+        "name_ar": "كرزاز - تيمودي",
+        "wilaya_code": "52"
+    },
+    {
+        "id": 284,
+        "name": "Mouzaia - Ain Romana",
+        "name_ar": "موزاية - عين الرمانة",
+        "wilaya_code": "09"
+    },
+    {
+        "id": 285,
+        "name": "Ouled Yaich - Beni Mered",
+        "name_ar": "أولاد يعيش - بني مراد",
+        "wilaya_code": "09"
+    },
+    {
+        "id": 286,
+        "name": "Oued El Alleug - Beni-Tamou",
+        "name_ar": "وادي العلايق - بني تامو",
+        "wilaya_code": "09"
+    },
+    {
+        "id": 287,
+        "name": "Oued El Alleug - Benkhelil",
+        "name_ar": "وادي العلايق - بن خليل",
+        "wilaya_code": "09"
+    },
+    {
+        "id": 288,
+        "name": "Blida - Blida",
+        "name_ar": "البليدة - البليدة",
+        "wilaya_code": "09"
+    },
+    {
+        "id": 289,
+        "name": "Blida - Bouarfa",
+        "name_ar": "البليدة - بوعرفة",
+        "wilaya_code": "09"
+    },
+    {
+        "id": 290,
+        "name": "Boufarik - Boufarik",
+        "name_ar": "بوفاريك - بوفاريك",
+        "wilaya_code": "09"
+    },
+    {
+        "id": 291,
+        "name": "Bougara - Bougara",
+        "name_ar": "بوقرة - بوقرة",
+        "wilaya_code": "09"
+    },
+    {
+        "id": 292,
+        "name": "Bouinan - Bouinan",
+        "name_ar": "بوعينان - بوعينان",
+        "wilaya_code": "09"
+    },
+    {
+        "id": 293,
+        "name": "Bouinan - Chebli",
+        "name_ar": "بوعينان - الشبلي",
+        "wilaya_code": "09"
+    },
+    {
+        "id": 294,
+        "name": "Mouzaia - Chiffa",
+        "name_ar": "موزاية - الشفة",
+        "wilaya_code": "09"
+    },
+    {
+        "id": 295,
+        "name": "Ouled Yaich - Chrea",
+        "name_ar": "أولاد يعيش - الشريعة",
+        "wilaya_code": "09"
+    },
+    {
+        "id": 296,
+        "name": "Meftah - Djebabra",
+        "name_ar": "مفتاح - جبابرة",
+        "wilaya_code": "09"
+    },
+    {
+        "id": 297,
+        "name": "El Affroun - El-Affroun",
+        "name_ar": "العفرون - العفرون",
+        "wilaya_code": "09"
+    },
+    {
+        "id": 298,
+        "name": "Boufarik - Guerrouaou",
+        "name_ar": "بوفاريك - قرواو",
+        "wilaya_code": "09"
+    },
+    {
+        "id": 299,
+        "name": "Bougara - Hammam Elouane",
+        "name_ar": "بوقرة - حمام ملوان",
+        "wilaya_code": "09"
+    },
+    {
+        "id": 300,
+        "name": "Larbaa - Larbaa",
+        "name_ar": "الأربعاء - الأربعاء",
+        "wilaya_code": "09"
+    },
+    {
+        "id": 301,
+        "name": "Meftah - Meftah",
+        "name_ar": "مفتاح - مفتاح",
+        "wilaya_code": "09"
+    },
+    {
+        "id": 302,
+        "name": "Mouzaia - Mouzaia",
+        "name_ar": "موزاية - موزاية",
+        "wilaya_code": "09"
+    },
+    {
+        "id": 303,
+        "name": "El Affroun - Oued  Djer",
+        "name_ar": "العفرون - وادي جر",
+        "wilaya_code": "09"
+    },
+    {
+        "id": 304,
+        "name": "Oued El Alleug - Oued El Alleug",
+        "name_ar": "وادي العلايق - وادي العلايق",
+        "wilaya_code": "09"
+    },
+    {
+        "id": 305,
+        "name": "Bougara - Ouled Slama",
+        "name_ar": "بوقرة - اولاد سلامة",
+        "wilaya_code": "09"
+    },
+    {
+        "id": 306,
+        "name": "Ouled Yaich - Ouled Yaich",
+        "name_ar": "أولاد يعيش - أولاد يعيش",
+        "wilaya_code": "09"
+    },
+    {
+        "id": 307,
+        "name": "Larbaa - Souhane",
+        "name_ar": "الأربعاء - صوحان",
+        "wilaya_code": "09"
+    },
+    {
+        "id": 308,
+        "name": "Boufarik - Soumaa",
+        "name_ar": "بوفاريك - الصومعة",
+        "wilaya_code": "09"
+    },
+    {
+        "id": 309,
+        "name": "M'chedallah - Aghbalou",
+        "name_ar": "مشد الله - أغبالو",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 310,
+        "name": "Bechloul - Ahl El Ksar",
+        "name_ar": "بشلول - أهل القصر",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 311,
+        "name": "Ain Bessem - Ain El Hadjar",
+        "name_ar": "عين بسام - عين الحجر",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 312,
+        "name": "Ain Bessem - Ain Laloui",
+        "name_ar": "عين بسام - عين العلوي",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 313,
+        "name": "Bouira - Ain Turk",
+        "name_ar": "البويرة - عين الترك",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 314,
+        "name": "Ain Bessem - Ain-Bessem",
+        "name_ar": "عين بسام - عين بسام",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 315,
+        "name": "Bouira - Ait Laaziz",
+        "name_ar": "البويرة - أيت لعزيز",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 316,
+        "name": "Kadiria - Aomar",
+        "name_ar": "القادرية - أعمر",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 317,
+        "name": "Bechloul - Bechloul",
+        "name_ar": "بشلول - بشلول",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 318,
+        "name": "Bir Ghbalou - Bir Ghbalou",
+        "name_ar": "بئر غبالو - بئر غبالو",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 319,
+        "name": "Bordj Okhriss - Bordj Okhriss",
+        "name_ar": "برج أوخريص - برج أوخريص",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 320,
+        "name": "Lakhdaria - Bouderbala",
+        "name_ar": "الأخضرية - بودربالة",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 321,
+        "name": "Bouira - Bouira",
+        "name_ar": "البويرة - البويرة",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 322,
+        "name": "Lakhdaria - Boukram",
+        "name_ar": "الأخضرية - بوكرم",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 323,
+        "name": "M'chedallah - Chorfa",
+        "name_ar": "مشد الله - شرفة",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 324,
+        "name": "Sour El Ghozlane - Dechmia",
+        "name_ar": "سور الغزلان - الدشمية",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 325,
+        "name": "Sour El Ghozlane - Dirah",
+        "name_ar": "سور الغزلان - ديرة",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 326,
+        "name": "Kadiria - Djebahia",
+        "name_ar": "القادرية - جباحية",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 327,
+        "name": "Bechloul - El Adjiba",
+        "name_ar": "بشلول - العجيبة",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 328,
+        "name": "Bechloul - El Asnam",
+        "name_ar": "بشلول - الأسنام",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 329,
+        "name": "El Hachimia - El Hachimia",
+        "name_ar": "الهاشمية - الهاشمية",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 330,
+        "name": "Bir Ghbalou - El Khabouzia",
+        "name_ar": "بئر غبالو - الخبوزية",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 331,
+        "name": "Sour El Ghozlane - El-Hakimia",
+        "name_ar": "سور الغزلان - الحاكمية",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 332,
+        "name": "Souk El Khemis - El-Mokrani",
+        "name_ar": "سوق الخميس - المقراني",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 333,
+        "name": "Lakhdaria - Guerrouma",
+        "name_ar": "الأخضرية - قرومة",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 334,
+        "name": "Bordj Okhriss - Hadjera Zerga",
+        "name_ar": "برج أوخريص - الحجرة الزرقاء",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 335,
+        "name": "Haizer - Haizer",
+        "name_ar": "الحيزر - حيزر",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 336,
+        "name": "M'chedallah - Hanif",
+        "name_ar": "مشد الله - حنيف",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 337,
+        "name": "Kadiria - Kadiria",
+        "name_ar": "القادرية - قادرية",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 338,
+        "name": "Lakhdaria - Lakhdaria",
+        "name_ar": "الأخضرية - الأخضرية",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 339,
+        "name": "M'chedallah - M Chedallah",
+        "name_ar": "مشد الله - أمشدالة",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 340,
+        "name": "Lakhdaria - Maala",
+        "name_ar": "الأخضرية - معلة",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 341,
+        "name": "Sour El Ghozlane - Maamora",
+        "name_ar": "سور الغزلان - المعمورة",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 342,
+        "name": "Bordj Okhriss - Mezdour",
+        "name_ar": "برج أوخريص - مزدور",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 343,
+        "name": "El Hachimia - Oued El Berdi",
+        "name_ar": "الهاشمية - وادي البردي",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 344,
+        "name": "Bechloul - Ouled Rached",
+        "name_ar": "بشلول - أولاد راشد",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 345,
+        "name": "Bir Ghbalou - Raouraoua",
+        "name_ar": "بئر غبالو - روراوة",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 346,
+        "name": "Sour El Ghozlane - Ridane",
+        "name_ar": "سور الغزلان - ريدان",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 347,
+        "name": "M'chedallah - Saharidj",
+        "name_ar": "مشد الله - سحاريج",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 348,
+        "name": "Souk El Khemis - Souk El Khemis",
+        "name_ar": "سوق الخميس - سوق الخميس",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 349,
+        "name": "Sour El Ghozlane - Sour El Ghozlane",
+        "name_ar": "سور الغزلان - سور الغزلان",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 350,
+        "name": "Haizer - Taghzout",
+        "name_ar": "الحيزر - تاغزوت",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 351,
+        "name": "Bordj Okhriss - Taguedite",
+        "name_ar": "برج أوخريص - تاقديت",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 352,
+        "name": "M'chedallah - Ath Mansour",
+        "name_ar": "مشد الله - آث  منصور",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 353,
+        "name": "Lakhdaria - Z'barbar (El Isseri )",
+        "name_ar": "الأخضرية - زبربر",
+        "wilaya_code": "10"
+    },
+    {
+        "id": 354,
+        "name": "Silet - Abelsa",
+        "name_ar": "سيلت - ابلسة",
+        "wilaya_code": "11"
+    },
+    {
+        "id": 355,
+        "name": "Tamanrasset - Ain Amguel",
+        "name_ar": "تمنراست - عين امقل",
+        "wilaya_code": "11"
+    },
+    {
+        "id": 356,
+        "name": "In Guezzam - Ain Guezzam",
+        "name_ar": "عين قزام - عين قزام",
+        "wilaya_code": "54"
+    },
+    {
+        "id": 357,
+        "name": "In Salah - Ain Salah",
+        "name_ar": "عين صالح - عين صالح",
+        "wilaya_code": "53"
+    },
+    {
+        "id": 358,
+        "name": "In Salah - Foggaret Ezzoua",
+        "name_ar": "عين صالح - فقارة الزوى",
+        "wilaya_code": "53"
+    },
+    {
+        "id": 359,
+        "name": "Tazrouk - Idles",
+        "name_ar": "تاظروك - أدلس",
+        "wilaya_code": "11"
+    },
+    {
+        "id": 360,
+        "name": "In Ghar - Inghar",
+        "name_ar": "إينغر - إينغر",
+        "wilaya_code": "53"
+    },
+    {
+        "id": 361,
+        "name": "Tamanrasset - Tamanrasset",
+        "name_ar": "تمنراست - تمنراست",
+        "wilaya_code": "11"
+    },
+    {
+        "id": 362,
+        "name": "Tazrouk - Tazrouk",
+        "name_ar": "تاظروك - تاظروك",
+        "wilaya_code": "11"
+    },
+    {
+        "id": 363,
+        "name": "Tin Zouatine - Tin Zouatine",
+        "name_ar": "تين زواتين - تين زواتين",
+        "wilaya_code": "54"
+    },
+    {
+        "id": 364,
+        "name": "Ouenza - Ain Zerga",
+        "name_ar": "الونزة - عين الزرقاء",
+        "wilaya_code": "12"
+    },
+    {
+        "id": 365,
+        "name": "El Ogla - Bedjene",
+        "name_ar": "العقلة - بجن",
+        "wilaya_code": "12"
+    },
+    {
+        "id": 366,
+        "name": "El Kouif - Bekkaria",
+        "name_ar": "الكويف - بكارية",
+        "wilaya_code": "12"
+    },
+    {
+        "id": 367,
+        "name": "Morsott - Bir Dheheb",
+        "name_ar": "مرسط - بئر الذهب",
+        "wilaya_code": "12"
+    },
+    {
+        "id": 368,
+        "name": "Bir Mokadem - Bir Mokkadem",
+        "name_ar": "بئر مقدم - بئر مقدم",
+        "wilaya_code": "12"
+    },
+    {
+        "id": 369,
+        "name": "Bir El Ater - Bir-El-Ater",
+        "name_ar": "بئر العاتر - بئر العاتر",
+        "wilaya_code": "12"
+    },
+    {
+        "id": 370,
+        "name": "El Aouinet - Boukhadra",
+        "name_ar": "العوينات - بوخضرة",
+        "wilaya_code": "12"
+    },
+    {
+        "id": 371,
+        "name": "El Kouif - Boulhaf Dyr",
+        "name_ar": "الكويف - بولحاف الدير",
+        "wilaya_code": "12"
+    },
+    {
+        "id": 372,
+        "name": "Cheria - Cheria",
+        "name_ar": "الشريعة - الشريعة",
+        "wilaya_code": "12"
+    },
+    {
+        "id": 373,
+        "name": "El Kouif - El Kouif",
+        "name_ar": "الكويف - الكويف",
+        "wilaya_code": "12"
+    },
+    {
+        "id": 374,
+        "name": "El Malabiod - El Malabiod",
+        "name_ar": "الماء الابيض - الماء الابيض",
+        "wilaya_code": "12"
+    },
+    {
+        "id": 375,
+        "name": "Ouenza - El Meridj",
+        "name_ar": "الونزة - المريج",
+        "wilaya_code": "12"
+    },
+    {
+        "id": 376,
+        "name": "El Ogla - El Mezeraa",
+        "name_ar": "العقلة - المزرعة",
+        "wilaya_code": "12"
+    },
+    {
+        "id": 377,
+        "name": "El Ogla - El Ogla",
+        "name_ar": "العقلة - العقلة",
+        "wilaya_code": "12"
+    },
+    {
+        "id": 378,
+        "name": "Bir El Ater - El Ogla El Malha",
+        "name_ar": "بئر العاتر - العقلة المالحة",
+        "wilaya_code": "12"
+    },
+    {
+        "id": 379,
+        "name": "El Aouinet - El-Aouinet",
+        "name_ar": "العوينات - العوينات",
+        "wilaya_code": "12"
+    },
+    {
+        "id": 380,
+        "name": "El Malabiod - El-Houidjbet",
+        "name_ar": "الماء الابيض - الحويجبات",
+        "wilaya_code": "12"
+    },
+    {
+        "id": 381,
+        "name": "Negrine - Ferkane",
+        "name_ar": "نقرين - فركان",
+        "wilaya_code": "12"
+    },
+    {
+        "id": 382,
+        "name": "Bir Mokadem - Guorriguer",
+        "name_ar": "بئر مقدم - قريقر",
+        "wilaya_code": "12"
+    },
+    {
+        "id": 383,
+        "name": "Bir Mokadem - Hammamet",
+        "name_ar": "بئر مقدم - الحمامات",
+        "wilaya_code": "12"
+    },
+    {
+        "id": 384,
+        "name": "Morsott - Morsott",
+        "name_ar": "مرسط - مرسط",
+        "wilaya_code": "12"
+    },
+    {
+        "id": 385,
+        "name": "Negrine - Negrine",
+        "name_ar": "نقرين - نقرين",
+        "wilaya_code": "12"
+    },
+    {
+        "id": 386,
+        "name": "Ouenza - Ouenza",
+        "name_ar": "الونزة - الونزة",
+        "wilaya_code": "12"
+    },
+    {
+        "id": 387,
+        "name": "Oum Ali - Oum Ali",
+        "name_ar": "أم علي - أم علي",
+        "wilaya_code": "12"
+    },
+    {
+        "id": 388,
+        "name": "Oum Ali - Saf Saf El Ouesra",
+        "name_ar": "أم علي - صفصاف الوسرى",
+        "wilaya_code": "12"
+    },
+    {
+        "id": 389,
+        "name": "El Ogla - Stah Guentis",
+        "name_ar": "العقلة - سطح قنطيس",
+        "wilaya_code": "12"
+    },
+    {
+        "id": 390,
+        "name": "Tebessa - Tebessa",
+        "name_ar": "تبسة - تبسة",
+        "wilaya_code": "12"
+    },
+    {
+        "id": 391,
+        "name": "Cheria - Telidjen",
+        "name_ar": "الشريعة - ثليجان",
+        "wilaya_code": "12"
+    },
+    {
+        "id": 392,
+        "name": "Fellaoucene - Ain Fetah",
+        "name_ar": "فلاوسن - عين فتاح",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 393,
+        "name": "Chetouane - Ain Fezza",
+        "name_ar": "شتوان - عين فزة",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 394,
+        "name": "Mansourah - Ain Ghoraba",
+        "name_ar": "منصورة - عين غرابة",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 395,
+        "name": "Fellaoucene - Ain Kebira",
+        "name_ar": "فلاوسن - عين الكبيرة",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 396,
+        "name": "Ain Tellout - Ain Nehala",
+        "name_ar": "عين تالوت - عين النحالة",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 397,
+        "name": "Ain Tellout - Ain Tellout",
+        "name_ar": "عين تالوت - عين تالوت",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 398,
+        "name": "Remchi - Ain Youcef",
+        "name_ar": "الرمشي - عين يوسف",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 399,
+        "name": "Chetouane - Amieur",
+        "name_ar": "شتوان - عمير",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 400,
+        "name": "Bab El Assa - Bab El Assa",
+        "name_ar": "باب العسة - باب العسة",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 401,
+        "name": "Beni Snous - Beni Bahdel",
+        "name_ar": "بني سنوس - بني بهدل",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 402,
+        "name": "Beni Boussaid - Beni Boussaid",
+        "name_ar": "بني بوسعيد - بني بوسعيد",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 403,
+        "name": "Honnaine - Beni Khellad",
+        "name_ar": "هنين - بني خلاد",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 404,
+        "name": "Mansourah - Beni Mester",
+        "name_ar": "منصورة - بني مستر",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 405,
+        "name": "Remchi - Beni Ouarsous",
+        "name_ar": "الرمشي - بني وارسوس",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 406,
+        "name": "Ouled Mimoun - Beni Smiel",
+        "name_ar": "أولاد ميمون - بني صميل",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 407,
+        "name": "Beni Snous - Beni Snous",
+        "name_ar": "بني سنوس - بني سنوس",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 408,
+        "name": "Bensekrane - Bensekrane",
+        "name_ar": "بن سكران - بن سكران",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 409,
+        "name": "Sabra - Bouhlou",
+        "name_ar": "صبرة - بوحلو",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 410,
+        "name": "Sidi Djillali - Bouihi",
+        "name_ar": "سيدي الجيلالي - البويهي",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 411,
+        "name": "Chetouane - Chetouane",
+        "name_ar": "شتوان - شتوان",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 412,
+        "name": "Ghazaouet - Dar Yaghmoracen",
+        "name_ar": "الغزوات - دار يغمراسن",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 413,
+        "name": "Nedroma - Djebala",
+        "name_ar": "ندرومة - جبالة",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 414,
+        "name": "Sebdou - El Aricha",
+        "name_ar": "سبدو - العريشة",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 415,
+        "name": "Beni Snous - Azail",
+        "name_ar": "بني سنوس - العزايل",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 416,
+        "name": "Remchi - El Fehoul",
+        "name_ar": "الرمشي - الفحول",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 417,
+        "name": "Sebdou - El Gor",
+        "name_ar": "سبدو - القور",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 418,
+        "name": "Fellaoucene - Fellaoucene",
+        "name_ar": "فلاوسن - فلاوسن",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 419,
+        "name": "Ghazaouet - Ghazaouet",
+        "name_ar": "الغزوات - الغزوات",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 420,
+        "name": "Maghnia - Hammam Boughrara",
+        "name_ar": "مغنية - حمام بوغرارة",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 421,
+        "name": "Hennaya - Hennaya",
+        "name_ar": "الحناية - الحناية",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 422,
+        "name": "Honnaine - Honnaine",
+        "name_ar": "هنين - هنين",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 423,
+        "name": "Maghnia - Maghnia",
+        "name_ar": "مغنية - مغنية",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 424,
+        "name": "Mansourah - Mansourah",
+        "name_ar": "منصورة - منصورة",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 425,
+        "name": "Marsa Ben Mehdi - Marsa Ben M'hidi",
+        "name_ar": "مرسى بن مهيدي - مرسى بن مهيدي",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 426,
+        "name": "Marsa Ben Mehdi - M'sirda Fouaga",
+        "name_ar": "مرسى بن مهيدي - مسيردة الفواقة",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 427,
+        "name": "Nedroma - Nedroma",
+        "name_ar": "ندرومة - ندرومة",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 428,
+        "name": "Ouled Mimoun - Oued Lakhdar",
+        "name_ar": "أولاد ميمون - وادي الخضر",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 429,
+        "name": "Ouled Mimoun - Ouled Mimoun",
+        "name_ar": "أولاد ميمون - أولاد ميمون",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 430,
+        "name": "Hennaya - Ouled Riyah",
+        "name_ar": "الحناية - أولاد رياح",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 431,
+        "name": "Remchi - Remchi",
+        "name_ar": "الرمشي - الرمشي",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 432,
+        "name": "Sabra - Sabra",
+        "name_ar": "صبرة - صبرة",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 433,
+        "name": "Remchi - Sebbaa Chioukh",
+        "name_ar": "الرمشي - سبعة شيوخ",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 434,
+        "name": "Sebdou - Sebdou",
+        "name_ar": "سبدو - سبدو",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 435,
+        "name": "Bensekrane - Sidi Abdelli",
+        "name_ar": "بن سكران - سيدي العبدلي",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 436,
+        "name": "Sidi Djillali - Sidi Djillali",
+        "name_ar": "سيدي الجيلالي - سيدي الجيلالي",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 437,
+        "name": "Beni Boussaid - Sidi Medjahed",
+        "name_ar": "بني بوسعيد - سيدي مجاهد",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 438,
+        "name": "Ghazaouet - Souahlia",
+        "name_ar": "الغزوات - السواحلية",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 439,
+        "name": "Bab El Assa - Souani",
+        "name_ar": "باب العسة - السواني",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 440,
+        "name": "Bab El Assa - Souk Tleta",
+        "name_ar": "باب العسة - سوق الثلاثاء",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 441,
+        "name": "Mansourah - Terny Beni Hediel",
+        "name_ar": "منصورة - تيرني بني هديل",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 442,
+        "name": "Ghazaouet - Tianet",
+        "name_ar": "الغزوات - تيانت",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 443,
+        "name": "Tlemcen - Tlemcen",
+        "name_ar": "تلمسان - تلمسان",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 444,
+        "name": "Hennaya - Zenata",
+        "name_ar": "الحناية - زناتة",
+        "wilaya_code": "13"
+    },
+    {
+        "id": 445,
+        "name": "Dahmouni - Ain Bouchekif",
+        "name_ar": "دحموني - عين بوشقيف",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 446,
+        "name": "Ain Deheb - Ain Deheb",
+        "name_ar": "عين الذهب - عين الذهب",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 447,
+        "name": "Mahdia - Ain Dzarit",
+        "name_ar": "مهدية - عين دزاريت",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 448,
+        "name": "Frenda - Ain El Hadid",
+        "name_ar": "فرندة - عين الحديد",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 449,
+        "name": "Ain Kermes - Ain Kermes",
+        "name_ar": "عين كرمس - عين كرمس",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 450,
+        "name": "Hamadia - Bougara",
+        "name_ar": "حمادية - بوقرة",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 451,
+        "name": "Ain Deheb - Chehaima",
+        "name_ar": "عين الذهب - شحيمة",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 452,
+        "name": "Dahmouni - Dahmouni",
+        "name_ar": "دحموني - دحموني",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 453,
+        "name": "Ain Kermes - Djebilet Rosfa",
+        "name_ar": "عين كرمس - جبيلات الرصفاء",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 454,
+        "name": "Mechraa Sfa - Djillali Ben Amar",
+        "name_ar": "مشرع الصفا - جيلالي بن عمار",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 455,
+        "name": "Sougueur - Faidja",
+        "name_ar": "السوقر - الفايجة",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 456,
+        "name": "Frenda - Frenda",
+        "name_ar": "فرندة - فرندة",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 457,
+        "name": "Rahouia - Guertoufa",
+        "name_ar": "رحوية - قرطوفة",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 458,
+        "name": "Hamadia - Hamadia",
+        "name_ar": "حمادية - حمادية",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 459,
+        "name": "Ksar Chellala - Ksar Chellala",
+        "name_ar": "قصر الشلالة - قصر الشلالة",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 460,
+        "name": "Ain Kermes - Madna",
+        "name_ar": "عين كرمس - مادنة",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 461,
+        "name": "Mahdia - Mahdia",
+        "name_ar": "مهدية - مهدية",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 462,
+        "name": "Mechraa Sfa - Mechraa Safa",
+        "name_ar": "مشرع الصفا - مشرع الصفا",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 463,
+        "name": "Ain Kermes - Medrissa",
+        "name_ar": "عين كرمس - مدريسة",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 464,
+        "name": "Medroussa - Medroussa",
+        "name_ar": "مدروسة - مدروسة",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 465,
+        "name": "Meghila - Meghila",
+        "name_ar": "مغيلة - مغيلة",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 466,
+        "name": "Medroussa - Mellakou",
+        "name_ar": "مدروسة - ملاكو",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 467,
+        "name": "Mahdia - Nadorah",
+        "name_ar": "مهدية - الناظورة",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 468,
+        "name": "Ain Deheb - Naima",
+        "name_ar": "عين الذهب - النعيمة",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 469,
+        "name": "Oued Lili - Oued Lilli",
+        "name_ar": "وادي ليلي - وادي ليلي",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 470,
+        "name": "Rahouia - Rahouia",
+        "name_ar": "رحوية - الرحوية",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 471,
+        "name": "Hamadia - Rechaiga",
+        "name_ar": "حمادية - الرشايقة",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 472,
+        "name": "Mahdia - Sebaine",
+        "name_ar": "مهدية - السبعين",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 473,
+        "name": "Meghila - Sebt",
+        "name_ar": "مغيلة - السبت",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 474,
+        "name": "Ksar Chellala - Serghine",
+        "name_ar": "قصر الشلالة - سرغين",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 475,
+        "name": "Sougueur - Si Abdelghani",
+        "name_ar": "السوقر - سي عبد الغني",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 476,
+        "name": "Ain Kermes - Sidi Abderrahmane",
+        "name_ar": "عين كرمس - سيدي عبد الرحمن",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 477,
+        "name": "Oued Lili - Sidi Ali Mellal",
+        "name_ar": "وادي ليلي - سيدي علي ملال",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 478,
+        "name": "Medroussa - Sidi Bakhti",
+        "name_ar": "مدروسة - سيدي بختي",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 479,
+        "name": "Meghila - Sidi Hosni",
+        "name_ar": "مغيلة - سيدي حسني",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 480,
+        "name": "Sougueur - Sougueur",
+        "name_ar": "السوقر - السوقر",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 481,
+        "name": "Mechraa Sfa - Tagdempt",
+        "name_ar": "مشرع الصفا - تاقدمت",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 482,
+        "name": "Frenda - Takhemaret",
+        "name_ar": "فرندة - تخمرت",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 483,
+        "name": "Tiaret - Tiaret",
+        "name_ar": "تيارت - تيارت",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 484,
+        "name": "Oued Lili - Tidda",
+        "name_ar": "وادي ليلي - تيدة",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 485,
+        "name": "Sougueur - Tousnina",
+        "name_ar": "السوقر - توسنينة",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 486,
+        "name": "Ksar Chellala - Zmalet El Emir Abdelkade",
+        "name_ar": "قصر الشلالة - زمالة  الأمير عبد القادر",
+        "wilaya_code": "14"
+    },
+    {
+        "id": 487,
+        "name": "Ain El Hammam - Abi-Youcef",
+        "name_ar": "عين الحمام - أبي يوسف",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 488,
+        "name": "Azeffoun - Aghribs",
+        "name_ar": "أزفون - أغريب",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 489,
+        "name": "Ouadhias - Agouni-Gueghrane",
+        "name_ar": "واضية - أقني قغران",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 490,
+        "name": "Ain El Hammam - Ain-El-Hammam",
+        "name_ar": "عين الحمام - عين الحمام",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 491,
+        "name": "Draa El Mizan - Ain-Zaouia",
+        "name_ar": "ذراع الميزان - عين الزاوية",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 492,
+        "name": "Larbaa Nath Iraten - Ait Aggouacha",
+        "name_ar": "الأربعاء ناث إيراثن - أيت عقـواشة",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 493,
+        "name": "Ouadhias - Ait Bouaddou",
+        "name_ar": "واضية - أيت بــوادو",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 494,
+        "name": "Ouacif - Ait Boumahdi",
+        "name_ar": "واسيف - أيت بومهدي",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 495,
+        "name": "Mekla - Ait Khellili",
+        "name_ar": "مقلع - أيت خليلي",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 496,
+        "name": "Draa El Mizan - Ait Yahia Moussa",
+        "name_ar": "ذراع الميزان - أيت يحي موسى",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 497,
+        "name": "Ouaguenoun - Ait-Aissa-Mimoun",
+        "name_ar": "واقنون - أيت عيسى ميمون",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 498,
+        "name": "Azeffoun - Ait-Chafaa",
+        "name_ar": "أزفون - أيت شافع",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 499,
+        "name": "Beni Douala - Ait-Mahmoud",
+        "name_ar": "بني دوالة - أيت محمود",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 500,
+        "name": "Tizi Rached - Ait-Oumalou",
+        "name_ar": "تيزي راشد - أيت  أومالو",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 501,
+        "name": "Ouacif - Ait-Toudert",
+        "name_ar": "واسيف - أيت تودرت",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 502,
+        "name": "Ain El Hammam - Ait-Yahia",
+        "name_ar": "عين الحمام - أيت يحيى",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 503,
+        "name": "Ain El Hammam - Akbil",
+        "name_ar": "عين الحمام - اقبيل",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 504,
+        "name": "Azeffoun - Akerrou",
+        "name_ar": "أزفون - أقرو",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 505,
+        "name": "Boghni - Assi-Youcef",
+        "name_ar": "بوغني - أسي يوسف",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 506,
+        "name": "Azazga - Azazga",
+        "name_ar": "عزازقة - عزازقة",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 507,
+        "name": "Azeffoun - Azeffoun",
+        "name_ar": "أزفون - أزفون",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 508,
+        "name": "Beni Douala - Beni Zmenzer",
+        "name_ar": "بني دوالة - بنــــي زمنزار",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 509,
+        "name": "Beni Douala - Beni-Aissi",
+        "name_ar": "بني دوالة - بني عيسي",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 510,
+        "name": "Beni Douala - Beni-Douala",
+        "name_ar": "بني دوالة - بني دوالة",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 511,
+        "name": "Benni Yenni - Beni-Yenni",
+        "name_ar": "بني يني - بني يني",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 512,
+        "name": "Bouzeguene - Beni-Zikki",
+        "name_ar": "بوزقن - بني زيكــي",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 513,
+        "name": "Boghni - Boghni",
+        "name_ar": "بوغني - بوغني",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 514,
+        "name": "Makouda - Boudjima",
+        "name_ar": "ماكودة - بوجيمة",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 515,
+        "name": "Boghni - Bounouh",
+        "name_ar": "بوغني - بونوح",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 516,
+        "name": "Bouzeguene - Bouzeguene",
+        "name_ar": "بوزقن - بوزقــن",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 517,
+        "name": "Draa Ben Khedda - Draa-Ben-Khedda",
+        "name_ar": "ذراع بن خدة - ذراع بن خدة",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 518,
+        "name": "Draa El Mizan - Draa-El-Mizan",
+        "name_ar": "ذراع الميزان - ذراع الميزان",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 519,
+        "name": "Azazga - Freha",
+        "name_ar": "عزازقة - فريحة",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 520,
+        "name": "Draa El Mizan - Frikat",
+        "name_ar": "ذراع الميزان - فريقات",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 521,
+        "name": "Benni Yenni - Iboudrarene",
+        "name_ar": "بني يني - إبودرارن",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 522,
+        "name": "Bouzeguene - Idjeur",
+        "name_ar": "بوزقن - إيجــار",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 523,
+        "name": "Iferhounene - Iferhounene",
+        "name_ar": "إفرحونان - إفــرحــونان",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 524,
+        "name": "Azazga - Ifigha",
+        "name_ar": "عزازقة - إيفيغاء",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 525,
+        "name": "Tigzirt - Iflissen",
+        "name_ar": "تيقزيرت - إفليـــسن",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 526,
+        "name": "Iferhounene - Illilten",
+        "name_ar": "إفرحونان - إيلـيــلتـن",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 527,
+        "name": "Bouzeguene - Illoula Oumalou",
+        "name_ar": "بوزقن - إيلولة أومـــالو",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 528,
+        "name": "Iferhounene - Imsouhal",
+        "name_ar": "إفرحونان - إمســوحال",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 529,
+        "name": "Larbaa Nath Iraten - Irdjen",
+        "name_ar": "الأربعاء ناث إيراثن - إيرجـــن",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 530,
+        "name": "Larbaa Nath Iraten - Larbaa Nath Irathen",
+        "name_ar": "الأربعاء ناث إيراثن - الأربعــاء ناث إيراثن",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 531,
+        "name": "Maatkas - Maatkas",
+        "name_ar": "معاتقة - معـــاتقة",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 532,
+        "name": "Makouda - Makouda",
+        "name_ar": "ماكودة - ماكودة",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 533,
+        "name": "Boghni - Mechtras",
+        "name_ar": "بوغني - مشطراس",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 534,
+        "name": "Mekla - Mekla",
+        "name_ar": "مقلع - مقــلع",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 535,
+        "name": "Tigzirt - Mizrana",
+        "name_ar": "تيقزيرت - ميزرانـــة",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 536,
+        "name": "Tizi-Ghenif - M'kira",
+        "name_ar": "تيزي غنيف - مكيرة",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 537,
+        "name": "Ouacif - Ouacif",
+        "name_ar": "واسيف - واسيف",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 538,
+        "name": "Ouadhias - Ouadhias",
+        "name_ar": "واضية - واضية",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 539,
+        "name": "Ouaguenoun - Ouaguenoun",
+        "name_ar": "واقنون - واقنون",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 540,
+        "name": "Draa Ben Khedda - Sidi Namane",
+        "name_ar": "ذراع بن خدة - سيدي نعمان",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 541,
+        "name": "Mekla - Souama",
+        "name_ar": "مقلع - صوامـــع",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 542,
+        "name": "Maatkas - Souk-El-Tenine",
+        "name_ar": "معاتقة - سوق الإثنين",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 543,
+        "name": "Draa Ben Khedda - Tadmait",
+        "name_ar": "ذراع بن خدة - تادمايت",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 544,
+        "name": "Tigzirt - Tigzirt",
+        "name_ar": "تيقزيرت - تيقـزيرت",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 545,
+        "name": "Ouaguenoun - Timizart",
+        "name_ar": "واقنون - تيمـيزار",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 546,
+        "name": "Draa Ben Khedda - Tirmitine",
+        "name_ar": "ذراع بن خدة - تيرمتين",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 547,
+        "name": "Ouadhias - Tizi N'tleta",
+        "name_ar": "واضية - تيزي نثلاثة",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 548,
+        "name": "Tizi-Ghenif - Tizi-Gheniff",
+        "name_ar": "تيزي غنيف - تيزي غنيف",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 549,
+        "name": "Tizi Ouzou - Tizi-Ouzou",
+        "name_ar": "تيزي وزو - تيزي وزو",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 550,
+        "name": "Tizi Rached - Tizi-Rached",
+        "name_ar": "تيزي راشد - تيزي راشد",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 551,
+        "name": "Azazga - Yakourene",
+        "name_ar": "عزازقة - إعــكورن",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 552,
+        "name": "Benni Yenni - Yatafene",
+        "name_ar": "بني يني - يطــافن",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 553,
+        "name": "Azazga - Zekri",
+        "name_ar": "عزازقة - زكري",
+        "wilaya_code": "15"
+    },
+    {
+        "id": 554,
+        "name": "Cheraga - Ain Benian",
+        "name_ar": "الشراقة - عين بنيان",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 555,
+        "name": "Dar El Beida - Ain Taya",
+        "name_ar": "الدار البيضاء - عين طاية",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 556,
+        "name": "Sidi M'hamed - Alger Centre",
+        "name_ar": "سيدي امحمد - الجزائر الوسطى",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 557,
+        "name": "Bab El Oued - Bab El Oued",
+        "name_ar": "باب الوادي - باب الوادي",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 558,
+        "name": "Dar El Beida - Bab Ezzouar",
+        "name_ar": "الدار البيضاء - باب الزوار",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 559,
+        "name": "Draria - Baba Hassen",
+        "name_ar": "الدرارية - بابا حسن",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 560,
+        "name": "El Harrach - Bachedjerah",
+        "name_ar": "الحراش - باش جراح",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 561,
+        "name": "Baraki - Baraki",
+        "name_ar": "براقي - براقي",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 562,
+        "name": "Bouzareah - Ben Aknoun",
+        "name_ar": "بوزريعة - ابن عكنون",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 563,
+        "name": "Bouzareah - Beni Messous",
+        "name_ar": "بوزريعة - بني مسوس",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 564,
+        "name": "Bir Mourad Rais - Bir Mourad Rais",
+        "name_ar": "بئر مراد رايس - بئر مراد رايس",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 565,
+        "name": "Bir Mourad Rais - Birkhadem",
+        "name_ar": "بئر مراد رايس - بئر خادم",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 566,
+        "name": "Birtouta - Bir Touta",
+        "name_ar": "بئر توتة - بئر توتة",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 567,
+        "name": "Bab El Oued - Bologhine Ibnou Ziri",
+        "name_ar": "باب الوادي - بولوغين بن زيري",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 568,
+        "name": "Dar El Beida - Bordj El Bahri",
+        "name_ar": "الدار البيضاء - برج البحري",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 569,
+        "name": "Dar El Beida - Bordj El Kiffan",
+        "name_ar": "الدار البيضاء - برج الكيفان",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 570,
+        "name": "El Harrach - Bourouba",
+        "name_ar": "الحراش - بوروبة",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 571,
+        "name": "Bouzareah - Bouzareah",
+        "name_ar": "بوزريعة - بوزريعة",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 572,
+        "name": "Bab El Oued - Casbah",
+        "name_ar": "باب الوادي - القصبة",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 573,
+        "name": "Cheraga - Cheraga",
+        "name_ar": "الشراقة - الشراقة",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 574,
+        "name": "Dar El Beida - Dar El Beida",
+        "name_ar": "الدار البيضاء - الدار البيضاء",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 575,
+        "name": "Cheraga - Dely Ibrahim",
+        "name_ar": "الشراقة - دالي ابراهيم",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 576,
+        "name": "Bir Mourad Rais - Djasr Kasentina",
+        "name_ar": "بئر مراد رايس - جسر قسنطينة",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 577,
+        "name": "Draria - Douira",
+        "name_ar": "الدرارية - الدويرة",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 578,
+        "name": "Draria - Draria",
+        "name_ar": "الدرارية - الدرارية",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 579,
+        "name": "Draria - El Achour",
+        "name_ar": "الدرارية - العاشور",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 580,
+        "name": "Bouzareah - El Biar",
+        "name_ar": "بوزريعة - الابيار",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 581,
+        "name": "El Harrach - El Harrach",
+        "name_ar": "الحراش - الحراش",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 582,
+        "name": "Sidi M'hamed - El Madania",
+        "name_ar": "سيدي امحمد - المدنية",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 583,
+        "name": "Hussein Dey - El Magharia",
+        "name_ar": "حسين داي - المغارية",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 584,
+        "name": "Dar El Beida - El Marsa",
+        "name_ar": "الدار البيضاء - المرسى",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 585,
+        "name": "Sidi M'hamed - El Mouradia",
+        "name_ar": "سيدي امحمد - المرادية",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 586,
+        "name": "Cheraga - Hammamet",
+        "name_ar": "الشراقة - الحمامات",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 587,
+        "name": "Rouiba - Herraoua",
+        "name_ar": "الرويبة - هراوة",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 588,
+        "name": "Hussein Dey - Hussein Dey",
+        "name_ar": "حسين داي - حسين داي",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 589,
+        "name": "Bir Mourad Rais - Hydra",
+        "name_ar": "بئر مراد رايس - حيدرة",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 590,
+        "name": "Draria - Khraissia",
+        "name_ar": "الدرارية - الخرايسية",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 591,
+        "name": "Hussein Dey - Kouba",
+        "name_ar": "حسين داي - القبة",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 592,
+        "name": "Baraki - Les Eucalyptus",
+        "name_ar": "براقي - الكاليتوس",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 593,
+        "name": "Zeralda - Maalma",
+        "name_ar": "زرالدة - المعالمة",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 594,
+        "name": "Hussein Dey - Mohamed Belouzdad",
+        "name_ar": "حسين داي - محمد بلوزداد",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 595,
+        "name": "Dar El Beida - Mohammadia",
+        "name_ar": "الدار البيضاء - المحمدية",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 596,
+        "name": "Bab El Oued - Oued Koriche",
+        "name_ar": "باب الوادي - وادي قريش",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 597,
+        "name": "El Harrach - Oued Smar",
+        "name_ar": "الحراش - وادي السمار",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 598,
+        "name": "Birtouta - Ouled Chebel",
+        "name_ar": "بئر توتة - اولاد شبل",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 599,
+        "name": "Cheraga - Ouled Fayet",
+        "name_ar": "الشراقة - اولاد فايت",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 600,
+        "name": "Zeralda - Rahmania",
+        "name_ar": "زرالدة - الرحمانية",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 601,
+        "name": "Bab El Oued - Rais Hamidou",
+        "name_ar": "باب الوادي - الرايس حميدو",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 602,
+        "name": "Rouiba - Reghaia",
+        "name_ar": "الرويبة - رغاية",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 603,
+        "name": "Rouiba - Rouiba",
+        "name_ar": "الرويبة - الرويبة",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 604,
+        "name": "Bir Mourad Rais - Sehaoula",
+        "name_ar": "بئر مراد رايس - السحاولة",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 605,
+        "name": "Sidi M'hamed - Sidi M'hamed",
+        "name_ar": "سيدي امحمد - سيدي امحمد",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 606,
+        "name": "Baraki - Sidi Moussa",
+        "name_ar": "براقي - سيدي موسى",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 607,
+        "name": "Zeralda - Souidania",
+        "name_ar": "زرالدة - سويدانية",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 608,
+        "name": "Zeralda - Staoueli",
+        "name_ar": "زرالدة - سطاوالي",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 609,
+        "name": "Birtouta - Tessala El Merdja",
+        "name_ar": "بئر توتة - تسالة المرجة",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 610,
+        "name": "Zeralda - Zeralda",
+        "name_ar": "زرالدة - زرالدة",
+        "wilaya_code": "16"
+    },
+    {
+        "id": 611,
+        "name": "El Idrissia - Ain Chouhada",
+        "name_ar": "الادريسية - عين الشهداء",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 612,
+        "name": "Ain El Ibel - Ain El Ibel",
+        "name_ar": "عين الإبل - عين الإبل",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 613,
+        "name": "Had Sahary - Ain Fekka",
+        "name_ar": "حد الصحاري - عين فقه",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 614,
+        "name": "Hassi Bahbah - Ain Maabed",
+        "name_ar": "حاسي بحبح - عين معبد",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 615,
+        "name": "Ain Oussera - Ain Oussera",
+        "name_ar": "عين وسارة - عين وسارة",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 616,
+        "name": "Faidh El Botma - Amourah",
+        "name_ar": "فيض البطمة - عمورة",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 617,
+        "name": "Birine - Benhar",
+        "name_ar": "بيرين - بنهار",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 618,
+        "name": "Charef - Benyagoub",
+        "name_ar": "الشارف - بن يعقوب",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 619,
+        "name": "Birine - Birine",
+        "name_ar": "بيرين - بيرين",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 620,
+        "name": "Had Sahary - Bouira Lahdab",
+        "name_ar": "حد الصحاري - بويرة الأحداب",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 621,
+        "name": "Charef - Charef",
+        "name_ar": "الشارف - الشارف",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 622,
+        "name": "Dar Chioukh - Dar Chioukh",
+        "name_ar": "دار الشيوخ - دار الشيوخ",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 623,
+        "name": "Messaad - Deldoul",
+        "name_ar": "مسعد - دلدول",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 624,
+        "name": "Djelfa - Djelfa",
+        "name_ar": "الجلفة - الجلفة",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 625,
+        "name": "El Idrissia - Douis",
+        "name_ar": "الادريسية - دويس",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 626,
+        "name": "Charef - El Guedid",
+        "name_ar": "الشارف - القديد",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 627,
+        "name": "El Idrissia - El Idrissia",
+        "name_ar": "الادريسية - الادريسية",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 628,
+        "name": "Sidi Laadjel - El Khemis",
+        "name_ar": "سيدي لعجال - الخميس",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 629,
+        "name": "Faidh El Botma - Faidh El Botma",
+        "name_ar": "فيض البطمة - فيض البطمة",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 630,
+        "name": "Ain Oussera - Guernini",
+        "name_ar": "عين وسارة - قرنيني",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 631,
+        "name": "Messaad - Guettara",
+        "name_ar": "مسعد - قطارة",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 632,
+        "name": "Had Sahary - Had Sahary",
+        "name_ar": "حد الصحاري - حد الصحاري",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 633,
+        "name": "Hassi Bahbah - Hassi Bahbah",
+        "name_ar": "حاسي بحبح - حاسي بحبح",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 634,
+        "name": "Hassi Bahbah - Hassi El Euch",
+        "name_ar": "حاسي بحبح - حاسي العش",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 635,
+        "name": "Sidi Laadjel - Hassi Fedoul",
+        "name_ar": "سيدي لعجال - حاسي فدول",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 636,
+        "name": "Messaad - Messaad",
+        "name_ar": "مسعد - مسعد",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 637,
+        "name": "Dar Chioukh - M'liliha",
+        "name_ar": "دار الشيوخ - مليليحة",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 638,
+        "name": "Ain El Ibel - Moudjebara",
+        "name_ar": "عين الإبل - مجبارة",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 639,
+        "name": "Faidh El Botma - Oum Laadham",
+        "name_ar": "فيض البطمة - أم العظام",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 640,
+        "name": "Messaad - Sed Rahal",
+        "name_ar": "مسعد - سد الرحال",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 641,
+        "name": "Messaad - Selmana",
+        "name_ar": "مسعد - سلمانة",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 642,
+        "name": "Dar Chioukh - Sidi Baizid",
+        "name_ar": "دار الشيوخ - سيدي بايزيد",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 643,
+        "name": "Sidi Laadjel - Sidi Laadjel",
+        "name_ar": "سيدي لعجال - سيدي لعجال",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 644,
+        "name": "Ain El Ibel - Taadmit",
+        "name_ar": "عين الإبل - تعظميت",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 645,
+        "name": "Hassi Bahbah - Zaafrane",
+        "name_ar": "حاسي بحبح - زعفران",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 646,
+        "name": "Ain El Ibel - Zaccar",
+        "name_ar": "عين الإبل - زكار",
+        "wilaya_code": "17"
+    },
+    {
+        "id": 647,
+        "name": "Chekfa - Bordj T'har",
+        "name_ar": "الشقفة - برج الطهر",
+        "wilaya_code": "18"
+    },
+    {
+        "id": 648,
+        "name": "Djimla - Boudria Beniyadjis",
+        "name_ar": "جيملة - بودريعة بني  ياجيس",
+        "wilaya_code": "18"
+    },
+    {
+        "id": 649,
+        "name": "El Ancer - Bouraoui Belhadef",
+        "name_ar": "العنصر - بوراوي بلهادف",
+        "wilaya_code": "18"
+    },
+    {
+        "id": 650,
+        "name": "Taher - Boussif Ouled Askeur",
+        "name_ar": "الطاهير - بوسيف أولاد عسكر",
+        "wilaya_code": "18"
+    },
+    {
+        "id": 651,
+        "name": "Taher - Chahna",
+        "name_ar": "الطاهير - الشحنة",
+        "wilaya_code": "18"
+    },
+    {
+        "id": 652,
+        "name": "Chekfa - Chekfa",
+        "name_ar": "الشقفة - الشقفة",
+        "wilaya_code": "18"
+    },
+    {
+        "id": 653,
+        "name": "El Ancer - Djemaa Beni Habibi",
+        "name_ar": "العنصر - الجمعة بني حبيبي",
+        "wilaya_code": "18"
+    },
+    {
+        "id": 654,
+        "name": "Djimla - Djimla",
+        "name_ar": "جيملة - جيملة",
+        "wilaya_code": "18"
+    },
+    {
+        "id": 655,
+        "name": "El Ancer - El Ancer",
+        "name_ar": "العنصر - العنصر",
+        "wilaya_code": "18"
+    },
+    {
+        "id": 656,
+        "name": "El Aouana - El Aouana",
+        "name_ar": "العوانة - العوانة",
+        "wilaya_code": "18"
+    },
+    {
+        "id": 657,
+        "name": "Chekfa - El Kennar Nouchfi",
+        "name_ar": "الشقفة - القنار نشفي",
+        "wilaya_code": "18"
+    },
+    {
+        "id": 658,
+        "name": "El Milia - El Milia",
+        "name_ar": "الميلية - الميلية",
+        "wilaya_code": "18"
+    },
+    {
+        "id": 659,
+        "name": "Taher - Emir Abdelkader",
+        "name_ar": "الطاهير - الامير عبد القادر",
+        "wilaya_code": "18"
+    },
+    {
+        "id": 660,
+        "name": "Ziamah Mansouriah - Erraguene Souissi",
+        "name_ar": "زيامة منصورية - أراقن سويسي",
+        "wilaya_code": "18"
+    },
+    {
+        "id": 661,
+        "name": "Settara - Ghebala",
+        "name_ar": "السطارة - غبالة",
+        "wilaya_code": "18"
+    },
+    {
+        "id": 662,
+        "name": "Jijel - Jijel",
+        "name_ar": "جيجل - جيجل",
+        "wilaya_code": "18"
+    },
+    {
+        "id": 663,
+        "name": "Texenna - Kaous",
+        "name_ar": "تاكسنة - قاوس",
+        "wilaya_code": "18"
+    },
+    {
+        "id": 664,
+        "name": "El Ancer - Khiri Oued Adjoul",
+        "name_ar": "العنصر - خيري واد عجول",
+        "wilaya_code": "18"
+    },
+    {
+        "id": 665,
+        "name": "Taher - Oudjana",
+        "name_ar": "الطاهير - وجانة",
+        "wilaya_code": "18"
+    },
+    {
+        "id": 666,
+        "name": "Sidi Marouf - Ouled Rabah",
+        "name_ar": "سيدي معروف - أولاد رابح",
+        "wilaya_code": "18"
+    },
+    {
+        "id": 667,
+        "name": "El Milia - Ouled Yahia Khadrouch",
+        "name_ar": "الميلية - أولاد يحيى خدروش",
+        "wilaya_code": "18"
+    },
+    {
+        "id": 668,
+        "name": "El Aouana - Selma Benziada",
+        "name_ar": "العوانة - سلمى بن زيادة",
+        "wilaya_code": "18"
+    },
+    {
+        "id": 669,
+        "name": "Settara - Settara",
+        "name_ar": "السطارة - السطارة",
+        "wilaya_code": "18"
+    },
+    {
+        "id": 670,
+        "name": "Chekfa - Sidi Abdelaziz",
+        "name_ar": "الشقفة - سيدي عبد العزيز",
+        "wilaya_code": "18"
+    },
+    {
+        "id": 671,
+        "name": "Sidi Marouf - Sidi Marouf",
+        "name_ar": "سيدي معروف - سيدي معروف",
+        "wilaya_code": "18"
+    },
+    {
+        "id": 672,
+        "name": "Taher - Taher",
+        "name_ar": "الطاهير - الطاهير",
+        "wilaya_code": "18"
+    },
+    {
+        "id": 673,
+        "name": "Texenna - Texenna",
+        "name_ar": "تاكسنة - تاكسنة",
+        "wilaya_code": "18"
+    },
+    {
+        "id": 674,
+        "name": "Ziamah Mansouriah - Ziama Mansouriah",
+        "name_ar": "زيامة منصورية - زيامة منصورية",
+        "wilaya_code": "18"
+    },
+    {
+        "id": 675,
+        "name": "Ain Arnat - Ain Abessa",
+        "name_ar": "عين أرنات - عين عباسة",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 676,
+        "name": "Ain Arnat - Ain Arnat",
+        "name_ar": "عين أرنات - عين أرنات",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 677,
+        "name": "Ain Azel - Ain Azel",
+        "name_ar": "عين أزال - عين أزال",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 678,
+        "name": "Ain El Kebira - Ain El Kebira",
+        "name_ar": "عين الكبيرة - عين الكبيرة",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 679,
+        "name": "Ain Azel - Ain Lahdjar",
+        "name_ar": "عين أزال - عين الحجر",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 680,
+        "name": "Ain Oulmene - Ain Oulmene",
+        "name_ar": "عين ولمان - عين ولمان",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 681,
+        "name": "Beni Ourtilane - Ain-Legradj",
+        "name_ar": "بني ورتيلان - عين لقراج",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 682,
+        "name": "Bougaa - Ain-Roua",
+        "name_ar": "بوقاعة - عين الروى",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 683,
+        "name": "Beni Aziz - Ain-Sebt",
+        "name_ar": "بني عزيز - عين السبت",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 684,
+        "name": "Bouandas - Ait Naoual Mezada",
+        "name_ar": "بوعنداس - أيت نوال مزادة",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 685,
+        "name": "Bouandas - Ait-Tizi",
+        "name_ar": "بوعنداس - ايت تيزي",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 686,
+        "name": "Amoucha - Amoucha",
+        "name_ar": "عموشة - عموشة",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 687,
+        "name": "Babor - Babor",
+        "name_ar": "بابور - بابور",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 688,
+        "name": "El Eulma - Bazer-Sakra",
+        "name_ar": "العلمة - بازر سكرة",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 689,
+        "name": "Ain Azel - Beidha Bordj",
+        "name_ar": "عين أزال - بيضاء برج",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 690,
+        "name": "Bir El Arch - Bellaa",
+        "name_ar": "بئر العرش - بلاعة",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 691,
+        "name": "Beni Ourtilane - Beni Chebana",
+        "name_ar": "بني ورتيلان - بني شبانة",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 692,
+        "name": "Djemila - Beni Fouda",
+        "name_ar": "جميلة - بني فودة",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 693,
+        "name": "Beni Ourtilane - Beni Ourtilane",
+        "name_ar": "بني ورتيلان - بني ورتيلان",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 694,
+        "name": "Bougaa - Beni Oussine",
+        "name_ar": "بوقاعة - بني وسين",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 695,
+        "name": "Beni Aziz - Beni-Aziz",
+        "name_ar": "بني عزيز - بني عزيز",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 696,
+        "name": "Beni Ourtilane - Beni-Mouhli",
+        "name_ar": "بني ورتيلان - بني موحلي",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 697,
+        "name": "Ain Azel - Bir Haddada",
+        "name_ar": "عين أزال - بئر حدادة",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 698,
+        "name": "Bir El Arch - Bir-El-Arch",
+        "name_ar": "بئر العرش - بئر العرش",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 699,
+        "name": "Bouandas - Bouandas",
+        "name_ar": "بوعنداس - بوعنداس",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 700,
+        "name": "Bougaa - Bougaa",
+        "name_ar": "بوقاعة - بوقاعة",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 701,
+        "name": "Bouandas - Bousselam",
+        "name_ar": "بوعنداس - بوسلام",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 702,
+        "name": "Salah Bey - Boutaleb",
+        "name_ar": "صالح باي - بوطالب",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 703,
+        "name": "Ain El Kebira - Dehamcha",
+        "name_ar": "عين الكبيرة - الدهامشة",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 704,
+        "name": "Djemila - Djemila",
+        "name_ar": "جميلة - جميلة",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 705,
+        "name": "Hammam Guergour - Draa-Kebila",
+        "name_ar": "حمام قرقور - ذراع قبيلة",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 706,
+        "name": "El Eulma - El Eulma",
+        "name_ar": "العلمة - العلمة",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 707,
+        "name": "Ain Arnat - El Ouricia",
+        "name_ar": "عين أرنات - أوريسيا",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 708,
+        "name": "Bir El Arch - El-Ouldja",
+        "name_ar": "بئر العرش - الولجة",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 709,
+        "name": "Ain Oulmene - Guellal",
+        "name_ar": "عين ولمان - قلال",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 710,
+        "name": "El Eulma - Guelta Zerka",
+        "name_ar": "العلمة - قلتة زرقاء",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 711,
+        "name": "Guenzet - Guenzet",
+        "name_ar": "قنزات - قنزات",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 712,
+        "name": "Guidjel - Guidjel",
+        "name_ar": "قجال - قجال",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 713,
+        "name": "Hammam Sokhna - Hamam Soukhna",
+        "name_ar": "حمام السخنة - حمام السخنة",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 714,
+        "name": "Salah Bey - Hamma",
+        "name_ar": "صالح باي - الحامة",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 715,
+        "name": "Hammam Guergour - Hammam Guergour",
+        "name_ar": "حمام قرقور - حمام قرقور",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 716,
+        "name": "Guenzet - Harbil",
+        "name_ar": "قنزات - حربيل",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 717,
+        "name": "Ain Oulmene - Kasr El Abtal",
+        "name_ar": "عين ولمان - قصر الابطال",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 718,
+        "name": "Beni Aziz - Maaouia",
+        "name_ar": "بني عزيز - معاوية",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 719,
+        "name": "Maoklane - Maouaklane",
+        "name_ar": "ماوكلان - ماوكلان",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 720,
+        "name": "Ain Arnat - Mezloug",
+        "name_ar": "عين أرنات - مزلوق",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 721,
+        "name": "Amoucha - Oued El Bared",
+        "name_ar": "عموشة - واد البارد",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 722,
+        "name": "Ain El Kebira - Ouled Addouane",
+        "name_ar": "عين الكبيرة - أولاد عدوان",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 723,
+        "name": "Guidjel - Ouled Sabor",
+        "name_ar": "قجال - أولاد صابر",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 724,
+        "name": "Ain Oulmene - Ouled Si Ahmed",
+        "name_ar": "عين ولمان - أولاد سي أحمد",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 725,
+        "name": "Salah Bey - Ouled Tebben",
+        "name_ar": "صالح باي - أولاد تبان",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 726,
+        "name": "Salah Bey - Rosfa",
+        "name_ar": "صالح باي - الرصفة",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 727,
+        "name": "Salah Bey - Salah Bey",
+        "name_ar": "صالح باي - صالح باي",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 728,
+        "name": "Babor - Serdj-El-Ghoul",
+        "name_ar": "بابور - سرج الغول",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 729,
+        "name": "Setif - Setif",
+        "name_ar": "سطيف - سطيف",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 730,
+        "name": "Bir El Arch - Tachouda",
+        "name_ar": "بئر العرش - تاشودة",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 731,
+        "name": "Maoklane - Tala-Ifacene",
+        "name_ar": "ماوكلان - تالة إيفاسن",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 732,
+        "name": "Hammam Sokhna - Taya",
+        "name_ar": "حمام السخنة - الطاية",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 733,
+        "name": "Hammam Sokhna - Tella",
+        "name_ar": "حمام السخنة - التلة",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 734,
+        "name": "Amoucha - Tizi N'bechar",
+        "name_ar": "عموشة - تيزي نبشار",
+        "wilaya_code": "19"
+    },
+    {
+        "id": 735,
+        "name": "Ain El Hadjar - Ain El Hadjar",
+        "name_ar": "عين الحجر - عين الحجر",
+        "wilaya_code": "20"
+    },
+    {
+        "id": 736,
+        "name": "El Hassasna - Ain Sekhouna",
+        "name_ar": "الحساسنة - عين السخونة",
+        "wilaya_code": "20"
+    },
+    {
+        "id": 737,
+        "name": "Ouled Brahim - Ain Soltane",
+        "name_ar": "أولاد ابراهيم - عين السلطان",
+        "wilaya_code": "20"
+    },
+    {
+        "id": 738,
+        "name": "Youb - Doui Thabet",
+        "name_ar": "يوب - دوي ثابت",
+        "wilaya_code": "20"
+    },
+    {
+        "id": 739,
+        "name": "El Hassasna - El Hassasna",
+        "name_ar": "الحساسنة - الحساسنة",
+        "wilaya_code": "20"
+    },
+    {
+        "id": 740,
+        "name": "Sidi Boubekeur - Hounet",
+        "name_ar": "سيدي بوبكر - هونت",
+        "wilaya_code": "20"
+    },
+    {
+        "id": 741,
+        "name": "El Hassasna - Maamora",
+        "name_ar": "الحساسنة - المعمورة",
+        "wilaya_code": "20"
+    },
+    {
+        "id": 742,
+        "name": "Ain El Hadjar - Moulay Larbi",
+        "name_ar": "عين الحجر - مولاي العربي",
+        "wilaya_code": "20"
+    },
+    {
+        "id": 743,
+        "name": "Ouled Brahim - Ouled Brahim",
+        "name_ar": "أولاد ابراهيم - أولاد إبراهيم",
+        "wilaya_code": "20"
+    },
+    {
+        "id": 744,
+        "name": "Sidi Boubekeur - Ouled Khaled",
+        "name_ar": "سيدي بوبكر - أولاد خالد",
+        "wilaya_code": "20"
+    },
+    {
+        "id": 745,
+        "name": "Saida - Saida",
+        "name_ar": "سعيدة - سعيدة",
+        "wilaya_code": "20"
+    },
+    {
+        "id": 746,
+        "name": "Ain El Hadjar - Sidi Ahmed",
+        "name_ar": "عين الحجر - سيدي احمد",
+        "wilaya_code": "20"
+    },
+    {
+        "id": 747,
+        "name": "Sidi Boubekeur - Sidi Amar",
+        "name_ar": "سيدي بوبكر - سيدي عمر",
+        "wilaya_code": "20"
+    },
+    {
+        "id": 748,
+        "name": "Sidi Boubekeur - Sidi Boubekeur",
+        "name_ar": "سيدي بوبكر - سيدي بوبكر",
+        "wilaya_code": "20"
+    },
+    {
+        "id": 749,
+        "name": "Ouled Brahim - Tircine",
+        "name_ar": "أولاد ابراهيم - تيرسين",
+        "wilaya_code": "20"
+    },
+    {
+        "id": 750,
+        "name": "Youb - Youb",
+        "name_ar": "يوب - يوب",
+        "wilaya_code": "20"
+    },
+    {
+        "id": 751,
+        "name": "Sidi Mezghiche - Ain Bouziane",
+        "name_ar": "سيدي مزغيش - عين بوزيان",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 752,
+        "name": "Azzaba - Ain Charchar",
+        "name_ar": "عزابة - عين شرشار",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 753,
+        "name": "Ain Kechra - Ain Kechra",
+        "name_ar": "عين قشرة - عين قشرة",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 754,
+        "name": "El Hadaiek - Ain Zouit",
+        "name_ar": "الحدائق - عين زويت",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 755,
+        "name": "Azzaba - Azzaba",
+        "name_ar": "عزابة - عزابة",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 756,
+        "name": "Ben Azzouz - Bekkouche Lakhdar",
+        "name_ar": "بن عزوز - بكوش لخضر",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 757,
+        "name": "Ben Azzouz - Ben Azzouz",
+        "name_ar": "بن عزوز - بن عزوز",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 758,
+        "name": "Ramdane Djamel - Beni Bechir",
+        "name_ar": "رمضان جمال - بني بشير",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 759,
+        "name": "Sidi Mezghiche - Beni Oulbane",
+        "name_ar": "سيدي مزغيش - بني ولبان",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 760,
+        "name": "Collo - Beni Zid",
+        "name_ar": "القل - بني زيد",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 761,
+        "name": "Tamalous - Bin El Ouiden",
+        "name_ar": "تمالوس - بين الويدان",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 762,
+        "name": "El Hadaiek - Bouchetata",
+        "name_ar": "الحدائق - بوشطاطة",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 763,
+        "name": "Collo - Cheraia",
+        "name_ar": "القل - الشرايع",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 764,
+        "name": "Collo - Collo",
+        "name_ar": "القل - القل",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 765,
+        "name": "Azzaba - Djendel Saadi Mohamed",
+        "name_ar": "عزابة - جندل سعدي محمد",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 766,
+        "name": "El Harrouch - El Arrouch",
+        "name_ar": "الحروش - الحروش",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 767,
+        "name": "Azzaba - El Ghedir",
+        "name_ar": "عزابة - الغدير",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 768,
+        "name": "El Hadaiek - El Hadaiek",
+        "name_ar": "الحدائق - الحدائق",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 769,
+        "name": "Ben Azzouz - El Marsa",
+        "name_ar": "بن عزوز - المرسى",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 770,
+        "name": "El Harrouch - Emjez Edchich",
+        "name_ar": "الحروش - مجاز الدشيش",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 771,
+        "name": "Azzaba - Es Sebt",
+        "name_ar": "عزابة - السبت",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 772,
+        "name": "Skikda - Filfila",
+        "name_ar": "سكيكدة - فلفلة",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 773,
+        "name": "Skikda - Hammadi Krouma",
+        "name_ar": "سكيكدة - حمادي كرومة",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 774,
+        "name": "Zitouna - Kanoua",
+        "name_ar": "الزيتونة - قنواع",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 775,
+        "name": "Tamalous - Kerkara",
+        "name_ar": "تمالوس - الكركرة",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 776,
+        "name": "Ouled Attia - Khenag Maoune",
+        "name_ar": "أولاد عطية - خناق مايو",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 777,
+        "name": "Ouled Attia - Oued Zhour",
+        "name_ar": "أولاد عطية - وادي الزهور",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 778,
+        "name": "Ain Kechra - Ouldja Boulbalout",
+        "name_ar": "عين قشرة - الولجة بولبلوط",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 779,
+        "name": "Ouled Attia - Ouled Attia",
+        "name_ar": "أولاد عطية - أولاد عطية",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 780,
+        "name": "El Harrouch - Ouled Habbaba",
+        "name_ar": "الحروش - أولاد حبابة",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 781,
+        "name": "Oum Toub - Oum Toub",
+        "name_ar": "أم الطوب - أم الطوب",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 782,
+        "name": "Ramdane Djamel - Ramdane Djamel",
+        "name_ar": "رمضان جمال - رمضان جمال",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 783,
+        "name": "El Harrouch - Salah Bouchaour",
+        "name_ar": "الحروش - صالح بو الشعور",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 784,
+        "name": "Sidi Mezghiche - Sidi Mezghiche",
+        "name_ar": "سيدي مزغيش - سيدي مزغيش",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 785,
+        "name": "Skikda - Skikda",
+        "name_ar": "سكيكدة - سكيكدة",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 786,
+        "name": "Tamalous - Tamalous",
+        "name_ar": "تمالوس - تمالوس",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 787,
+        "name": "El Harrouch - Zerdezas",
+        "name_ar": "الحروش - زردازة",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 788,
+        "name": "Zitouna - Zitouna",
+        "name_ar": "الزيتونة - الزيتونة",
+        "wilaya_code": "21"
+    },
+    {
+        "id": 789,
+        "name": "Ain El Berd - Ain El Berd",
+        "name_ar": "عين البرد - عين البرد",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 790,
+        "name": "Sidi Ali Boussidi - Ain Kada",
+        "name_ar": "سيدي علي بوسيدي - عين قادة",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 791,
+        "name": "Tessala - Ain Thrid",
+        "name_ar": "تسالة - عين الثريد",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 792,
+        "name": "Moulay Slissen - Ain Tindamine",
+        "name_ar": "مولاي سليسن - عين تندمين",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 793,
+        "name": "Sfisef - Ain- Adden",
+        "name_ar": "سفيزف - عين أدن",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 794,
+        "name": "Sidi Lahcene - Amarnas",
+        "name_ar": "سيدي لحسن - العمارنة",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 795,
+        "name": "Ben Badis - Bedrabine El Mokrani",
+        "name_ar": "بن باديس - بضرابين المقراني",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 796,
+        "name": "Mostefa  Ben Brahim - Belarbi",
+        "name_ar": "مصطفى بن ابراهيم - بلعربي",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 797,
+        "name": "Ben Badis - Ben Badis",
+        "name_ar": "بن باديس - بن باديس",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 798,
+        "name": "Tenira - Benachiba Chelia",
+        "name_ar": "تنيرة - بن عشيبة شلية",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 799,
+        "name": "Marhoum - Bir El Hammam",
+        "name_ar": "مرحوم - بئر الحمام",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 800,
+        "name": "Sfisef - Boudjebaa El Bordj",
+        "name_ar": "سفيزف - بوجبهة البرج",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 801,
+        "name": "Sidi Ali Ben Youb - Boukhanefis",
+        "name_ar": "سيدي علي بن يوب - بوخنفيس",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 802,
+        "name": "Ben Badis - Chetouane Belaila",
+        "name_ar": "بن باديس - شيطوان البلايلة",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 803,
+        "name": "Telagh - Dhaya",
+        "name_ar": "تلاغ - الضاية",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 804,
+        "name": "Moulay Slissen - El Hacaiba",
+        "name_ar": "مولاي سليسن - الحصيبة",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 805,
+        "name": "Tenira - Hassi Dahou",
+        "name_ar": "تنيرة - حاسي دحو",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 806,
+        "name": "Ben Badis - Hassi Zahana",
+        "name_ar": "بن باديس - حاسي زهانة",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 807,
+        "name": "Sidi Ali Boussidi - Lamtar",
+        "name_ar": "سيدي علي بوسيدي - لمطار",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 808,
+        "name": "Ain El Berd - Makedra",
+        "name_ar": "عين البرد - مكدرة",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 809,
+        "name": "Marhoum - Marhoum",
+        "name_ar": "مرحوم - مرحوم",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 810,
+        "name": "Sfisef - M'cid",
+        "name_ar": "سفيزف - مسيد",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 811,
+        "name": "Merine - Merine",
+        "name_ar": "مرين - مرين",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 812,
+        "name": "Telagh - Mezaourou",
+        "name_ar": "تلاغ - مزاورو",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 813,
+        "name": "Mostefa  Ben Brahim - Mostefa  Ben Brahim",
+        "name_ar": "مصطفى بن ابراهيم - مصطفى بن ابراهيم",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 814,
+        "name": "Moulay Slissen - Moulay Slissen",
+        "name_ar": "مولاي سليسن - مولاي سليسن",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 815,
+        "name": "Ras El Ma - Oued Sebaa",
+        "name_ar": "راس الماء - وادي السبع",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 816,
+        "name": "Tenira - Oued Sefioun",
+        "name_ar": "تنيرة - وادي سفيون",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 817,
+        "name": "Merine - Oued Taourira",
+        "name_ar": "مرين - وادي تاوريرة",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 818,
+        "name": "Ras El Ma - Ras El Ma",
+        "name_ar": "راس الماء - راس الماء",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 819,
+        "name": "Ras El Ma - Redjem Demouche",
+        "name_ar": "راس الماء - رجم دموش",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 820,
+        "name": "Tessala - Sehala Thaoura",
+        "name_ar": "تسالة - السهالة الثورة",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 821,
+        "name": "Sfisef - Sfisef",
+        "name_ar": "سفيزف - سفيزف",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 822,
+        "name": "Sidi Ali Ben Youb - Sidi Ali Benyoub",
+        "name_ar": "سيدي علي بن يوب - سيدي علي بن يوب",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 823,
+        "name": "Sidi Ali Boussidi - Sidi Ali Boussidi",
+        "name_ar": "سيدي علي بوسيدي - سيدي علي بوسيدي",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 824,
+        "name": "Sidi Bel Abbes - Sidi Bel-Abbes",
+        "name_ar": "سيدي بلعباس - سيدي بلعباس",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 825,
+        "name": "Ain El Berd - Sidi Brahim",
+        "name_ar": "عين البرد - سيدي ابراهيم",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 826,
+        "name": "Marhoum - Sidi Chaib",
+        "name_ar": "مرحوم - سيدي شعيب",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 827,
+        "name": "Sidi Ali Boussidi - Sidi Dahou Zairs",
+        "name_ar": "سيدي علي بوسيدي - سيدي دحو الزاير",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 828,
+        "name": "Ain El Berd - Sidi Hamadouche",
+        "name_ar": "عين البرد - سيدي حمادوش",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 829,
+        "name": "Sidi Lahcene - Sidi Khaled",
+        "name_ar": "سيدي لحسن - سيدي خالد",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 830,
+        "name": "Sidi Lahcene - Sidi Lahcene",
+        "name_ar": "سيدي لحسن - سيدي لحسن",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 831,
+        "name": "Sidi Lahcene - Sidi Yacoub",
+        "name_ar": "سيدي لحسن - سيدي يعقوب",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 832,
+        "name": "Sidi Ali Ben Youb - Tabia",
+        "name_ar": "سيدي علي بن يوب - طابية",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 833,
+        "name": "Merine - Taoudmout",
+        "name_ar": "مرين - تاودموت",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 834,
+        "name": "Merine - Tefessour",
+        "name_ar": "مرين - تفسور",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 835,
+        "name": "Telagh - Teghalimet",
+        "name_ar": "تلاغ - تغاليمت",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 836,
+        "name": "Telagh - Telagh",
+        "name_ar": "تلاغ - تلاغ",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 837,
+        "name": "Tenira - Tenira",
+        "name_ar": "تنيرة - تنيرة",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 838,
+        "name": "Tessala - Tessala",
+        "name_ar": "تسالة - تسالة",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 839,
+        "name": "Mostefa  Ben Brahim - Tilmouni",
+        "name_ar": "مصطفى بن ابراهيم - تلموني",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 840,
+        "name": "Mostefa  Ben Brahim - Zerouala",
+        "name_ar": "مصطفى بن ابراهيم - زروالة",
+        "wilaya_code": "22"
+    },
+    {
+        "id": 841,
+        "name": "Ain El Berda - Ain El Berda",
+        "name_ar": "عين الباردة - عين الباردة",
+        "wilaya_code": "23"
+    },
+    {
+        "id": 842,
+        "name": "Annaba - Annaba",
+        "name_ar": "عنابة - عنابة",
+        "wilaya_code": "23"
+    },
+    {
+        "id": 843,
+        "name": "Berrahal - Berrahal",
+        "name_ar": "برحال - برحال",
+        "wilaya_code": "23"
+    },
+    {
+        "id": 844,
+        "name": "Chetaibi - Chetaibi",
+        "name_ar": "شطايبي - شطايبي",
+        "wilaya_code": "23"
+    },
+    {
+        "id": 845,
+        "name": "Ain El Berda - Cheurfa",
+        "name_ar": "عين الباردة - الشرفة",
+        "wilaya_code": "23"
+    },
+    {
+        "id": 846,
+        "name": "El Bouni - El Bouni",
+        "name_ar": "البوني - البوني",
+        "wilaya_code": "23"
+    },
+    {
+        "id": 847,
+        "name": "Ain El Berda - El Eulma",
+        "name_ar": "عين الباردة - العلمة",
+        "wilaya_code": "23"
+    },
+    {
+        "id": 848,
+        "name": "El Hadjar - El Hadjar",
+        "name_ar": "الحجار - الحجار",
+        "wilaya_code": "23"
+    },
+    {
+        "id": 849,
+        "name": "Berrahal - Oued El Aneb",
+        "name_ar": "برحال - واد العنب",
+        "wilaya_code": "23"
+    },
+    {
+        "id": 850,
+        "name": "Annaba - Seraidi",
+        "name_ar": "عنابة - سرايدي",
+        "wilaya_code": "23"
+    },
+    {
+        "id": 851,
+        "name": "El Hadjar - Sidi Amar",
+        "name_ar": "الحجار - سيدي عمار",
+        "wilaya_code": "23"
+    },
+    {
+        "id": 852,
+        "name": "Berrahal - Treat",
+        "name_ar": "برحال - التريعات",
+        "wilaya_code": "23"
+    },
+    {
+        "id": 853,
+        "name": "Bouchegouf - Ain Ben Beida",
+        "name_ar": "بوشقوف - عين بن بيضاء",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 854,
+        "name": "Ain Makhlouf - Ain Larbi",
+        "name_ar": "عين مخلوف - عين العربي",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 855,
+        "name": "Ain Makhlouf - Ain Makhlouf",
+        "name_ar": "عين مخلوف - عين مخلوف",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 856,
+        "name": "Oued Zenati - Ain Regada",
+        "name_ar": "وادي الزناتي - عين رقادة",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 857,
+        "name": "Khezaras - Ain Sandel",
+        "name_ar": "خزارة - عين صندل",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 858,
+        "name": "Guelaat Bousbaa - Belkheir",
+        "name_ar": "قلعة بوصبع - بلخير",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 859,
+        "name": "Guelma - Bendjarah",
+        "name_ar": "قالمة - بن جراح",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 860,
+        "name": "Guelaat Bousbaa - Beni Mezline",
+        "name_ar": "قلعة بوصبع - بني مزلين",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 861,
+        "name": "Oued Zenati - Bordj Sabath",
+        "name_ar": "وادي الزناتي - برج صباط",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 862,
+        "name": "Khezaras - Bou Hachana",
+        "name_ar": "خزارة - بوحشانة",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 863,
+        "name": "Hammam Debagh - Bou Hamdane",
+        "name_ar": "حمام دباغ - بوحمدان",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 864,
+        "name": "Heliopolis - Bouati Mahmoud",
+        "name_ar": "هيليوبوليس - بوعاتي محمود",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 865,
+        "name": "Bouchegouf - Bouchegouf",
+        "name_ar": "بوشقوف - بوشقوف",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 866,
+        "name": "Guelaat Bousbaa - Boumahra Ahmed",
+        "name_ar": "قلعة بوصبع - بومهرة أحمد",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 867,
+        "name": "Hammam N'bails - Dahouara",
+        "name_ar": "حمام النبايل - الدهوارة",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 868,
+        "name": "Guelaat Bousbaa - Djeballah Khemissi",
+        "name_ar": "قلعة بوصبع - جبالة الخميسي",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 869,
+        "name": "Heliopolis - El Fedjoudj",
+        "name_ar": "هيليوبوليس - الفجوج",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 870,
+        "name": "Guelaat Bousbaa - Guelaat Bou Sbaa",
+        "name_ar": "قلعة بوصبع - قلعة بوصبع",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 871,
+        "name": "Guelma - Guelma",
+        "name_ar": "قالمة - قالمة",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 872,
+        "name": "Hammam Debagh - Hammam Debagh",
+        "name_ar": "حمام دباغ - حمام دباغ",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 873,
+        "name": "Hammam N'bails - Hammam N'bail",
+        "name_ar": "حمام النبايل - حمام النبايل",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 874,
+        "name": "Heliopolis - Heliopolis",
+        "name_ar": "هيليوبوليس - هيليوبوليس",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 875,
+        "name": "Guelaat Bousbaa - Nechmaya",
+        "name_ar": "قلعة بوصبع - نشماية",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 876,
+        "name": "Khezaras - Khezaras",
+        "name_ar": "خزارة - لخزارة",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 877,
+        "name": "Ain Hessainia - Medjez Amar",
+        "name_ar": "عين حساينية - مجاز عمار",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 878,
+        "name": "Bouchegouf - Medjez Sfa",
+        "name_ar": "بوشقوف - مجاز الصفاء",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 879,
+        "name": "Ain Hessainia - Houari Boumedienne",
+        "name_ar": "عين حساينية - هواري بومدين",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 880,
+        "name": "Hammam N'bails - Oued Cheham",
+        "name_ar": "حمام النبايل - وادي الشحم",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 881,
+        "name": "Bouchegouf - Oued Ferragha",
+        "name_ar": "بوشقوف - وادي فراغة",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 882,
+        "name": "Oued Zenati - Oued Zenati",
+        "name_ar": "وادي الزناتي - وادي الزناتي",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 883,
+        "name": "Ain Hessainia - Ras El Agba",
+        "name_ar": "عين حساينية - رأس العقبة",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 884,
+        "name": "Hammam Debagh - Roknia",
+        "name_ar": "حمام دباغ - الركنية",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 885,
+        "name": "Ain Hessainia - Sellaoua Announa",
+        "name_ar": "عين حساينية - سلاوة عنونة",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 886,
+        "name": "Ain Makhlouf - Tamlouka",
+        "name_ar": "عين مخلوف - تاملوكة",
+        "wilaya_code": "24"
+    },
+    {
+        "id": 887,
+        "name": "Ain Abid - Ain Abid",
+        "name_ar": "عين عبيد - عين عبيد",
+        "wilaya_code": "25"
+    },
+    {
+        "id": 888,
+        "name": "El Khroub - Ain Smara",
+        "name_ar": "الخروب - عين السمارة",
+        "wilaya_code": "25"
+    },
+    {
+        "id": 889,
+        "name": "Ain Abid - Ben Badis",
+        "name_ar": "عين عبيد - أبن باديس الهرية",
+        "wilaya_code": "25"
+    },
+    {
+        "id": 890,
+        "name": "Zighoud Youcef - Beni Hamidane",
+        "name_ar": "زيغود يوسف - بني حميدان",
+        "wilaya_code": "25"
+    },
+    {
+        "id": 891,
+        "name": "Constantine - Constantine",
+        "name_ar": "قسنطينة - قسنطينة",
+        "wilaya_code": "25"
+    },
+    {
+        "id": 892,
+        "name": "Hamma Bouziane - Didouche Mourad",
+        "name_ar": "حامة بوزيان - ديدوش مراد",
+        "wilaya_code": "25"
+    },
+    {
+        "id": 893,
+        "name": "El Khroub - El Khroub",
+        "name_ar": "الخروب - الخروب",
+        "wilaya_code": "25"
+    },
+    {
+        "id": 894,
+        "name": "Hamma Bouziane - Hamma Bouziane",
+        "name_ar": "حامة بوزيان - حامة بوزيان",
+        "wilaya_code": "25"
+    },
+    {
+        "id": 895,
+        "name": "Ibn Ziad - Ibn Ziad",
+        "name_ar": "ابن زياد - ابن زياد",
+        "wilaya_code": "25"
+    },
+    {
+        "id": 896,
+        "name": "Ibn Ziad - Messaoud Boudjeriou",
+        "name_ar": "ابن زياد - بوجريو مسعود",
+        "wilaya_code": "25"
+    },
+    {
+        "id": 897,
+        "name": "El Khroub - Ouled Rahmoun",
+        "name_ar": "الخروب - أولاد رحمون",
+        "wilaya_code": "25"
+    },
+    {
+        "id": 898,
+        "name": "Zighoud Youcef - Zighoud Youcef",
+        "name_ar": "زيغود يوسف - زيغود يوسف",
+        "wilaya_code": "25"
+    },
+    {
+        "id": 899,
+        "name": "Ain Boucif - Ain Boucif",
+        "name_ar": "عين بوسيف - عين بوسيف",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 900,
+        "name": "Chellalat El Adhaoura - Ain Ouksir",
+        "name_ar": "شلالة العذاورة - عين اقصير",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 901,
+        "name": "Tablat - Aissaouia",
+        "name_ar": "تابلاط - العيساوية",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 902,
+        "name": "Aziz - Aziz",
+        "name_ar": "عزيز - عزيز",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 903,
+        "name": "El Omaria - Baata",
+        "name_ar": "العمارية - بعطة",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 904,
+        "name": "Ouzera - Ben Chicao",
+        "name_ar": "وزرة - بن شكاو",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 905,
+        "name": "Beni Slimane - Beni Slimane",
+        "name_ar": "بني سليمان - بني سليمان",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 906,
+        "name": "Berrouaghia - Berrouaghia",
+        "name_ar": "البرواقية - البرواقية",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 907,
+        "name": "Guelb El Kebir - Bir Ben Laabed",
+        "name_ar": "القلب الكبير - بئر بن عابد",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 908,
+        "name": "Ouled Antar - Boghar",
+        "name_ar": "أولاد عنتر - بوغار",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 909,
+        "name": "Chahbounia - Bouaiche",
+        "name_ar": "الشهبونية - بوعيش",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 910,
+        "name": "Si Mahdjoub - Bouaichoune",
+        "name_ar": "سي المحجوب - بوعيشون",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 911,
+        "name": "Sidi Naamane - Bouchrahil",
+        "name_ar": "سيدي نعمان - بوشراحيل",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 912,
+        "name": "Chahbounia - Boughzoul",
+        "name_ar": "الشهبونية - بوغزول",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 913,
+        "name": "Beni Slimane - Bouskene",
+        "name_ar": "بني سليمان - بوسكن",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 914,
+        "name": "Chahbounia - Chabounia",
+        "name_ar": "الشهبونية - الشهبونية",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 915,
+        "name": "Chellalat El Adhaoura - Chelalet El Adhaoura",
+        "name_ar": "شلالة العذاورة - شلالة العذاورة",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 916,
+        "name": "Chellalat El Adhaoura - Cheniguel",
+        "name_ar": "شلالة العذاورة - شنيقل",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 917,
+        "name": "Aziz - Derrag",
+        "name_ar": "عزيز - دراق",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 918,
+        "name": "Souaghi - Djouab",
+        "name_ar": "السواقي - جواب",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 919,
+        "name": "Medea - Draa Esmar",
+        "name_ar": "المدية - ذراع السمار",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 920,
+        "name": "El Azizia - El Azizia",
+        "name_ar": "العزيزية - العزيزية",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 921,
+        "name": "Guelb El Kebir - El Guelbelkebir",
+        "name_ar": "القلب الكبير - القلب الكبير",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 922,
+        "name": "Ouzera - El Hamdania",
+        "name_ar": "وزرة - الحمدانية",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 923,
+        "name": "Tablat - El Haoudane",
+        "name_ar": "تابلاط - الحوضان",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 924,
+        "name": "El Omaria - El Omaria",
+        "name_ar": "العمارية - العمارية",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 925,
+        "name": "Ain Boucif - El Ouinet",
+        "name_ar": "عين بوسيف - العوينات",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 926,
+        "name": "Ouamri - Hannacha",
+        "name_ar": "عوامري - حناشة",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 927,
+        "name": "Ain Boucif - Kef Lakhdar",
+        "name_ar": "عين بوسيف - الكاف الاخضر",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 928,
+        "name": "Sidi Naamane - Khams Djouamaa",
+        "name_ar": "سيدي نعمان - خمس جوامع",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 929,
+        "name": "Ksar El Boukhari - Ksar El Boukhari",
+        "name_ar": "قصر البخاري - قصر البخاري",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 930,
+        "name": "El Azizia - Maghraoua",
+        "name_ar": "العزيزية - مغراوة",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 931,
+        "name": "Medea - Medea",
+        "name_ar": "المدية - المدية",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 932,
+        "name": "Seghouane - Medjebar",
+        "name_ar": "سغوان - مجبر",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 933,
+        "name": "Tablat - Mezerana",
+        "name_ar": "تابلاط - مزغنة",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 934,
+        "name": "Ksar El Boukhari - M'fatha",
+        "name_ar": "قصر البخاري - مفاتحة",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 935,
+        "name": "El Azizia - Mihoub",
+        "name_ar": "العزيزية - ميهوب",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 936,
+        "name": "Ouamri - Ouamri",
+        "name_ar": "عوامري - عوامري",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 937,
+        "name": "Ouamri - Oued Harbil",
+        "name_ar": "عوامري - وادي حربيل",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 938,
+        "name": "Ouled Antar - Ouled Antar",
+        "name_ar": "أولاد عنتر - أولاد عنتر",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 939,
+        "name": "Si Mahdjoub - Ouled Bouachra",
+        "name_ar": "سي المحجوب - أولاد بوعشرة",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 940,
+        "name": "El Omaria - Ouled Brahim",
+        "name_ar": "العمارية - أولاد إبراهيم",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 941,
+        "name": "Berrouaghia - Ouled Deid",
+        "name_ar": "البرواقية - أولاد دايد",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 942,
+        "name": "Ain Boucif - Ouled Emaaraf",
+        "name_ar": "عين بوسيف - أولاد امعرف",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 943,
+        "name": "Ouled Antar - Ouled Hellal",
+        "name_ar": "أولاد عنتر - أولاد هلال",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 944,
+        "name": "Aziz - Oum El Djellil",
+        "name_ar": "عزيز - أم الجليل",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 945,
+        "name": "Ouzera - Ouzera",
+        "name_ar": "وزرة - وزرة",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 946,
+        "name": "Berrouaghia - Rebaia",
+        "name_ar": "البرواقية - الربعية",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 947,
+        "name": "Ksar El Boukhari - Saneg",
+        "name_ar": "قصر البخاري - السانق",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 948,
+        "name": "Guelb El Kebir - Sedraya",
+        "name_ar": "القلب الكبير - سدراية",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 949,
+        "name": "Seghouane - Seghouane",
+        "name_ar": "سغوان - سغوان",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 950,
+        "name": "Si Mahdjoub - Si Mahdjoub",
+        "name_ar": "سي المحجوب - سي المحجوب",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 951,
+        "name": "Ain Boucif - Sidi Demed",
+        "name_ar": "عين بوسيف - سيدي دامد",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 952,
+        "name": "Sidi Naamane - Sidi Naamane",
+        "name_ar": "سيدي نعمان - سيدي نعمان",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 953,
+        "name": "Beni Slimane - Sidi Rabie",
+        "name_ar": "بني سليمان - سيدي الربيع",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 954,
+        "name": "Souaghi - Sidi Zahar",
+        "name_ar": "السواقي - سيدي زهار",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 955,
+        "name": "Souaghi - Sidi Ziane",
+        "name_ar": "السواقي - سيدي زيان",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 956,
+        "name": "Souaghi - Souagui",
+        "name_ar": "السواقي - السواقي",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 957,
+        "name": "Tablat - Tablat",
+        "name_ar": "تابلاط - تابلاط",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 958,
+        "name": "Chellalat El Adhaoura - Tafraout",
+        "name_ar": "شلالة العذاورة - تفراوت",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 959,
+        "name": "Medea - Tamesguida",
+        "name_ar": "المدية - تمسقيدة",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 960,
+        "name": "Ouzera - Tizi Mahdi",
+        "name_ar": "وزرة - تيزي مهدي",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 961,
+        "name": "Seghouane - Tletat Ed Douair",
+        "name_ar": "سغوان - ثلاث دوائر",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 962,
+        "name": "Seghouane - Zoubiria",
+        "name_ar": "سغوان - الزبيرية",
+        "wilaya_code": "26"
+    },
+    {
+        "id": 963,
+        "name": "Achaacha - Achaacha",
+        "name_ar": "عشعاشة - عشعاشة",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 964,
+        "name": "Kheir Eddine - Ain-Boudinar",
+        "name_ar": "خير الدين - عين بودينار",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 965,
+        "name": "Ain Nouicy - Ain-Nouissy",
+        "name_ar": "عين نويسي - عين نويسي",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 966,
+        "name": "Mesra - Ain-Sidi Cherif",
+        "name_ar": "ماسرة - عين سيدي الشريف",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 967,
+        "name": "Ain Tedeles - Ain-Tedles",
+        "name_ar": "عين تادلس - عين تادلس",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 968,
+        "name": "Sidi Lakhdar - Benabdelmalek Ramdane",
+        "name_ar": "سيدي لخضر - بن عبد المالك رمضان",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 969,
+        "name": "Bouguirat - Bouguirat",
+        "name_ar": "بوقيراط - بوقيراط",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 970,
+        "name": "Ain Nouicy - Fornaka",
+        "name_ar": "عين نويسي - فرناقة",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 971,
+        "name": "Sidi Lakhdar - Hadjadj",
+        "name_ar": "سيدي لخضر - حجاج",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 972,
+        "name": "Hassi Mameche - Hassi Mameche",
+        "name_ar": "حاسي ماماش - حاسي ماماش",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 973,
+        "name": "Ain Nouicy - Hassiane",
+        "name_ar": "عين نويسي - الحسيان (بني ياحي",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 974,
+        "name": "Achaacha - Khadra",
+        "name_ar": "عشعاشة - خضرة",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 975,
+        "name": "Kheir Eddine - Kheir-Eddine",
+        "name_ar": "خير الدين - خير الدين",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 976,
+        "name": "Mesra - Mansourah",
+        "name_ar": "ماسرة - منصورة",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 977,
+        "name": "Hassi Mameche - Mazagran",
+        "name_ar": "حاسي ماماش - مزغران",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 978,
+        "name": "Mesra - Mesra",
+        "name_ar": "ماسرة - ماسرة",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 979,
+        "name": "Mostaganem - Mostaganem",
+        "name_ar": "مستغانم - مستغانم",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 980,
+        "name": "Achaacha - Nekmaria",
+        "name_ar": "عشعاشة - نكمارية",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 981,
+        "name": "Ain Tedeles - Oued El Kheir",
+        "name_ar": "عين تادلس - وادي الخير",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 982,
+        "name": "Achaacha - Ouled Boughalem",
+        "name_ar": "عشعاشة - أولاد بوغالم",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 983,
+        "name": "Sidi Ali - Ouled-Maalah",
+        "name_ar": "سيدي علي - أولاد مع الله",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 984,
+        "name": "Bouguirat - Safsaf",
+        "name_ar": "بوقيراط - صفصاف",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 985,
+        "name": "Kheir Eddine - Sayada",
+        "name_ar": "خير الدين - صيادة",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 986,
+        "name": "Sidi Ali - Sidi Ali",
+        "name_ar": "سيدي علي - سيدي علي",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 987,
+        "name": "Ain Tedeles - Sidi Belaattar",
+        "name_ar": "عين تادلس - سيدي بلعطار",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 988,
+        "name": "Sidi Lakhdar - Sidi-Lakhdar",
+        "name_ar": "سيدي لخضر - سيدي لخضر",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 989,
+        "name": "Bouguirat - Sirat",
+        "name_ar": "بوقيراط - سيرات",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 990,
+        "name": "Bouguirat - Souaflia",
+        "name_ar": "بوقيراط - السوافلية",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 991,
+        "name": "Ain Tedeles - Sour",
+        "name_ar": "عين تادلس - سور",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 992,
+        "name": "Hassi Mameche - Stidia",
+        "name_ar": "حاسي ماماش - ستيدية",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 993,
+        "name": "Sidi Ali - Tazgait",
+        "name_ar": "سيدي علي - تزقايت",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 994,
+        "name": "Mesra - Touahria",
+        "name_ar": "ماسرة - الطواهرية",
+        "wilaya_code": "27"
+    },
+    {
+        "id": 995,
+        "name": "Ain El Hadjel - Ain El Hadjel",
+        "name_ar": "عين الحجل - عين الحجل",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 996,
+        "name": "Ain El Melh - Ain El Melh",
+        "name_ar": "عين الملح - عين الملح",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 997,
+        "name": "Ain El Melh - Ain Fares",
+        "name_ar": "عين الملح - عين فارس",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 998,
+        "name": "Magra - Ain Khadra",
+        "name_ar": "مقرة - عين الخضراء",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 999,
+        "name": "Ain El Melh - Ain Rich",
+        "name_ar": "عين الملح - عين الريش",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1000,
+        "name": "Magra - Belaiba",
+        "name_ar": "مقرة - بلعايبة",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1001,
+        "name": "Ben Srour - Ben Srour",
+        "name_ar": "بن سرور - بن سرور",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1002,
+        "name": "Sidi Aissa - Beni Ilmane",
+        "name_ar": "سيدي عيسى - بني يلمان",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1003,
+        "name": "Ouled Sidi Brahim - Benzouh",
+        "name_ar": "أولاد سيدي ابراهيم - بن زوه",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1004,
+        "name": "Magra - Berhoum",
+        "name_ar": "مقرة - برهوم",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1005,
+        "name": "Ain El Melh - Bir Foda",
+        "name_ar": "عين الملح - بئر فضة",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1006,
+        "name": "Bousaada - Bou Saada",
+        "name_ar": "بوسعادة - بوسعادة",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1007,
+        "name": "Sidi Aissa - Bouti Sayeh",
+        "name_ar": "سيدي عيسى - بوطي السايح",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1008,
+        "name": "Chellal - Chellal",
+        "name_ar": "شلال - شلال",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1009,
+        "name": "Magra - Dehahna",
+        "name_ar": "مقرة - دهاهنة",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1010,
+        "name": "Djebel Messaad - Djebel Messaad",
+        "name_ar": "جبل مساعد - جبل مساعد",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1011,
+        "name": "Bousaada - El Hamel",
+        "name_ar": "بوسعادة - الهامل",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1012,
+        "name": "Khoubana - El Houamed",
+        "name_ar": "خبانة - الحوامد",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1013,
+        "name": "Hammam Dalaa - Hammam Dalaa",
+        "name_ar": "حمام الضلعة - حمام الضلعة",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1014,
+        "name": "Chellal - Khettouti Sed-El-Jir",
+        "name_ar": "شلال - خطوطي سد الجير",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1015,
+        "name": "Khoubana - Khoubana",
+        "name_ar": "خبانة - خبانة",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1016,
+        "name": "Ouled Derradj - Maadid",
+        "name_ar": "أولاد دراج - المعاضيد",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1017,
+        "name": "Chellal - Maarif",
+        "name_ar": "شلال - معاريف",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1018,
+        "name": "Magra - Magra",
+        "name_ar": "مقرة - مقرة",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1019,
+        "name": "Khoubana - M'cif",
+        "name_ar": "خبانة - مسيف",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1020,
+        "name": "Medjedel - Medjedel",
+        "name_ar": "امجدل - امجدل",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1021,
+        "name": "Medjedel - Menaa",
+        "name_ar": "امجدل - مناعة",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1022,
+        "name": "Ben Srour - Mohamed Boudiaf",
+        "name_ar": "بن سرور - محمد بوضياف",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1023,
+        "name": "M'sila - M'sila",
+        "name_ar": "المسيلة - المسيلة",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1024,
+        "name": "Ouled Derradj - M'tarfa",
+        "name_ar": "أولاد دراج - المطارفة",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1025,
+        "name": "Hammam Dalaa - Ouanougha",
+        "name_ar": "حمام الضلعة - ونوغة",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1026,
+        "name": "Ouled Derradj - Ouled Addi Guebala",
+        "name_ar": "أولاد دراج - أولاد عدي لقبالة",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1027,
+        "name": "Ouled Derradj - Ouled Derradj",
+        "name_ar": "أولاد دراج - أولاد دراج",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1028,
+        "name": "Chellal - Ouled Madhi",
+        "name_ar": "شلال - أولاد ماضي",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1029,
+        "name": "Hammam Dalaa - Ouled Mansour",
+        "name_ar": "حمام الضلعة - أولاد منصور",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1030,
+        "name": "Ouled Sidi Brahim - Ouled Sidi Brahim",
+        "name_ar": "أولاد سيدي ابراهيم - أولاد سيدي ابراهيم",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1031,
+        "name": "Ben Srour - Ouled Slimane",
+        "name_ar": "بن سرور - أولاد سليمان",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1032,
+        "name": "Bousaada - Oulteme",
+        "name_ar": "بوسعادة - ولتام",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1033,
+        "name": "Sidi Aissa - Sidi Aissa",
+        "name_ar": "سيدي عيسى - سيدي عيسى",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1034,
+        "name": "Sidi Ameur - Sidi Ameur",
+        "name_ar": "سيدي عامر - سيدي عامر",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1035,
+        "name": "Ain El Hadjel - Sidi Hadjeres",
+        "name_ar": "عين الحجل - سيدي هجرس",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1036,
+        "name": "Ain El Melh - Sidi M'hamed",
+        "name_ar": "عين الملح - سيدي امحمد",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1037,
+        "name": "Djebel Messaad - Slim",
+        "name_ar": "جبل مساعد - سليم",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1038,
+        "name": "Ouled Derradj - Souamaa",
+        "name_ar": "أولاد دراج - السوامع",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1039,
+        "name": "Sidi Ameur - Tamsa",
+        "name_ar": "سيدي عامر - تامسة",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1040,
+        "name": "Hammam Dalaa - Tarmount",
+        "name_ar": "حمام الضلعة - تارمونت",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1041,
+        "name": "Ben Srour - Zarzour",
+        "name_ar": "بن سرور - زرزور",
+        "wilaya_code": "28"
+    },
+    {
+        "id": 1042,
+        "name": "Ain Fares - Ain Fares",
+        "name_ar": "عين فارس - عين فارس",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1043,
+        "name": "Ain Fekan - Ain Fekan",
+        "name_ar": "عين فكان - عين فكان",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1044,
+        "name": "Oued El Abtal - Ain Ferah",
+        "name_ar": "وادي الأبطال - عين فراح",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1045,
+        "name": "Ain Fekan - Ain Frass",
+        "name_ar": "عين فكان - عين أفرص",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1046,
+        "name": "Oggaz - Alaimia",
+        "name_ar": "عقاز - العلايمية",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1047,
+        "name": "Aouf - Aouf",
+        "name_ar": "عوف - عوف",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1048,
+        "name": "Aouf - Benian",
+        "name_ar": "عوف - بنيان",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1049,
+        "name": "Sig - Bou Henni",
+        "name_ar": "سيق - بوهني",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1050,
+        "name": "Bouhanifia - Bouhanifia",
+        "name_ar": "بوحنيفية - بوحنيفية",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1051,
+        "name": "Sig - Chorfa",
+        "name_ar": "سيق - الشرفاء",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1052,
+        "name": "El Bordj - El Bordj",
+        "name_ar": "البرج - البرج",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1053,
+        "name": "Zahana - El Gaada",
+        "name_ar": "زهانة - القعدة",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1054,
+        "name": "Mohammadia - El Ghomri",
+        "name_ar": "المحمدية - الغمري",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1055,
+        "name": "Bouhanifia - El Gueitena",
+        "name_ar": "بوحنيفية - القطنة",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1056,
+        "name": "Hachem - El Hachem",
+        "name_ar": "الحشم - الحشم",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1057,
+        "name": "Tizi - El Keurt",
+        "name_ar": "تيزي - القرط",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1058,
+        "name": "Ain Fares - El Mamounia",
+        "name_ar": "عين فارس - المأمونية",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1059,
+        "name": "El Bordj - El Menaouer",
+        "name_ar": "البرج - المنور",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1060,
+        "name": "Mohammadia - Ferraguig",
+        "name_ar": "المحمدية - فراقيق",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1061,
+        "name": "Tizi - Froha",
+        "name_ar": "تيزي - فروحة",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1062,
+        "name": "Aouf - Gharrous",
+        "name_ar": "عوف - غروس",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1063,
+        "name": "Ghriss - Ghriss",
+        "name_ar": "غريس - غريس",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1064,
+        "name": "Oued Taria - Guerdjoum",
+        "name_ar": "وادي التاغية - قرجوم",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1065,
+        "name": "Bouhanifia - Hacine",
+        "name_ar": "بوحنيفية - حسين",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1066,
+        "name": "El Bordj - Khalouia",
+        "name_ar": "البرج - خلوية",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1067,
+        "name": "Ghriss - Makhda",
+        "name_ar": "غريس - ماقضة",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1068,
+        "name": "Ghriss - Maoussa",
+        "name_ar": "غريس - ماوسة",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1069,
+        "name": "Mascara - Mascara",
+        "name_ar": "معسكر - معسكر",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1070,
+        "name": "Ghriss - Matemore",
+        "name_ar": "غريس - المطمور",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1071,
+        "name": "Mohammadia - Mocta-Douz",
+        "name_ar": "المحمدية - مقطع الدوز",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1072,
+        "name": "Mohammadia - Mohammadia",
+        "name_ar": "المحمدية - المحمدية",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1073,
+        "name": "Hachem - Nesmot",
+        "name_ar": "الحشم - نسمط",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1074,
+        "name": "Oggaz - Oggaz",
+        "name_ar": "عقاز - عقاز",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1075,
+        "name": "Oued El Abtal - Oued El Abtal",
+        "name_ar": "وادي الأبطال - وادي الأبطال",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1076,
+        "name": "Oued Taria - Oued Taria",
+        "name_ar": "وادي التاغية - وادي التاغية",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1077,
+        "name": "Oggaz - Ras El Ain Amirouche",
+        "name_ar": "عقاز - رأس عين عميروش",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1078,
+        "name": "Mohammadia - Sedjerara",
+        "name_ar": "المحمدية - سجرارة",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1079,
+        "name": "Tighennif - Sehailia",
+        "name_ar": "تيغنيف - السهايلية",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1080,
+        "name": "Oued El Abtal - Sidi Abdeldjebar",
+        "name_ar": "وادي الأبطال - سيدي عبد الجبار",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1081,
+        "name": "Mohammadia - Sidi Abdelmoumene",
+        "name_ar": "المحمدية - سيدي عبد المومن",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1082,
+        "name": "Ghriss - Sidi Boussaid",
+        "name_ar": "غريس - سيدي بوسعيد",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1083,
+        "name": "Tighennif - Sidi Kada",
+        "name_ar": "تيغنيف - سيدي قادة",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1084,
+        "name": "Sig - Sig",
+        "name_ar": "سيق - سيق",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1085,
+        "name": "Tighennif - Tighennif",
+        "name_ar": "تيغنيف - تيغنيف",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1086,
+        "name": "Tizi - Tizi",
+        "name_ar": "تيزي - تيزي",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1087,
+        "name": "Zahana - Zahana",
+        "name_ar": "زهانة - زهانة",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1088,
+        "name": "Hachem - Zelamta",
+        "name_ar": "الحشم - زلامطة",
+        "wilaya_code": "29"
+    },
+    {
+        "id": 1089,
+        "name": "Sidi Khouiled - Ain Beida",
+        "name_ar": "سيدي خويلد - عين البيضاء",
+        "wilaya_code": "30"
+    },
+    {
+        "id": 1090,
+        "name": "Taibet - Benaceur",
+        "name_ar": "الطيبات - بن ناصر",
+        "wilaya_code": "55"
+    },
+    {
+        "id": 1091,
+        "name": "Temacine - Blidet Amor",
+        "name_ar": "تماسين - بلدة اعمر",
+        "wilaya_code": "55"
+    },
+    {
+        "id": 1092,
+        "name": "El-Hadjira - El Alia",
+        "name_ar": "الحجيرة - العالية",
+        "wilaya_code": "55"
+    },
+    {
+        "id": 1093,
+        "name": "El Borma - El Borma",
+        "name_ar": "البرمة - البرمة",
+        "wilaya_code": "30"
+    },
+    {
+        "id": 1094,
+        "name": "El-Hadjira - El-Hadjira",
+        "name_ar": "الحجيرة - الحجيرة",
+        "wilaya_code": "55"
+    },
+    {
+        "id": 1095,
+        "name": "Sidi Khouiled - Hassi Ben Abdellah",
+        "name_ar": "سيدي خويلد - حاسي بن عبد الله",
+        "wilaya_code": "30"
+    },
+    {
+        "id": 1096,
+        "name": "Hassi Messaoud - Hassi Messaoud",
+        "name_ar": "حاسي مسعود - حاسي مسعود",
+        "wilaya_code": "30"
+    },
+    {
+        "id": 1097,
+        "name": "Megarine - Megarine",
+        "name_ar": "المقارين - المقارين",
+        "wilaya_code": "55"
+    },
+    {
+        "id": 1098,
+        "name": "Taibet - M'naguer",
+        "name_ar": "الطيبات - المنقر",
+        "wilaya_code": "55"
+    },
+    {
+        "id": 1099,
+        "name": "Touggourt - Nezla",
+        "name_ar": "تقرت - النزلة",
+        "wilaya_code": "55"
+    },
+    {
+        "id": 1100,
+        "name": "N'goussa - N'goussa",
+        "name_ar": "انقوسة - انقوسة",
+        "wilaya_code": "30"
+    },
+    {
+        "id": 1101,
+        "name": "Ouargla - Ouargla",
+        "name_ar": "ورقلة - ورقلة",
+        "wilaya_code": "30"
+    },
+    {
+        "id": 1102,
+        "name": "Ouargla - Rouissat",
+        "name_ar": "ورقلة - الرويسات",
+        "wilaya_code": "30"
+    },
+    {
+        "id": 1103,
+        "name": "Sidi Khouiled - Sidi Khouiled",
+        "name_ar": "سيدي خويلد - سيدي خويلد",
+        "wilaya_code": "30"
+    },
+    {
+        "id": 1104,
+        "name": "Megarine - Sidi Slimane",
+        "name_ar": "المقارين - سيدي سليمان",
+        "wilaya_code": "55"
+    },
+    {
+        "id": 1105,
+        "name": "Taibet - Taibet",
+        "name_ar": "الطيبات - الطيبات",
+        "wilaya_code": "55"
+    },
+    {
+        "id": 1106,
+        "name": "Touggourt - Tebesbest",
+        "name_ar": "تقرت - تبسبست",
+        "wilaya_code": "55"
+    },
+    {
+        "id": 1107,
+        "name": "Temacine - Temacine",
+        "name_ar": "تماسين - تماسين",
+        "wilaya_code": "55"
+    },
+    {
+        "id": 1108,
+        "name": "Touggourt - Touggourt",
+        "name_ar": "تقرت - تقرت",
+        "wilaya_code": "55"
+    },
+    {
+        "id": 1109,
+        "name": "Touggourt - Zaouia El Abidia",
+        "name_ar": "تقرت - الزاوية العابدية",
+        "wilaya_code": "55"
+    },
+    {
+        "id": 1110,
+        "name": "Bethioua - Ain Biya",
+        "name_ar": "بطيوة - عين البية",
+        "wilaya_code": "31"
+    },
+    {
+        "id": 1111,
+        "name": "Boutlelis - Ain Kerma",
+        "name_ar": "بوتليليس - عين الكرمة",
+        "wilaya_code": "31"
+    },
+    {
+        "id": 1112,
+        "name": "Ain Turk - Ain Turk",
+        "name_ar": "عين الترك - عين الترك",
+        "wilaya_code": "31"
+    },
+    {
+        "id": 1113,
+        "name": "Arzew - Arzew",
+        "name_ar": "أرزيو - أرزيو",
+        "wilaya_code": "31"
+    },
+    {
+        "id": 1114,
+        "name": "Gdyel - Ben Freha",
+        "name_ar": "قديل - بن فريحة",
+        "wilaya_code": "31"
+    },
+    {
+        "id": 1115,
+        "name": "Bethioua - Bethioua",
+        "name_ar": "بطيوة - بطيوة",
+        "wilaya_code": "31"
+    },
+    {
+        "id": 1116,
+        "name": "Bir El Djir - Bir El Djir",
+        "name_ar": "بئر الجير - بئر الجير",
+        "wilaya_code": "31"
+    },
+    {
+        "id": 1117,
+        "name": "Oued Tlelat - Boufatis",
+        "name_ar": "وادي تليلات - بوفاتيس",
+        "wilaya_code": "31"
+    },
+    {
+        "id": 1118,
+        "name": "Ain Turk - Bousfer",
+        "name_ar": "عين الترك - بوسفر",
+        "wilaya_code": "31"
+    },
+    {
+        "id": 1119,
+        "name": "Boutlelis - Boutlelis",
+        "name_ar": "بوتليليس - بوتليليس",
+        "wilaya_code": "31"
+    },
+    {
+        "id": 1120,
+        "name": "Ain Turk - El Ancor",
+        "name_ar": "عين الترك - العنصر",
+        "wilaya_code": "31"
+    },
+    {
+        "id": 1121,
+        "name": "Oued Tlelat - El Braya",
+        "name_ar": "وادي تليلات - البراية",
+        "wilaya_code": "31"
+    },
+    {
+        "id": 1122,
+        "name": "Es Senia - El Kerma",
+        "name_ar": "السانية - الكرمة",
+        "wilaya_code": "31"
+    },
+    {
+        "id": 1123,
+        "name": "Es Senia - Es Senia",
+        "name_ar": "السانية - السانية",
+        "wilaya_code": "31"
+    },
+    {
+        "id": 1124,
+        "name": "Gdyel - Gdyel",
+        "name_ar": "قديل - قديل",
+        "wilaya_code": "31"
+    },
+    {
+        "id": 1125,
+        "name": "Bir El Djir - Hassi Ben Okba",
+        "name_ar": "بئر الجير - حاسي بن عقبة",
+        "wilaya_code": "31"
+    },
+    {
+        "id": 1126,
+        "name": "Bir El Djir - Hassi Bounif",
+        "name_ar": "بئر الجير - حاسي بونيف",
+        "wilaya_code": "31"
+    },
+    {
+        "id": 1127,
+        "name": "Gdyel - Hassi Mefsoukh",
+        "name_ar": "قديل - حاسي مفسوخ",
+        "wilaya_code": "31"
+    },
+    {
+        "id": 1128,
+        "name": "Bethioua - Marsat El Hadjadj",
+        "name_ar": "بطيوة - مرسى الحجاج",
+        "wilaya_code": "31"
+    },
+    {
+        "id": 1129,
+        "name": "Ain Turk - Mers El Kebir",
+        "name_ar": "عين الترك - المرسى الكبير",
+        "wilaya_code": "31"
+    },
+    {
+        "id": 1130,
+        "name": "Boutlelis - Messerghin",
+        "name_ar": "بوتليليس - مسرغين",
+        "wilaya_code": "31"
+    },
+    {
+        "id": 1131,
+        "name": "Oran - Oran",
+        "name_ar": "وهران - وهران",
+        "wilaya_code": "31"
+    },
+    {
+        "id": 1132,
+        "name": "Oued Tlelat - Oued Tlelat",
+        "name_ar": "وادي تليلات - وادي تليلات",
+        "wilaya_code": "31"
+    },
+    {
+        "id": 1133,
+        "name": "Arzew - Sidi Ben Yebka",
+        "name_ar": "أرزيو - سيدي بن يبقى",
+        "wilaya_code": "31"
+    },
+    {
+        "id": 1134,
+        "name": "Es Senia - Sidi Chami",
+        "name_ar": "السانية - سيدي الشحمي",
+        "wilaya_code": "31"
+    },
+    {
+        "id": 1135,
+        "name": "Oued Tlelat - Tafraoui",
+        "name_ar": "وادي تليلات - طفراوي",
+        "wilaya_code": "31"
+    },
+    {
+        "id": 1136,
+        "name": "Labiodh Sidi Cheikh - Ain El Orak",
+        "name_ar": "الأبيض سيدي الشيخ - عين العراك",
+        "wilaya_code": "32"
+    },
+    {
+        "id": 1137,
+        "name": "Labiodh Sidi Cheikh - Arbaouat",
+        "name_ar": "الأبيض سيدي الشيخ - اربوات",
+        "wilaya_code": "32"
+    },
+    {
+        "id": 1138,
+        "name": "Boualem - Boualem",
+        "name_ar": "بوعلام - بوعلام",
+        "wilaya_code": "32"
+    },
+    {
+        "id": 1139,
+        "name": "Bougtoub - Bougtoub",
+        "name_ar": "بوقطب - بوقطب",
+        "wilaya_code": "32"
+    },
+    {
+        "id": 1140,
+        "name": "Boussemghoun - Boussemghoun",
+        "name_ar": "بوسمغون - بوسمغون",
+        "wilaya_code": "32"
+    },
+    {
+        "id": 1141,
+        "name": "Brezina - Brezina",
+        "name_ar": "بريزينة - بريزينة",
+        "wilaya_code": "32"
+    },
+    {
+        "id": 1142,
+        "name": "Rogassa - Cheguig",
+        "name_ar": "رقاصة - الشقيق",
+        "wilaya_code": "32"
+    },
+    {
+        "id": 1143,
+        "name": "Chellala - Chellala",
+        "name_ar": "شلالة - شلالة",
+        "wilaya_code": "32"
+    },
+    {
+        "id": 1144,
+        "name": "El Bayadh - El Bayadh",
+        "name_ar": "البيض - البيض",
+        "wilaya_code": "32"
+    },
+    {
+        "id": 1145,
+        "name": "Labiodh Sidi Cheikh - Labiodh Sidi Cheikh",
+        "name_ar": "الأبيض سيدي الشيخ - الأبيض سيدي الشيخ",
+        "wilaya_code": "32"
+    },
+    {
+        "id": 1146,
+        "name": "Labiodh Sidi Cheikh - El Bnoud",
+        "name_ar": "الأبيض سيدي الشيخ - البنود",
+        "wilaya_code": "32"
+    },
+    {
+        "id": 1147,
+        "name": "Bougtoub - El Kheiter",
+        "name_ar": "بوقطب - الخيثر",
+        "wilaya_code": "32"
+    },
+    {
+        "id": 1148,
+        "name": "Chellala - El Mehara",
+        "name_ar": "شلالة - المحرة",
+        "wilaya_code": "32"
+    },
+    {
+        "id": 1149,
+        "name": "Brezina - Ghassoul",
+        "name_ar": "بريزينة - الغاسول",
+        "wilaya_code": "32"
+    },
+    {
+        "id": 1150,
+        "name": "Rogassa - Kef El Ahmar",
+        "name_ar": "رقاصة - الكاف الأحمر",
+        "wilaya_code": "32"
+    },
+    {
+        "id": 1151,
+        "name": "Brezina - Krakda",
+        "name_ar": "بريزينة - كراكدة",
+        "wilaya_code": "32"
+    },
+    {
+        "id": 1152,
+        "name": "Rogassa - Rogassa",
+        "name_ar": "رقاصة - رقاصة",
+        "wilaya_code": "32"
+    },
+    {
+        "id": 1153,
+        "name": "Boualem - Sidi Ameur",
+        "name_ar": "بوعلام - سيدي عامر",
+        "wilaya_code": "32"
+    },
+    {
+        "id": 1154,
+        "name": "Boualem - Sidi Slimane",
+        "name_ar": "بوعلام - سيدي سليمان",
+        "wilaya_code": "32"
+    },
+    {
+        "id": 1155,
+        "name": "Boualem - Sidi Tiffour",
+        "name_ar": "بوعلام - سيدي طيفور",
+        "wilaya_code": "32"
+    },
+    {
+        "id": 1156,
+        "name": "Boualem - Stitten",
+        "name_ar": "بوعلام - ستيتن",
+        "wilaya_code": "32"
+    },
+    {
+        "id": 1157,
+        "name": "Bougtoub - Tousmouline",
+        "name_ar": "بوقطب - توسمولين",
+        "wilaya_code": "32"
+    },
+    {
+        "id": 1158,
+        "name": "Djanet - Bordj El Haouass",
+        "name_ar": "جانت - برج الحواس",
+        "wilaya_code": "56"
+    },
+    {
+        "id": 1159,
+        "name": "In Amenas - Bordj Omar Driss",
+        "name_ar": "إن أمناس - برج عمر إدريس",
+        "wilaya_code": "33"
+    },
+    {
+        "id": 1160,
+        "name": "In Amenas - Debdeb",
+        "name_ar": "إن أمناس - دبداب",
+        "wilaya_code": "33"
+    },
+    {
+        "id": 1161,
+        "name": "Djanet - Djanet",
+        "name_ar": "جانت - جانت",
+        "wilaya_code": "56"
+    },
+    {
+        "id": 1162,
+        "name": "Illizi - Illizi",
+        "name_ar": "إيليزي - إيليزي",
+        "wilaya_code": "33"
+    },
+    {
+        "id": 1163,
+        "name": "In Amenas - In Amenas",
+        "name_ar": "إن أمناس - إن أمناس",
+        "wilaya_code": "33"
+    },
+    {
+        "id": 1164,
+        "name": "Ain Taghrout - Ain Taghrout",
+        "name_ar": "عين تاغروت - عين تاغروت",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1165,
+        "name": "Ras El Oued - Ain Tesra",
+        "name_ar": "رأس الوادي - عين تسرة",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1166,
+        "name": "Bordj Bou Arreridj - B. B. Arreridj",
+        "name_ar": "برج بوعريريج - برج بوعريرج",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1167,
+        "name": "Bordj Ghedir - Belimour",
+        "name_ar": "برج الغدير - بليمور",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1168,
+        "name": "Mansourah - Ben Daoud",
+        "name_ar": "المنصورة - بن داود",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1169,
+        "name": "Bir Kasdali - Bir Kasdali",
+        "name_ar": "بئر قاصد علي - بئر قاصد علي",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1170,
+        "name": "Bordj Ghedir - Bordj Ghedir",
+        "name_ar": "برج الغدير - برج الغدير",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1171,
+        "name": "Bordj Zemmoura - Bordj Zemmoura",
+        "name_ar": "برج زمورة - برج زمورة",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1172,
+        "name": "Djaafra - Colla",
+        "name_ar": "جعافرة - القلة",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1173,
+        "name": "Djaafra - Djaafra",
+        "name_ar": "جعافرة - جعافرة",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1174,
+        "name": "El Hamadia - El Euch",
+        "name_ar": "الحمادية - العش",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1175,
+        "name": "Medjana - El Achir",
+        "name_ar": "مجانة - الياشير",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1176,
+        "name": "Bordj Ghedir - El Annasseur",
+        "name_ar": "برج الغدير - العناصر",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1177,
+        "name": "El Hamadia - Elhammadia",
+        "name_ar": "الحمادية - الحمادية",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1178,
+        "name": "Djaafra - El Main",
+        "name_ar": "جعافرة - الماين",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1179,
+        "name": "Mansourah - El M'hir",
+        "name_ar": "المنصورة - المهير",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1180,
+        "name": "Bordj Ghedir - Ghailasa",
+        "name_ar": "برج الغدير - غيلاسة",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1181,
+        "name": "Mansourah - Haraza",
+        "name_ar": "المنصورة - حرازة",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1182,
+        "name": "Medjana - Hasnaoua",
+        "name_ar": "مجانة - حسناوة",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1183,
+        "name": "Bir Kasdali - Khelil",
+        "name_ar": "بئر قاصد علي - خليل",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1184,
+        "name": "El Hamadia - Ksour",
+        "name_ar": "الحمادية - القصور",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1185,
+        "name": "Mansourah - Mansoura",
+        "name_ar": "المنصورة - المنصورة",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1186,
+        "name": "Medjana - Medjana",
+        "name_ar": "مجانة - مجانة",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1187,
+        "name": "Ras El Oued - Ouled Brahem",
+        "name_ar": "رأس الوادي - أولاد أبراهم",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1188,
+        "name": "Bordj Zemmoura - Ouled Dahmane",
+        "name_ar": "برج زمورة - أولاد دحمان",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1189,
+        "name": "Mansourah - Ouled Sidi-Brahim",
+        "name_ar": "المنصورة - أولاد سيدي ابراهيم",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1190,
+        "name": "El Hamadia - Rabta",
+        "name_ar": "الحمادية - الرابطة",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1191,
+        "name": "Ras El Oued - Ras El Oued",
+        "name_ar": "رأس الوادي - رأس الوادي",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1192,
+        "name": "Bir Kasdali - Sidi-Embarek",
+        "name_ar": "بئر قاصد علي - سيدي أمبارك",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1193,
+        "name": "Djaafra - Tefreg",
+        "name_ar": "جعافرة - تفرق",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1194,
+        "name": "Bordj Ghedir - Taglait",
+        "name_ar": "برج الغدير - تقلعيت",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1195,
+        "name": "Bordj Zemmoura - Tassamert",
+        "name_ar": "برج زمورة - تسامرت",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1196,
+        "name": "Medjana - Teniet En Nasr",
+        "name_ar": "مجانة - ثنية النصر",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1197,
+        "name": "Ain Taghrout - Tixter",
+        "name_ar": "عين تاغروت - تيكستار",
+        "wilaya_code": "34"
+    },
+    {
+        "id": 1198,
+        "name": "Dellys - Afir",
+        "name_ar": "دلس - أعفير",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1199,
+        "name": "Thenia - Ammal",
+        "name_ar": "الثنية - عمال",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1200,
+        "name": "Baghlia - Baghlia",
+        "name_ar": "بغلية - بغلية",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1201,
+        "name": "Dellys - Ben Choud",
+        "name_ar": "دلس - بن شود",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1202,
+        "name": "Thenia - Beni Amrane",
+        "name_ar": "الثنية - بني عمران",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1203,
+        "name": "Bordj Menaiel - Bordj Menaiel",
+        "name_ar": "برج منايل - برج منايل",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1204,
+        "name": "Boudouaou - Boudouaou",
+        "name_ar": "بودواو - بودواو",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1205,
+        "name": "Boudouaou - Boudouaou El Bahri",
+        "name_ar": "بودواو - بودواو البحري",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1206,
+        "name": "Boumerdes - Boumerdes",
+        "name_ar": "بومرداس - بومرداس",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1207,
+        "name": "Boudouaou - Bouzegza Keddara",
+        "name_ar": "بودواو - بوزقزة قدارة",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1208,
+        "name": "Isser - Chabet El Ameur",
+        "name_ar": "يسر - شعبة العامر",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1209,
+        "name": "Boumerdes - Corso",
+        "name_ar": "بومرداس - قورصو",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1210,
+        "name": "Dellys - Dellys",
+        "name_ar": "دلس - دلس",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1211,
+        "name": "Bordj Menaiel - Djinet",
+        "name_ar": "برج منايل - جنات",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1212,
+        "name": "Boudouaou - El Kharrouba",
+        "name_ar": "بودواو - الخروبة",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1213,
+        "name": "Khemis El Khechna - Hammedi",
+        "name_ar": "خميس الخشنة - حمادي",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1214,
+        "name": "Isser - Isser",
+        "name_ar": "يسر - يسر",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1215,
+        "name": "Khemis El Khechna - Khemis El Khechna",
+        "name_ar": "خميس الخشنة - خميس الخشنة",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1216,
+        "name": "Khemis El Khechna - Larbatache",
+        "name_ar": "خميس الخشنة - الاربعطاش",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1217,
+        "name": "Bordj Menaiel - Leghata",
+        "name_ar": "برج منايل - لقاطة",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1218,
+        "name": "Naciria - Naciria",
+        "name_ar": "الناصرية - الناصرية",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1219,
+        "name": "Naciria - Ouled Aissa",
+        "name_ar": "الناصرية - أولاد عيسى",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1220,
+        "name": "Boudouaou - Ouled Hedadj",
+        "name_ar": "بودواو - أولاد هداج",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1221,
+        "name": "Khemis El Khechna - Ouled Moussa",
+        "name_ar": "خميس الخشنة - أولاد موسى",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1222,
+        "name": "Isser - Si Mustapha",
+        "name_ar": "يسر - سي مصطفى",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1223,
+        "name": "Baghlia - Sidi Daoud",
+        "name_ar": "بغلية - سيدي داود",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1224,
+        "name": "Thenia - Souk El Had",
+        "name_ar": "الثنية - سوق الحد",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1225,
+        "name": "Baghlia - Taourga",
+        "name_ar": "بغلية - تاورقة",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1226,
+        "name": "Thenia - Thenia",
+        "name_ar": "الثنية - الثنية",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1227,
+        "name": "Boumerdes - Tidjelabine",
+        "name_ar": "بومرداس - تيجلابين",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1228,
+        "name": "Isser - Timezrit",
+        "name_ar": "يسر - تيمزريت",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1229,
+        "name": "Bordj Menaiel - Zemmouri",
+        "name_ar": "برج منايل - زموري",
+        "wilaya_code": "35"
+    },
+    {
+        "id": 1230,
+        "name": "El Tarf - Ain El Assel",
+        "name_ar": "الطارف - عين العسل",
+        "wilaya_code": "36"
+    },
+    {
+        "id": 1231,
+        "name": "Bouhadjar - Ain Kerma",
+        "name_ar": "بوحجار - عين الكرمة",
+        "wilaya_code": "36"
+    },
+    {
+        "id": 1232,
+        "name": "Besbes - Asfour",
+        "name_ar": "البسباس - عصفور",
+        "wilaya_code": "36"
+    },
+    {
+        "id": 1233,
+        "name": "Ben M'hidi - Ben M Hidi",
+        "name_ar": "بن مهيدي - بن مهيدي",
+        "wilaya_code": "36"
+    },
+    {
+        "id": 1234,
+        "name": "Ben M'hidi - Berrihane",
+        "name_ar": "بن مهيدي - بريحان",
+        "wilaya_code": "36"
+    },
+    {
+        "id": 1235,
+        "name": "Besbes - Besbes",
+        "name_ar": "البسباس - البسباس",
+        "wilaya_code": "36"
+    },
+    {
+        "id": 1236,
+        "name": "El Tarf - Bougous",
+        "name_ar": "الطارف - بوقوس",
+        "wilaya_code": "36"
+    },
+    {
+        "id": 1237,
+        "name": "Bouhadjar - Bouhadjar",
+        "name_ar": "بوحجار - بوحجار",
+        "wilaya_code": "36"
+    },
+    {
+        "id": 1238,
+        "name": "Bouteldja - Bouteldja",
+        "name_ar": "بوثلجة - بوثلجة",
+        "wilaya_code": "36"
+    },
+    {
+        "id": 1239,
+        "name": "Drean - Chebaita Mokhtar",
+        "name_ar": "الذرعان - شبيطة مختار",
+        "wilaya_code": "36"
+    },
+    {
+        "id": 1240,
+        "name": "Bouteldja - Chefia",
+        "name_ar": "بوثلجة - الشافية",
+        "wilaya_code": "36"
+    },
+    {
+        "id": 1241,
+        "name": "Drean - Chihani",
+        "name_ar": "الذرعان - شحاني",
+        "wilaya_code": "36"
+    },
+    {
+        "id": 1242,
+        "name": "Drean - Drean",
+        "name_ar": "الذرعان - الذرعـان",
+        "wilaya_code": "36"
+    },
+    {
+        "id": 1243,
+        "name": "Ben M'hidi - Echatt",
+        "name_ar": "بن مهيدي - الشط",
+        "wilaya_code": "36"
+    },
+    {
+        "id": 1244,
+        "name": "El Kala - El Aioun",
+        "name_ar": "القالة - العيون",
+        "wilaya_code": "36"
+    },
+    {
+        "id": 1245,
+        "name": "El Kala - El Kala",
+        "name_ar": "القالة - القالة",
+        "wilaya_code": "36"
+    },
+    {
+        "id": 1246,
+        "name": "El Tarf - El Tarf",
+        "name_ar": "الطارف - الطارف",
+        "wilaya_code": "36"
+    },
+    {
+        "id": 1247,
+        "name": "Bouhadjar - Hammam Beni Salah",
+        "name_ar": "بوحجار - حمام بني صالح",
+        "wilaya_code": "36"
+    },
+    {
+        "id": 1248,
+        "name": "Bouteldja - Lac Des Oiseaux",
+        "name_ar": "بوثلجة - بحيرة الطيور",
+        "wilaya_code": "36"
+    },
+    {
+        "id": 1249,
+        "name": "Bouhadjar - Oued Zitoun",
+        "name_ar": "بوحجار - وادي الزيتون",
+        "wilaya_code": "36"
+    },
+    {
+        "id": 1250,
+        "name": "El Kala - Raml Souk",
+        "name_ar": "القالة - رمل السوق",
+        "wilaya_code": "36"
+    },
+    {
+        "id": 1251,
+        "name": "El Kala - Souarekh",
+        "name_ar": "القالة - السوارخ",
+        "wilaya_code": "36"
+    },
+    {
+        "id": 1252,
+        "name": "Besbes - Zerizer",
+        "name_ar": "البسباس - زريزر",
+        "wilaya_code": "36"
+    },
+    {
+        "id": 1253,
+        "name": "El Tarf - Zitouna",
+        "name_ar": "الطارف - الزيتونة",
+        "wilaya_code": "36"
+    },
+    {
+        "id": 1254,
+        "name": "Tindouf - Oum El Assel",
+        "name_ar": "تندوف - أم العسل",
+        "wilaya_code": "37"
+    },
+    {
+        "id": 1255,
+        "name": "Tindouf - Tindouf",
+        "name_ar": "تندوف - تندوف",
+        "wilaya_code": "37"
+    },
+    {
+        "id": 1256,
+        "name": "Ammari - Ammari",
+        "name_ar": "عماري - عماري",
+        "wilaya_code": "38"
+    },
+    {
+        "id": 1257,
+        "name": "Bordj Bounaama - Beni Chaib",
+        "name_ar": "برج بونعامة - بني شعيب",
+        "wilaya_code": "38"
+    },
+    {
+        "id": 1258,
+        "name": "Bordj Bounaama - Beni Lahcene",
+        "name_ar": "برج بونعامة - بني لحسن",
+        "wilaya_code": "38"
+    },
+    {
+        "id": 1259,
+        "name": "Bordj Bounaama - Bordj Bounaama",
+        "name_ar": "برج بونعامة - برج بونعامة",
+        "wilaya_code": "38"
+    },
+    {
+        "id": 1260,
+        "name": "Bordj Emir Abdelkader - Bordj El Emir Abdelkader",
+        "name_ar": "برج الأمير عبد القادر - برج الأمير عبد القادر",
+        "wilaya_code": "38"
+    },
+    {
+        "id": 1261,
+        "name": "Lazharia - Boucaid",
+        "name_ar": "الأزهرية - بوقائد",
+        "wilaya_code": "38"
+    },
+    {
+        "id": 1262,
+        "name": "Khemisti - Khemisti",
+        "name_ar": "خميستي - خميستي",
+        "wilaya_code": "38"
+    },
+    {
+        "id": 1263,
+        "name": "Lazharia - Larbaa",
+        "name_ar": "الأزهرية - الأربعاء",
+        "wilaya_code": "38"
+    },
+    {
+        "id": 1264,
+        "name": "Lardjem - Lardjem",
+        "name_ar": "لرجام - لرجام",
+        "wilaya_code": "38"
+    },
+    {
+        "id": 1265,
+        "name": "Khemisti - Layoune",
+        "name_ar": "خميستي - العيون",
+        "wilaya_code": "38"
+    },
+    {
+        "id": 1266,
+        "name": "Lazharia - Lazharia",
+        "name_ar": "الأزهرية - الأزهرية",
+        "wilaya_code": "38"
+    },
+    {
+        "id": 1267,
+        "name": "Ammari - Maacem",
+        "name_ar": "عماري - المعاصم",
+        "wilaya_code": "38"
+    },
+    {
+        "id": 1268,
+        "name": "Lardjem - Melaab",
+        "name_ar": "لرجام - الملعب",
+        "wilaya_code": "38"
+    },
+    {
+        "id": 1269,
+        "name": "Tissemsilt - Ouled Bessam",
+        "name_ar": "تيسمسيلت - أولاد بسام",
+        "wilaya_code": "38"
+    },
+    {
+        "id": 1270,
+        "name": "Ammari - Sidi Abed",
+        "name_ar": "عماري - سيدي عابد",
+        "wilaya_code": "38"
+    },
+    {
+        "id": 1271,
+        "name": "Theniet El Had - Sidi Boutouchent",
+        "name_ar": "ثنية الاحد - سيدي بوتوشنت",
+        "wilaya_code": "38"
+    },
+    {
+        "id": 1272,
+        "name": "Lardjem - Sidi Lantri",
+        "name_ar": "لرجام - سيدي العنتري",
+        "wilaya_code": "38"
+    },
+    {
+        "id": 1273,
+        "name": "Bordj Bounaama - Sidi Slimane",
+        "name_ar": "برج بونعامة - سيدي سليمان",
+        "wilaya_code": "38"
+    },
+    {
+        "id": 1274,
+        "name": "Lardjem - Tamellahet",
+        "name_ar": "لرجام - تملاحت",
+        "wilaya_code": "38"
+    },
+    {
+        "id": 1275,
+        "name": "Theniet El Had - Theniet El Had",
+        "name_ar": "ثنية الاحد - ثنية الاحد",
+        "wilaya_code": "38"
+    },
+    {
+        "id": 1276,
+        "name": "Tissemsilt - Tissemsilt",
+        "name_ar": "تيسمسيلت - تيسمسيلت",
+        "wilaya_code": "38"
+    },
+    {
+        "id": 1277,
+        "name": "Bordj Emir Abdelkader - Youssoufia",
+        "name_ar": "برج الأمير عبد القادر - اليوسفية",
+        "wilaya_code": "38"
+    },
+    {
+        "id": 1278,
+        "name": "Bayadha - Bayadha",
+        "name_ar": "البياضة - البياضة",
+        "wilaya_code": "39"
+    },
+    {
+        "id": 1279,
+        "name": "Taleb Larbi - Ben Guecha",
+        "name_ar": "الطالب العربي - بن  قشة",
+        "wilaya_code": "39"
+    },
+    {
+        "id": 1280,
+        "name": "Debila - Debila",
+        "name_ar": "الدبيلة - الدبيلة",
+        "wilaya_code": "39"
+    },
+    {
+        "id": 1281,
+        "name": "Djamaa - Djamaa",
+        "name_ar": "جامعة - جامعة",
+        "wilaya_code": "57"
+    },
+    {
+        "id": 1282,
+        "name": "Taleb Larbi - Douar El Maa",
+        "name_ar": "الطالب العربي - دوار الماء",
+        "wilaya_code": "39"
+    },
+    {
+        "id": 1283,
+        "name": "Robbah - El Ogla",
+        "name_ar": "الرباح - العقلة",
+        "wilaya_code": "39"
+    },
+    {
+        "id": 1284,
+        "name": "El Meghaier - El-M'ghaier",
+        "name_ar": "المغير - المغير",
+        "wilaya_code": "57"
+    },
+    {
+        "id": 1285,
+        "name": "El Oued - El-Oued",
+        "name_ar": "الوادي - الوادي",
+        "wilaya_code": "39"
+    },
+    {
+        "id": 1286,
+        "name": "Guemar - Guemar",
+        "name_ar": "قمار - قمار",
+        "wilaya_code": "39"
+    },
+    {
+        "id": 1287,
+        "name": "Reguiba - Hamraia",
+        "name_ar": "الرقيبة - الحمراية",
+        "wilaya_code": "39"
+    },
+    {
+        "id": 1288,
+        "name": "Debila - Hassani Abdelkrim",
+        "name_ar": "الدبيلة - حساني عبد الكريم",
+        "wilaya_code": "39"
+    },
+    {
+        "id": 1289,
+        "name": "Hassi Khalifa - Hassi Khalifa",
+        "name_ar": "حاسي خليفة - حاسي خليفة",
+        "wilaya_code": "39"
+    },
+    {
+        "id": 1290,
+        "name": "El Oued - Kouinine",
+        "name_ar": "الوادي - كوينين",
+        "wilaya_code": "39"
+    },
+    {
+        "id": 1291,
+        "name": "Magrane - Magrane",
+        "name_ar": "المقرن - المقرن",
+        "wilaya_code": "39"
+    },
+    {
+        "id": 1292,
+        "name": "Mih Ouensa - Mih Ouansa",
+        "name_ar": "اميه وانسة - اميه وانسة",
+        "wilaya_code": "39"
+    },
+    {
+        "id": 1293,
+        "name": "Djamaa - M'rara",
+        "name_ar": "جامعة - المرارة",
+        "wilaya_code": "57"
+    },
+    {
+        "id": 1294,
+        "name": "Robbah - Nakhla",
+        "name_ar": "الرباح - النخلة",
+        "wilaya_code": "39"
+    },
+    {
+        "id": 1295,
+        "name": "Mih Ouensa - Oued El Alenda",
+        "name_ar": "اميه وانسة - وادي العلندة",
+        "wilaya_code": "39"
+    },
+    {
+        "id": 1296,
+        "name": "El Meghaier - Oum Touyour",
+        "name_ar": "المغير - أم الطيور",
+        "wilaya_code": "57"
+    },
+    {
+        "id": 1297,
+        "name": "Guemar - Ourmes",
+        "name_ar": "قمار - ورماس",
+        "wilaya_code": "39"
+    },
+    {
+        "id": 1298,
+        "name": "Reguiba - Reguiba",
+        "name_ar": "الرقيبة - الرقيبة",
+        "wilaya_code": "39"
+    },
+    {
+        "id": 1299,
+        "name": "Robbah - Robbah",
+        "name_ar": "الرباح - الرباح",
+        "wilaya_code": "39"
+    },
+    {
+        "id": 1300,
+        "name": "Djamaa - Sidi Amrane",
+        "name_ar": "جامعة - سيدي عمران",
+        "wilaya_code": "57"
+    },
+    {
+        "id": 1301,
+        "name": "Magrane - Sidi Aoun",
+        "name_ar": "المقرن - سيدي عون",
+        "wilaya_code": "39"
+    },
+    {
+        "id": 1302,
+        "name": "El Meghaier - Sidi Khelil",
+        "name_ar": "المغير - سيدي خليل",
+        "wilaya_code": "57"
+    },
+    {
+        "id": 1303,
+        "name": "El Meghaier - Still",
+        "name_ar": "المغير - سطيل",
+        "wilaya_code": "57"
+    },
+    {
+        "id": 1304,
+        "name": "Guemar - Taghzout",
+        "name_ar": "قمار - تغزوت",
+        "wilaya_code": "39"
+    },
+    {
+        "id": 1305,
+        "name": "Taleb Larbi - Taleb Larbi",
+        "name_ar": "الطالب العربي - الطالب العربي",
+        "wilaya_code": "39"
+    },
+    {
+        "id": 1306,
+        "name": "Djamaa - Tenedla",
+        "name_ar": "جامعة - تندلة",
+        "wilaya_code": "57"
+    },
+    {
+        "id": 1307,
+        "name": "Hassi Khalifa - Trifaoui",
+        "name_ar": "حاسي خليفة - الطريفاوي",
+        "wilaya_code": "39"
+    },
+    {
+        "id": 1308,
+        "name": "Ain Touila - Ain Touila",
+        "name_ar": "عين الطويلة - عين الطويلة",
+        "wilaya_code": "40"
+    },
+    {
+        "id": 1309,
+        "name": "Babar - Babar",
+        "name_ar": "بابار - بابار",
+        "wilaya_code": "40"
+    },
+    {
+        "id": 1310,
+        "name": "El Hamma - Baghai",
+        "name_ar": "الحامة - بغاي",
+        "wilaya_code": "40"
+    },
+    {
+        "id": 1311,
+        "name": "Bouhmama - Bouhmama",
+        "name_ar": "بوحمامة - بوحمامة",
+        "wilaya_code": "40"
+    },
+    {
+        "id": 1312,
+        "name": "Chechar - Chechar",
+        "name_ar": "ششار - ششار",
+        "wilaya_code": "40"
+    },
+    {
+        "id": 1313,
+        "name": "Bouhmama - Chelia",
+        "name_ar": "بوحمامة - شلية",
+        "wilaya_code": "40"
+    },
+    {
+        "id": 1314,
+        "name": "Chechar - Djellal",
+        "name_ar": "ششار - جلال",
+        "wilaya_code": "40"
+    },
+    {
+        "id": 1315,
+        "name": "El Hamma - El Hamma",
+        "name_ar": "الحامة - الحامة",
+        "wilaya_code": "40"
+    },
+    {
+        "id": 1316,
+        "name": "Ouled Rechache - El Mahmal",
+        "name_ar": "أولاد رشاش - المحمل",
+        "wilaya_code": "40"
+    },
+    {
+        "id": 1317,
+        "name": "Chechar - El Oueldja",
+        "name_ar": "ششار - الولجة",
+        "wilaya_code": "40"
+    },
+    {
+        "id": 1318,
+        "name": "El Hamma - Ensigha",
+        "name_ar": "الحامة - انسيغة",
+        "wilaya_code": "40"
+    },
+    {
+        "id": 1319,
+        "name": "Kais - Kais",
+        "name_ar": "قايس - قايس",
+        "wilaya_code": "40"
+    },
+    {
+        "id": 1320,
+        "name": "Khenchela - Khenchela",
+        "name_ar": "خنشلة - خنشلة",
+        "wilaya_code": "40"
+    },
+    {
+        "id": 1321,
+        "name": "Chechar - Khirane",
+        "name_ar": "ششار - خيران",
+        "wilaya_code": "40"
+    },
+    {
+        "id": 1322,
+        "name": "Bouhmama - M'sara",
+        "name_ar": "بوحمامة - مصارة",
+        "wilaya_code": "40"
+    },
+    {
+        "id": 1323,
+        "name": "Ain Touila - M'toussa",
+        "name_ar": "عين الطويلة - متوسة",
+        "wilaya_code": "40"
+    },
+    {
+        "id": 1324,
+        "name": "Ouled Rechache - Ouled Rechache",
+        "name_ar": "أولاد رشاش - أولاد رشاش",
+        "wilaya_code": "40"
+    },
+    {
+        "id": 1325,
+        "name": "Kais - Remila",
+        "name_ar": "قايس - الرميلة",
+        "wilaya_code": "40"
+    },
+    {
+        "id": 1326,
+        "name": "El Hamma - Tamza",
+        "name_ar": "الحامة - طامزة",
+        "wilaya_code": "40"
+    },
+    {
+        "id": 1327,
+        "name": "Kais - Taouzianat",
+        "name_ar": "قايس - تاوزيانت",
+        "wilaya_code": "40"
+    },
+    {
+        "id": 1328,
+        "name": "Bouhmama - Yabous",
+        "name_ar": "بوحمامة - يابوس",
+        "wilaya_code": "40"
+    },
+    {
+        "id": 1329,
+        "name": "Sedrata - Ain Soltane",
+        "name_ar": "سدراتة - عين سلطان",
+        "wilaya_code": "41"
+    },
+    {
+        "id": 1330,
+        "name": "Ouled Driss - Ain Zana",
+        "name_ar": "أولاد إدريس - عين الزانة",
+        "wilaya_code": "41"
+    },
+    {
+        "id": 1331,
+        "name": "Bir Bouhouche - Bir Bouhouche",
+        "name_ar": "بئر بوحوش - بئر بوحوش",
+        "wilaya_code": "41"
+    },
+    {
+        "id": 1332,
+        "name": "Taoura - Drea",
+        "name_ar": "تاورة - الدريعة",
+        "wilaya_code": "41"
+    },
+    {
+        "id": 1333,
+        "name": "Haddada - Haddada",
+        "name_ar": "الحدادة - الحدادة",
+        "wilaya_code": "41"
+    },
+    {
+        "id": 1334,
+        "name": "Mechroha - Hanencha",
+        "name_ar": "المشروحة - الحنانشة",
+        "wilaya_code": "41"
+    },
+    {
+        "id": 1335,
+        "name": "Haddada - Khedara",
+        "name_ar": "الحدادة - الخضارة",
+        "wilaya_code": "41"
+    },
+    {
+        "id": 1336,
+        "name": "Sedrata - Khemissa",
+        "name_ar": "سدراتة - خميسة",
+        "wilaya_code": "41"
+    },
+    {
+        "id": 1337,
+        "name": "Mechroha - Machroha",
+        "name_ar": "المشروحة - المشروحة",
+        "wilaya_code": "41"
+    },
+    {
+        "id": 1338,
+        "name": "M'daourouche - M'daourouche",
+        "name_ar": "مداوروش - مداوروش",
+        "wilaya_code": "41"
+    },
+    {
+        "id": 1339,
+        "name": "Merahna - Merahna",
+        "name_ar": "المراهنة - المراهنة",
+        "wilaya_code": "41"
+    },
+    {
+        "id": 1340,
+        "name": "Oum El Adhaim - Oued Kebrit",
+        "name_ar": "أم العظايم - وادي الكبريت",
+        "wilaya_code": "41"
+    },
+    {
+        "id": 1341,
+        "name": "Ouled Driss - Ouled Driss",
+        "name_ar": "أولاد إدريس - أولاد إدريس",
+        "wilaya_code": "41"
+    },
+    {
+        "id": 1342,
+        "name": "Haddada - Ouled Moumen",
+        "name_ar": "الحدادة - أولاد مومن",
+        "wilaya_code": "41"
+    },
+    {
+        "id": 1343,
+        "name": "Oum El Adhaim - Oum El Adhaim",
+        "name_ar": "أم العظايم - أم العظايم",
+        "wilaya_code": "41"
+    },
+    {
+        "id": 1344,
+        "name": "Merahna - Ouillen",
+        "name_ar": "المراهنة - ويلان",
+        "wilaya_code": "41"
+    },
+    {
+        "id": 1345,
+        "name": "M'daourouche - Ragouba",
+        "name_ar": "مداوروش - الراقوبة",
+        "wilaya_code": "41"
+    },
+    {
+        "id": 1346,
+        "name": "Bir Bouhouche - Safel El Ouiden",
+        "name_ar": "بئر بوحوش - سافل الويدان",
+        "wilaya_code": "41"
+    },
+    {
+        "id": 1347,
+        "name": "Sedrata - Sedrata",
+        "name_ar": "سدراتة - سدراتة",
+        "wilaya_code": "41"
+    },
+    {
+        "id": 1348,
+        "name": "Merahna - Sidi Fredj",
+        "name_ar": "المراهنة - سيدي فرج",
+        "wilaya_code": "41"
+    },
+    {
+        "id": 1349,
+        "name": "Souk Ahras - Souk Ahras",
+        "name_ar": "سوق أهراس - سوق أهراس",
+        "wilaya_code": "41"
+    },
+    {
+        "id": 1350,
+        "name": "Taoura - Taoura",
+        "name_ar": "تاورة - تاورة",
+        "wilaya_code": "41"
+    },
+    {
+        "id": 1351,
+        "name": "Oum El Adhaim - Terraguelt",
+        "name_ar": "أم العظايم - ترقالت",
+        "wilaya_code": "41"
+    },
+    {
+        "id": 1352,
+        "name": "M'daourouche - Tiffech",
+        "name_ar": "مداوروش - تيفاش",
+        "wilaya_code": "41"
+    },
+    {
+        "id": 1353,
+        "name": "Taoura - Zaarouria",
+        "name_ar": "تاورة - الزعرورية",
+        "wilaya_code": "41"
+    },
+    {
+        "id": 1354,
+        "name": "Bir Bouhouche - Zouabi",
+        "name_ar": "بئر بوحوش - الزوابي",
+        "wilaya_code": "41"
+    },
+    {
+        "id": 1355,
+        "name": "Gouraya - Aghbal",
+        "name_ar": "قوراية - أغبال",
+        "wilaya_code": "42"
+    },
+    {
+        "id": 1356,
+        "name": "Ahmar El Ain - Ahmer El Ain",
+        "name_ar": "أحمر العين - أحمر العين",
+        "wilaya_code": "42"
+    },
+    {
+        "id": 1357,
+        "name": "Bou Ismail - Ain Tagourait",
+        "name_ar": "بواسماعيل - عين تاقورايت",
+        "wilaya_code": "42"
+    },
+    {
+        "id": 1358,
+        "name": "Kolea - Attatba",
+        "name_ar": "القليعة - الحطاطبة",
+        "wilaya_code": "42"
+    },
+    {
+        "id": 1359,
+        "name": "Damous - Beni Mileuk",
+        "name_ar": "الداموس - بني ميلك",
+        "wilaya_code": "42"
+    },
+    {
+        "id": 1360,
+        "name": "Bou Ismail - Bou Haroun",
+        "name_ar": "بواسماعيل - بوهارون",
+        "wilaya_code": "42"
+    },
+    {
+        "id": 1361,
+        "name": "Bou Ismail - Bou Ismail",
+        "name_ar": "بواسماعيل - بواسماعيل",
+        "wilaya_code": "42"
+    },
+    {
+        "id": 1362,
+        "name": "Ahmar El Ain - Bourkika",
+        "name_ar": "أحمر العين - بورقيقة",
+        "wilaya_code": "42"
+    },
+    {
+        "id": 1363,
+        "name": "Kolea - Chaiba",
+        "name_ar": "القليعة - الشعيبة",
+        "wilaya_code": "42"
+    },
+    {
+        "id": 1364,
+        "name": "Cherchell - Cherchell",
+        "name_ar": "شرشال - شرشال",
+        "wilaya_code": "42"
+    },
+    {
+        "id": 1365,
+        "name": "Damous - Damous",
+        "name_ar": "الداموس - الداموس",
+        "wilaya_code": "42"
+    },
+    {
+        "id": 1366,
+        "name": "Fouka - Douaouda",
+        "name_ar": "فوكة - دواودة",
+        "wilaya_code": "42"
+    },
+    {
+        "id": 1367,
+        "name": "Fouka - Fouka",
+        "name_ar": "فوكة - فوكة",
+        "wilaya_code": "42"
+    },
+    {
+        "id": 1368,
+        "name": "Gouraya - Gouraya",
+        "name_ar": "قوراية - قوراية",
+        "wilaya_code": "42"
+    },
+    {
+        "id": 1369,
+        "name": "Hadjout - Hadjout",
+        "name_ar": "حجوط - حجوط",
+        "wilaya_code": "42"
+    },
+    {
+        "id": 1370,
+        "name": "Cherchell - Hadjret Ennous",
+        "name_ar": "شرشال - حجرة النص",
+        "wilaya_code": "42"
+    },
+    {
+        "id": 1371,
+        "name": "Bou Ismail - Khemisti",
+        "name_ar": "بواسماعيل - خميستي",
+        "wilaya_code": "42"
+    },
+    {
+        "id": 1372,
+        "name": "Kolea - Kolea",
+        "name_ar": "القليعة - القليعة",
+        "wilaya_code": "42"
+    },
+    {
+        "id": 1373,
+        "name": "Damous - Larhat",
+        "name_ar": "الداموس - الأرهاط",
+        "wilaya_code": "42"
+    },
+    {
+        "id": 1374,
+        "name": "Sidi Amar - Menaceur",
+        "name_ar": "سيدي أعمر - مناصر",
+        "wilaya_code": "42"
+    },
+    {
+        "id": 1375,
+        "name": "Hadjout - Merad",
+        "name_ar": "حجوط - مراد",
+        "wilaya_code": "42"
+    },
+    {
+        "id": 1376,
+        "name": "Gouraya - Messelmoun",
+        "name_ar": "قوراية - مسلمون",
+        "wilaya_code": "42"
+    },
+    {
+        "id": 1377,
+        "name": "Sidi Amar - Nador",
+        "name_ar": "سيدي أعمر - الناظور",
+        "wilaya_code": "42"
+    },
+    {
+        "id": 1378,
+        "name": "Cherchell - Sidi Ghiles",
+        "name_ar": "شرشال - سيدي غيلاس",
+        "wilaya_code": "42"
+    },
+    {
+        "id": 1379,
+        "name": "Ahmar El Ain - Sidi Rached",
+        "name_ar": "أحمر العين - سيدي راشد",
+        "wilaya_code": "42"
+    },
+    {
+        "id": 1380,
+        "name": "Cherchell - Sidi Semiane",
+        "name_ar": "شرشال - سيدي سميان",
+        "wilaya_code": "42"
+    },
+    {
+        "id": 1381,
+        "name": "Sidi Amar - Sidi-Amar",
+        "name_ar": "سيدي أعمر - سيدي عامر",
+        "wilaya_code": "42"
+    },
+    {
+        "id": 1382,
+        "name": "Tipaza - Tipaza",
+        "name_ar": "تيبازة - تيبازة",
+        "wilaya_code": "42"
+    },
+    {
+        "id": 1383,
+        "name": "Oued Endja - Ahmed Rachedi",
+        "name_ar": "وادي النجاء - أحمد راشدي",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1384,
+        "name": "Ain Beida Harriche - Ain Beida Harriche",
+        "name_ar": "عين البيضاء أحريش -  عين البيضاء أحريش",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1385,
+        "name": "Chelghoum Laid - Ain Mellouk",
+        "name_ar": "شلغوم العيد - عين الملوك",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1386,
+        "name": "Mila - Ain Tine",
+        "name_ar": "ميلة - عين التين",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1387,
+        "name": "Terrai Bainen - Amira Arres",
+        "name_ar": "ترعي باينان - اعميرة اراس",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1388,
+        "name": "Tadjenanet - Benyahia Abderrahmane",
+        "name_ar": "تاجنانت - بن يحي عبد الرحمن",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1389,
+        "name": "Bouhatem - Bouhatem",
+        "name_ar": "بوحاتم - بوحاتم",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1390,
+        "name": "Chelghoum Laid - Chelghoum Laid",
+        "name_ar": "شلغوم العيد - شلغوم العيد",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1391,
+        "name": "Sidi Merouane - Chigara",
+        "name_ar": "سيدي مروان - الشيقارة",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1392,
+        "name": "Bouhatem - Derrahi Bousselah",
+        "name_ar": "بوحاتم - دراحي بوصلاح",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1393,
+        "name": "Ain Beida Harriche - El Ayadi Barbes",
+        "name_ar": "عين البيضاء أحريش - العياضي برباس",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1394,
+        "name": "Teleghma - El Mechira",
+        "name_ar": "التلاغمة - مشيرة",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1395,
+        "name": "Ferdjioua - Ferdjioua",
+        "name_ar": "فرجيوة - فرجيوة",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1396,
+        "name": "Grarem Gouga - Grarem Gouga",
+        "name_ar": "القرارم قوقة - القرارم قوقة",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1397,
+        "name": "Grarem Gouga - Hamala",
+        "name_ar": "القرارم قوقة - حمالة",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1398,
+        "name": "Mila - Mila",
+        "name_ar": "ميلة - ميلة",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1399,
+        "name": "Tassadane Haddada - Minar Zarza",
+        "name_ar": "تسدان حدادة - مينار زارزة",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1400,
+        "name": "Chelghoum Laid - Oued Athmenia",
+        "name_ar": "شلغوم العيد - وادي العثمانية",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1401,
+        "name": "Oued Endja - Oued Endja",
+        "name_ar": "وادي النجاء - وادي النجاء",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1402,
+        "name": "Teleghma - Oued Seguen",
+        "name_ar": "التلاغمة - وادي سقان",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1403,
+        "name": "Tadjenanet - Ouled Khalouf",
+        "name_ar": "تاجنانت - أولاد اخلوف",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1404,
+        "name": "Rouached - Rouached",
+        "name_ar": "الرواشد - الرواشد",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1405,
+        "name": "Mila - Sidi Khelifa",
+        "name_ar": "ميلة - سيدي خليفة",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1406,
+        "name": "Sidi Merouane - Sidi Merouane",
+        "name_ar": "سيدي مروان - سيدي مروان",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1407,
+        "name": "Tadjenanet - Tadjenanet",
+        "name_ar": "تاجنانت - تاجنانت",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1408,
+        "name": "Tassadane Haddada - Tassadane Haddada",
+        "name_ar": "تسدان حدادة - تسدان حدادة",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1409,
+        "name": "Teleghma - Teleghma",
+        "name_ar": "التلاغمة - التلاغمة",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1410,
+        "name": "Terrai Bainen - Terrai Bainen",
+        "name_ar": "ترعي باينان - ترعي باينان",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1411,
+        "name": "Terrai Bainen - Tassala Lematai",
+        "name_ar": "ترعي باينان - تسالة لمطاعي",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1412,
+        "name": "Rouached - Tiberguent",
+        "name_ar": "الرواشد - تيبرقنت",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1413,
+        "name": "Ferdjioua - Yahia Beniguecha",
+        "name_ar": "فرجيوة - يحي بني قشة",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1414,
+        "name": "Oued Endja - Zeghaia",
+        "name_ar": "وادي النجاء - زغاية",
+        "wilaya_code": "43"
+    },
+    {
+        "id": 1415,
+        "name": "Hammam Righa - Ain-Benian",
+        "name_ar": "حمام ريغة - عين البنيان",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1416,
+        "name": "El Abadia - Ain-Bouyahia",
+        "name_ar": "العبادية - عين بويحيى",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1417,
+        "name": "Ain Defla - Ain-Defla",
+        "name_ar": "عين الدفلى - عين الدفلى",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1418,
+        "name": "Ain Lechiakh - Ain-Lechiakh",
+        "name_ar": "عين الاشياخ - عين الاشياخ",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1419,
+        "name": "Ain Lechiakh - Ain-Soltane",
+        "name_ar": "عين الاشياخ - عين السلطان",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1420,
+        "name": "Hammam Righa - Ain-Torki",
+        "name_ar": "حمام ريغة - عين التركي",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1421,
+        "name": "El Amra - Arib",
+        "name_ar": "العامرة - عريب",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1422,
+        "name": "Djendel - Birbouche",
+        "name_ar": "جندل - بربوش",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1423,
+        "name": "Bathia - Bathia",
+        "name_ar": "بطحية - بطحية",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1424,
+        "name": "Bathia - Belaas",
+        "name_ar": "بطحية - بلعاص",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1425,
+        "name": "Miliana - Ben Allal",
+        "name_ar": "مليانة - بن علال",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1426,
+        "name": "Bordj El Emir Khaled - Bir-Ould-Khelifa",
+        "name_ar": "برج الأمير خالد - بئر ولد خليفة",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1427,
+        "name": "Bordj El Emir Khaled - Bordj-Emir-Khaled",
+        "name_ar": "برج الأمير خالد - برج الأمير خالد",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1428,
+        "name": "Boumedfaa - Boumedfaa",
+        "name_ar": "بومدفع - بومدفع",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1429,
+        "name": "Djelida - Bourached",
+        "name_ar": "جليدة - بوراشد",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1430,
+        "name": "Djelida - Djelida",
+        "name_ar": "جليدة - جليدة",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1431,
+        "name": "Djelida - Djemaa Ouled Cheikh",
+        "name_ar": "جليدة - جمعة أولاد الشيخ",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1432,
+        "name": "Djendel - Djendel",
+        "name_ar": "جندل - جندل",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1433,
+        "name": "El Abadia - El-Abadia",
+        "name_ar": "العبادية - العبادية",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1434,
+        "name": "El Amra - El-Amra",
+        "name_ar": "العامرة - العامرة",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1435,
+        "name": "El Attaf - El-Attaf",
+        "name_ar": "العطاف - العطاف",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1436,
+        "name": "Rouina - El-Maine",
+        "name_ar": "الروينة - الماين",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1437,
+        "name": "Hammam Righa - Hammam-Righa",
+        "name_ar": "حمام ريغة - حمام ريغة",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1438,
+        "name": "Bathia - Hassania",
+        "name_ar": "بطحية - الحسانية",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1439,
+        "name": "Boumedfaa - Hoceinia",
+        "name_ar": "بومدفع - الحسينية",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1440,
+        "name": "Khemis - Khemis-Miliana",
+        "name_ar": "خميس - خميس مليانة",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1441,
+        "name": "El Amra - Mekhatria",
+        "name_ar": "العامرة - المخاطرية",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1442,
+        "name": "Miliana - Miliana",
+        "name_ar": "مليانة - مليانة",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1443,
+        "name": "Djendel - Oued Chorfa",
+        "name_ar": "جندل - وادي الشرفاء",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1444,
+        "name": "Ain Lechiakh - Oued Djemaa",
+        "name_ar": "عين الاشياخ - واد الجمعة",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1445,
+        "name": "Rouina - Rouina",
+        "name_ar": "الروينة - الروينة",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1446,
+        "name": "Khemis - Sidi-Lakhdar",
+        "name_ar": "خميس - سيدي الأخضر",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1447,
+        "name": "El Abadia - Tacheta Zegagha",
+        "name_ar": "العبادية - تاشتة زقاغة",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1448,
+        "name": "Bordj El Emir Khaled - Tarik-Ibn-Ziad",
+        "name_ar": "برج الأمير خالد - طارق بن زياد",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1449,
+        "name": "El Attaf - Tiberkanine",
+        "name_ar": "العطاف - تبركانين",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1450,
+        "name": "Rouina - Zeddine",
+        "name_ar": "الروينة - زدين",
+        "wilaya_code": "44"
+    },
+    {
+        "id": 1451,
+        "name": "Mecheria - Ain Ben Khelil",
+        "name_ar": "المشرية - عين بن خليل",
+        "wilaya_code": "45"
+    },
+    {
+        "id": 1452,
+        "name": "Ain Sefra - Ain Sefra",
+        "name_ar": "عين الصفراء - عين الصفراء",
+        "wilaya_code": "45"
+    },
+    {
+        "id": 1453,
+        "name": "Asla - Asla",
+        "name_ar": "عسلة - عسلة",
+        "wilaya_code": "45"
+    },
+    {
+        "id": 1454,
+        "name": "Moghrar - Djenienne Bourezg",
+        "name_ar": "مغرار - جنين بورزق",
+        "wilaya_code": "45"
+    },
+    {
+        "id": 1455,
+        "name": "Mecheria - El Biodh",
+        "name_ar": "المشرية - البيوض",
+        "wilaya_code": "45"
+    },
+    {
+        "id": 1456,
+        "name": "Mekmen Ben Amar - Kasdir",
+        "name_ar": "مكمن بن عمار - القصدير",
+        "wilaya_code": "45"
+    },
+    {
+        "id": 1457,
+        "name": "Mekmen Ben Amar - Makmen Ben Amar",
+        "name_ar": "مكمن بن عمار - مكمن بن عمار",
+        "wilaya_code": "45"
+    },
+    {
+        "id": 1458,
+        "name": "Mecheria - Mecheria",
+        "name_ar": "المشرية - المشرية",
+        "wilaya_code": "45"
+    },
+    {
+        "id": 1459,
+        "name": "Moghrar - Moghrar",
+        "name_ar": "مغرار - مغرار",
+        "wilaya_code": "45"
+    },
+    {
+        "id": 1460,
+        "name": "Naama - Naama",
+        "name_ar": "النعامة - النعامة",
+        "wilaya_code": "45"
+    },
+    {
+        "id": 1461,
+        "name": "Sfissifa - Sfissifa",
+        "name_ar": "سفيسيفة - سفيسيفة",
+        "wilaya_code": "45"
+    },
+    {
+        "id": 1462,
+        "name": "Ain Sefra - Tiout",
+        "name_ar": "عين الصفراء - تيوت",
+        "wilaya_code": "45"
+    },
+    {
+        "id": 1463,
+        "name": "Ain Kihel - Aghlal",
+        "name_ar": "عين الكيحل - أغلال",
+        "wilaya_code": "46"
+    },
+    {
+        "id": 1464,
+        "name": "Ain Larbaa - Ain El Arbaa",
+        "name_ar": "عين الأربعاء - عين الأربعاء",
+        "wilaya_code": "46"
+    },
+    {
+        "id": 1465,
+        "name": "Ain Kihel - Ain Kihal",
+        "name_ar": "عين الكيحل - عين الكيحل",
+        "wilaya_code": "46"
+    },
+    {
+        "id": 1466,
+        "name": "Ain Temouchent - Ain Temouchent",
+        "name_ar": "عين تموشنت - عين تموشنت",
+        "wilaya_code": "46"
+    },
+    {
+        "id": 1467,
+        "name": "Ain Kihel - Ain Tolba",
+        "name_ar": "عين الكيحل - عين الطلبة",
+        "wilaya_code": "46"
+    },
+    {
+        "id": 1468,
+        "name": "Ain Kihel - Aoubellil",
+        "name_ar": "عين الكيحل - عقب الليل",
+        "wilaya_code": "46"
+    },
+    {
+        "id": 1469,
+        "name": "Beni Saf - Beni Saf",
+        "name_ar": "بني صاف - بني صاف",
+        "wilaya_code": "46"
+    },
+    {
+        "id": 1470,
+        "name": "El Amria - Bouzedjar",
+        "name_ar": "العامرية - بوزجار",
+        "wilaya_code": "46"
+    },
+    {
+        "id": 1471,
+        "name": "El Maleh - Chaabat El Ham",
+        "name_ar": "المالح - شعبة اللحم",
+        "wilaya_code": "46"
+    },
+    {
+        "id": 1472,
+        "name": "Hammam Bou Hadjar - Chentouf",
+        "name_ar": "حمام بوحجر - شنتوف",
+        "wilaya_code": "46"
+    },
+    {
+        "id": 1473,
+        "name": "El Amria - El Amria",
+        "name_ar": "العامرية - العامرية",
+        "wilaya_code": "46"
+    },
+    {
+        "id": 1474,
+        "name": "El Maleh - El Maleh",
+        "name_ar": "المالح - المالح",
+        "wilaya_code": "46"
+    },
+    {
+        "id": 1475,
+        "name": "El Amria - El Messaid",
+        "name_ar": "العامرية - المساعيد",
+        "wilaya_code": "46"
+    },
+    {
+        "id": 1476,
+        "name": "Beni Saf - Emir Abdelkader",
+        "name_ar": "بني صاف - الأمير عبد القادر",
+        "wilaya_code": "46"
+    },
+    {
+        "id": 1477,
+        "name": "Hammam Bou Hadjar - Hammam Bou Hadjar",
+        "name_ar": "حمام بوحجر - حمام بوحجر",
+        "wilaya_code": "46"
+    },
+    {
+        "id": 1478,
+        "name": "Hammam Bou Hadjar - Hassasna",
+        "name_ar": "حمام بوحجر - الحساسنة",
+        "wilaya_code": "46"
+    },
+    {
+        "id": 1479,
+        "name": "El Amria - Hassi El Ghella",
+        "name_ar": "العامرية - حاسي الغلة",
+        "wilaya_code": "46"
+    },
+    {
+        "id": 1480,
+        "name": "Hammam Bou Hadjar - Oued Berkeche",
+        "name_ar": "حمام بوحجر - وادي برقش",
+        "wilaya_code": "46"
+    },
+    {
+        "id": 1481,
+        "name": "Ain Larbaa - Oued Sebbah",
+        "name_ar": "عين الأربعاء - وادي الصباح",
+        "wilaya_code": "46"
+    },
+    {
+        "id": 1482,
+        "name": "El Amria - Ouled Boudjemaa",
+        "name_ar": "العامرية - أولاد بوجمعة",
+        "wilaya_code": "46"
+    },
+    {
+        "id": 1483,
+        "name": "El Maleh - Ouled Kihal",
+        "name_ar": "المالح - أولاد الكيحل",
+        "wilaya_code": "46"
+    },
+    {
+        "id": 1484,
+        "name": "Oulhassa Gheraba - Oulhaca El Gheraba",
+        "name_ar": "ولهاصة الغرابة - ولهاصة الغرابة",
+        "wilaya_code": "46"
+    },
+    {
+        "id": 1485,
+        "name": "Ain Temouchent - Sidi Ben Adda",
+        "name_ar": "عين تموشنت - سيدي بن عدة",
+        "wilaya_code": "46"
+    },
+    {
+        "id": 1486,
+        "name": "Ain Larbaa - Sidi Boumediene",
+        "name_ar": "عين الأربعاء - سيدي بومدين",
+        "wilaya_code": "46"
+    },
+    {
+        "id": 1487,
+        "name": "Oulhassa Gheraba - Sidi Ouriache",
+        "name_ar": "ولهاصة الغرابة - سيدي ورياش",
+        "wilaya_code": "46"
+    },
+    {
+        "id": 1488,
+        "name": "Beni Saf - Sidi Safi",
+        "name_ar": "بني صاف - سيدي صافي",
+        "wilaya_code": "46"
+    },
+    {
+        "id": 1489,
+        "name": "Ain Larbaa - Tamzoura",
+        "name_ar": "عين الأربعاء - تامزورة",
+        "wilaya_code": "46"
+    },
+    {
+        "id": 1490,
+        "name": "El Maleh - Terga",
+        "name_ar": "المالح - تارقة",
+        "wilaya_code": "46"
+    },
+    {
+        "id": 1491,
+        "name": "Berriane - Berriane",
+        "name_ar": "بريان - بريان",
+        "wilaya_code": "47"
+    },
+    {
+        "id": 1492,
+        "name": "Bounoura - Bounoura",
+        "name_ar": "بونورة - بونورة",
+        "wilaya_code": "47"
+    },
+    {
+        "id": 1493,
+        "name": "Dhayet Ben Dhahoua - Dhayet Bendhahoua",
+        "name_ar": "ضاية بن ضحوة - ضاية بن ضحوة",
+        "wilaya_code": "47"
+    },
+    {
+        "id": 1494,
+        "name": "Bounoura - El Atteuf",
+        "name_ar": "بونورة - العطف",
+        "wilaya_code": "47"
+    },
+    {
+        "id": 1495,
+        "name": "El Menia - El Meniaa",
+        "name_ar": "المنيعة - المنيعة",
+        "wilaya_code": "58"
+    },
+    {
+        "id": 1496,
+        "name": "Ghardaia - Ghardaia",
+        "name_ar": "غرداية - غرداية",
+        "wilaya_code": "47"
+    },
+    {
+        "id": 1497,
+        "name": "El Guerrara - El Guerrara",
+        "name_ar": "القرارة - القرارة",
+        "wilaya_code": "47"
+    },
+    {
+        "id": 1498,
+        "name": "Mansourah - Hassi Fehal",
+        "name_ar": "المنصورة - حاسي الفحل",
+        "wilaya_code": "58"
+    },
+    {
+        "id": 1499,
+        "name": "El Menia - Hassi Gara",
+        "name_ar": "المنيعة - حاسي القارة",
+        "wilaya_code": "58"
+    },
+    {
+        "id": 1500,
+        "name": "Mansourah - Mansoura",
+        "name_ar": "المنصورة - المنصورة",
+        "wilaya_code": "47"
+    },
+    {
+        "id": 1501,
+        "name": "Metlili - Metlili",
+        "name_ar": "متليلي - متليلي",
+        "wilaya_code": "47"
+    },
+    {
+        "id": 1502,
+        "name": "Metlili - Sebseb",
+        "name_ar": "متليلي - سبسب",
+        "wilaya_code": "47"
+    },
+    {
+        "id": 1503,
+        "name": "Zelfana - Zelfana",
+        "name_ar": "زلفانة - زلفانة",
+        "wilaya_code": "47"
+    },
+    {
+        "id": 1504,
+        "name": "Yellel - Ain Rahma",
+        "name_ar": "يلل - عين الرحمة",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1505,
+        "name": "Ain Tarek - Ain-Tarek",
+        "name_ar": "عين طارق - عين طارق",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1506,
+        "name": "Ammi Moussa - Ammi Moussa",
+        "name_ar": "عمي موسى - عمي موسى",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1507,
+        "name": "El Matmar - Belaassel Bouzagza",
+        "name_ar": "المطمر - بلعسل بوزقزة",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1508,
+        "name": "Relizane - Bendaoud",
+        "name_ar": "غليزان - بن داود",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1509,
+        "name": "Zemmoura - Beni Dergoun",
+        "name_ar": "زمورة - بني درقن",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1510,
+        "name": "Sidi M'hamed Ben Ali - Beni Zentis",
+        "name_ar": "سيدي أمحمد بن علي - بني زنطيس",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1511,
+        "name": "Zemmoura - Dar Ben Abdelah",
+        "name_ar": "زمورة - دار بن عبد الله",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1512,
+        "name": "Djidiouia - Djidiouia",
+        "name_ar": "جديوية - جديوية",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1513,
+        "name": "Ammi Moussa - El Hassi",
+        "name_ar": "عمي موسى - الحاسي",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1514,
+        "name": "El H'madna - El H'madna",
+        "name_ar": "الحمادنة - الحمادنة",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1515,
+        "name": "Ammi Moussa - El Ouldja",
+        "name_ar": "عمي موسى - الولجة",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1516,
+        "name": "Mazouna - El-Guettar",
+        "name_ar": "مازونة - القطار",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1517,
+        "name": "El Matmar - El-Matmar",
+        "name_ar": "المطمر - المطمر",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1518,
+        "name": "Ain Tarek - Had Echkalla",
+        "name_ar": "عين طارق - حد الشكالة",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1519,
+        "name": "Djidiouia - Hamri",
+        "name_ar": "جديوية - حمري",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1520,
+        "name": "Yellel - Kalaa",
+        "name_ar": "يلل - القلعة",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1521,
+        "name": "Oued Rhiou - Lahlef",
+        "name_ar": "وادي رهيو - لحلاف",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1522,
+        "name": "Mazouna - Mazouna",
+        "name_ar": "مازونة - مازونة",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1523,
+        "name": "Sidi M'hamed Ben Ali - Mediouna",
+        "name_ar": "سيدي أمحمد بن علي - مديونة",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1524,
+        "name": "Mendes - Mendes",
+        "name_ar": "منداس - منداس",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1525,
+        "name": "Oued Rhiou - Merdja Sidi Abed",
+        "name_ar": "وادي رهيو - مرجة سيدي عابد",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1526,
+        "name": "Oued Rhiou - Ouarizane",
+        "name_ar": "وادي رهيو - واريزان",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1527,
+        "name": "El H'madna - Oued El Djemaa",
+        "name_ar": "الحمادنة - وادي الجمعة",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1528,
+        "name": "Mendes - Oued Essalem",
+        "name_ar": "منداس - وادي السلام",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1529,
+        "name": "Oued Rhiou - Oued-Rhiou",
+        "name_ar": "وادي رهيو - وادي رهيو",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1530,
+        "name": "Ammi Moussa - Ouled Aiche",
+        "name_ar": "عمي موسى - أولاد يعيش",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1531,
+        "name": "Djidiouia - Ouled Sidi Mihoub",
+        "name_ar": "جديوية - أولاد سيدي الميهوب",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1532,
+        "name": "Ramka - Ramka",
+        "name_ar": "الرمكة - الرمكة",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1533,
+        "name": "Relizane - Relizane",
+        "name_ar": "غليزان - غليزان",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1534,
+        "name": "El Matmar - Sidi Khettab",
+        "name_ar": "المطمر - سيدي  خطاب",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1535,
+        "name": "Mendes - Sidi Lazreg",
+        "name_ar": "منداس - سيدي لزرق",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1536,
+        "name": "Sidi M'hamed Ben Ali - Sidi M'hamed Benali",
+        "name_ar": "سيدي أمحمد بن علي - سيدي أمحمد بن علي",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1537,
+        "name": "El Matmar - Sidi M'hamed Benaouda",
+        "name_ar": "المطمر - سيدي امحمد بن عودة",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1538,
+        "name": "Yellel - Sidi Saada",
+        "name_ar": "يلل - سيدي سعادة",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1539,
+        "name": "Ramka - Souk El Had",
+        "name_ar": "الرمكة - سوق الحد",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1540,
+        "name": "Yellel - Yellel",
+        "name_ar": "يلل - يلل",
+        "wilaya_code": "48"
+    },
+    {
+        "id": 1541,
+        "name": "Zemmoura - Zemmoura",
+        "name_ar": "زمورة - زمورة",
+        "wilaya_code": "48"
     }
 ]

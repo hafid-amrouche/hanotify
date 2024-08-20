@@ -1,4 +1,6 @@
 import re
+import hashlib
+
 
 def is_acceptable_string(s):
     # Define the regex pattern to allow only Latin letters, numbers, and specified special characters
@@ -20,3 +22,20 @@ def is_only_latin_and_arabic_letters(s):
     
     # Test if the entire string matches the regex pattern
     return bool(regex.match(s))
+
+def get_client_ip(request):
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[0]
+    else:
+        ip = request.META.get('REMOTE_ADDR')
+    return ip
+
+def generate_token_from_id(id_value):
+    # Convert the ID to a string if it's not already
+    id_str = str(id_value)
+    
+    # Hash the ID using SHA-256
+    hashed_id = hashlib.sha256(id_str.encode()).hexdigest()
+    
+    return hashed_id

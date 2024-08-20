@@ -15,26 +15,20 @@ from django.contrib.auth import authenticate
 from django.contrib.auth.models import User 
 from functions import is_acceptable_string, is_only_latin_and_arabic_letters
 from time import sleep
-
-
-# Create your views here.
+from store.models import StateShippingCost
+from contants import media_files_domain
+import requests
+from django.conf import settings
+from store.models import Store
 
 @api_view(['POST'])
 def login(request):
-    print(request.headers)
     sleep(1)
     data = json.loads(request.body)
     username= data.get('username').lower()
     password = data.get('password')
     user = authenticate(request, username=username, password=password)
     if not user:
-        # # check if his account is deleted
-        # accountDeleted = DeletedAccount.objects.filter(username=username, password=password)
-        # if accountDeleted.exists():
-        #     message = {'detail': _('Your account has been deleted.')}
-        #     accountDeleted.first().delete()
-        #     return JsonResponse(message, status=400)  
-        
         message = {'detail': _('There is no user with this username and password.')}
         return JsonResponse(message, status=400)
     serializer = UserSerializerWithToken(user).data
@@ -92,19 +86,31 @@ def register(request):
             username=username,
             password=make_password(password)
         )
+        store = Store.objects.create(owner=user)
         # UserPassword.objects.create(
         #     user = user,
         #     password = password
         # )
-
+        store.sub_domain = store.id
+        store.save()
+        shipping_costs = [StateShippingCost(
+            store= store,
+            state_id = state_id,
+        ) for state_id in range(1, 59)]
+        StateShippingCost.objects.bulk_create(shipping_costs)
         userData = UserSerializerWithToken(user, many=False).data
-        UserToken.objects.create(
-            user_id = user.id,
-            token = userData['token']
-        )
+
+        receiver_url = media_files_domain + '/make-user-directory'
+        response = requests.post(receiver_url,{
+            'user_id': user.id,
+            'MESSAGING_KEY': settings.MESSAGING_KEY
+        })
+        if not response.ok:
+            raise
         return Response(userData)
     
     except:
+        raise
         try:
             user.delete()
         except :
