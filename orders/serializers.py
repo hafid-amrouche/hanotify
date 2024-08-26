@@ -38,6 +38,57 @@ class OrderPreviewSerializer(serializers.ModelSerializer):
             'shipping_to_home',
             'shippingCity',
             'shipping_address',
+            'shipping_state_id',
+            'shipping_city_id',
+            'made_by_seller',
+            'seller_note',
+            'client_note'
+        ]
+
+class AbndonedOrderPreviewSerializer(serializers.ModelSerializer):
+    
+    shippingState = serializers.SerializerMethodField(read_only=True)
+    def get_shippingState(self, order):
+        return order.shipping_state.name
+    
+    status=serializers.SerializerMethodField(read_only=True)
+    def get_status(self, order):
+        if order.status:
+            return {
+                'text': order.status.text,
+                'icon': order.status.icon,
+                'id': order.id,
+            }
+        else:
+            return None
+    
+    shippingCity = serializers.SerializerMethodField(read_only=True)
+    def get_shippingCity(self, order):
+        return order.shipping_city.name
+
+
+    phone_number = serializers.SerializerMethodField(read_only=True)
+    def get_phone_number(self, order):
+        return order.phone_number if order.show_phone_number else 'locked'
+    class Meta:
+        model = Order
+        fields= [
+            'id',
+            'product',
+            'created_at',
+            'full_name',
+            'shippingState',
+            'status', # order from ordering and indexing
+            'product_quantity',
+            'shipping_to_home',
+            'shippingCity',
+            'shipping_address',
+            'shipping_state_id',
+            'shipping_city_id',
+            'made_by_seller',
+            'phone_number',
+            'seller_note',
+            'client_note'
         ]
 
 class OrderDetailsSerializer(serializers.ModelSerializer):     

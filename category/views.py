@@ -7,7 +7,7 @@ from contants import media_files_domain
 from django.conf import settings
 import requests
 from django.utils.translation import gettext as _
-from django.utils.text import slugify
+from functions import custom_slugify
 
 
 
@@ -24,18 +24,21 @@ def addCategory(request):
     slug = data.get('slug').strip()
     description = data.get('description')
     image = data.get('image')
+    store= request.user.stores.first()
     category = Category.objects.create(
-        store= request.user.stores.first(),
+        store= store,
         user=request.user,
         label= title,
         description= description,
         image=image,
-        slug= slug or slugify(title),
+        slug= slug or custom_slugify(title),
     )
 
     receiver_url = media_files_domain + '/save-category'
     data = json.dumps({
+        'category_id': category.id,
         'category_image': image,
+        'store_id': store.id,
         'MESSAGING_KEY' : settings.MESSAGING_KEY,
     })
     try:

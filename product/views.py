@@ -8,7 +8,6 @@ from django.conf import settings
 import time
 from django.utils.translation import gettext as _
 from .serialiers import SearchedProductTypeASerializer, SearchedProductDetailedSerializer
-from django.utils.text import slugify
 from django.db.models import F
 from django.db.models.functions import Length
 from django.db.models import F
@@ -16,6 +15,7 @@ from django.core.paginator import Paginator, EmptyPage
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
+from functions import custom_slugify
 
 
 @api_view(['POST'])
@@ -37,6 +37,7 @@ def initiate_product(request):
             product.save()
             data = {
                 'product_id' : product.id,
+                'store_id' : store.id,
                 'user_id': request.user.id,
                 'MESSAGING_KEY' : settings.MESSAGING_KEY
             }
@@ -47,6 +48,7 @@ def initiate_product(request):
                 if response.ok:
                     return JsonResponse({'product_id': product.id}, status=200)
                 else:
+                    product.delete()
                     raise
 
             except Exception as e:
@@ -98,7 +100,7 @@ def add_product(request):
         
         slug = data.get('slug').strip()
         if not slug:
-            slug = slugify(title)
+            slug = custom_slugify(title)
 
         mini_description = data.get('miniDescription') #
         selected_categories= data.get('selectedCategories')#
@@ -106,7 +108,6 @@ def add_product(request):
         original_price = data.get('originalPrice') #
         discount = data.get('discount') #
         shipping_cost_by_state = data.get('shippingCostByState')#
-        ask_for_city = data.get('askForCity') or False
         ask_for_address = data.get('askForAddress') or False
         variants = data.get('variants') #
         prices_and_images_list = data.get('pricesAndImagesList') #
@@ -131,9 +132,6 @@ def add_product(request):
 
         product.slug = slug
         new_data['slug'] = slug
-
-        product.ask_for_city = ask_for_city
-        new_data['askForCity'] = ask_for_city
 
         product.ask_for_address = ask_for_address
         new_data['askForAddress'] = ask_for_address
@@ -265,7 +263,7 @@ def edit_product(request):
         
         slug = data.get('slug').strip()
         if not slug:
-            slug = slugify(title)
+            slug = custom_slugify(title)
 
         mini_description = data.get('miniDescription') #
         selected_categories= data.get('selectedCategories')#
@@ -273,7 +271,6 @@ def edit_product(request):
         original_price = data.get('originalPrice') #
         discount = data.get('discount') #
         shipping_cost_by_state = data.get('shippingCostByState')#
-        ask_for_city = data.get('askForCity') or False
         ask_for_address = data.get('askForAddress') or False
         variants = data.get('variants') #
         prices_and_images_list = data.get('pricesAndImagesList') #
@@ -303,9 +300,6 @@ def edit_product(request):
 
         product.slug = slug
         new_data['slug'] = slug
-
-        product.ask_for_city = ask_for_city
-        new_data['askForCity'] = ask_for_city
 
         product.ask_for_address = ask_for_address
         new_data['askForAddress'] = ask_for_address
@@ -454,7 +448,8 @@ def incerement_product_views(request):
 def get_user_products(request):
     time.sleep(1)
     search_text = request.GET.get('search-text')
-    searched_products = Product.objects.filter(title__icontains = search_text, is_available=True).annotate(text_length=Length('title')).order_by('title')[:10]
+    store_id = request.GET.get('store_id')
+    searched_products = Product.objects.filter(user=request.user, store_id=store_id, title__icontains = search_text, is_available=True).annotate(text_length=Length('title')).order_by('title')[:10]
     serialized = SearchedProductTypeASerializer(searched_products, many=True).data
     return Response(serialized, status=200)
 
@@ -499,9 +494,21 @@ def get_products_for_seller(request):
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_product_variants(request):
+    time.sleep(1)
     product = request.user.products.get(id= request.GET.get('product_id'))
+    if product.variants:
+        variants ={}
+        for item in product.variants.values():
+            variants[item['name']] = item['options']['1']['label']
+    else:
+        variants = None
+
+    price = product.price
+    original_price = product.original_price
     return JsonResponse({
-        'variants' : product.variants
+        'variants' : variants,
+        'price': price,
+        'originalPrice': original_price
     })
 
 @api_view(['POST'])

@@ -13,3 +13,4 @@ class UserToken(models.Model):
     last_updated = models.DateTimeField(auto_now=True)
     def is_expired(self):
         return timezone.now() - self.created_at > timezone.timedelta(seconds=30)
+

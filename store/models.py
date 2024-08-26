@@ -7,18 +7,23 @@ from orders.models import Order
 
 class Store(models.Model):
     owner= models.ForeignKey(User, on_delete=models.CASCADE, related_name='stores')
+
+    # Store design
+    logo= models.TextField(null=True, blank=True)
+    color_primary=models.CharField(max_length=7, default='#446ec3')
+    borders_rounded=models.BooleanField(default=True)
+
     name=models.CharField(max_length=100, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
     domain = models.CharField(max_length=255, unique=True, null=True, blank=True)
     has_custom_domain = models.BooleanField(default=False)
     sub_domain = models.CharField(max_length=255, unique=True, null=True, blank=True)
-    logo= models.ForeignKey(Image, on_delete=models.SET_NULL, null=True, blank=True)
-    location = models.ForeignKey(Location, on_delete=models.SET_NULL, blank=True, null=True)
     policies = models.JSONField(blank=True, null=True)
     phone_numbers = models.JSONField(blank=True, null=True)
     facebook = models.TextField(blank=True, null=True)
     instagram = models.TextField(blank=True, null=True)
     youtube = models.TextField(blank=True, null=True)
+    ask_for_client_note = models.BooleanField(default=True)
 
 class IpAddress(models.Model):
     visitor = models.ForeignKey('store.Visitor', on_delete=models.CASCADE, related_name='ip_addresses')
@@ -50,3 +55,10 @@ class GSInfo(models.Model):
     store = models.OneToOneField(Store, on_delete=models.CASCADE, related_name='gs_info')
     spreadsheet_id = models.CharField(max_length=220)
     sheet_name = models.CharField(max_length=220)
+
+class FBPixel(models.Model):
+    store = models.OneToOneField(Store, on_delete=models.CASCADE, related_name='fb_pixel')
+    pixel_id = models.CharField(max_length=20)
+
+class VIPStore(models.Model):
+    store = models.OneToOneField(Store, on_delete=models.CASCADE, related_name='vip_store')

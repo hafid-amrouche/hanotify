@@ -3,7 +3,7 @@ from rest_framework.permissions import IsAuthenticated
 from django.http import JsonResponse
 import json
 from django.utils.translation import gettext as _
-from .models import Visitor, Store, IpAddress, GSInfo
+from .models import Visitor, Store, IpAddress, GSInfo, FBPixel
 from django.utils import timezone
 from functions import generate_token_from_id, get_client_ip
 
@@ -11,10 +11,10 @@ from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from django.conf import settings
 from time import sleep
-
+from contants import media_files_domain
+import requests
         
 # Create your views here.
-
 
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
@@ -124,7 +124,6 @@ def unblock_visitor(request):
         'blocked': False
     })
 
-
 def get_google_sheets_service():
     SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
     SERVICE_ACCOUNT_FILE = settings.BASE_DIR / 'json_files/service_account.json'
@@ -134,7 +133,6 @@ def get_google_sheets_service():
     
     service = build('sheets', 'v4', credentials=credentials)
     return service
-
 
 def check_sheet_validity(spreadsheet_id, sheet_name):
     service = get_google_sheets_service()
@@ -193,7 +191,6 @@ def check_and_set_initial_data(spreadsheet_id, sheet_name, initial_data):
         print(f"An error occurred: {str(e)}")
         return False
 
-
 initial_data = [
     _('ID'),
     _('Full name'),
@@ -221,7 +218,7 @@ def set_up_google_sheets(request):
         gs_info.spreadsheet_id = spreadsheet_id
         gs_info.sheet_name = sheet_name
         gs_info.save()
-        return JsonResponse({'detail': 'You google sheets is connected successfully.'})
+        return JsonResponse({'detail': 'Your google sheets is connected successfully.'})
     else:
         return JsonResponse({'detail': 'Your google sheets is not connected, make sure your shared your google sheet with the email we provided.'}, status=400)
     
@@ -255,4 +252,87 @@ def delete_gs_info(request):
             {'detail': 'Deleted'}
         )
 
+def update_fb_pixel(fb_pixel, store_id):
+    receiver_url = media_files_domain + '/save-fb-pixel'
+    response = requests.post(receiver_url,{
+        'store_id': store_id,
+        'fb_pixel' :  fb_pixel,
+        'MESSAGING_KEY': settings.MESSAGING_KEY
+    })
+    if not response.ok:
+        raise
 
+@api_view(['POST'])
+def set_up_fb_pixel(request):
+    data = json.loads(request.body)
+    store_id = data.get('store_id')
+    store = request.user.stores.get(id = store_id)
+    pixel_id = data.get('pixel_id')
+    update_fb_pixel(pixel_id, store_id)
+    [fb_pixel, created] = FBPixel.objects.get_or_create(store=store)
+    fb_pixel.pixel_id = pixel_id
+    fb_pixel.save()
+    return JsonResponse({'detail': 'Your facebook pixel is connected successfully.'})
+    
+
+@api_view(['GET'])
+def get_fb_pxel(request):
+    data = request.GET
+    store = request.user.stores.get(id = data.get('store_id'))
+    try:
+        fb_pixel = store.fb_pixel
+        return JsonResponse(
+            {'fbPixel': fb_pixel.pixel_id}
+        )
+    except:
+        return JsonResponse({
+            'fbPixel': None
+        })
+    
+@api_view(['POST'])
+def delete_fb_pixel(request):
+    sleep(1)
+    data = json.loads(request.body)
+    store_id = data.get('store_id')
+    store = request.user.stores.get(id=store_id)
+    receiver_url = media_files_domain + '/delete-fb-pixel'
+
+    requests.post(receiver_url,{
+        'store_id': store_id,
+        'MESSAGING_KEY': settings.MESSAGING_KEY
+    })
+    try:
+        store.fb_pixel.delete()
+    except:
+        pass
+    return JsonResponse(
+            {'detail': 'Deleted'}
+        )
+
+@api_view(['POST'])
+def update_store_info(request):
+    data = json.loads(request.body)
+    store_id = data.get('store_id')
+    store = request.user.stores.get(id=store_id)
+    store.primary_color = data.get('primary_color')
+    store.borders_rounded = data.get('borders_rounded')
+    store.logo = data.get('logo')
+
+    receiver_url = media_files_domain + '/save-store'
+    response = requests.post(receiver_url,{
+        'store_id': store.id,
+        'store_logo_url' :  data.get('logo'),
+        'store_data': json.dumps({
+            'primaryColor': data.get('primary_color'),
+            'bordersRounded': data.get('borders_rounded'),
+            'logo': data.get('logo'),
+            'id': store_id
+        }),
+        'MESSAGING_KEY': settings.MESSAGING_KEY
+    })
+    if not response.ok:
+        raise
+
+    store.save()
+    return JsonResponse({'detail': 'success'})
+    

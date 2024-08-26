@@ -5,16 +5,6 @@ from googleapiclient.discovery import build
 from django.conf import settings
 from django.utils.translation import gettext as _
 
-
-
-# Create your models here.
-product = {
-    'image': '',
-    'title': '',
-    'price': '',
-    'shipping_price': '',
-}
-
 class Order(models.Model):
     store= models.ForeignKey('store.Store', on_delete=models.CASCADE, related_name='orders', null=True, blank=True)
     product =models.JSONField(null=True, blank=True)
@@ -29,6 +19,10 @@ class Order(models.Model):
     status = models.ForeignKey('store.Status', on_delete=models.SET_NULL, null=True, blank=True, related_name='orders')
     visitor = models.ForeignKey('store.Visitor', on_delete=models.SET_NULL, null=True, blank=True, related_name='orders')
     product_quantity = models.PositiveSmallIntegerField(default=1)
+    made_by_seller = models.BooleanField(default=False)
+    show_phone_number = models.BooleanField(default=False)
+    seller_note = models.TextField(max_length=1000, null=True, blank=True)
+    client_note = models.TextField(max_length=1000, null=True, blank=True)
 
     token = models.TextField(null=True, blank=True)
     class Meta:
@@ -96,8 +90,5 @@ def post_create(sender, instance, created,  **kwargs):
             append_order_to_sheet(order_data, spreadsheet_id, sheet_name)
         except:
             pass
-
-
-    
 
 post_save.connect(post_create, Order)

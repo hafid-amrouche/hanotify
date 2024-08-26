@@ -8,6 +8,7 @@ from contants import media_files_domain
 
 def produt_pre_delete(sender, instance, **kwargs):
     data = {
+        'store_id': instance.store.id,
         'product_id' : instance.id,
         'MESSAGING_KEY' : settings.MESSAGING_KEY,
         'user_id': instance.user.id,

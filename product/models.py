@@ -24,7 +24,6 @@ class Product(models.Model):
     all_products_related = models.BooleanField(default=False)
     selected_categories= models.ManyToManyField(Category, related_name='products', blank=True)
     variants = models.JSONField(null=True, blank=True)
-    ask_for_city= models.BooleanField(default=True)
     ask_for_address=models.BooleanField(default=False)
     sku = models.CharField(max_length=50, null=True, blank=True)
     active = models.BooleanField(default=True)

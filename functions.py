@@ -1,5 +1,7 @@
 import re
 import hashlib
+import re
+from django.utils.text import slugify as django_slugify
 
 
 def is_acceptable_string(s):
@@ -39,3 +41,16 @@ def generate_token_from_id(id_value):
     hashed_id = hashlib.sha256(id_str.encode()).hexdigest()
     
     return hashed_id
+
+def ship_to(company_name, order):
+    pass
+
+def custom_slugify(value):
+    # Convert spaces or underscores to hyphens
+    value = re.sub(r'[\s_]+', '-', value)
+    
+    # Remove any characters that aren't alphanumeric, hyphens, or Arabic characters
+    value = re.sub(r'[^\w\u0621-\u064A-]+', '', value, flags=re.UNICODE)
+    
+    # Slugify using Django's default slugify
+    return django_slugify(value, allow_unicode=True)
