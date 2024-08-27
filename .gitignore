@@ -30,6 +30,7 @@ db.sqlite3
 media
 local_settings.py
 hanotify/settings.py
+contants.py
 
 # If your build process includes running collectstatic, add these:
 static/
