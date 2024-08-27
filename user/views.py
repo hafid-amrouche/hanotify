@@ -102,7 +102,12 @@ def register(request):
 
         receiver_url = media_files_domain + '/make-user-directory'
         response = requests.post(receiver_url,{
-            'store_id': store.id,
+            'store': json.dumps({
+                'id': store.id,
+                'logo': None,
+                'BordersRounded': True,
+                'primaryColor': store.color_primary
+            }),
             'user_id': user.id,
             'MESSAGING_KEY': settings.MESSAGING_KEY
         })
