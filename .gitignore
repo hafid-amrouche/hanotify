@@ -29,9 +29,9 @@ build/
 db.sqlite3
 media
 local_settings.py
+hanotify/settings.py
 
 # If your build process includes running collectstatic, add these:
-staticfiles/
 static/
 
 # Django migrations
