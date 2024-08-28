@@ -16,7 +16,7 @@ from django.contrib.auth.models import User
 from functions import is_acceptable_string, is_only_latin_and_arabic_letters
 from time import sleep
 from store.models import StateShippingCost
-from contants import media_files_domain
+from contants import media_files_domain, stores_domain
 import requests
 from django.conf import settings
 from store.models import Store
@@ -91,7 +91,7 @@ def register(request):
         #     user = user,
         #     password = password
         # )
-        store.sub_domain = store.id
+        store.domain = f'store-{store.id}.{stores_domain}'
         store.save()
         shipping_costs = [StateShippingCost(
             store= store,
@@ -100,9 +100,10 @@ def register(request):
         StateShippingCost.objects.bulk_create(shipping_costs)
         userData = UserSerializerWithToken(user, many=False).data
 
-        receiver_url = media_files_domain + '/make-user-directory'
+        receiver_url = media_files_domain + '/files/make-user-directory'
         response = requests.post(receiver_url,{
             'store': json.dumps({
+                'domain': store.domain,
                 'id': store.id,
                 'logo': None,
                 'BordersRounded': True,
@@ -116,11 +117,11 @@ def register(request):
         return Response(userData)
     
     except:
-        raise
         try:
             user.delete()
         except :
             pass
+        raise
         message = {'detail': _('User was not created please try again')}
         return JsonResponse(message, status=400)
 

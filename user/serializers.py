@@ -7,7 +7,7 @@ from store.serializers import StateCostSerializer
 class UserSerializerWithToken(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['id', 'username', 'full_name' ,'email', 'is_staff', 'token', 'refresh', 'storeLogo', 'shippingCosts', 'storeId', 'storeDomain']
+        fields = ['id', 'username', 'full_name' ,'email', 'is_staff', 'token', 'refresh', 'storeLogo', 'shippingCosts', 'storeId', 'domain']
 
     token = serializers.SerializerMethodField(read_only=True)
     def get_token(self, obj):
@@ -36,7 +36,7 @@ class UserSerializerWithToken(serializers.ModelSerializer):
     def get_storeId(self, obj):
         return obj.stores.first().id
     
-    storeDomain = serializers.SerializerMethodField(read_only=True)
-    def get_storeDomain(self, obj):
+    domain = serializers.SerializerMethodField(read_only=True)
+    def get_domain(self, obj):
         store = obj.stores.first()
-        return f'{store.sub_domain}.{stores_domain}' if not store.has_custom_domain else store.custom_domain
+        return store.domain

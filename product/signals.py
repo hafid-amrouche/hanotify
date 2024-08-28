@@ -13,7 +13,7 @@ def produt_pre_delete(sender, instance, **kwargs):
         'MESSAGING_KEY' : settings.MESSAGING_KEY,
         'user_id': instance.user.id,
     }
-    receiver_url = media_files_domain + '/delete-product'
+    receiver_url = media_files_domain + '/files/delete-product'
     response = requests.post(receiver_url, data=data)
     if not response.ok:
         print('error product/signals 18', response)

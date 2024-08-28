@@ -17,7 +17,6 @@ class Store(models.Model):
     description = models.TextField(null=True, blank=True)
     domain = models.CharField(max_length=255, unique=True, null=True, blank=True)
     has_custom_domain = models.BooleanField(default=False)
-    sub_domain = models.CharField(max_length=255, unique=True, null=True, blank=True)
     policies = models.JSONField(blank=True, null=True)
     phone_numbers = models.JSONField(blank=True, null=True)
     facebook = models.TextField(blank=True, null=True)
