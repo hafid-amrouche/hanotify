@@ -59,7 +59,7 @@ def initiate_product(request):
 @permission_classes([IsAuthenticated])
 def save_gallery(request):
     if request.method == 'POST':
-        time.sleep(1)
+        
         data = json.loads(request.body)
         product_id = data.get('product_id')
         gallery_images = data.get('gallery_images')
@@ -85,7 +85,7 @@ def save_gallery(request):
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def add_product(request):
-    time.sleep(1)
+    
     data = json.loads(request.body)
     product_id= data.get('productId') #
     product = request.user.products.get(id=product_id)
@@ -248,7 +248,7 @@ def add_product(request):
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def edit_product(request):
-    time.sleep(1)
+    
     data = json.loads(request.body)
     product_id= data.get('productId') #
     product = request.user.products.get(id=product_id)
@@ -446,7 +446,7 @@ def incerement_product_views(request):
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_user_products(request):
-    time.sleep(1)
+    
     search_text = request.GET.get('search-text')
     store_id = request.GET.get('store_id')
     searched_products = Product.objects.filter(user=request.user, store_id=store_id, title__icontains = search_text, is_available=True).annotate(text_length=Length('title')).order_by('title')[:10]
@@ -455,7 +455,7 @@ def get_user_products(request):
 
 @api_view(['GET'])
 def get_related_products(request):
-    time.sleep(1)
+    
     product = Product.objects.get(id=request.GET.get('product_id'))
     if product.all_products_related:
         related_products = Product.objects.filter(user=product.user, is_available=True).exclude(id = product.id).order_by('-id')[:20]
@@ -494,7 +494,7 @@ def get_products_for_seller(request):
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_product_variants(request):
-    time.sleep(1)
+    
     product = request.user.products.get(id= request.GET.get('product_id'))
     if product.variants:
         variants ={}
@@ -514,7 +514,6 @@ def get_product_variants(request):
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def toggle_product_state(request):
-    time.sleep(0.5)
     data = json.loads(request.body)
     product = Product.objects.get(
         user= request.user,

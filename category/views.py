@@ -14,7 +14,7 @@ from functions import custom_slugify
 # Create your views here.
 @api_view(['POST'])
 def addCategory(request):
-    time.sleep(1)
+    
     data = json.loads(request.body)
     title = data.get('title').strip()
     if not title:
@@ -59,5 +59,4 @@ def addCategory(request):
     
 @api_view(['GET'])
 def get_categories(request):
-    time.sleep(2)
     return JsonResponse(list(request.user.categories.values('id', 'label', 'image')), safe=False )

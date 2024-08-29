@@ -23,7 +23,7 @@ from store.models import Store
 
 @api_view(['POST'])
 def login(request):
-    sleep(1)
+    
     data = json.loads(request.body)
     username= data.get('username').lower()
     password = data.get('password')
@@ -40,7 +40,7 @@ def login(request):
 
 @api_view(['POST'])
 def register(request):
-    sleep(1)
+    
     try :
         data = json.loads(request.body)
         first_name = data['first_name']
@@ -128,7 +128,7 @@ def register(request):
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def logout(request):
-    sleep(1)
+    
     data = json.loads(request.body)
     try :
         token = data.get('token')

@@ -235,7 +235,7 @@ def get_gs_info(request):
     
 @api_view(['POST'])
 def delete_gs_info(request):
-    sleep(1)
+    
     data = json.loads(request.body)
     store = request.user.stores.get(id = data.get('store_id'))
     try:
@@ -285,7 +285,7 @@ def get_fb_pxel(request):
     
 @api_view(['POST'])
 def delete_fb_pixel(request):
-    sleep(1)
+    
     data = json.loads(request.body)
     store_id = data.get('store_id')
     store = request.user.stores.get(id=store_id)

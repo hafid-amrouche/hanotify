@@ -24,7 +24,7 @@ from django.utils.translation import gettext as _
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_orders(request):
-    sleep(1)
+    
     data = request.GET
     page_number = data.get('page')
     store = request.user.stores.get(id = data.get('store_id'))
@@ -80,7 +80,7 @@ def get_orders(request):
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_abandoned_orders(request):
-    sleep(1)
+    
     data = request.GET
     page_number = data.get('page')
     store = request.user.stores.get(id = data.get('store_id'))
@@ -136,7 +136,6 @@ def get_abandoned_orders(request):
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_order(request):
-    sleep(0.8)
     data = request.GET
     store = request.user.stores.get(id = data.get('store_id'))
     order = Order.objects.get( store=store, is_abandoned=False, id=data.get('id'))  # Get all products from the database
@@ -148,7 +147,6 @@ def get_order(request):
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_abandoned_order(request):
-    sleep(0.8)
     data = request.GET
     store = request.user.stores.get(id = data.get('store_id'))
     order = Order.objects.get( store=store, is_abandoned=True, id=data.get('id'))  # Get all products from the database
@@ -421,7 +419,6 @@ def confirm_order(request): ## add this front end
     
 @api_view(['POST'])
 def change_orders_status(request):
-    sleep(0.5)
     data = json.loads(request.body)
     orders_id = data.get('orders_id')
     store_id = data.get('store_id')
@@ -434,7 +431,6 @@ def change_orders_status(request):
 
 @api_view(['POST'])
 def delete_orders(request):
-    sleep(0.5)
     try:
         data = json.loads(request.body)
         store = Store.objects.get(owner = request.user, id= data.get('store_id'))
@@ -449,7 +445,7 @@ def delete_orders(request):
    
 @api_view(['POST'])
 def create_user_order(request): ## add this front end
-    sleep(1)
+    
     data = json.loads(request.body)
     phone_number = data.get('phone_number')
     if len(phone_number) < 0 or (not phone_number.isdigit()):
@@ -514,7 +510,7 @@ def create_user_order(request): ## add this front end
 
 @api_view(['POST'])
 def update_user_order(request): ## add this front end
-    sleep(1)
+    
     data = json.loads(request.body)
     phone_number = data.get('phone_number')
     if len(phone_number) < 0 or (not phone_number.isdigit()):
@@ -567,7 +563,7 @@ def update_user_order(request): ## add this front end
 
 @api_view(['POST'])
 def reveal_phone_number(request):
-    sleep(1)
+    
     data = json.loads(request.body)
     store_id = data.get('store_id')
     store = request.user.stores.get(id = store_id)
