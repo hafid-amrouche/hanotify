@@ -100,7 +100,7 @@ def register(request):
         StateShippingCost.objects.bulk_create(shipping_costs)
         userData = UserSerializerWithToken(user, many=False).data
 
-        receiver_url = media_files_domain + '/files/make-user-directory'
+        receiver_url = media_files_domain + '/make-user-directory'
         response = requests.post(receiver_url,{
             'store': json.dumps({
                 'domain': store.domain,

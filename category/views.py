@@ -34,7 +34,7 @@ def addCategory(request):
         slug= slug or custom_slugify(title),
     )
 
-    receiver_url = media_files_domain + '/files/save-category'
+    receiver_url = media_files_domain + '/save-category'
     data = json.dumps({
         'category_id': category.id,
         'category_image': image,

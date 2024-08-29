@@ -247,7 +247,7 @@ def delete_gs_info(request):
         )
 
 def update_fb_pixel(fb_pixel, store_id):
-    receiver_url = media_files_domain + '/files/save-fb-pixel'
+    receiver_url = media_files_domain + '/save-fb-pixel'
     response = requests.post(receiver_url,{
         'store_id': store_id,
         'fb_pixel' :  fb_pixel,
@@ -289,7 +289,7 @@ def delete_fb_pixel(request):
     data = json.loads(request.body)
     store_id = data.get('store_id')
     store = request.user.stores.get(id=store_id)
-    receiver_url = media_files_domain + '/files/delete-fb-pixel'
+    receiver_url = media_files_domain + '/delete-fb-pixel'
 
     requests.post(receiver_url,{
         'store_id': store_id,
@@ -312,7 +312,7 @@ def update_store_info(request):
     store.borders_rounded = data.get('borders_rounded')
     store.logo = data.get('logo')
 
-    receiver_url = media_files_domain + '/files/save-store'
+    receiver_url = media_files_domain + '/save-store'
     response = requests.post(receiver_url,{
         'store_id': store.id,
         'store_logo_url' :  data.get('logo'),

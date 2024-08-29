@@ -43,7 +43,7 @@ def initiate_product(request):
             }
             
             try:
-                receiver_url = media_files_domain + '/files/make-product-directory'
+                receiver_url = media_files_domain + '/make-product-directory'
                 response = requests.post(receiver_url, data=data)
                 if response.ok:
                     return JsonResponse({'product_id': product.id}, status=200)
@@ -65,10 +65,10 @@ def save_gallery(request):
         gallery_images = data.get('gallery_images')
         product = request.user.products.get(id=product_id)
         product.gallery_images = json.dumps(gallery_images) if gallery_images else None
-        product.image = f'{media_files_domain}/files/resize?width=300&url=' + gallery_images[0] if gallery_images else None
+        product.image = f'{media_files_domain}/resize?width=300&url=' + gallery_images[0] if gallery_images else None
         product.save()
 
-        receiver_url = receiver_url = media_files_domain + '/files/save-galley-images'
+        receiver_url = receiver_url = media_files_domain + '/save-galley-images'
         data = json.dumps({
             'gallery_images': gallery_images,
             'MESSAGING_KEY' : settings.MESSAGING_KEY,
@@ -226,7 +226,7 @@ def add_product(request):
             'product_id': product_id,
         })
         
-        receiver_url = media_files_domain + '/files/save-product'
+        receiver_url = media_files_domain + '/save-product'
         response = requests.post(receiver_url, data={
             'product_files_data': product_files_data
         })
@@ -419,7 +419,7 @@ def edit_product(request):
             'product_id': product_id,
         })
         
-        receiver_url = media_files_domain + '/files/save-product'
+        receiver_url = media_files_domain + '/save-product'
         response = requests.post(receiver_url, data={
             'product_files_data': product_files_data
         })
@@ -526,7 +526,7 @@ def toggle_product_state(request):
         'MESSAGING_KEY' : settings.MESSAGING_KEY,
         'active': product.active
     }
-    receiver_url = media_files_domain + '/files/toggle-product-state'
+    receiver_url = media_files_domain + '/toggle-product-state'
     response = requests.post(receiver_url, data=data)
     if not response.ok:
         raise
