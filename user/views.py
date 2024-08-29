@@ -106,7 +106,7 @@ def register(request):
                 'domain': store.domain,
                 'id': store.id,
                 'logo': None,
-                'BordersRounded': True,
+                'bordersRounded': True,
                 'primaryColor': store.color_primary
             }),
             'user_id': user.id,
