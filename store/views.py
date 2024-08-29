@@ -308,21 +308,24 @@ def update_store_info(request):
     data = json.loads(request.body)
     store_id = data.get('store_id')
     store = request.user.stores.get(id=store_id)
-    store.primary_color = data.get('primary_color')
-    store.borders_rounded = data.get('borders_rounded')
-    store.logo = data.get('logo')
+
+    logo = data.get('logo')
+    primary_color = data.get('primary_color')
+    borders_rounded = data.get('borders_rounded')
+
+    store.logo = logo
+    store.primary_color = primary_color
+    store.borders_rounded = borders_rounded
 
     receiver_url = media_files_domain + '/save-store'
     response = requests.post(receiver_url,{
-        'store_id': store.id,
-        'store_logo_url' :  data.get('logo'),
-        'store_data': json.dumps({
-            'primaryColor': data.get('primary_color'),
-            'bordersRounded': data.get('borders_rounded'),
-            'logo': data.get('logo'),
-            'id': store_id
-        }),
-        'MESSAGING_KEY': settings.MESSAGING_KEY
+        'id': store.id,
+        'MESSAGING_KEY': settings.MESSAGING_KEY,
+        'store': json.dumps({
+            'primaryColor': primary_color,
+            'bordersRounded': borders_rounded,
+            'logo' :  logo,
+        })
     })
     if not response.ok:
         raise
