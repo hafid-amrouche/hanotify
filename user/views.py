@@ -107,7 +107,9 @@ def register(request):
                 'id': store.id,
                 'logo': None,
                 'bordersRounded': True,
-                'primaryColor': store.color_primary
+                'primaryColor': store.color_primary,
+                'name': '',
+                'description': '',
             }),
             'user_id': user.id,
             'MESSAGING_KEY': settings.MESSAGING_KEY
