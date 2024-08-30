@@ -12,9 +12,10 @@ class Store(models.Model):
     logo= models.TextField(null=True, blank=True)
     color_primary=models.CharField(max_length=7, default='#446ec3')
     borders_rounded=models.BooleanField(default=True)
-
     name=models.CharField(max_length=100, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
+
+    
     domain = models.CharField(max_length=255, unique=True, null=True, blank=True)
     has_custom_domain = models.BooleanField(default=False)
     policies = models.JSONField(blank=True, null=True)

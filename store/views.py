@@ -312,10 +312,14 @@ def update_store_info(request):
     logo = data.get('logo')
     primary_color = data.get('primary_color')
     borders_rounded = data.get('borders_rounded')
+    name = data.get('name')
+    description = data.get('description')
 
     store.logo = logo
     store.primary_color = primary_color
     store.borders_rounded = borders_rounded
+    store.name=name
+    store.description =description
 
     receiver_url = media_files_domain + '/save-store'
     response = requests.post(receiver_url,{
@@ -325,6 +329,8 @@ def update_store_info(request):
             'primaryColor': primary_color,
             'bordersRounded': borders_rounded,
             'logo' :  logo,
+            'name': name,
+            'description': description,
         })
     })
     if not response.ok:
