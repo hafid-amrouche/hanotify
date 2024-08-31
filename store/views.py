@@ -246,10 +246,10 @@ def delete_gs_info(request):
             {'detail': 'Deleted'}
         )
 
-def update_fb_pixel(fb_pixel, store_id):
+def update_fb_pixel(fb_pixel, store_domain):
     receiver_url = media_files_domain + '/save-fb-pixel'
     response = requests.post(receiver_url,{
-        'store_id': store_id,
+        'store_domain': store_domain,
         'fb_pixel' :  fb_pixel,
         'MESSAGING_KEY': settings.MESSAGING_KEY
     })
@@ -262,7 +262,7 @@ def set_up_fb_pixel(request):
     store_id = data.get('store_id')
     store = request.user.stores.get(id = store_id)
     pixel_id = data.get('pixel_id')
-    update_fb_pixel(pixel_id, store_id)
+    update_fb_pixel(pixel_id, store.store_domain)
     [fb_pixel, created] = FBPixel.objects.get_or_create(store=store)
     fb_pixel.pixel_id = pixel_id
     fb_pixel.save()
