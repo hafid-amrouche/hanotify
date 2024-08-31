@@ -322,16 +322,22 @@ def update_store_info(request):
     store.description =description
 
     receiver_url = media_files_domain + '/save-store'
+
+    store_dict = {
+        'primaryColor': primary_color,
+        'bordersRounded': borders_rounded,
+        'logo' :  logo,
+        'name': name,
+        'description': description,
+    }
+    try:
+        store_dict['facebookPixelId'] = store.fb_pixel.pixel_id
+    except:
+        pass
     response = requests.post(receiver_url,{
         'id': store.id,
         'MESSAGING_KEY': settings.MESSAGING_KEY,
-        'store': json.dumps({
-            'primaryColor': primary_color,
-            'bordersRounded': borders_rounded,
-            'logo' :  logo,
-            'name': name,
-            'description': description,
-        })
+        'store': json.dumps(store_dict)
     })
     if not response.ok:
         raise
