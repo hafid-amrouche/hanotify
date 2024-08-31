@@ -292,7 +292,7 @@ def delete_fb_pixel(request):
     receiver_url = media_files_domain + '/delete-fb-pixel'
 
     requests.post(receiver_url,{
-        'store_id': store_id,
+        'store_domain': store.domain,
         'MESSAGING_KEY': settings.MESSAGING_KEY
     })
     try:
