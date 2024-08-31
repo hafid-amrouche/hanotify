@@ -161,7 +161,8 @@ def create_order(request):
     data = json.loads(request.body)
     product = Product.objects.get(id=data.get('product_id'))
     phone_number = data.get('phone_number').strip()
-    if len(phone_number) < 10 or not phone_number.isdigit():
+    len_number = len(phone_number)
+    if not((len_number == 10 or len_number == 9 ) and phone_number.isdigit()):
         return JsonResponse({"detail": 'Stop playing around you\'re not a hacker'}, status= 400)
     
     state_id = data.get('state_id')
@@ -288,7 +289,6 @@ def update_order(request):
         except:
             city = shipping_state.cities.first()
             
-        print('CITY ID: ' + str(city_id))
         order.phone_number = phone_number
         order.shipping_state = shipping_state
         order.shipping_city = city
@@ -313,6 +313,11 @@ def confirm_order(request): ## add this front end
         if not order.is_abandoned:
             return JsonResponse({"datail": 'You\'re not a hacker'}, status=400)
         product = Product.objects.get(id = order.product['id'])
+        
+        phone_number = data.get('phone_number').strip()
+        len_number = len(phone_number)
+        if not((len_number == 10 or len_number == 9 ) and phone_number.isdigit()):
+            return JsonResponse({"detail": 'Stop playing around you\'re not a hacker'}, status= 400)
 
         tracker = data.get('tracker')
         if tracker:
