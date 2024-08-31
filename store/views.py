@@ -262,7 +262,7 @@ def set_up_fb_pixel(request):
     store_id = data.get('store_id')
     store = request.user.stores.get(id = store_id)
     pixel_id = data.get('pixel_id')
-    update_fb_pixel(pixel_id, store.store_domain)
+    update_fb_pixel(pixel_id, store.domain)
     [fb_pixel, created] = FBPixel.objects.get_or_create(store=store)
     fb_pixel.pixel_id = pixel_id
     fb_pixel.save()
