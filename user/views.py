@@ -115,11 +115,11 @@ def register(request):
             'MESSAGING_KEY': settings.MESSAGING_KEY
         })
         if not response.ok:
+            print(f"Response JSON: {response.json()}")
             raise
         return Response(userData)
     
     except:
-        raise
         print('Error at hontify/user/views/register l122')
         try:
             user.delete()
