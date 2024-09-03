@@ -39,4 +39,4 @@ class UserSerializerWithToken(serializers.ModelSerializer):
     domain = serializers.SerializerMethodField(read_only=True)
     def get_domain(self, obj):
         store = obj.stores.first()
-        return store.domain
+        return store.domain.domain

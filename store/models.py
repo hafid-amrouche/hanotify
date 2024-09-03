@@ -13,10 +13,7 @@ class Store(models.Model):
     color_primary=models.CharField(max_length=7, default='#446ec3')
     borders_rounded=models.BooleanField(default=True)
     name=models.CharField(max_length=100, null=True, blank=True)
-    description = models.TextField(null=True, blank=True)
-
-    
-    domain = models.CharField(max_length=255, unique=True, null=True, blank=True)
+    description = models.TextField(null=True, blank=True)    
     has_custom_domain = models.BooleanField(default=False)
     policies = models.JSONField(blank=True, null=True)
     phone_numbers = models.JSONField(blank=True, null=True)
@@ -24,6 +21,10 @@ class Store(models.Model):
     instagram = models.TextField(blank=True, null=True)
     youtube = models.TextField(blank=True, null=True)
     ask_for_client_note = models.BooleanField(default=True)
+
+class Domain(models.Model):
+    domain = models.CharField(max_length=255, unique=True)
+    store = models.OneToOneField(Store, on_delete=models.CASCADE, related_name='domain')
 
 class IpAddress(models.Model):
     visitor = models.ForeignKey('store.Visitor', on_delete=models.CASCADE, related_name='ip_addresses')

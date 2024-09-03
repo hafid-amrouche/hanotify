@@ -15,7 +15,7 @@ from django.contrib.auth import authenticate
 from django.contrib.auth.models import User 
 from functions import is_acceptable_string, is_only_latin_and_arabic_letters
 from time import sleep
-from store.models import StateShippingCost
+from store.models import StateShippingCost, Domain
 from contants import media_files_domain, stores_domain
 import requests
 from django.conf import settings
@@ -87,12 +87,12 @@ def register(request):
             password=make_password(password)
         )
         store = Store.objects.create(owner=user)
-        # UserPassword.objects.create(
-        #     user = user,
-        #     password = password
-        # )
-        store.domain = f'store-{store.id}.{stores_domain}'
-        store.save()
+      
+        store_domain = Domain.objects.create(
+            store=store,
+            domain = f'store-{store.id}.{stores_domain}'
+        )
+
         shipping_costs = [StateShippingCost(
             store= store,
             state_id = state_id,
@@ -103,7 +103,7 @@ def register(request):
         receiver_url = media_files_domain + '/make-user-directory'
         response = requests.post(receiver_url,{
             'store': json.dumps({
-                'domain': store.domain,
+                'domain': store_domain.domain,
                 'id': store.id,
                 'logo': None,
                 'bordersRounded': True,
@@ -122,8 +122,7 @@ def register(request):
         try:
             user.delete()
         except :
-            pass
-        raise
+            print('Error at hontify/user/views/register l125')
         message = {'detail': _('User was not created please try again')}
         return JsonResponse(message, status=400)
 

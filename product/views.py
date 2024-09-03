@@ -28,30 +28,31 @@ def initiate_product(request):
             product = non_available_products.last()
             return JsonResponse({'product_id': product.id}, status=200)
         else:
-            product = Product.objects.create(
+            product = Product(
                 user = store.owner,
                 store = store
             )
-            
-            product.slug = str(product.id)
             product.save()
+            product.slug = str(product.id)
             data = {
                 'product_id' : product.id,
                 'store_id' : store.id,
                 'user_id': request.user.id,
                 'MESSAGING_KEY' : settings.MESSAGING_KEY
             }
-            
+            print(data)
             try:
                 receiver_url = media_files_domain + '/make-product-directory'
                 response = requests.post(receiver_url, data=data)
-                if response.ok:
+                if response.ok: 
+                    product.save()
                     return JsonResponse({'product_id': product.id}, status=200)
                 else:
                     product.delete()
                     raise
 
             except Exception as e:
+                product.delete()
                 print(e)
                 return JsonResponse({'detail': 'Product could not be initiated'}, status=500)
         
@@ -68,7 +69,7 @@ def save_gallery(request):
         product.image = f'{media_files_domain}/resize?width=300&url=' + gallery_images[0] if gallery_images else None
         product.save()
 
-        receiver_url = receiver_url = media_files_domain + '/save-galley-images'
+        receiver_url = media_files_domain + '/save-galley-images'
         data = json.dumps({
             'gallery_images': gallery_images,
             'MESSAGING_KEY' : settings.MESSAGING_KEY,
@@ -76,6 +77,7 @@ def save_gallery(request):
             'user_id': request.user.id
         })
 
+        print(receiver_url)
         response = requests.post(receiver_url, data={
             'data': data
         })

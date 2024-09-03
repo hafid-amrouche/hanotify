@@ -34,7 +34,7 @@ def check_visitor(request):
     data = json.loads(request.body)
     tracker = data.get('tracker')
     store_id = data.get('id')
-    store = Store.objects.get(domain = store_id)
+    store = Store.objects.get(domain__domain = store_id)
     ip_address = get_client_ip(request)
     if tracker:
         try:
