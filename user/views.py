@@ -119,12 +119,12 @@ def register(request):
         return Response(userData)
     
     except:
+        raise
         print('Error at hontify/user/views/register l122')
         try:
             user.delete()
         except :
             print('Error at hontify/user/views/register l126')
-        raise
         message = {'detail': _('User was not created please try again')}
         return JsonResponse(message, status=400)
 
