@@ -118,13 +118,14 @@ def register(request):
             return JsonResponse(response.json(), status=400)
         return Response(userData)
     
-    except:
+    except Exception as e:
         print('Error at hontify/user/views/register l122')
         try:
             user.delete()
         except :
             print('Error at hontify/user/views/register l126')
-        message = {'detail': _('User was not created please try again')}
+        # message = {'detail': _('User was not created please try again')}
+        message = {'detail': _(e)}
         return JsonResponse(message, status=400)
 
 @api_view(['POST'])
