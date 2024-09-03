@@ -125,7 +125,7 @@ def register(request):
         except :
             print('Error at hontify/user/views/register l126')
         # message = {'detail': _('User was not created please try again')}
-        message = {'detail': _(e)}
+        message = {'detail': str(e)}
         return JsonResponse(message, status=400)
 
 @api_view(['POST'])
