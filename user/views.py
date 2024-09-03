@@ -115,17 +115,16 @@ def register(request):
             'MESSAGING_KEY': settings.MESSAGING_KEY
         })
         if not response.ok:
-            return JsonResponse(response.json(), status=400)
+            raise
         return Response(userData)
     
-    except Exception as e:
+    except:
         print('Error at hontify/user/views/register l122')
         try:
             user.delete()
         except :
             print('Error at hontify/user/views/register l126')
-        # message = {'detail': _('User was not created please try again')}
-        message = {'detail': str(e)}
+        message = {'detail': _('User was not created please try again')}
         return JsonResponse(message, status=400)
 
 @api_view(['POST'])
