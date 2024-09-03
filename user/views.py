@@ -115,7 +115,7 @@ def register(request):
             'MESSAGING_KEY': settings.MESSAGING_KEY
         })
         if not response.ok:
-            JsonResponse(response.json(), status=400)
+            return JsonResponse(response.json(), status=400)
         return Response(userData)
     
     except:
