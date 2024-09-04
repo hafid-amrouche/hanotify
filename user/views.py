@@ -124,6 +124,7 @@ def register(request):
         return Response(userData)
     
     except Exception as e:
+        raise
         print('Error at hontify/user/views/register l122')
         try:
             user.delete()
