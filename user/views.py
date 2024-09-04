@@ -101,7 +101,7 @@ def register(request):
         userData = UserSerializerWithToken(user, many=False).data
 
         receiver_url = media_files_domain + '/make-user-directory'
-        return requests.post(receiver_url,{
+        response = requests.post(receiver_url,{
             'store': json.dumps({
                 'domain': store_domain.domain,
                 'id': store.id,
@@ -114,6 +114,7 @@ def register(request):
             'user_id': user.id,
             'MESSAGING_KEY': settings.MESSAGING_KEY
         })
+        print(response.json())
         if not response.ok:
             message = {
                 'detail': _('User was not created please try again'),
