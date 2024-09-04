@@ -117,7 +117,7 @@ def register(request):
         if not response.ok:
             message = {
                 'detail': _('User was not created please try again'),
-                'error': str(response.json())
+                'error 1': str(response.json())
             }
             return JsonResponse(message, status=400)
         return Response(userData)
@@ -130,7 +130,7 @@ def register(request):
             print('Error at hontify/user/views/register l126')
         message = {
             'detail': _('User was not created please try again'),
-            "error": str(e)
+            "error 2": str(e)
             }
         return JsonResponse(message, status=400)
 
