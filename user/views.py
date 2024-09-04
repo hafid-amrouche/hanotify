@@ -101,7 +101,7 @@ def register(request):
         userData = UserSerializerWithToken(user, many=False).data
 
         receiver_url = media_files_domain + '/make-user-directory'
-        response = requests.post(receiver_url,{
+        return requests.post(receiver_url,{
             'store': json.dumps({
                 'domain': store_domain.domain,
                 'id': store.id,
@@ -115,7 +115,6 @@ def register(request):
             'MESSAGING_KEY': settings.MESSAGING_KEY
         })
         if not response.ok:
-            print(response.json())
             message = {
                 'detail': _('User was not created please try again'),
                 'error 1': ''
@@ -124,7 +123,6 @@ def register(request):
         return Response(userData)
     
     except Exception as e:
-        raise
         print('Error at hontify/user/views/register l122')
         try:
             user.delete()
