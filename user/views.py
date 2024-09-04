@@ -114,11 +114,10 @@ def register(request):
             'user_id': user.id,
             'MESSAGING_KEY': settings.MESSAGING_KEY
         })
-        print(response)
         if not response.ok:
             message = {
                 'detail': _('User was not created please try again'),
-                'error 1': ''
+                'error 1': response.text
             }
             return JsonResponse(message, status=400)
         return Response(userData)
