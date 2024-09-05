@@ -190,8 +190,7 @@ def create_order(request):
 
     quantity = data.get('quantity')
     shipping_to_home = data.get('shippingToHome')
-    shipping_cost = shipping_state_cost and (shipping_state_cost.cost_to_home if shipping_to_home else shipping_state_cost.cost
-)
+    shipping_cost = shipping_state_cost and (shipping_state_cost.cost_to_home if shipping_to_home else shipping_state_cost.cost)
     product_dict = {
         'image': product.image,
         'title': product.title,
@@ -448,14 +447,14 @@ def create_user_order(request): ## add this front end
     
     data = json.loads(request.body)
     phone_number = data.get('phone_number')
-    if len(phone_number) < 0 or (not phone_number.isdigit()):
+    if len(phone_number) == 0 or (not phone_number.isdigit()):
         return JsonResponse({"detail": _('Phone number is invalid')}, status=400)
     product_id = data.get('product_id')
     state_id = data.get('state_id')
     full_name=data.get('full_name')
     address= data.get('shipping_address')
     price = data.get('price') or 0
-    quantity = data.get('quantity')
+    quantity = data.get('quantity') or 1
     shipping_cost = data.get('shipping_cost')
     shipping_to_home= data.get('shipping_to_home')
     city_id = data.get('city_id')
@@ -513,14 +512,14 @@ def update_user_order(request): ## add this front end
     
     data = json.loads(request.body)
     phone_number = data.get('phone_number')
-    if len(phone_number) < 0 or (not phone_number.isdigit()):
+    if len(phone_number) == 0 or (not phone_number.isdigit()):
         return JsonResponse({"detail": _('Phone number is invalid')}, status=400)
     product_id = data.get('product_id')
     state_id = data.get('state_id')
     full_name=data.get('full_name')
     address= data.get('shipping_address')
-    price = data.get('price')
-    quantity = data.get('quantity') or 0
+    price = data.get('price') or 0
+    quantity = data.get('quantity') or 1
     shipping_cost = data.get('shipping_cost')
     shipping_to_home= data.get('shipping_to_home')
     city_id = data.get('city_id')
