@@ -90,7 +90,7 @@ def register(request):
       
         store_domain = Domain.objects.create(
             store=store,
-            domain = username
+            domain = f'{username}.{stores_domain}'
         )
 
         shipping_costs = [StateShippingCost(
