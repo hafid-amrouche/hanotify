@@ -454,7 +454,7 @@ def create_user_order(request): ## add this front end
     state_id = data.get('state_id')
     full_name=data.get('full_name')
     address= data.get('shipping_address')
-    price = data.get('price')
+    price = data.get('price') or 0
     quantity = data.get('quantity')
     shipping_cost = data.get('shipping_cost')
     shipping_to_home= data.get('shipping_to_home')
@@ -520,7 +520,7 @@ def update_user_order(request): ## add this front end
     full_name=data.get('full_name')
     address= data.get('shipping_address')
     price = data.get('price')
-    quantity = data.get('quantity')
+    quantity = data.get('quantity') or 0
     shipping_cost = data.get('shipping_cost')
     shipping_to_home= data.get('shipping_to_home')
     city_id = data.get('city_id')
