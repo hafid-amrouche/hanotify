@@ -313,11 +313,6 @@ def confirm_order(request): ## add this front end
         if not order.is_abandoned:
             return JsonResponse({"datail": 'You\'re not a hacker'}, status=400)
         product = Product.objects.get(id = order.product['id'])
-        
-        phone_number = data.get('phone_number').strip()
-        len_number = len(phone_number)
-        if not((len_number == 10 or len_number == 9 ) and phone_number.isdigit()):
-            return JsonResponse({"detail": 'Stop playing around you\'re not a hacker'}, status= 400)
 
         tracker = data.get('tracker')
         if tracker:
