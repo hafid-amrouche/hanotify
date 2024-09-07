@@ -115,6 +115,7 @@ def register(request):
             'MESSAGING_KEY': settings.MESSAGING_KEY
         })
         if not response.ok:
+            user.delete()
             message = {
                 'detail': _('User was not created please try again'),
                 'error 1': response.text

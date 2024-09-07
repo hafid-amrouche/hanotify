@@ -249,7 +249,7 @@ def delete_gs_info(request):
 def update_fb_pixel(fb_pixel, store_id):
     receiver_url = media_files_domain + '/save-fb-pixel'
     response = requests.post(receiver_url,{
-        'store_domain': store_id,
+        'store_id': store_id,
         'fb_pixel' :  fb_pixel,
         'MESSAGING_KEY': settings.MESSAGING_KEY
     })
