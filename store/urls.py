@@ -12,5 +12,10 @@ urlpatterns = [
         path('set-up-fb-pixel', views.set_up_fb_pixel),
         path('get-fb-pixel', views.get_fb_pxel),
         path('delete-fb-pixel', views.delete_fb_pixel),
+        path('set-up-tiktok-pixel', views.set_up_tiktok_pixel),
+        path('get-tiktok-pixel', views.get_tiktok_pixels),
+        path('delete-tiktok-pixel', views.delete_tiktok_pixel),
+        path('set-up-conversions-api', views.set_up_conversion_api_token),
+        path('delete-conversions-api', views.delete_conversion_api_token),
         path('update-store-info', views.update_store_info)
 ]

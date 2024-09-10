@@ -1,7 +1,6 @@
-import re
-import hashlib
-import re
+import re, hashlib, re, requests
 from django.utils.text import slugify as django_slugify
+from django.utils import timezone
 
 
 def is_acceptable_string(s):
@@ -54,3 +53,34 @@ def custom_slugify(value):
     
     # Slugify using Django's default slugify
     return django_slugify(value, allow_unicode=True)
+
+def hash_data(data):
+    return hashlib.sha256(data.encode('utf-8')).hexdigest()
+
+def send_event_to_facebook(event_name, FACEBOOK_PIXEL_ID, FACEBOOK_ACCESS_TOKEN, event_data):
+    url = f"https://graph.facebook.com/v14.0/{FACEBOOK_PIXEL_ID}/events"
+
+    user_data = {
+        'ph': hash_data(event_data.get('phone', '')),
+        'fn': hash_data(event_data.get('first_name', '')),
+        'ln': hash_data(event_data.get('last_name', '')),
+        'ct': hash_data(event_data.get('city', '')),
+        'st': hash_data(event_data.get('state', '')),
+        'country': hash_data(event_data.get('country', '')),
+        'client_ip_address' : event_data.get('client_ip_address', '')
+    }
+    
+    payload = {
+        'data': [{
+            'event_name': event_name,
+            'event_time': int(timezone.now().timestamp()),
+            'user_data': user_data,
+            'custom_data': event_data.get('custom_data', {}),
+        }],
+        'access_token': FACEBOOK_ACCESS_TOKEN,
+    }
+    
+    response = requests.post(url, json=payload)
+    response.raise_for_status()
+    print('HOOOOOOOOOOOOOOOOOO')
+    return response.json()

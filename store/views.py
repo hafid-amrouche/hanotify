@@ -3,7 +3,7 @@ from rest_framework.permissions import IsAuthenticated
 from django.http import JsonResponse
 import json
 from django.utils.translation import gettext as _
-from .models import Visitor, Store, IpAddress, GSInfo, FBPixel
+from .models import Visitor, Store, IpAddress, GSInfo, FBPixel, TikTokPixel
 from django.utils import timezone
 from functions import generate_token_from_id, get_client_ip
 
@@ -262,9 +262,11 @@ def set_up_fb_pixel(request):
     store_id = data.get('store_id')
     store = request.user.stores.get(id = store_id)
     pixel_id = data.get('pixel_id')
+    conversion_api_access_token = data.get('conversion_api_access_token')
     update_fb_pixel(pixel_id, store.id)
     [fb_pixel, created] = FBPixel.objects.get_or_create(store=store)
     fb_pixel.pixel_id = pixel_id
+    fb_pixel.conversion_api_access_token = conversion_api_access_token or None
     fb_pixel.save()
     return JsonResponse({'detail': 'Your facebook pixel is connected successfully.'})
     
@@ -276,11 +278,15 @@ def get_fb_pxel(request):
     try:
         fb_pixel = store.fb_pixel
         return JsonResponse(
-            {'fbPixel': fb_pixel.pixel_id}
+            {
+                'fbPixel': fb_pixel.pixel_id,
+                'apiToken': fb_pixel.conversion_api_access_token
+            }
         )
     except:
         return JsonResponse({
-            'fbPixel': None
+            'fbPixel': None,
+            'apiToken': None
         })
     
 @api_view(['POST'])
@@ -302,6 +308,98 @@ def delete_fb_pixel(request):
     return JsonResponse(
             {'detail': 'Deleted'}
         )
+
+
+
+@api_view(['POST'])
+def set_up_conversion_api_token(request):
+    data = json.loads(request.body)
+    store_id = data.get('store_id')
+    store = request.user.stores.get(id = store_id)
+    conversion_api_access_token = data.get('conversion_api_access_token')
+    fb_pixel = FBPixel.objects.get(store=store)
+    fb_pixel.conversion_api_access_token = conversion_api_access_token or None
+    fb_pixel.save()
+    return JsonResponse({'detail': 'Meta api conversions token is connected successfully.'})
+    
+@api_view(['POST'])
+def delete_conversion_api_token(request):
+    data = json.loads(request.body)
+    store_id = data.get('store_id')
+    store = request.user.stores.get(id=store_id)
+    store.fb_pixel.conversion_api_access_token = None
+    store.fb_pixel.save()
+    return JsonResponse(
+            {'detail': 'Deleted'}
+        )
+
+
+
+
+@api_view(['POST'])
+def set_up_tiktok_pixel(request):
+    data = json.loads(request.body)
+    store_id = data.get('store_id')
+    store = request.user.stores.get(id = store_id)
+    pixel_id = data.get('pixel_id').strip()
+    if not pixel_id or (TikTokPixel.objects.filter(store=store, pixel_id=pixel_id).exists()):
+        return JsonResponse({'detail': 'pixel id exists'}, status=400)
+    receiver_url = media_files_domain + '/update-tiktok-pixels'
+    old_pixels_id = list(store.tiktok_pixels.values_list('pixel_id', flat=True))
+    old_pixels_id.append(pixel_id)
+    response = requests.post(receiver_url,{
+        'store_id': store.id,
+        'pixels_id' :  old_pixels_id,
+        'MESSAGING_KEY': settings.MESSAGING_KEY
+    })
+    if not response.ok:
+        raise
+
+    tiktok_pixel = TikTokPixel.objects.create(store=store)
+    tiktok_pixel.pixel_id = pixel_id
+    tiktok_pixel.save()
+    return JsonResponse({'detail': 'Your tiktok pixel is connected successfully.'})
+    
+
+@api_view(['GET'])
+def get_tiktok_pixels(request):
+    data = request.GET
+    store = request.user.stores.get(id = data.get('store_id'))
+    try:
+        return JsonResponse(
+            {
+                'tiktokPixels': list(store.tiktok_pixels.values_list('pixel_id', flat=True)),
+            }
+        )
+    except:
+        return JsonResponse({
+            'tiktokPixels': None
+        })
+    
+@api_view(['POST'])
+def delete_tiktok_pixel(request):
+    data = json.loads(request.body)
+    store_id = data.get('store_id')
+    pixel_id = data.get('pixel_id')
+    store = request.user.stores.get(id=store_id)
+    tiktok_pixel = TikTokPixel.objects.get(store=store, pixel_id=pixel_id)
+    receiver_url = media_files_domain + '/update-tiktok-pixels'
+
+    new_list = list(store.tiktok_pixels.values_list('pixel_id', flat=True))
+    new_list.remove(pixel_id)
+    requests.post(receiver_url,{
+        'store_id': store.id,
+        'pixels_id': new_list,
+        'MESSAGING_KEY': settings.MESSAGING_KEY
+    })
+    try:
+        tiktok_pixel.delete()
+    except:
+        pass
+    return JsonResponse(
+            {'detail': 'Deleted'}
+        )
+
 
 @api_view(['POST'])
 def update_store_info(request):

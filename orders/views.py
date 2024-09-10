@@ -15,7 +15,7 @@ from store.models import Visitor, IpAddress,Store, VIPStore
 from django.db.models import Q
 from store.models import Status
 from django.utils.translation import gettext as _
-
+from functions import send_event_to_facebook
 
 
 
@@ -314,6 +314,7 @@ def confirm_order(request): ## add this front end
         product = Product.objects.get(id = order.product['id'])
 
         tracker = data.get('tracker')
+        ip_address = get_client_ip(request)
         if tracker:
             try:
                 visitor = Visitor.objects.get(tracker = tracker)
@@ -321,7 +322,7 @@ def confirm_order(request): ## add this front end
                 visitor.save()
                 IpAddress.objects.get_or_create(
                     visitor = visitor,
-                    ip_address = get_client_ip(request)
+                    ip_address = ip_address
                 )
             except:
                 visitor = Visitor.objects.create(
@@ -333,9 +334,8 @@ def confirm_order(request): ## add this front end
 
                 IpAddress.objects.create(
                     visitor = visitor,
-                    ip_address = get_client_ip(request)
+                    ip_address = ip_address
                 )
-
         else:
             visitor = Visitor.objects.create(
                 store=order.store,
@@ -346,7 +346,7 @@ def confirm_order(request): ## add this front end
 
             IpAddress.objects.create(
                 visitor = visitor,
-                ip_address = get_client_ip(request)
+                ip_address = ip_address
             )
         order.visitor = visitor
         order.shipping_address = data.get("shipping_address")
@@ -379,13 +379,14 @@ def confirm_order(request): ## add this front end
         shipping_cost = shipping_state_cost and (shipping_state_cost.cost_to_home if shipping_to_home else shipping_state_cost.cost)
         quantity = data.get('quantity')
 
+        total_price = price * quantity + (shipping_cost or 0)
         product_dict = {
             'image': product.image,
             'title': product.title,
             'price': price,
             'id': product.id,
             'shipping_cost': shipping_cost,
-            'total_price': price * quantity + (shipping_cost or 0)
+            'total_price': total_price
         }
     
         if combination:
@@ -396,7 +397,6 @@ def confirm_order(request): ## add this front end
             city = City.objects.get(id= city_id, state=shipping_state)
         except:
             city = shipping_state.cities.first()
-            print('CITY ID: ' + str(city_id))
         
         full_name  = data.get('full_name').strip()
         if not full_name:
@@ -411,6 +411,32 @@ def confirm_order(request): ## add this front end
         order.product_quantity=quantity
         order.created_at = timezone.now()
         order.save()
+
+        try: 
+            FACEBOOK_PIXEL_ID = order.store.fb_pixel.pixel_id
+            FACEBOOK_ACCESS_TOKEN = order.store.fb_pixel.conversion_api_access_token
+            if FACEBOOK_ACCESS_TOKEN :
+                event_data={
+                    'phone' : order.phone_number,
+                    'first_name' : data.get('first_name'),
+                    'last_name' : data.get('last_name'),
+                    'city': order.shipping_city.name,
+                    'state': order.shipping_state.name,
+                    'country': 'DZ',
+                    'client_ip_address': ip_address,
+                    'custom_data': {
+                        "currency" : 'DZD',
+                        'value' : total_price
+                    }
+                }
+                respone = send_event_to_facebook(
+                    FACEBOOK_ACCESS_TOKEN=FACEBOOK_ACCESS_TOKEN,
+                    FACEBOOK_PIXEL_ID=FACEBOOK_PIXEL_ID,
+                    event_data=event_data,
+                    event_name='Purchase'
+                )
+        except:
+            raise
     except Exception as e:
         raise
 
@@ -499,7 +525,6 @@ def create_user_order(request): ## add this front end
         made_by_seller = True,
         client_note= client_note,
         seller_note= seller_note
-        
     )
     
     order.token = generate_token_from_id(order.id)
