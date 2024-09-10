@@ -411,10 +411,10 @@ def confirm_order(request): ## add this front end
         order.product_quantity=quantity
         order.created_at = timezone.now()
         order.save()
-
         try: 
             FACEBOOK_PIXEL_ID = order.store.fb_pixel.pixel_id
             FACEBOOK_ACCESS_TOKEN = order.store.fb_pixel.conversion_api_access_token
+            test_event_code = order.store.fb_pixel.test_event_code
             if FACEBOOK_ACCESS_TOKEN :
                 event_data={
                     'phone' : order.phone_number,
@@ -426,14 +426,18 @@ def confirm_order(request): ## add this front end
                     'client_ip_address': ip_address,
                     'custom_data': {
                         "currency" : 'DZD',
-                        'value' : total_price
+                        'value' : total_price,
+                        "order_id": order_id,
+                        "num_items": quantity,
+                        "content_type": 'product', # or product_group 
                     }
                 }
                 respone = send_event_to_facebook(
                     FACEBOOK_ACCESS_TOKEN=FACEBOOK_ACCESS_TOKEN,
                     FACEBOOK_PIXEL_ID=FACEBOOK_PIXEL_ID,
                     event_data=event_data,
-                    event_name='Purchase'
+                    event_name='Purchase',
+                    test_event_code = test_event_code
                 )
         except:
             raise

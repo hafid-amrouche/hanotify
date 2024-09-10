@@ -17,5 +17,6 @@ urlpatterns = [
         path('delete-tiktok-pixel', views.delete_tiktok_pixel),
         path('set-up-conversions-api', views.set_up_conversion_api_token),
         path('delete-conversions-api', views.delete_conversion_api_token),
+        path('set-up-test-event-code', views.set_up_test_code_event),
         path('update-store-info', views.update_store_info)
 ]

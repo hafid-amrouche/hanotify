@@ -15,7 +15,7 @@ from django.core.paginator import Paginator, EmptyPage
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
-from functions import custom_slugify
+from functions import custom_slugify, send_event_to_facebook, get_client_ip
 
 
 @api_view(['POST'])
@@ -443,6 +443,23 @@ def incerement_product_views(request):
     product = Product.objects.get(id = data.get('product_id'))
     product.views += 1
     product.save()
+    try: 
+        FACEBOOK_PIXEL_ID = product.store.fb_pixel.pixel_id
+        FACEBOOK_ACCESS_TOKEN = product.store.fb_pixel.conversion_api_access_token
+        test_event_code = product.store.fb_pixel.test_event_code
+        if FACEBOOK_ACCESS_TOKEN :
+            event_data={
+                'client_ip_address': get_client_ip(request),
+            }
+            respone = send_event_to_facebook(
+                FACEBOOK_ACCESS_TOKEN=FACEBOOK_ACCESS_TOKEN,
+                FACEBOOK_PIXEL_ID=FACEBOOK_PIXEL_ID,
+                event_data=event_data,
+                event_name='PageView',
+                test_event_code = test_event_code
+            )
+    except:
+        raise
     return JsonResponse({'detail': 'success'})
 
 @api_view(['GET'])

@@ -1,4 +1,4 @@
-import re, hashlib, re, requests
+import re, hashlib, re, requests, json
 from django.utils.text import slugify as django_slugify
 from django.utils import timezone
 
@@ -57,7 +57,7 @@ def custom_slugify(value):
 def hash_data(data):
     return hashlib.sha256(data.encode('utf-8')).hexdigest()
 
-def send_event_to_facebook(event_name, FACEBOOK_PIXEL_ID, FACEBOOK_ACCESS_TOKEN, event_data):
+def send_event_to_facebook(event_name, FACEBOOK_PIXEL_ID, FACEBOOK_ACCESS_TOKEN, event_data, test_event_code):
     url = f"https://graph.facebook.com/v14.0/{FACEBOOK_PIXEL_ID}/events"
 
     user_data = {
@@ -67,7 +67,7 @@ def send_event_to_facebook(event_name, FACEBOOK_PIXEL_ID, FACEBOOK_ACCESS_TOKEN,
         'ct': hash_data(event_data.get('city', '')),
         'st': hash_data(event_data.get('state', '')),
         'country': hash_data(event_data.get('country', '')),
-        'client_ip_address' : event_data.get('client_ip_address', '')
+        'client_ip_address' : event_data.get('client_ip_address', ''),
     }
     
     payload = {
@@ -75,12 +75,14 @@ def send_event_to_facebook(event_name, FACEBOOK_PIXEL_ID, FACEBOOK_ACCESS_TOKEN,
             'event_name': event_name,
             'event_time': int(timezone.now().timestamp()),
             'user_data': user_data,
+            "action_source": "website",
             'custom_data': event_data.get('custom_data', {}),
         }],
         'access_token': FACEBOOK_ACCESS_TOKEN,
     }
-    
+    if test_event_code :
+        payload['test_event_code'] = test_event_code
     response = requests.post(url, json=payload)
     response.raise_for_status()
-    print('HOOOOOOOOOOOOOOOOOO')
     return response.json()
+

@@ -280,7 +280,8 @@ def get_fb_pxel(request):
         return JsonResponse(
             {
                 'fbPixel': fb_pixel.pixel_id,
-                'apiToken': fb_pixel.conversion_api_access_token
+                'apiToken': fb_pixel.conversion_api_access_token,
+                'eventTestCode': fb_pixel.test_event_code,
             }
         )
     except:
@@ -328,10 +329,22 @@ def delete_conversion_api_token(request):
     store_id = data.get('store_id')
     store = request.user.stores.get(id=store_id)
     store.fb_pixel.conversion_api_access_token = None
+    store.fb_pixel.test_event_code = None
     store.fb_pixel.save()
     return JsonResponse(
             {'detail': 'Deleted'}
         )
+
+@api_view(['POST'])
+def set_up_test_code_event(request):
+    data = json.loads(request.body)
+    store_id = data.get('store_id')
+    store = request.user.stores.get(id = store_id)
+    test_event_code = data.get('test_event_code')
+    fb_pixel = FBPixel.objects.get(store=store)
+    fb_pixel.test_event_code = test_event_code or None
+    fb_pixel.save()
+    return JsonResponse({'detail': 'Success'})
 
 
 
