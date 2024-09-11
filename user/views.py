@@ -23,7 +23,6 @@ from store.models import Store
 
 @api_view(['POST'])
 def login(request):
-    
     data = json.loads(request.body)
     username= data.get('username').lower()
     password = data.get('password')

@@ -459,7 +459,7 @@ def incerement_product_views(request):
                 test_event_code = test_event_code
             )
     except:
-        raise
+        pass
     return JsonResponse({'detail': 'success'})
 
 @api_view(['GET'])
