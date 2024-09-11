@@ -246,15 +246,15 @@ def delete_gs_info(request):
             {'detail': 'Deleted'}
         )
 
-def update_fb_pixel(fb_pixel, store_id):
-    receiver_url = media_files_domain + '/save-fb-pixel'
+def update_fb_pixel(fb_pixels, store_id):
+    receiver_url = media_files_domain + '/update-fb-pixel'
     response = requests.post(receiver_url,{
         'store_id': store_id,
-        'fb_pixel' :  fb_pixel,
+        'fb_pixels' :  fb_pixels,
         'MESSAGING_KEY': settings.MESSAGING_KEY
     })
     if not response.ok:
-        raise
+        return JsonResponse({'detail': 'Error setting up your facebook pixel'}, status=400)
 
 @api_view(['POST'])
 def set_up_fb_pixel(request):
@@ -262,10 +262,12 @@ def set_up_fb_pixel(request):
     store_id = data.get('store_id')
     store = request.user.stores.get(id = store_id)
     pixel_id = data.get('pixel_id')
-    update_fb_pixel(pixel_id, store.id)
-    [fb_pixel, created] = FBPixel.objects.get_or_create(store=store)
-    fb_pixel.pixel_id = pixel_id
-    fb_pixel.save()
+    if not pixel_id or (FBPixel.objects.filter(store=store, pixel_id=pixel_id).exists()):
+        return JsonResponse({'detail': 'This facebook pixel id already exists'}, status=400)
+    new_list = list(store.fb_pixels.values_list('pixel_id', flat=True))
+    new_list.append(pixel_id)
+    update_fb_pixel(new_list, store.id)
+    FBPixel.objects.create(store=store, pixel_id=pixel_id)
     return JsonResponse({'detail': 'Your facebook pixel is connected successfully.'})
     
 
@@ -288,15 +290,17 @@ def delete_fb_pixel(request):
     
     data = json.loads(request.body)
     store_id = data.get('store_id')
+    pixel_id = data.get('pixel_id')
     store = request.user.stores.get(id=store_id)
-    receiver_url = media_files_domain + '/delete-fb-pixel'
+    store_fb_pixels = FBPixel.objects.filter(store = store)
+    pixel = store_fb_pixels.get(pixel_id=pixel_id)
+    
+    new_list = list(store_fb_pixels.values_list('pixel_id', flat=True))
+    new_list.remove(pixel_id)
 
-    requests.post(receiver_url,{
-        'store_id': store.id,
-        'MESSAGING_KEY': settings.MESSAGING_KEY
-    })
+    update_fb_pixel(new_list, store.id)
     try:
-        store.fb_pixel.delete()
+        pixel.delete()
     except:
         pass
     return JsonResponse(
@@ -322,9 +326,11 @@ def delete_conversion_api_token(request):
     data = json.loads(request.body)
     store_id = data.get('store_id')
     store = request.user.stores.get(id=store_id)
-    store.fb_pixel.conversion_api_access_token = None
-    store.fb_pixel.test_event_code = None
-    store.fb_pixel.save()
+    pixel_id = data.get('pixel_id')
+    fb_pixel = FBPixel.objects.get(store=store, pixel_id=pixel_id)
+    fb_pixel.conversion_api_access_token = None
+    fb_pixel.test_event_code = None
+    fb_pixel.save()
     return JsonResponse(
             {'detail': 'Deleted'}
         )
@@ -333,14 +339,13 @@ def delete_conversion_api_token(request):
 def set_up_test_code_event(request):
     data = json.loads(request.body)
     store_id = data.get('store_id')
+    pixel_id = data.get('pixel_id')
     store = request.user.stores.get(id = store_id)
     test_event_code = data.get('test_event_code')
-    fb_pixel = FBPixel.objects.get(store=store)
+    fb_pixel = FBPixel.objects.get(store=store, pixel_id=pixel_id)
     fb_pixel.test_event_code = test_event_code or None
     fb_pixel.save()
     return JsonResponse({'detail': 'Success'})
-
-
 
 
 @api_view(['POST'])
@@ -350,7 +355,7 @@ def set_up_tiktok_pixel(request):
     store = request.user.stores.get(id = store_id)
     pixel_id = data.get('pixel_id').strip()
     if not pixel_id or (TikTokPixel.objects.filter(store=store, pixel_id=pixel_id).exists()):
-        return JsonResponse({'detail': 'pixel id exists'}, status=400)
+        return JsonResponse({'detail': 'pixel id already exists'}, status=400)
     receiver_url = media_files_domain + '/update-tiktok-pixels'
     old_pixels_id = list(store.tiktok_pixels.values_list('pixel_id', flat=True))
     old_pixels_id.append(pixel_id)
