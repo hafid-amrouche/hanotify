@@ -262,11 +262,9 @@ def set_up_fb_pixel(request):
     store_id = data.get('store_id')
     store = request.user.stores.get(id = store_id)
     pixel_id = data.get('pixel_id')
-    conversion_api_access_token = data.get('conversion_api_access_token')
     update_fb_pixel(pixel_id, store.id)
     [fb_pixel, created] = FBPixel.objects.get_or_create(store=store)
     fb_pixel.pixel_id = pixel_id
-    fb_pixel.conversion_api_access_token = conversion_api_access_token or None
     fb_pixel.save()
     return JsonResponse({'detail': 'Your facebook pixel is connected successfully.'})
     
@@ -275,20 +273,15 @@ def set_up_fb_pixel(request):
 def get_fb_pxel(request):
     data = request.GET
     store = request.user.stores.get(id = data.get('store_id'))
-    try:
-        fb_pixel = store.fb_pixel
-        return JsonResponse(
-            {
-                'fbPixel': fb_pixel.pixel_id,
-                'apiToken': fb_pixel.conversion_api_access_token,
-                'eventTestCode': fb_pixel.test_event_code,
-            }
-        )
-    except:
-        return JsonResponse({
-            'fbPixel': None,
-            'apiToken': None
-        })
+    fb_pixels = store.fb_pixels.all()
+    return JsonResponse(
+        [ {
+            'fbPixel': fb_pixel.pixel_id,
+            'apiToken': fb_pixel.conversion_api_access_token,
+            'eventTestCode': fb_pixel.test_event_code,
+        } for fb_pixel in fb_pixels],
+        safe=False
+    )
     
 @api_view(['POST'])
 def delete_fb_pixel(request):
@@ -318,7 +311,8 @@ def set_up_conversion_api_token(request):
     store_id = data.get('store_id')
     store = request.user.stores.get(id = store_id)
     conversion_api_access_token = data.get('conversion_api_access_token')
-    fb_pixel = FBPixel.objects.get(store=store)
+    pixel_id = data.get('pixel_id')
+    fb_pixel = FBPixel.objects.get(store=store, pixel_id=pixel_id)
     fb_pixel.conversion_api_access_token = conversion_api_access_token or None
     fb_pixel.save()
     return JsonResponse({'detail': 'Meta api conversions token is connected successfully.'})

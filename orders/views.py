@@ -440,9 +440,9 @@ def confirm_order(request): ## add this front end
                     test_event_code = test_event_code
                 )
         except:
-            raise
+            pass
     except Exception as e:
-        raise
+        pass
 
     return JsonResponse({"datail": 'Success'}, status=200)
     

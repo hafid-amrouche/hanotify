@@ -58,7 +58,7 @@ class GSInfo(models.Model):
     sheet_name = models.CharField(max_length=220)
 
 class FBPixel(models.Model):
-    store = models.OneToOneField(Store, on_delete=models.CASCADE, related_name='fb_pixel')
+    store = models.ForeignKey(Store, on_delete=models.CASCADE, related_name='fb_pixels')
     pixel_id = models.CharField(max_length=20)
     conversion_api_access_token = models.TextField(max_length=400, null=True, blank=True)
     test_event_code = models.CharField(max_length=20, null=True, blank=True)
