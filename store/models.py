@@ -10,10 +10,15 @@ class Store(models.Model):
 
     # Store design
     logo= models.TextField(null=True, blank=True)
+    favicon= models.TextField(null=True, blank=True)
     color_primary=models.CharField(max_length=7, default='#446ec3')
+    color_primary_dark=models.CharField(max_length=7, default='#446ec3')
+    header_outlined=models.BooleanField(default=False)
     borders_rounded=models.BooleanField(default=True)
     name=models.CharField(max_length=100, null=True, blank=True)
     description = models.TextField(null=True, blank=True)    
+    language = models.CharField(max_length=2, default='ar')
+    mode = models.CharField(max_length=10, default='light')
     has_custom_domain = models.BooleanField(default=False)
     policies = models.JSONField(blank=True, null=True)
     phone_numbers = models.JSONField(blank=True, null=True)
@@ -21,6 +26,7 @@ class Store(models.Model):
     instagram = models.TextField(blank=True, null=True)
     youtube = models.TextField(blank=True, null=True)
     ask_for_client_note = models.BooleanField(default=True)
+    footer = models.TextField(default='')
 
 class Domain(models.Model):
     domain = models.CharField(max_length=255, unique=True)
@@ -56,12 +62,18 @@ class GSInfo(models.Model):
     store = models.OneToOneField(Store, on_delete=models.CASCADE, related_name='gs_info')
     spreadsheet_id = models.CharField(max_length=220)
     sheet_name = models.CharField(max_length=220)
+    
+class ConversionsApi(models.Model):
+    store=models.ForeignKey(Store, on_delete=models.CASCADE, related_name='conversions_apis', null=True, blank=True)
+    token = models.TextField(max_length=400, null=True, blank=True)
+    test_event_code = models.CharField(max_length=20, null=True, blank=True)
 
 class FBPixel(models.Model):
     store = models.ForeignKey(Store, on_delete=models.CASCADE, related_name='fb_pixels')
     pixel_id = models.CharField(max_length=20)
-    conversion_api_access_token = models.TextField(max_length=400, null=True, blank=True)
-    test_event_code = models.CharField(max_length=20, null=True, blank=True)
+    conversions_api = models.OneToOneField(ConversionsApi, on_delete=models.SET_NULL, related_name='fb_pixel', null=True, blank=True)
+
+
 
 class TikTokPixel(models.Model):
     store = models.ForeignKey(Store, on_delete=models.CASCADE, related_name='tiktok_pixels')

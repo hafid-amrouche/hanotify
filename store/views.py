@@ -3,7 +3,7 @@ from rest_framework.permissions import IsAuthenticated
 from django.http import JsonResponse
 import json
 from django.utils.translation import gettext as _
-from .models import Visitor, Store, IpAddress, GSInfo, FBPixel, TikTokPixel
+from .models import Visitor, Store, IpAddress, GSInfo, FBPixel, ConversionsApi, TikTokPixel
 from django.utils import timezone
 from functions import generate_token_from_id, get_client_ip
 
@@ -279,8 +279,8 @@ def get_fb_pxel(request):
     return JsonResponse(
         [ {
             'fbPixel': fb_pixel.pixel_id,
-            'apiToken': fb_pixel.conversion_api_access_token,
-            'eventTestCode': fb_pixel.test_event_code,
+            'apiToken': fb_pixel.conversions_api.token if fb_pixel.conversions_api else None,
+            'eventTestCode': fb_pixel.conversions_api.test_event_code if fb_pixel.conversions_api else None,
         } for fb_pixel in fb_pixels],
         safe=False
     )
@@ -301,6 +301,7 @@ def delete_fb_pixel(request):
     update_fb_pixel(new_list, store.id)
     try:
         pixel.delete()
+        pixel.conversions_api.delete()
     except:
         pass
     return JsonResponse(
@@ -317,8 +318,15 @@ def set_up_conversion_api_token(request):
     conversion_api_access_token = data.get('conversion_api_access_token')
     pixel_id = data.get('pixel_id')
     fb_pixel = FBPixel.objects.get(store=store, pixel_id=pixel_id)
-    fb_pixel.conversion_api_access_token = conversion_api_access_token or None
-    fb_pixel.save()
+    if conversion_api_access_token:
+        conversions_api = ConversionsApi.objects.create(
+            store = store,
+            token = conversion_api_access_token,
+        )
+        fb_pixel.conversions_api = conversions_api
+        fb_pixel.save()
+    else:
+        return JsonResponse({'detail': 'Error while setting your conversions api'}, status=400)
     return JsonResponse({'detail': 'Meta api conversions token is connected successfully.'})
     
 @api_view(['POST'])
@@ -328,9 +336,10 @@ def delete_conversion_api_token(request):
     store = request.user.stores.get(id=store_id)
     pixel_id = data.get('pixel_id')
     fb_pixel = FBPixel.objects.get(store=store, pixel_id=pixel_id)
-    fb_pixel.conversion_api_access_token = None
-    fb_pixel.test_event_code = None
-    fb_pixel.save()
+    try:
+        fb_pixel.conversions_api.delete()
+    except:
+        pass
     return JsonResponse(
             {'detail': 'Deleted'}
         )
@@ -343,8 +352,9 @@ def set_up_test_code_event(request):
     store = request.user.stores.get(id = store_id)
     test_event_code = data.get('test_event_code')
     fb_pixel = FBPixel.objects.get(store=store, pixel_id=pixel_id)
-    fb_pixel.test_event_code = test_event_code or None
-    fb_pixel.save()
+    conversions_api = fb_pixel.conversions_api
+    conversions_api.test_event_code = test_event_code or None
+    conversions_api.save()
     return JsonResponse({'detail': 'Success'})
 
 
@@ -421,33 +431,49 @@ def update_store_info(request):
 
     logo = data.get('logo')
     primary_color = data.get('primary_color')
+    primary_color_dark = data.get('primary_color_dark') 
     borders_rounded = data.get('borders_rounded')
     name = data.get('name')
     description = data.get('description')
+    favicon = data.get('favicon', '')
+    header_outlined = data.get('header_outlined')
+    language = data.get('language')
+    mode = data.get('mode')
+    footer = data.get('footer')
+    images_urls = data.get('images_urls')
 
     store.logo = logo
     store.primary_color = primary_color
+    store.primary_color_dark = primary_color_dark
     store.borders_rounded = borders_rounded
     store.name=name
     store.description =description
+    store.favicon =favicon
+    store.header_outlined = header_outlined
+    store.language = language
+    store.mode = mode
+    store.footer = footer
 
     receiver_url = media_files_domain + '/save-store'
 
     store_dict = {
         'primaryColor': primary_color,
+        'primaryColorDark': primary_color_dark,
         'bordersRounded': borders_rounded,
         'logo' :  logo,
         'name': name,
         'description': description,
+        'favicon': favicon,
+        'headerOutlined': header_outlined,
+        'language': language,
+        'mode': mode,
+        'footer': footer
     }
-    try:
-        store_dict['facebookPixelId'] = store.fb_pixel.pixel_id
-    except:
-        pass
     response = requests.post(receiver_url,{
         'id': store.id,
         'MESSAGING_KEY': settings.MESSAGING_KEY,
-        'store': json.dumps(store_dict)
+        'store': json.dumps(store_dict),
+        'images_urls' : images_urls
     })
     if not response.ok:
         raise

@@ -105,10 +105,16 @@ def register(request):
                 'domain': store_domain.domain,
                 'id': store.id,
                 'logo': None,
+                'favicon': None,
                 'bordersRounded': True,
                 'primaryColor': store.color_primary,
+                'primaryColorDark': store.color_primary_dark,
                 'name': '',
                 'description': '',
+                'headerOutlined': False,
+                'language': 'ar',
+                'mode': 'light',
+                'footer': ''
             }),
             'user_id': user.id,
             'MESSAGING_KEY': settings.MESSAGING_KEY

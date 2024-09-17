@@ -443,10 +443,10 @@ def incerement_product_views(request):
     product = Product.objects.get(id = data.get('product_id'))
     product.views += 1
     product.save()
-    try: 
-        FACEBOOK_PIXEL_ID = product.store.fb_pixel.pixel_id
-        FACEBOOK_ACCESS_TOKEN = product.store.fb_pixel.conversion_api_access_token
-        test_event_code = product.store.fb_pixel.test_event_code
+    for conversions_api in product.store.conversions_apis.all():
+        FACEBOOK_PIXEL_ID = conversions_api.fb_pixel.pixel_id
+        FACEBOOK_ACCESS_TOKEN = conversions_api.token
+        test_event_code = conversions_api.test_event_code
         if FACEBOOK_ACCESS_TOKEN :
             event_data={
                 'client_ip_address': get_client_ip(request),
@@ -458,8 +458,6 @@ def incerement_product_views(request):
                 event_name='PageView',
                 test_event_code = test_event_code
             )
-    except:
-        pass
     return JsonResponse({'detail': 'success'})
 
 @api_view(['GET'])

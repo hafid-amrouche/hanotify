@@ -411,36 +411,37 @@ def confirm_order(request): ## add this front end
         order.product_quantity=quantity
         order.created_at = timezone.now()
         order.save()
-        try: 
-            FACEBOOK_PIXEL_ID = order.store.fb_pixel.pixel_id
-            FACEBOOK_ACCESS_TOKEN = order.store.fb_pixel.conversion_api_access_token
-            test_event_code = order.store.fb_pixel.test_event_code
-            if FACEBOOK_ACCESS_TOKEN :
-                event_data={
-                    'phone' : order.phone_number,
-                    'first_name' : data.get('first_name'),
-                    'last_name' : data.get('last_name'),
-                    'city': order.shipping_city.name,
-                    'state': order.shipping_state.name,
-                    'country': 'DZ',
-                    'client_ip_address': ip_address,
-                    'custom_data': {
-                        "currency" : 'DZD',
-                        'value' : total_price,
-                        "order_id": order_id,
-                        "num_items": quantity,
-                        "content_type": 'product', # or product_group 
+        for conversions_api in order.store.conversions_apis.all():
+            try: 
+                FACEBOOK_PIXEL_ID = conversions_api.fb_pixel.pixel_id
+                FACEBOOK_ACCESS_TOKEN = conversions_api.token
+                test_event_code = conversions_api.test_event_code
+                if FACEBOOK_ACCESS_TOKEN :
+                    event_data={
+                        'phone' : order.phone_number,
+                        'first_name' : data.get('first_name'),
+                        'last_name' : data.get('last_name'),
+                        'city': order.shipping_city.name,
+                        'state': order.shipping_state.name,
+                        'country': 'DZ',
+                        'client_ip_address': ip_address,
+                        'custom_data': {
+                            "currency" : 'DZD',
+                            'value' : total_price,
+                            "order_id": order_id,
+                            "num_items": quantity,
+                            "content_type": 'product', # or product_group 
+                        }
                     }
-                }
-                respone = send_event_to_facebook(
-                    FACEBOOK_ACCESS_TOKEN=FACEBOOK_ACCESS_TOKEN,
-                    FACEBOOK_PIXEL_ID=FACEBOOK_PIXEL_ID,
-                    event_data=event_data,
-                    event_name='Purchase',
-                    test_event_code = test_event_code
-                )
-        except:
-            pass
+                    respone = send_event_to_facebook(
+                        FACEBOOK_ACCESS_TOKEN=FACEBOOK_ACCESS_TOKEN,
+                        FACEBOOK_PIXEL_ID=FACEBOOK_PIXEL_ID,
+                        event_data=event_data,
+                        event_name='Purchase',
+                        test_event_code = test_event_code
+                    )
+            except:
+                pass
     except Exception as e:
         pass
 
