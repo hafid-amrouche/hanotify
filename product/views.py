@@ -463,28 +463,28 @@ def incerement_product_views(request):
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_user_products(request):
-    
     search_text = request.GET.get('search-text')
     store_id = request.GET.get('store_id')
-    searched_products = Product.objects.filter(user=request.user, store_id=store_id, title__icontains = search_text, is_available=True).annotate(text_length=Length('title')).order_by('title')[:10]
+    exclude_id = request.GET.get('exclude')
+    searched_products = Product.objects.filter(user=request.user, store_id=store_id, title__icontains = search_text, is_available=True).exclude(id=exclude_id).annotate(text_length=Length('title')).order_by('title')[:10]
     serialized = SearchedProductTypeASerializer(searched_products, many=True).data
     return Response(serialized, status=200)
 
 @api_view(['GET'])
 def get_related_products(request):
-    
     product = Product.objects.get(id=request.GET.get('product_id'))
     if product.all_products_related:
         related_products = Product.objects.filter(user=product.user, is_available=True).exclude(id = product.id).order_by('-id')[:20]
         related_products_list = list(related_products.annotate(index=F('id')).values('id', 'index', 'slug', 'image', 'price', 'title'))
     else:
-        related_products = RelatedProduct.objects.filter(main_product = product, main_product__is_available=True)
+        related_products = RelatedProduct.objects.filter(main_product = product, main_product__is_available=True).exclude(main_product_id = product.id)
         related_products_list = list(related_products.annotate(
+            product_id=F('related_product__id'),
             slug=F('related_product__slug'),
             image=F('related_product__image'),
             price=F('related_product__price'),
             title=F('related_product__title'),
-            index=F('order')).values('id', 'index', 'slug', 'image', 'price', 'title'))
+            index=F('order')).values('product_id', 'index', 'slug', 'image', 'price', 'title'))
     return JsonResponse(related_products_list, safe=False, status=200)
 
 @api_view(['POST'])
