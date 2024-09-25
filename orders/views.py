@@ -537,7 +537,7 @@ def update_user_order(request): ## add this front end
     
     data = json.loads(request.body)
     phone_number = data.get('phone_number')
-    if len(phone_number) == 0 or (not phone_number.isdigit()):
+    if phone_number != 'locked' and (len(phone_number) == 0 or (not phone_number.isdigit())):
         return JsonResponse({"detail": _('Phone number is invalid')}, status=400)
     product_id = data.get('product_id')
     state_id = data.get('state_id')
@@ -577,7 +577,8 @@ def update_user_order(request): ## add this front end
     order.shipping_city = City.objects.get(state=state, id = city_id) if city_id else None
     order.shipping_address = address
     order.full_name = full_name
-    order.phone_number = phone_number
+    if order.show_phone_number:
+        order.phone_number = phone_number
     order.shipping_to_home = shipping_to_home
     order.product_quantity = quantity
     order.client_note = client_note
