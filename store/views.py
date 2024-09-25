@@ -193,7 +193,6 @@ initial_data = [
     _('Phone number'),
     _('State'),
     _('City'),
-    _('Status'),
     _('Quantity'),
     _('Shipping cost'),
     _('Total price'),

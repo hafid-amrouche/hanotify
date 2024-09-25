@@ -55,7 +55,7 @@ class AbndonedOrderPreviewSerializer(serializers.ModelSerializer):
     
     shippingState = serializers.SerializerMethodField(read_only=True)
     def get_shippingState(self, order):
-        return order.shipping_state.name
+        return order.shipping_state.name if order.shipping_state else '------'
     
     status=serializers.SerializerMethodField(read_only=True)
     def get_status(self, order):

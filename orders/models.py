@@ -71,7 +71,6 @@ def post_create(sender, instance, created,  **kwargs):
                 order.phone_number,
                 order.shipping_state.name if order.shipping_state else _('No state'),
                 (order.shipping_city.name if order.shipping_to_home else _('Office')) if order.shipping_city else '/',
-                order.status.text,
                 order.product_quantity,
                 order.product['shipping_cost'] or 0,
                 order.product['total_price'],
