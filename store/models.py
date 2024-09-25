@@ -1,13 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import User 
-from others.models import Image, SEO, State
-from others.models import Location
-from orders.models import Order
+from others.models import State
 # Create your models here.
 
 class Store(models.Model):
     owner= models.ForeignKey(User, on_delete=models.CASCADE, related_name='stores')
-
+    active = models.BooleanField(default=True)
     # Store design
     logo= models.TextField(null=True, blank=True)
     favicon= models.TextField(null=True, blank=True)
@@ -26,7 +24,7 @@ class Store(models.Model):
     instagram = models.TextField(blank=True, null=True)
     youtube = models.TextField(blank=True, null=True)
     ask_for_client_note = models.BooleanField(default=True)
-    footer = models.TextField(default='')
+    footer = models.TextField(default='')    
 
 class Domain(models.Model):
     domain = models.CharField(max_length=255, unique=True)
@@ -81,3 +79,8 @@ class TikTokPixel(models.Model):
 
 class VIPStore(models.Model):
     store = models.OneToOneField(Store, on_delete=models.CASCADE, related_name='vip_store')
+
+class StoreTopPick(models.Model):
+    store =  models.ForeignKey(Store, on_delete=models.CASCADE, related_name='top_picks')
+    product = models.ForeignKey('product.product', on_delete=models.CASCADE)
+    order = models.PositiveSmallIntegerField()

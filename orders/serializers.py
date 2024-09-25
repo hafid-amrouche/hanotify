@@ -20,9 +20,15 @@ class OrderPreviewSerializer(serializers.ModelSerializer):
     
     shippingCity = serializers.SerializerMethodField(read_only=True)
     def get_shippingCity(self, order):
-        return order.shipping_city.name
+        return order.shipping_city.name if order.shipping_city else None
 
-
+    shipping_city_id = serializers.SerializerMethodField(read_only=True)
+    def get_shipping_city_id(self, order):
+        return order.shipping_city_id if order.shipping_city else None
+    
+    shipping_state_id = serializers.SerializerMethodField(read_only=True)
+    def get_shipping_state_id(self, order):
+        return order.shipping_state_id if order.shipping_state_id else None
     
     class Meta:
         model = Order
@@ -64,12 +70,21 @@ class AbndonedOrderPreviewSerializer(serializers.ModelSerializer):
     
     shippingCity = serializers.SerializerMethodField(read_only=True)
     def get_shippingCity(self, order):
-        return order.shipping_city.name
+        return order.shipping_city.name if order.shipping_city else None
 
 
     phone_number = serializers.SerializerMethodField(read_only=True)
     def get_phone_number(self, order):
         return order.phone_number if order.show_phone_number else 'locked'
+    
+    shipping_city_id = serializers.SerializerMethodField(read_only=True)
+    def get_shipping_city_id(self, order):
+        return order.shipping_city_id if order.shipping_city else None
+    
+    shipping_state_id = serializers.SerializerMethodField(read_only=True)
+    def get_shipping_state_id(self, order):
+        return order.shipping_state_id if order.shipping_state_id else None
+    
     class Meta:
         model = Order
         fields= [

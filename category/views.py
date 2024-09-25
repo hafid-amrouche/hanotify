@@ -23,14 +23,29 @@ def add_category(request):
     slug = data.get('slug').strip()
     description = data.get('description')
     image = data.get('image')
-    store= request.user.stores.get(id=data.get('store_id'))
+    store_id = data.get('store_id')
+    store= request.user.stores.get(id=store_id)
+    if Category.objects.filter(store= store, label__iexact= title).exists():
+        return JsonResponse({
+            'detail': _('This name is already used'),
+            'field': 'name'
+        }, status=400)
+        
+    slug = slug or custom_slugify(title)
+
+    if Category.objects.filter(store= store, slug= slug).exists():
+        return JsonResponse({
+            'detail': _('This slug is already used'),
+            'field': 'slug'
+        }, status=400)
+    
     category = Category.objects.create(
         store= store,
         user=request.user,
         label= title,
         description= description,
         image=image,
-        slug= slug or custom_slugify(title),
+        slug= slug,
     )
 
     receiver_url = media_files_domain + '/save-category'
@@ -64,17 +79,31 @@ def update_category(request):
     slug = data.get('slug').strip()
     description = data.get('description')
     image = data.get('image')
-    store= request.user.stores.get(id=data.get('store_id'))
+    store_id = data.get('store_id')
+    category_id =data. get('category_id')
+    store= request.user.stores.get(id=store_id)
+    if Category.objects.filter(store= store, label__iexact= title).exclude(id=category_id).exists():
+        return JsonResponse({
+            'detail': _('This name is already used'),
+            'field': 'name'
+        }, status=400)
     category = Category.objects.get(
-        id=data.get('category_id'),
+        id=category_id,
         store= store,
         user=request.user,
     )
     category.label= title
     category.description= description
     category.image=image
-    category.slug= slug or custom_slugify(title)
+    slug= slug or custom_slugify(title)
 
+    if Category.objects.filter(store= store, slug= slug).exclude(id=category_id).exists():
+        return JsonResponse({
+            'detail': _('This slug is already used'),
+            'field': 'slug'
+        }, status=400)
+    
+    category.slug = slug
     receiver_url = media_files_domain + '/update-category'
     data = json.dumps({
         'category_id': category.id,

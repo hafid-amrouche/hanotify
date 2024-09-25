@@ -1,5 +1,4 @@
 from django.db import models
-from others.models import Image, SEO
 from django.contrib.auth.models import User 
 from store.models import Store
 
@@ -7,6 +6,7 @@ from store.models import Store
 # Create your models here.
 
 class Category(models.Model):
+    active = models.BooleanField(default=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True, related_name='categories') # remove blank
     store = models.ForeignKey(Store, on_delete=models.CASCADE, null=True, blank=True, related_name='categories') # remove blank
     label = models.CharField(max_length=50)
@@ -15,4 +15,9 @@ class Category(models.Model):
     slug = models.SlugField(null=True, blank=True)
     class Meta:
         ordering = ['-id']  # Default ordering: newest orders first
+
+class CategoryPreviewProduct(models.Model):
+    category =  models.ForeignKey(Category, on_delete=models.CASCADE, related_name='preview_products')
+    product = models.ForeignKey('product.product', on_delete=models.CASCADE)
+    order = models.PositiveSmallIntegerField()
 

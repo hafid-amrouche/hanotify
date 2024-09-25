@@ -35,6 +35,9 @@ class Product(models.Model):
     views = models.PositiveIntegerField(default=0)   
     # barcode = models.CharField(max_length=20, null=True, blank=True)
 
+    class Meta:
+        ordering = ['-created_at']
+
 class VariantsCombination(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='variants_combinations')
     index = models.PositiveIntegerField()

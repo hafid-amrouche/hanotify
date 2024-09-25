@@ -165,14 +165,6 @@ def create_order(request):
     if not((len_number == 10 or len_number == 9 ) and phone_number.isdigit()):
         return JsonResponse({"detail": 'Stop playing around you\'re not a hacker'}, status= 400)
     
-    state_id = data.get('state_id')
-    
-    shipping_state = State.objects.get(id = state_id)
-    try:
-        shipping_state_cost = StateShippingCost.objects.get(state = shipping_state, product=product)
-    except:
-        shipping_state_cost = None
-    
     combination_index = data.get('combination_index')
 
     if product.has_variants:
@@ -189,35 +181,25 @@ def create_order(request):
         combination = None
 
     quantity = data.get('quantity')
-    shipping_to_home = data.get('shippingToHome')
-    shipping_cost = shipping_state_cost and (shipping_state_cost.cost_to_home if shipping_to_home else shipping_state_cost.cost)
+
     product_dict = {
         'image': product.image,
         'title': product.title,
         'price': price,
         'id': product.id,
-        'shipping_cost': shipping_cost,
-        'total_price': price * quantity + (shipping_cost or 0)
+        'shipping_cost': None,
+        'total_price': price * quantity
     }
-
     if combination:
         product_dict['combination'] = combination
-
-    city_id = data.get('city_id')
-    try:
-        city = City.objects.get(id= city_id, state=shipping_state)
-    except:
-        city = shipping_state.cities.first()
-    
 
     order = Order.objects.create(
         store= product.store,
         product = product_dict,
         full_name = data.get('full_name').strip(),
         phone_number = phone_number,
-        shipping_state = shipping_state,
-        shipping_city = city,
-        shipping_to_home = shipping_to_home,
+        shipping_state = None,
+        shipping_city = None,
         created_at = timezone.now(),
         product_quantity = quantity,
         show_phone_number = VIPStore.objects.filter(store = product.store).exists()
@@ -274,24 +256,28 @@ def update_order(request):
         order_token =  data.get('order_token')
         order = Order.objects.get(id=order_id, token=order_token)
         state_id = data.get('state_id')
-        shipping_state = State.objects.get(id = state_id)
+        if state_id :
+            shipping_state = State.objects.get(id = state_id)
+            city_id = data.get('city_id')
+            try:
+                city = City.objects.get(id= city_id, state=shipping_state)
+            except:
+                city = shipping_state.cities.first()
+            
+            order.shipping_state = shipping_state
+            order.shipping_city = city
+
         full_name = data.get('full_name').strip()
         phone_number = data.get('phone_number').strip()
-        city_id = data.get('city_id')
 
         order.full_name = full_name
         if not phone_number.isdigit():
             return JsonResponse({"detail": 'Stop playing around you\'re not a hacker'}, status= 400)
         
-        try:
-            city = City.objects.get(id= city_id, state=shipping_state)
-        except:
-            city = shipping_state.cities.first()
             
         order.phone_number = phone_number
-        order.shipping_state = shipping_state
-        order.shipping_city = city
         order.created_at = timezone.now()
+
         order.save()
         return JsonResponse({
             'orderId' : order.id,
@@ -352,15 +338,27 @@ def confirm_order(request): ## add this front end
         order.shipping_address = data.get("shipping_address")
         
         state_id = data.get('state_id')
-    
         shipping_state = State.objects.get(id = state_id)
+        city_id = data.get('city_id')
+        try:
+            city = City.objects.get(id= city_id, state=shipping_state)
+        except:
+            city = shipping_state.cities.first()
+        
+        order.shipping_state = shipping_state
+        order.shipping_city = city
+
         try:
             shipping_state_cost = StateShippingCost.objects.get(state = shipping_state, product=product)
         except:
             shipping_state_cost = None
 
-        combination_index = data.get('combination_index')
 
+        shipping_to_home = data.get('shippingToHome')
+        order.shipping_to_home = shipping_to_home
+        shipping_cost = shipping_state_cost and (shipping_state_cost.cost_to_home if shipping_to_home else shipping_state_cost.cost)
+
+        combination_index = data.get('combination_index')
         if product.has_variants:
             try:        
                 variants_combination = product.variants_combinations.get(index = combination_index)      
@@ -375,8 +373,6 @@ def confirm_order(request): ## add this front end
             combination = None
 
 
-        shipping_to_home = data.get('shippingToHome')
-        shipping_cost = shipping_state_cost and (shipping_state_cost.cost_to_home if shipping_to_home else shipping_state_cost.cost)
         quantity = data.get('quantity')
 
         total_price = price * quantity + (shipping_cost or 0)
@@ -403,7 +399,6 @@ def confirm_order(request): ## add this front end
             return JsonResponse({"datail": 'Full name error'}, status=400)
         
         order.client_note= data.get('client_note')
-        
         order.shipping_city = city
         order.product = product_dict
         order.is_abandoned = False

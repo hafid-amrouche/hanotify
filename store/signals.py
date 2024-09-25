@@ -76,7 +76,6 @@ def store_post_create(sender, instance, created,  **kwargs):
                 order=status['order'],
                 icon=status['icon']
             )
-
     
 
 post_save.connect(store_post_create, Store)

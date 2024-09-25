@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Store, StateShippingCost, Status, Visitor, IpAddress, GSInfo, VIPStore, Domain, FBPixel, TikTokPixel, ConversionsApi
+from .models import Store, StateShippingCost, Status, Visitor, IpAddress, GSInfo, VIPStore, Domain, FBPixel, TikTokPixel, ConversionsApi, StoreTopPick
 # Register your models here.
 
 admin.site.register(Store)
@@ -13,4 +13,5 @@ admin.site.register(Domain)
 admin.site.register(FBPixel)
 admin.site.register(ConversionsApi)
 admin.site.register(TikTokPixel)
+admin.site.register(StoreTopPick)
 
