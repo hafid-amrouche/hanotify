@@ -555,7 +555,7 @@ def update_user_order(request): ## add this front end
     client_note= data.get('client_note')
     seller_note= data.get('seller_note')
 
-    state = State.objects.get(id = state_id)
+    state = State.objects.get(id = state_id) if state_id else None
     store = request.user.stores.get(id = store_id)
 
 
@@ -574,7 +574,7 @@ def update_user_order(request): ## add this front end
             'combination': variants,
     }
     order.shipping_state =state
-    order.shipping_city = City.objects.get(state=state, id = city_id)
+    order.shipping_city = City.objects.get(state=state, id = city_id) if city_id else None
     order.shipping_address = address
     order.full_name = full_name
     order.phone_number = phone_number

@@ -5,7 +5,7 @@ class OrderPreviewSerializer(serializers.ModelSerializer):
     
     shippingState = serializers.SerializerMethodField(read_only=True)
     def get_shippingState(self, order):
-        return order.shipping_state.name
+        return order.shipping_state.name if order.shipping_state else '------'
     
     status=serializers.SerializerMethodField(read_only=True)
     def get_status(self, order):
@@ -20,7 +20,7 @@ class OrderPreviewSerializer(serializers.ModelSerializer):
     
     shippingCity = serializers.SerializerMethodField(read_only=True)
     def get_shippingCity(self, order):
-        return order.shipping_city.name if order.shipping_city else None
+        return order.shipping_city.name if order.shipping_city else '------'
 
     shipping_city_id = serializers.SerializerMethodField(read_only=True)
     def get_shipping_city_id(self, order):
