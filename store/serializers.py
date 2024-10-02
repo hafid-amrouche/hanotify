@@ -13,3 +13,4 @@ class StateCostSerializer(serializers.ModelSerializer):
     costToHome = serializers.SerializerMethodField(read_only=True)
     def get_costToHome(self, obj):
         return obj.cost_to_home
+    

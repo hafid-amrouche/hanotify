@@ -10,7 +10,6 @@ from django.http import JsonResponse
 from functions import get_client_ip, generate_token_from_id
 from django.utils import timezone
 from django.core.paginator import Paginator, EmptyPage
-from time import sleep
 from store.models import Visitor, IpAddress,Store, VIPStore
 from django.db.models import Q
 from store.models import Status
@@ -43,7 +42,6 @@ def get_orders(request):
     if date:
         if date == '1-day':
             delta = timezone.now() - timezone.timedelta(days=1)
-            
             
         elif date == '7-days':
             delta = timezone.now() - timezone.timedelta(days=7)

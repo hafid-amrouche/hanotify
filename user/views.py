@@ -39,7 +39,6 @@ def login(request):
 
 @api_view(['POST'])
 def register(request):
-    
     try :
         data = json.loads(request.body)
         first_name = data['first_name']

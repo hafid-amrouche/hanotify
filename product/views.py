@@ -9,7 +9,6 @@ from django.utils.translation import gettext as _
 from .serialiers import SearchedProductTypeASerializer, SearchedProductDetailedSerializer
 from django.db.models import F
 from django.db.models.functions import Length
-from django.db.models import F
 from django.core.paginator import Paginator, EmptyPage
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
@@ -641,6 +640,7 @@ def home_customization_products(request):
             'products': serialized_category_preview_products(category.preview_products.all()) if active else None ,
             'type': 'products-container',
             'active': active,
+            'image': category.image
         })
 
     return Response({
@@ -655,14 +655,19 @@ def home_customization_products(request):
             'id': 'general-design',
             'type': 'general-design',
             'mobile': {
-                'backgroundColor': None
+                'backgroundColor': {
+                    "light": "#f6f6f6",
+                    "dark": "#121212"
+                }
             },
             'PC': {
-                'backgroundColor': None
+                'backgroundColor': {
+                    "light": "#f6f6f6",
+                    "dark": "#121212"
+                }
             },
-        },
-   
-        
-    })
+            }
+        }    
+    )
 
 

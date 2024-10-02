@@ -1,18 +1,23 @@
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+
 from django.http import JsonResponse
 import json
 from django.utils.translation import gettext as _
 from .models import Visitor, Store, IpAddress, GSInfo, FBPixel, ConversionsApi, TikTokPixel
 from django.utils import timezone
 from functions import generate_token_from_id, get_client_ip
+from product.serialiers import ProductSerializerA
 
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from django.conf import settings
-from time import sleep
 from contants import media_files_domain
 import requests
+from django.db.models import F
+from django.core.paginator import Paginator, EmptyPage
+
         
 # Create your views here.
 
@@ -429,8 +434,8 @@ def update_store_info(request):
     store = request.user.stores.get(id=store_id)
 
     logo = data.get('logo')
-    primary_color = data.get('primary_color')
-    primary_color_dark = data.get('primary_color_dark') 
+    color_primary = data.get('primary_color')
+    color_primary_dark = data.get('primary_color_dark') 
     borders_rounded = data.get('borders_rounded')
     name = data.get('name')
     description = data.get('description')
@@ -442,8 +447,8 @@ def update_store_info(request):
     images_urls = data.get('images_urls')
 
     store.logo = logo
-    store.primary_color = primary_color
-    store.primary_color_dark = primary_color_dark
+    store.color_primary = color_primary
+    store.color_primary_dark = color_primary_dark
     store.borders_rounded = borders_rounded
     store.name=name
     store.description =description
@@ -456,8 +461,8 @@ def update_store_info(request):
     receiver_url = media_files_domain + '/save-store'
 
     store_dict = {
-        'primaryColor': primary_color,
-        'primaryColorDark': primary_color_dark,
+        'primaryColor': color_primary,
+        'primaryColorDark': color_primary_dark,
         'bordersRounded': borders_rounded,
         'logo' :  logo,
         'name': name,
@@ -476,7 +481,62 @@ def update_store_info(request):
     })
     if not response.ok:
         raise
-
     store.save()
     return JsonResponse({'detail': 'success'})
     
+
+@api_view(['POST'])
+def non_selected_top_picks_products(request):
+    data = json.loads(request.body)
+    domain = data.get('domain')    
+
+    store = Store.objects.get(owner = request.user,domain__domain=domain)
+    if not store.active:
+        return JsonResponse({'detail', _('Store not found')}, status=400)
+    
+    excluded_products = data.get('excluded_products')    
+    top_picks = store.products.filter(active=True, is_available=True).exclude(id__in = excluded_products)
+
+    page = data.get('page')
+    
+    paginator = Paginator(top_picks, 3)
+    try:
+        products = paginator.page(page)  # Get products for the desired page
+    except EmptyPage:
+        products = paginator.page(paginator.num_pages)  # If page is out of range, deliver last page of results.
+
+    return Response({
+        'products': ProductSerializerA(products, many=True).data,    
+        'numPages': paginator.num_pages,
+        'hasNext': products.has_next(),
+        'hasPrev': products.has_previous(),    
+    })
+
+@api_view(['POST'])
+def non_selected_category_products(request):
+    data = json.loads(request.body)
+    domain = data.get('domain')    
+    category_id = data.get('category_id') 
+
+    store = Store.objects.get(owner = request.user,domain__domain=domain)
+    category = store.categories.get(id=category_id)
+    if not store.active:
+        return JsonResponse({'detail', _('Store not found')}, status=400)
+    
+    excluded_products = data.get('excluded_products')    
+    category_products = category.products.filter(active=True, is_available=True).exclude(id__in = excluded_products)
+    page = data.get('page')
+    
+    paginator = Paginator(category_products, 12)
+    try:
+        products = paginator.page(page)  # Get products for the desired page
+    except EmptyPage:
+        products = paginator.page(paginator.num_pages)  # If page is out of range, deliver last page of results
+
+    return Response({
+        'products': ProductSerializerA(products, many=True).data,    
+        'numPages': paginator.num_pages,
+        'hasNext': products.has_next(),
+        'hasPrev': products.has_previous(),    
+    })
+

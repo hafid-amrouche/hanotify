@@ -18,5 +18,7 @@ urlpatterns = [
         path('set-up-conversions-api', views.set_up_conversion_api_token),
         path('delete-conversions-api', views.delete_conversion_api_token),
         path('set-up-test-event-code', views.set_up_test_code_event),
-        path('update-store-info', views.update_store_info)
+        path('update-store-info', views.update_store_info),
+        path('non-selected-top-pick-products', views.non_selected_top_picks_products),
+        path('non-selected-category-products', views.non_selected_category_products),
 ]
