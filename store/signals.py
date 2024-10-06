@@ -1,4 +1,4 @@
-from .models import Store, Status, HomePage
+from .models import Store, Status, HomePage, HomePageSection
 from django.db.models.signals import post_save
 
 status_list =[
@@ -97,3 +97,14 @@ def store_post_create(sender, instance, created,  **kwargs):
             )
 
 post_save.connect(store_post_create, Store)
+
+def home_page_post_create(sender, instance, created,  **kwargs):
+    if created:
+        home_page = instance
+        HomePageSection.objects.create(
+            home_page = home_page,   
+            section_id = 'top-picks',
+            type = 'products-container',
+        )
+        
+post_save.connect(home_page_post_create, HomePage)
