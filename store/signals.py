@@ -1,4 +1,4 @@
-from .models import Store, Status
+from .models import Store, Status, HomePage
 from django.db.models.signals import post_save
 
 status_list =[
@@ -76,6 +76,24 @@ def store_post_create(sender, instance, created,  **kwargs):
                 order=status['order'],
                 icon=status['icon']
             )
-    
+            HomePage.objects.create(
+                store=store,
+                generalDesign= {
+                    'id': 'general-design',
+                    'type': 'general-design',
+                    'mobile': {
+                        'backgroundColor': {
+                            "light": "#f6f6f6",
+                            "dark": "#121212"
+                        }
+                    },
+                    'PC': {
+                        'backgroundColor': {
+                            "light": "#f6f6f6",
+                            "dark": "#121212"
+                        }
+                    },
+                }
+            )
 
 post_save.connect(store_post_create, Store)

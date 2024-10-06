@@ -21,4 +21,11 @@ urlpatterns = [
         path('update-store-info', views.update_store_info),
         path('non-selected-top-pick-products', views.non_selected_top_picks_products),
         path('non-selected-category-products', views.non_selected_category_products),
+        path('update-homepage', views.update_homepage),
+        path('home-customization-products', views.home_customization_products),
+
+        # hanotify.store
+        path('get-sidebar-content', views.sidebar_content),
+        path('home-page-sections', views.home_page_sections),
+
 ]

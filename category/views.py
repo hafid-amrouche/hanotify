@@ -1,13 +1,13 @@
 from rest_framework.decorators import api_view
 import json
 from django.http import JsonResponse
-import time
-from .models import Category
+from .models import Category, Store
 from contants import media_files_domain
 from django.conf import settings
 import requests
 from django.utils.translation import gettext as _
 from functions import custom_slugify
+from django.db.models import F
 
 
 
@@ -153,3 +153,38 @@ def delete_category(request):
 @api_view(['GET'])
 def get_categories(request):
     return JsonResponse(list(request.user.categories.values('id', 'label', 'image', 'slug', 'description', 'id')), safe=False )
+
+
+
+
+# hanotify-store
+def serialized_searched_products(query):
+    return list(query.values('id', 'slug', 'image', 'price', 'original_price', 'title'))
+
+def serialized_category_preview_products(query):
+    return list(
+        query.annotate(
+            product_id = F('id'),
+        ).values('product_id','image', 'price', 'title', 'slug', 'original_price'))
+
+
+@api_view(['GET'])
+def category_page(request):
+
+    domain = request.GET.get('domain')  
+    store = Store.objects.get(domain__domain = domain)  
+    slug = request.GET.get('slug') 
+    if slug == 'top-picks':
+        section = store.home_page.sections.get(section_id='top-picks')
+        products =  section.products.all()[:20]
+        title= 'Top picks'
+
+    else:
+        category = Category.objects.get(slug=slug, store__domain__domain = domain)
+        products = category.products.all()[:20]
+        title= category.label
+
+    return JsonResponse({
+        'products' : serialized_category_preview_products(products),
+        'title': title
+    })

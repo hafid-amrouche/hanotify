@@ -26,6 +26,30 @@ class Store(models.Model):
     ask_for_client_note = models.BooleanField(default=True)
     footer = models.TextField(default='')    
 
+class HomePage(models.Model):
+    store = models.OneToOneField(Store, on_delete=models.CASCADE, related_name='home_page')
+    general_design = models.JSONField(null=True, blank=True)
+
+
+
+class HomePageSection(models.Model):
+    home_page = models.ForeignKey(HomePage, on_delete=models.CASCADE, related_name='sections')   
+    section_id = models.CharField(max_length=50)
+    type = models.CharField(max_length=50, null=True, blank=True)
+    design = models.JSONField(null=True, blank=True)
+    order = models.PositiveSmallIntegerField(default=0)
+
+    # products container only
+    active = models.BooleanField(default=False)
+    category = models.OneToOneField('category.category', on_delete= models.CASCADE, null=True, blank=True, related_name='home_page_section')
+    products = models.ManyToManyField('product.product')
+
+    # swiper container only    
+    title = models.CharField(max_length=50, null=True, blank=True)
+    image_objects = models.JSONField(null=True, blank=True)
+    device = models.CharField(max_length=50, null=True, blank=True)
+
+
 class Domain(models.Model):
     domain = models.CharField(max_length=255, unique=True)
     store = models.OneToOneField(Store, on_delete=models.CASCADE, related_name='domain')
@@ -70,7 +94,6 @@ class FBPixel(models.Model):
     store = models.ForeignKey(Store, on_delete=models.CASCADE, related_name='fb_pixels')
     pixel_id = models.CharField(max_length=20)
     conversions_api = models.OneToOneField(ConversionsApi, on_delete=models.SET_NULL, related_name='fb_pixel', null=True, blank=True)
-
 
 
 class TikTokPixel(models.Model):

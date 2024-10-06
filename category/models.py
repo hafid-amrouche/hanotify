@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User 
-from store.models import Store
+from store.models import Store, HomePageSection
+from django.db.models.signals import post_save
+
 
 
 # Create your models here.
@@ -15,6 +17,19 @@ class Category(models.Model):
     slug = models.SlugField(null=True, blank=True)
     class Meta:
         ordering = ['-id']  # Default ordering: newest orders first
+
+def store_post_create(sender, instance, created,  **kwargs):
+    category = instance
+    if created:
+        HomePageSection.objects.create(
+            home_page = category.store.home_page,
+            section_id = category.id,
+            type = 'products-container',
+            design = None,
+            # products container only
+            category = category,
+        )
+post_save.connect(store_post_create, Category)
 
 class CategoryPreviewProduct(models.Model):
     category =  models.ForeignKey(Category, on_delete=models.CASCADE, related_name='preview_products')

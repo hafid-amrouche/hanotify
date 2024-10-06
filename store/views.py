@@ -15,8 +15,13 @@ from googleapiclient.discovery import build
 from django.conf import settings
 from contants import media_files_domain
 import requests
-from django.db.models import F
 from django.core.paginator import Paginator, EmptyPage
+from .models import HomePageSection
+from category.models import Category
+from product.models import Product
+from django.db.models import F
+
+
 
         
 # Create your views here.
@@ -484,7 +489,6 @@ def update_store_info(request):
     store.save()
     return JsonResponse({'detail': 'success'})
     
-
 @api_view(['POST'])
 def non_selected_top_picks_products(request):
     data = json.loads(request.body)
@@ -538,5 +542,175 @@ def non_selected_category_products(request):
         'numPages': paginator.num_pages,
         'hasNext': products.has_next(),
         'hasPrev': products.has_previous(),    
+    })
+
+@api_view(['POST'])
+def update_homepage(request):
+    if request.method == "POST":
+        try:
+            data = json.loads(request.body)  # Load the JSON payload
+            
+            # Get the home page for the store (assuming store_id is in the request or data)
+            store_id = data.get('store_id')
+            store = request.user.stores.get(id= store_id)
+            home_page = store.home_page
+            
+            # Iterate through the sections in the data
+            to_saved_id = []
+            order = 1
+            for section_data in data['sections']:
+                section_id = section_data.get('id')
+                section, created = HomePageSection.objects.update_or_create(
+                    home_page=home_page,
+                    section_id=section_id,
+                )
+                to_saved_id.append(section.id)
+                category = None
+                section_type = section_data.get('type')
+                if section_type == 'products-container':  # Assuming it's a category if it's an integer
+                    section_id = section_data.get('id')
+                    try:
+                        category = Category.objects.get(id=section_id)
+                    except:
+                        pass
+                    section.products.clear()
+                    for product_data in section_data.get('products', []):
+                        product_id = product_data['product_id']
+                        product = Product.objects.get(id=product_id)
+                        section.products.add(product)
+                    section.active = section_data.get('active')
+                elif section_type == 'swiper':
+                    
+                    section.image_objects = section_data.get('imageObjects')
+                    section.device = section_data.get('device')
+                    section.title = section_data.get('title')
+                    section.active = True
+                section.category = category 
+                section.section_id = section_id
+                section.type = section_type
+                section.design = section_data.get('design')
+                section.order = order
+                order += 1
+                section.save()
+
+            home_page.sections.exclude(id__in=to_saved_id).exclude(type='products-container').delete()
+            home_page.general_design = data['general_design']
+            home_page.save()
+            return JsonResponse({'status': 'success', 'message': 'Home page sections populated successfully.'}, status=201)
+        
+        except Exception as e:
+            return JsonResponse({'status': 'error', 'message': str(e)}, status=400)
+
+    return JsonResponse({'status': 'error', 'message': 'Invalid request method.'}, status=405)
+
+def serialized_category_preview_products(query):
+    return list(
+        query.annotate(
+            product_id = F('id'),
+        ).values('product_id','image', 'price', 'title', 'original_price', 'slug'))
+
+def home_page_section_serializer(home_page_sections):
+        def serialize_section(section):
+            if section.type == 'products-container':
+                if section.section_id == 'top-picks':
+                        return {
+                            "id": section.section_id,
+                            "title": 'Top picks',
+                            "products": serialized_category_preview_products(section.products),
+                            "type": "products-container",
+                            "active": section.active,
+                            "image": None,
+                            "design": section.design
+                        }
+                else:
+                    return {
+                        "id": section.section_id,
+                        "title": section.category.label,
+                        "products": serialized_category_preview_products(section.products),
+                        "type": "products-container",
+                        "active": section.active,
+                        "image": section.category.image,
+                        "design": section.design
+                    }
+            if section.type == 'swiper':
+                return {
+                    "id": section.section_id,
+                    "title": section.title,
+                    "imageObjects": section.image_objects,
+                    "design": section.design,
+                    "type": "swiper",
+                    "active": True,
+                    "device": section.device
+                }
+        return [
+            serialize_section(section) 
+            for section in home_page_sections
+        ]
+
+@api_view(['GET'])
+def home_customization_products(request):
+    domain = request.GET.get('domain')    
+
+    store = Store.objects.get(domain__domain=domain)
+    if not store.active:
+        return JsonResponse({'detail', _('Store not found')}, status=400)
+    
+    home_page = store.home_page
+    return Response({
+        'sections': home_page_section_serializer(home_page.sections.order_by('order')),
+        'store': {
+            'primaryColor': store.color_primary,
+            'primaryColorDark': store.color_primary_dark,
+            'visionMode': store.mode,
+            'bordersRounded': store.borders_rounded
+        },
+        'generalDesign':  home_page.general_design,
+    })
+
+
+# hanotify.store
+@api_view(['GET'])
+def sidebar_content(request):
+    domain = request.GET.get('domain')    
+
+    store = Store.objects.get(domain__domain=domain)
+    if not store.active:
+        return JsonResponse({'detail', _('Store not found')}, status=400)
+    
+    catgeories_list = [
+        {
+            'name' : category.label,
+            'slug': category.slug
+        }
+        for category in store.categories.filter(home_page_section__active=True)
+    ]
+    catgeories_list.insert(0, {
+        'name': 'Top picks',
+        'slug': 'top-picks'
+    })
+    return JsonResponse({
+        'categories': catgeories_list
+    })
+
+
+
+@api_view(['GET'])
+def home_page_sections(request):
+    domain = request.GET.get('domain')    
+
+    store = Store.objects.get(domain__domain=domain)
+    if not store.active:
+        return JsonResponse({'detail', _('Store not found')}, status=400)
+    
+    home_page = store.home_page
+    return Response({
+        'sections': home_page_section_serializer(home_page.sections.filter(active=True).order_by('order')),
+        'store': {
+            'primaryColor': store.color_primary,
+            'primaryColorDark': store.color_primary_dark,
+            'visionMode': store.mode,
+            'bordersRounded': store.borders_rounded
+        },
+        'generalDesign':  home_page.general_design,
     })
 

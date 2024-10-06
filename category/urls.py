@@ -6,4 +6,5 @@ urlpatterns = [
     path("update-category", views.update_category),
     path("get-categories", views.get_categories),
     path("delete-category", views.delete_category),
+    path("category-page", views.category_page),
 ]

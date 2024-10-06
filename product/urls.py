@@ -13,6 +13,4 @@ urlpatterns = [
     path("toggle-product-state", views.toggle_product_state),
     path('delete-product', views.delete_product),
     path("get-product-variants", views.get_product_variants),
-    path('home-products', views.home_products),
-    path('home-customization-products', views.home_customization_products)
 ]

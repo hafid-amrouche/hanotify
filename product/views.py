@@ -503,6 +503,7 @@ def get_products_for_seller(request):
         products = paginator.page(paginator.num_pages)  # If page is out of range, deliver last page of results.
 
     serialized = SearchedProductDetailedSerializer(products, many=True).data
+    print(product_list[0].price  , products[0].price)
     return Response({
         'products': serialized,
         'numPages': paginator.num_pages,
@@ -567,107 +568,3 @@ def delete_product(request):
     return JsonResponse({
         'detail': _('Your product was deleted succefully')
     })
-
-def serialized_searched_products(query):
-    return list(query.annotate(product_id=F('id')).values('product_id', 'slug', 'image', 'price', 'title'))
-
-
-# store
-@api_view(['GET'])
-def home_products(request):
-    domain = request.GET.get('domain')    
-
-    store = Store.objects.get(domain__domain=domain)
-    if not store.active:
-        return JsonResponse({'detail', _('Store not found')}, status=400)
-    home_page_design = store.home_page_design
-
-    
-    categories = home_page_design.selected_categories.all()
-    if categories:
-        categories_products = [{
-            'image': category.image,
-            'name': category.label,
-            'products': serialized_searched_products(category.products.all()[:10])
-        } for category in categories]
-
-    else:
-        categories_products = None
-
-    selected_products = (home_page_design.selected_products and serialized_searched_products(home_page_design.selected_products)) or None
-    return Response({
-        'selectedProducts': selected_products,
-        'categoriesProducts' : categories_products,
-        'orders': home_page_design.orders
-    })
-    
-def serialized_home_customization_products(query):
-    return list(query.annotate(product_id=F('id')).values('product_id','image', 'price', 'title'))
-
-def serialized_category_preview_products(query):
-    return list(
-        query.annotate(
-            image = F('product__image'),
-            price = F('product__price'),
-            title = F('product__title'),
-        ).values('product_id','image', 'price', 'title'))
-# store
-@api_view(['GET'])
-def home_customization_products(request):
-    domain = request.GET.get('domain')    
-
-    store = Store.objects.get(domain__domain=domain)
-    if not store.active:
-        return JsonResponse({'detail', _('Store not found')}, status=400)
-    
-    top_picks = store.top_picks.all()
-
-    sections = []
-
-    if top_picks:
-        sections.append({
-            'id': 'top-picks',
-            'title': _('Top picks'),
-            'products': serialized_category_preview_products(top_picks),
-            'type': 'products-container',
-            'active': True,
-        })
-    for category in store.categories.all():
-        active = category.active
-        sections.append({
-            'id': category.id,
-            'title': category.label,
-            'products': serialized_category_preview_products(category.preview_products.all()) if active else None ,
-            'type': 'products-container',
-            'active': active,
-            'image': category.image
-        })
-
-    return Response({
-        'sections': sections,
-        'store': {
-            'primaryColor': store.color_primary,
-            'primaryColorDark': store.color_primary_dark,
-            'visionMode': store.mode,
-            'bordersRounded': store.borders_rounded
-        },
-        'generalDesign': {
-            'id': 'general-design',
-            'type': 'general-design',
-            'mobile': {
-                'backgroundColor': {
-                    "light": "#f6f6f6",
-                    "dark": "#121212"
-                }
-            },
-            'PC': {
-                'backgroundColor': {
-                    "light": "#f6f6f6",
-                    "dark": "#121212"
-                }
-            },
-            }
-        }    
-    )
-
-
