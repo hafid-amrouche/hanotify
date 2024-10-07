@@ -69,6 +69,25 @@ status_list =[
 def store_post_create(sender, instance, created,  **kwargs):
     if created:
         store = instance
+        HomePage.objects.create(
+            store=store,
+            general_design= {
+                'id': 'general-design',
+                'type': 'general-design',
+                'mobile': {
+                    'backgroundColor': {
+                        "light": "#ffffff",
+                        "dark": "#121212"
+                    }
+                },
+                'PC': {
+                    'backgroundColor': {
+                        "light": "#ffffff",
+                        "dark": "#121212"
+                    }
+                },
+            }
+        )
         for status in status_list:
             Status.objects.create(
                 store= store,
@@ -76,25 +95,7 @@ def store_post_create(sender, instance, created,  **kwargs):
                 order=status['order'],
                 icon=status['icon']
             )
-            HomePage.objects.create(
-                store=store,
-                generalDesign= {
-                    'id': 'general-design',
-                    'type': 'general-design',
-                    'mobile': {
-                        'backgroundColor': {
-                            "light": "#f6f6f6",
-                            "dark": "#121212"
-                        }
-                    },
-                    'PC': {
-                        'backgroundColor': {
-                            "light": "#f6f6f6",
-                            "dark": "#121212"
-                        }
-                    },
-                }
-            )
+           
 
 post_save.connect(store_post_create, Store)
 
