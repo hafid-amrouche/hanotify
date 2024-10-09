@@ -30,6 +30,10 @@ class OrderPreviewSerializer(serializers.ModelSerializer):
     def get_shipping_state_id(self, order):
         return order.shipping_state_id if order.shipping_state_id else None
     
+    phone_number = serializers.SerializerMethodField(read_only=True)
+    def get_phone_number(self, order):
+        return order.phone_number if order.show_phone_number else 'locked'
+    
     class Meta:
         model = Order
         fields= [
