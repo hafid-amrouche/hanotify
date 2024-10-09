@@ -200,7 +200,7 @@ def create_order(request):
         shipping_city = None,
         created_at = timezone.now(),
         product_quantity = quantity,
-        show_phone_number = VIPStore.objects.filter(store = product.store).exists()
+        show_phone_number = product.store.plan in ['type-b', 'type-c'],
     )
     order.token = generate_token_from_id(order.id)
 
@@ -400,7 +400,7 @@ def confirm_order(request): ## add this front end
         order.shipping_city = city
         order.product = product_dict
         order.is_abandoned = False
-        order.show_phone_number = True
+        order.show_phone_number = order.show_phone_number or bool(product.store.plan)
         order.product_quantity=quantity
         order.created_at = timezone.now()
         order.save()
@@ -585,8 +585,7 @@ def update_user_order(request): ## add this front end
     return JsonResponse({"order": OrderPreviewSerializer(order).data})
 
 @api_view(['POST'])
-def reveal_phone_number(request):
-    
+def reveal_phone_number(request):  
     data = json.loads(request.body)
     store_id = data.get('store_id')
     store = request.user.stores.get(id = store_id)
@@ -595,15 +594,20 @@ def reveal_phone_number(request):
         store=store,
     )
     if not order.show_phone_number:
+        if store.credit < 10:
+            return JsonResponse({
+                    'phone_number': None,
+                    'revelied': False,
+                    'store_credit': store.credit
+                })
+        store.credit -= 10
+        store.save()
         order.show_phone_number = True
         order.save()
-        # decrease points
-        return JsonResponse({
-            'phone_number': order.phone_number,
-            'revelied': True
-        })
-    else:
-        return JsonResponse({
-            'phone_number': order.phone_number,
-            'revelied': False
-        })
+
+    return JsonResponse({
+        'phone_number': order.phone_number,
+        'revelied': True,
+        'store_credit': store.credit
+    })
+   

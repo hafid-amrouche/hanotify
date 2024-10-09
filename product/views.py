@@ -503,7 +503,6 @@ def get_products_for_seller(request):
         products = paginator.page(paginator.num_pages)  # If page is out of range, deliver last page of results.
 
     serialized = SearchedProductDetailedSerializer(products, many=True).data
-    print(product_list[0].price  , products[0].price)
     return Response({
         'products': serialized,
         'numPages': paginator.num_pages,

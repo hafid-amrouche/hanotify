@@ -88,6 +88,7 @@ def store_post_create(sender, instance, created,  **kwargs):
                 },
             }
         )
+      
         for status in status_list:
             Status.objects.create(
                 store= store,
@@ -95,8 +96,9 @@ def store_post_create(sender, instance, created,  **kwargs):
                 order=status['order'],
                 icon=status['icon']
             )
-           
+        
 
+        
 post_save.connect(store_post_create, Store)
 
 def home_page_post_create(sender, instance, created,  **kwargs):

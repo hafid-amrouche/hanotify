@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Store, StateShippingCost, Status, Visitor, IpAddress, GSInfo, VIPStore, Domain, FBPixel, TikTokPixel, ConversionsApi, StoreTopPick, HomePage, HomePageSection
+from .models import (Store, StateShippingCost, Status, Visitor, 
+    IpAddress, GSInfo, VIPStore, Domain, FBPixel, TikTokPixel, ConversionsApi, StoreTopPick, HomePage, HomePageSection)
 # Register your models here.
 
 admin.site.register(Store)
@@ -16,5 +17,4 @@ admin.site.register(TikTokPixel)
 admin.site.register(StoreTopPick)
 admin.site.register(HomePageSection)
 admin.site.register(HomePage)
-
 

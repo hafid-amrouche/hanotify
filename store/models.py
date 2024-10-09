@@ -25,10 +25,15 @@ class Store(models.Model):
     youtube = models.TextField(blank=True, null=True)
     ask_for_client_note = models.BooleanField(default=True)
     footer = models.TextField(default='')    
+    credit = models.BigIntegerField(default=300)
+    plan = models.CharField(max_length=10, null=True, blank=True)
+
 
 class HomePage(models.Model):
     store = models.OneToOneField(Store, on_delete=models.CASCADE, related_name='home_page')
     general_design = models.JSONField(null=True, blank=True)
+
+
 
 
 

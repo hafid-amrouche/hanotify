@@ -714,3 +714,12 @@ def home_page_sections(request):
         'generalDesign':  home_page.general_design,
     })
 
+@api_view(['GET'])
+def get_store_credit(request):
+    store_id = request.GET.get('store_id')
+    store = Store.objects.get(id=store_id, owner=request.user)
+    
+    return JsonResponse({
+        'credit' : store.credit    
+    })
+
