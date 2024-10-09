@@ -295,6 +295,7 @@ def update_order(request):
 
 def send_new_order_notification(instance):
         channel_layer = get_channel_layer()
+        print('about to send order 1')
 
         # Send message to the orders group
         async_to_sync(channel_layer.group_send)(
