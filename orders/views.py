@@ -301,7 +301,7 @@ def send_new_order_notification(instance):
             "orders",
             {
                 "type": "send_new_order",
-                "order": OrderPreviewSerializer(instance).data
+                "order": {"": ''}
             }
         )
 
