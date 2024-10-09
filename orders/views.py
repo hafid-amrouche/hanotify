@@ -301,7 +301,7 @@ def send_new_order_notification(instance):
             "orders",
             {
                 "type": "send_new_order",
-                "order": {"": ''} 
+                "order": OrderPreviewSerializer(instance).data
             }
         )
 
@@ -450,7 +450,7 @@ def confirm_order(request): ## add this front end
         order.save()
 
         # after order is confirmed
-        send_new_order_notification(order)  
+        send_new_order_notification(order)
         try:
             gs_info = order.store.gs_info
             order_data =[

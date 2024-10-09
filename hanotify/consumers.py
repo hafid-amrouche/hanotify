@@ -17,6 +17,7 @@ class OrderConsumer(AsyncWebsocketConsumer):
     async def send_new_order(self, event):
         order = event['order']
 
+        print('about to send order')
         # Send message to WebSocket
         await self.send(text_data=json.dumps({
             'order': order
