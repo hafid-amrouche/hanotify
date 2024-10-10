@@ -9,7 +9,7 @@ class Order(models.Model):
     shipping_state = models.ForeignKey('others.State', on_delete=models.SET_NULL, null=True, blank=True)
     shipping_city = models.ForeignKey('others.City', on_delete=models.SET_NULL, null=True, blank=True)
     shipping_address = models.TextField(max_length=200, null=True, blank=True)
-    full_name = models.CharField(max_length=50, null=True, blank=True)
+    full_name = models.CharField(max_length=5000, null=True, blank=True)
     phone_number = models.CharField(max_length=13, null=True, blank=True)
     created_at = models.DateTimeField(null=True, blank=True)
     shipping_to_home = models.BooleanField(default=False)
