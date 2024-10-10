@@ -29,7 +29,7 @@ def store_post_create(sender, instance, created,  **kwargs):
             # products container only
             category = category,
         )
-post_save.connect(store_post_create, Category)
+# post_save.connect(store_post_create, Category)
 
 class CategoryPreviewProduct(models.Model):
     category =  models.ForeignKey(Category, on_delete=models.CASCADE, related_name='preview_products')
