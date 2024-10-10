@@ -293,18 +293,17 @@ def update_order(request):
         print('orders/views/112 :', str(e))
         return JsonResponse({'detail' : str(e)}, status=400)
 
-def send_new_order_notification(instance):
-        channel_layer = get_channel_layer()
-        print('about to send order 1')
+def send_new_order_notification(store, instance):
+    channel_layer = get_channel_layer()
 
-        # Send message to the orders group
-        async_to_sync(channel_layer.group_send)(
-            "orders",
-            {
-                "type": "send_new_order",
-                "order": OrderPreviewSerializer(instance).data
-            }
-        )
+    # Send message to the orders group
+    async_to_sync(channel_layer.group_send)(
+        f"orders-{store.id}",
+        {
+            "type": "send_new_order",
+            "order": OrderPreviewSerializer(instance).data
+        }
+    )
 
 def append_order_to_sheet(order_data, spreadsheet_id, sheet_name):
     SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
@@ -451,7 +450,7 @@ def confirm_order(request): ## add this front end
         order.save()
 
         # after order is confirmed
-        send_new_order_notification(order)
+        send_new_order_notification(product.store, order)
         try:
             gs_info = order.store.gs_info
             order_data =[
