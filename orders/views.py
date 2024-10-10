@@ -297,6 +297,7 @@ def send_new_order_notification(store, instance):
     channel_layer = get_channel_layer()
 
     # Send message to the orders group
+    print(f"STEP-1 orders-{store.id}")
     async_to_sync(channel_layer.group_send)(
         f"orders-{store.id}",
         {

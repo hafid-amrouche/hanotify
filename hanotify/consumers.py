@@ -42,6 +42,7 @@ class OrderConsumer(AsyncWebsocketConsumer):
 
     # Receive message from room group
     async def send_new_order(self, event):
+        print(f"STEP-2")
         order = event['order']
         # Send message to WebSocket
         await self.send(text_data=json.dumps({
