@@ -484,7 +484,7 @@ def get_related_products(request):
     product = Product.objects.get(id=request.GET.get('product_id'))
     if product.all_products_related:
         related_products = Product.objects.filter(user=product.user, is_available=True).exclude(id = product.id).order_by('-id')[:20]
-        related_products_list = list(related_products.annotate(index=F('id')).values('id', 'index', 'slug', 'image', 'price', 'title'))
+        related_products_list = list(related_products.annotate(index=F('id'), product_id=F('id')).values('product_id', 'index', 'slug', 'image', 'price', 'title'))
     else:
         related_products = RelatedProduct.objects.filter(main_product = product, main_product__is_available=True).exclude(main_product_id = product.id)
         related_products_list = serialized_searched_related_products(related_products)
