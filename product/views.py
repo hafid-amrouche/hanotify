@@ -40,7 +40,6 @@ def initiate_product(request):
                 'user_id': request.user.id,
                 'MESSAGING_KEY' : settings.MESSAGING_KEY
             }
-            print(data)
             try:
                 receiver_url = media_files_domain + '/make-product-directory'
                 response = requests.post(receiver_url, data=data)

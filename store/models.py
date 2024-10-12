@@ -35,6 +35,8 @@ class HomePage(models.Model):
 
 
 
+def default_device():
+    return ['mobile', 'PC']  # This is a valid JSON array
 
 
 class HomePageSection(models.Model):
@@ -52,7 +54,9 @@ class HomePageSection(models.Model):
     # swiper container only    
     title = models.CharField(max_length=50, null=True, blank=True)
     image_objects = models.JSONField(null=True, blank=True)
-    device = models.CharField(max_length=50, null=True, blank=True)
+
+    device = models.JSONField(default=default_device, null=True, blank=True)
+
 
 
 class Domain(models.Model):

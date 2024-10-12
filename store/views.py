@@ -463,7 +463,6 @@ def update_store_info(request):
     store.mode = mode
     store.footer = footer
 
-    receiver_url = media_files_domain + '/save-store'
 
     store_dict = {
         'primaryColor': color_primary,
@@ -478,6 +477,7 @@ def update_store_info(request):
         'mode': mode,
         'footer': footer
     }
+    receiver_url = media_files_domain + '/save-store'
     response = requests.post(receiver_url,{
         'id': store.id,
         'MESSAGING_KEY': settings.MESSAGING_KEY,
@@ -554,7 +554,19 @@ def update_homepage(request):
             store_id = data.get('store_id')
             store = request.user.stores.get(id= store_id)
             home_page = store.home_page
-            
+            images = data.get('images')
+
+            receiver_url = media_files_domain + '/save-store-images'
+            response = requests.post(receiver_url, {
+                'data': json.dumps({
+                    'store_id': store.id,
+                    'MESSAGING_KEY': settings.MESSAGING_KEY,
+                    'images_urls' : images
+                })
+            })
+
+            if not response.ok:
+                return JsonResponse({'detail': 'file server error'}, status=500)
             # Iterate through the sections in the data
             to_saved_id = []
             order = 1
@@ -582,9 +594,9 @@ def update_homepage(request):
                 elif section_type == 'swiper':
                     
                     section.image_objects = section_data.get('imageObjects')
-                    section.device = section_data.get('device')
                     section.title = section_data.get('title')
                     section.active = True
+                section.device = section_data.get('device')
                 section.category = category 
                 section.section_id = section_id
                 section.type = section_type
@@ -599,6 +611,7 @@ def update_homepage(request):
             return JsonResponse({'status': 'success', 'message': 'Home page sections populated successfully.'}, status=201)
         
         except Exception as e:
+            raise
             return JsonResponse({'status': 'error', 'message': str(e)}, status=400)
 
     return JsonResponse({'status': 'error', 'message': 'Invalid request method.'}, status=405)
@@ -620,7 +633,8 @@ def home_page_section_serializer(home_page_sections):
                             "type": "products-container",
                             "active": section.active,
                             "image": None,
-                            "design": section.design
+                            "design": section.design,
+                            "device": section.device
                         }
                 else:
                     return {
@@ -630,7 +644,8 @@ def home_page_section_serializer(home_page_sections):
                         "type": "products-container",
                         "active": section.active,
                         "image": section.category.image,
-                        "design": section.design
+                        "design": section.design,
+                        "device": section.device
                     }
             if section.type == 'swiper':
                 return {
