@@ -115,7 +115,7 @@ def register(request):
                 'language': 'ar',
                 'mode': 'light',
                 'footer': '',
-                'defaultShipping': StateCostSerializer(shipping_costs_query_set)
+                'defaultShipping': StateCostSerializer(shipping_costs_query_set, many=True).data
             }),
             'user_id': user.id,
             'MESSAGING_KEY': settings.MESSAGING_KEY
@@ -138,7 +138,6 @@ def register(request):
         except :
             print('Error at hontify/user/views/register l126')
         
-        raise
         message = {
             'detail': _('User was not created please try again'),
             "error 2": str(e)
