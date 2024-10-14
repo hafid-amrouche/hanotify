@@ -20,6 +20,7 @@ from .models import HomePageSection
 from category.models import Category
 from product.models import Product
 from django.db.models import F
+from .serializers import StateCostSerializer
 
 
 
@@ -31,12 +32,30 @@ from django.db.models import F
 def update_shipping_costs(request):
     data = json.loads(request.body)
     costs_list = data.get('costs_list')
-    store = request.user.stores.first()
+    store_id = data.get('store_id')
+    store = request.user.stores.get(id=store_id)
+   
+    shipping_costs = store.shipping_costs.all()
+    new_shipping_costs = []
     for cost in costs_list:
-        costObj = store.shipping_costs.get(state_id=cost['id'])
+        costObj = shipping_costs.get(state_id=cost['id'])           
         costObj.cost = cost['cost']
         costObj.cost_to_home = cost['costToHome']
         costObj.save()
+        if cost['cost'] or cost['costToHome']:
+            new_shipping_costs.append(cost)
+    
+    receiver_url = media_files_domain + '/update-store-shipping-costs'
+    response = requests.post(receiver_url,{
+        'data': json.dumps({
+            'MESSAGING_KEY': settings.MESSAGING_KEY,
+            'costs_list': new_shipping_costs,
+            'store_id': store_id
+        })
+    })
+    if not response.ok:
+        return JsonResponse({'detail': 'Error setting up your shipping costs'}, status=400)
+        
     return JsonResponse({'detail': 'Success'}, status=200)
 
 @api_view(['POST'])
@@ -196,16 +215,17 @@ def check_and_set_initial_data(spreadsheet_id, sheet_name, initial_data):
         return False
 
 initial_data = [
-    _('ID'),
-    _('Full name'),
-    _('Title'),
     _('Date'),
+    _('Title'),
+    _('Full name'),
     _('Phone number'),
     _('State'),
     _('City'),
     _('Quantity'),
+    _('Price'),
     _('Shipping cost'),
     _('Total price'),
+    _('Note'),
     _('Variants'),
 ] 
 
@@ -738,3 +758,8 @@ def get_store_credit(request):
         'credit' : store.credit    
     })
 
+@api_view(['GET'])
+def get_default_shipping_cost(request):
+    store_id = request.GET.get('store_id')
+    store = request.user.stores.get(id = store_id)
+    return Response(StateCostSerializer(store.shipping_costs.all(), many=True).data)

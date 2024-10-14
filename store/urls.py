@@ -24,6 +24,7 @@ urlpatterns = [
         path('update-homepage', views.update_homepage),
         path('home-customization-products', views.home_customization_products),
         path('get-store-credit', views.get_store_credit),
+        path('get-default-shipping-costs', views.get_default_shipping_cost),
 
         # hanotify.store
         path('get-sidebar-content', views.sidebar_content),

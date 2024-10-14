@@ -20,6 +20,7 @@ from contants import media_files_domain, stores_domain
 import requests
 from django.conf import settings
 from store.models import Store
+from store.serializers import StateCostSerializer
 
 @api_view(['POST'])
 def login(request):
@@ -95,7 +96,7 @@ def register(request):
             store= store,
             state_id = state_id,
         ) for state_id in range(1, 59)]
-        StateShippingCost.objects.bulk_create(shipping_costs)
+        shipping_costs_query_set = StateShippingCost.objects.bulk_create(shipping_costs)
         userData = UserSerializerWithToken(user, many=False).data
 
         receiver_url = media_files_domain + '/make-user-directory'
@@ -113,7 +114,8 @@ def register(request):
                 'headerOutlined': False,
                 'language': 'ar',
                 'mode': 'light',
-                'footer': ''
+                'footer': '',
+                'defaultShipping': StateCostSerializer(shipping_costs_query_set)
             }),
             'user_id': user.id,
             'MESSAGING_KEY': settings.MESSAGING_KEY

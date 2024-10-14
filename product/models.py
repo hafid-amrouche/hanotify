@@ -34,6 +34,7 @@ class Product(models.Model):
     # brand = models.CharField(max_length=50, null=True, blank=True)
     views = models.PositiveIntegerField(default=0)   
     # barcode = models.CharField(max_length=20, null=True, blank=True)
+    use_default_shipping = models.BooleanField(default=True)
 
     class Meta:
         ordering = ['-created_at']

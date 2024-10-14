@@ -22,6 +22,8 @@ from asgiref.sync import async_to_sync
 from channels.layers import get_channel_layer
 from .models import Order
 from .serializers import OrderPreviewSerializer
+from django.conf import settings
+
 
 
 
@@ -454,26 +456,28 @@ def confirm_order(request): ## add this front end
         try:
             gs_info = order.store.gs_info
             order_data =[
-                order.id,
-                order.full_name,
-                order.product['title'],
+                # order.id,
                 order.created_at.strftime('%Y-%m-%d %H:%M'),
+                order.product['title'],
+                order.full_name,
                 order.phone_number,
                 order.shipping_state.name if order.shipping_state else _('No state'),
                 (order.shipping_city.name if order.shipping_to_home else _('Office')) if order.shipping_city else '/',
                 order.product_quantity,
+                order.product['price'] or 0,
                 order.product['shipping_cost'] or 0,
                 order.product['total_price'],
+                order.client_note,
             ]
 
             combination = order.product.get('combination')
+            combination_text = ''
             if combination:
-                combination_text = ''
                 for key, value in combination.items():
                     combination_text = f'{combination_text} {key}: {value},'
                 combination_text = combination_text[:-1]
-                order_data.append(combination_text)
-
+            order_data.append(combination_text)
+            
             spreadsheet_id = gs_info.spreadsheet_id  # Assuming each seller has a `spreadsheet_id` field
             sheet_name = gs_info.sheet_name   # The name of the sheet/tab in the Google Sheet
             append_order_to_sheet(order_data, spreadsheet_id, sheet_name)

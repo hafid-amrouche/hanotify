@@ -23,37 +23,32 @@ def initiate_product(request):
     if request.method == 'POST':
         data = json.loads(request.body)
         store = request.user.stores.get(id=data['store_id'])
-        non_available_products = Product.objects.filter(store=store, is_available=False)
-        if non_available_products.exists():
-            product = non_available_products.last()
-            return JsonResponse({'product_id': product.id}, status=200)
-        else:
-            product = Product(
-                user = store.owner,
-                store = store
-            )
-            product.save()
-            product.slug = str(product.id)
-            data = {
-                'product_id' : product.id,
-                'store_id' : store.id,
-                'user_id': request.user.id,
-                'MESSAGING_KEY' : settings.MESSAGING_KEY
-            }
-            try:
-                receiver_url = media_files_domain + '/make-product-directory'
-                response = requests.post(receiver_url, data=data)
-                if response.ok: 
-                    product.save()
-                    return JsonResponse({'product_id': product.id}, status=200)
-                else:
-                    product.delete()
-                    raise
-
-            except Exception as e:
+        product = Product(
+            user = store.owner,
+            store = store
+        )
+        product.save()
+        product.slug = str(product.id)
+        data = {
+            'product_id' : product.id,
+            'store_id' : store.id,
+            'user_id': request.user.id,
+            'MESSAGING_KEY' : settings.MESSAGING_KEY
+        }
+        try:
+            receiver_url = media_files_domain + '/make-product-directory'
+            response = requests.post(receiver_url, data=data)
+            if response.ok: 
+                product.save()
+                return JsonResponse({'product_id': product.id}, status=200)
+            else:
                 product.delete()
-                print(e)
-                return JsonResponse({'detail': 'Product could not be initiated'}, status=500)
+                raise
+
+        except Exception as e:
+            product.delete()
+            print(e)
+            return JsonResponse({'detail': 'Product could not be initiated'}, status=500)
         
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
@@ -116,9 +111,10 @@ def add_product(request):
         rich_text = data.get('richText') #
         all_products_related = data.get('allProductsRelated') or False #
         related_products = data.get('relatedProducts') #
-        gallery_images= json.loads(product.gallery_images) if product.gallery_images else None
+        gallery_images= json.loads(data.get('imagesUrls')) if data.get('imagesUrls') else None
         quantity = data.get('quantity')
         sku = data.get('sku')
+        use_default_shipping = data.get('useDefaultShipping')
 
         new_data={}
 
@@ -187,6 +183,8 @@ def add_product(request):
 
         if gallery_images:
             new_data['galleryImages'] = gallery_images
+            product.gallery_images = gallery_images
+            product.image = f'{media_files_domain}/resize?width=300&url=' + gallery_images[0]
         
         if mini_description:
             product.mini_description = mini_description
@@ -209,16 +207,19 @@ def add_product(request):
             product.selected_categories.set(selected_categories) 
             selected_categories = list(selected_categories.values('id', 'label'))
             new_data['selectedCategories'] = selected_categories
-        
-        for elem in shipping_cost_by_state:
-            if elem['cost'] != None or elem['costToHome'] != None:
-                StateShippingCost.objects.create(
-                    state_id = elem['id'],
-                    cost = elem['cost'],
-                    cost_to_home = elem['costToHome'],
-                    product = product
-                )
-        new_data['shippingCostByState'] = shipping_cost_by_state
+
+        new_data['useDefaultShipping'] = use_default_shipping
+        product.use_default_shipping = use_default_shipping
+        if not use_default_shipping:
+            for elem in shipping_cost_by_state:
+                if elem['cost'] != None or elem['costToHome'] != None:
+                    StateShippingCost.objects.create(
+                        state_id = elem['id'],
+                        cost = elem['cost'],
+                        cost_to_home = elem['costToHome'],
+                        product = product
+                    )
+            new_data['shippingCostByState'] = shipping_cost_by_state
 
         product_files_data = json.dumps({
             'product_data': new_data,
@@ -281,9 +282,10 @@ def edit_product(request):
         rich_text = data.get('richText') #
         all_products_related = data.get('allProductsRelated') or False #
         related_products = data.get('relatedProducts') #
-        gallery_images= json.loads(product.gallery_images) if product.gallery_images else None
+        gallery_images= data.get('imagesUrls') if data.get('imagesUrls') else None
         quantity = data.get('quantity')
         sku = data.get('sku')
+        use_default_shipping = data.get('useDefaultShipping')
 
         new_data={}
 
@@ -368,7 +370,12 @@ def edit_product(request):
 
         if gallery_images:
             new_data['galleryImages'] = gallery_images
-        
+            product.gallery_images = gallery_images
+            product.image = f'{media_files_domain}/resize?width=300&url=' + gallery_images[0]
+        else:
+            product.gallery_images = None
+            product.image = None
+
         if mini_description:
             product.mini_description = mini_description
             new_data['miniDescription'] = mini_description
@@ -391,28 +398,36 @@ def edit_product(request):
             selected_categories = list(selected_categories.values('id', 'label'))
             new_data['selectedCategories'] = selected_categories
         
-        allStateShippingCosts = StateShippingCost.objects.filter(product = product)
-        allStateShippingCosts.exclude(state_id__in = [x['id'] for x in shipping_cost_by_state]).delete()
-        for elem in shipping_cost_by_state:
-            if elem['cost'] != None or elem['costToHome'] != None:
-                [shipping_cost, is_created] = allStateShippingCosts.get_or_create(
-                    state_id = elem['id'],
-                    product=product
-                )
-                shipping_cost.cost = elem['cost']
-                shipping_cost.cost_to_home = elem['costToHome']
-                shipping_cost.save()
-            else:
-                try:
-                    shipping_cost = allStateShippingCosts.get(
+        new_data['useDefaultShipping'] = use_default_shipping
+        product.use_default_shipping = use_default_shipping
+        if not use_default_shipping:
+            allStateShippingCosts = StateShippingCost.objects.filter(product = product)
+            allStateShippingCosts.exclude(state_id__in = [x['id'] for x in shipping_cost_by_state]).delete()
+            for elem in shipping_cost_by_state:
+                if elem['cost'] != None or elem['costToHome'] != None:
+                    [shipping_cost, is_created] = allStateShippingCosts.get_or_create(
                         state_id = elem['id'],
+                        product=product
                     )
-                    shipping_cost.delete()
-                except:
-                    pass
-                shipping_cost_by_state = [d for d in shipping_cost_by_state if d.get("id") != elem['id']]
+                    shipping_cost.cost = elem['cost']
+                    shipping_cost.cost_to_home = elem['costToHome']
+                    shipping_cost.save()
+                else:
+                    try:
+                        shipping_cost = allStateShippingCosts.get(
+                            state_id = elem['id'],
+                        )
+                        shipping_cost.delete()
+                    except:
+                        pass
+                    shipping_cost_by_state = [d for d in shipping_cost_by_state if d.get("id") != elem['id']]
 
-        new_data['shippingCostByState'] = shipping_cost_by_state
+            new_data['shippingCostByState'] = shipping_cost_by_state
+        else:
+            StateShippingCost.objects.filter(product = product).delete()
+
+
+
         product_files_data = json.dumps({
             'product_data': new_data,
             'images_urls' : data.pop('imagesUrls'),
