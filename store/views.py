@@ -21,6 +21,7 @@ from category.models import Category
 from product.models import Product
 from django.db.models import F
 from .serializers import StateCostSerializer
+from contants import default_home_page_section
 
 
 
@@ -631,7 +632,6 @@ def update_homepage(request):
             return JsonResponse({'status': 'success', 'message': 'Home page sections populated successfully.'}, status=201)
         
         except Exception as e:
-            raise
             return JsonResponse({'status': 'error', 'message': str(e)}, status=400)
 
     return JsonResponse({'status': 'error', 'message': 'Invalid request method.'}, status=405)
@@ -691,18 +691,43 @@ def home_customization_products(request):
         return JsonResponse({'detail', _('Store not found')}, status=400)
     
     home_page = store.home_page
-    return Response({
-        'sections': home_page_section_serializer(home_page.sections.order_by('order')),
-        'store': {
-            'primaryColor': store.color_primary,
-            'primaryColorDark': store.color_primary_dark,
-            'visionMode': store.mode,
-            'bordersRounded': store.borders_rounded
-        },
-        'generalDesign':  home_page.general_design,
+    if(home_page.auto):
+        return Response({
+            'sections': home_page_section_serializer([default_home_page_section(store.products.all()[:20])]),
+            'store': {
+                'primaryColor': store.color_primary,
+                'primaryColorDark': store.color_primary_dark,
+                'visionMode': store.mode,
+                'bordersRounded': store.borders_rounded
+            },
+            'generalDesign':  home_page.general_design,
+            'home_page_mode' : home_page.auto
+        })
+    else:
+        return Response({
+            'sections': home_page_section_serializer(home_page.sections.order_by('order')),
+            'store': {
+                'primaryColor': store.color_primary,
+                'primaryColorDark': store.color_primary_dark,
+                'visionMode': store.mode,
+                'bordersRounded': store.borders_rounded
+            },
+            'generalDesign':  home_page.general_design,
+            'home_page_mode' : home_page.auto
+        })
+
+
+@api_view(['POST'])
+def toggle_auto_home_page(request):
+    data = json.loads(request.body)
+    store_id = data.get('store_id')
+    store = request.user.stores.get(id=store_id)
+    store.home_page.auto = not store.home_page.auto
+    store.home_page.save()
+    return JsonResponse({
+        'home_page_mode': store.home_page.auto,
+        'sections': home_page_section_serializer([default_home_page_section(store.products.all()[:20])]) if store.home_page.auto else home_page_section_serializer(store.home_page.sections.order_by('order'))
     })
-
-
 # hanotify.store
 @api_view(['GET'])
 def sidebar_content(request):
@@ -727,27 +752,26 @@ def sidebar_content(request):
         'categories': catgeories_list
     })
 
-
-
 @api_view(['GET'])
 def home_page_sections(request):
-    domain = request.GET.get('domain')    
+    # domain = request.GET.get('domain')    
 
-    store = Store.objects.get(domain__domain=domain)
-    if not store.active:
-        return JsonResponse({'detail', _('Store not found')}, status=400)
+    # store = Store.objects.get(domain__domain=domain)
+    # if not store.active:
+    #     return JsonResponse({'detail', _('Store not found')}, status=400)
     
-    home_page = store.home_page
-    return Response({
-        'sections': home_page_section_serializer(home_page.sections.filter(active=True).order_by('order')),
-        'store': {
-            'primaryColor': store.color_primary,
-            'primaryColorDark': store.color_primary_dark,
-            'visionMode': store.mode,
-            'bordersRounded': store.borders_rounded
-        },
-        'generalDesign':  home_page.general_design,
-    })
+    # home_page = store.home_page
+    # return Response({
+    #     'sections': home_page_section_serializer(home_page.sections.filter(active=True).order_by('order')),
+    #     'store': {
+    #         'primaryColor': store.color_primary,
+    #         'primaryColorDark': store.color_primary_dark,
+    #         'visionMode': store.mode,
+    #         'bordersRounded': store.borders_rounded
+    #     },
+    #     'generalDesign':  home_page.general_design,
+    # })
+    pass
 
 @api_view(['GET'])
 def get_store_credit(request):

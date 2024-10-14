@@ -32,7 +32,7 @@ class Store(models.Model):
 class HomePage(models.Model):
     store = models.OneToOneField(Store, on_delete=models.CASCADE, related_name='home_page')
     general_design = models.JSONField(null=True, blank=True)
-
+    auto = models.BooleanField(default=True)
 
 
 def default_device():
@@ -45,6 +45,7 @@ class HomePageSection(models.Model):
     type = models.CharField(max_length=50, null=True, blank=True)
     design = models.JSONField(null=True, blank=True)
     order = models.PositiveSmallIntegerField(default=0)
+    device = models.JSONField(default=default_device, null=True, blank=True)
 
     # products container only
     active = models.BooleanField(default=False)
@@ -55,7 +56,6 @@ class HomePageSection(models.Model):
     title = models.CharField(max_length=50, null=True, blank=True)
     image_objects = models.JSONField(null=True, blank=True)
 
-    device = models.JSONField(default=default_device, null=True, blank=True)
 
 
 
