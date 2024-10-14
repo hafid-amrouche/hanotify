@@ -21,7 +21,7 @@ from category.models import Category
 from product.models import Product
 from django.db.models import F
 from .serializers import StateCostSerializer
-from contants import default_home_page_section
+from .constants import default_home_page_section
 
 
 
