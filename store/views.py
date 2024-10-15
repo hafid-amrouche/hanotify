@@ -338,8 +338,6 @@ def delete_fb_pixel(request):
             {'detail': 'Deleted'}
         )
 
-
-
 @api_view(['POST'])
 def set_up_conversion_api_token(request):
     data = json.loads(request.body)
@@ -387,7 +385,6 @@ def set_up_test_code_event(request):
     conversions_api.save()
     return JsonResponse({'detail': 'Success'})
 
-
 @api_view(['POST'])
 def set_up_tiktok_pixel(request):
     data = json.loads(request.body)
@@ -412,7 +409,6 @@ def set_up_tiktok_pixel(request):
     tiktok_pixel.save()
     return JsonResponse({'detail': 'Your tiktok pixel is connected successfully.'})
     
-
 @api_view(['GET'])
 def get_tiktok_pixels(request):
     data = request.GET
@@ -451,7 +447,6 @@ def delete_tiktok_pixel(request):
     return JsonResponse(
             {'detail': 'Deleted'}
         )
-
 
 @api_view(['POST'])
 def update_store_info(request):
@@ -511,7 +506,7 @@ def update_store_info(request):
     return JsonResponse({'detail': 'success'})
     
 @api_view(['POST'])
-def non_selected_top_picks_products(request):
+def non_selected_products_container_products(request):
     data = json.loads(request.body)
     domain = data.get('domain')    
 
@@ -601,9 +596,18 @@ def update_homepage(request):
                 category = None
                 section_type = section_data.get('type')
                 if section_type == 'products-container':  # Assuming it's a category if it's an integer
-                    section_id = section_data.get('id')
+                    section.products.clear()
+                    for product_data in section_data.get('products', []):
+                        product_id = product_data['product_id']
+                        product = Product.objects.get(id=product_id)
+                        section.products.add(product)
+                    
+                    section.active = True
+
+                elif section_type == 'category':  # Assuming it's a category if it's an integer
+                    category_id = section_data.get('id').split('-')[1]
                     try:
-                        category = Category.objects.get(id=section_id)
+                        category = Category.objects.get(id=category_id)
                     except:
                         pass
                     section.products.clear()
@@ -611,12 +615,15 @@ def update_homepage(request):
                         product_id = product_data['product_id']
                         product = Product.objects.get(id=product_id)
                         section.products.add(product)
+
                     section.active = section_data.get('active')
+
                 elif section_type == 'swiper':
                     
                     section.image_objects = section_data.get('imageObjects')
-                    section.title = section_data.get('title')
                     section.active = True
+
+                section.title = section_data.get('title')
                 section.device = section_data.get('device')
                 section.category = category 
                 section.section_id = section_id
@@ -626,7 +633,7 @@ def update_homepage(request):
                 order += 1
                 section.save()
 
-            home_page.sections.exclude(id__in=to_saved_id).exclude(type='products-container').delete()
+            home_page.sections.exclude(id__in=to_saved_id).exclude(type='category').delete()
             home_page.general_design = data['general_design']
             home_page.save()
             return JsonResponse({'status': 'success', 'message': 'Home page sections populated successfully.'}, status=201)
@@ -645,36 +652,35 @@ def serialized_category_preview_products(query):
 def home_page_section_serializer(home_page_sections):
         def serialize_section(section):
             if section.type == 'products-container':
-                if section.section_id == 'top-picks':
-                        return {
-                            "id": section.section_id,
-                            "title": 'Top picks',
-                            "products": serialized_category_preview_products(section.products),
-                            "type": "products-container",
-                            "active": section.active,
-                            "image": None,
-                            "design": section.design,
-                            "device": section.device
-                        }
-                else:
-                    return {
+                return {
                         "id": section.section_id,
-                        "title": section.category.label,
+                        "title": section.title,
                         "products": serialized_category_preview_products(section.products),
                         "type": "products-container",
-                        "active": section.active,
-                        "image": section.category.image,
+                        "active": True,
                         "design": section.design,
                         "device": section.device
                     }
+        
+            if section.type == 'category':
+                return {
+                        "id": section.section_id,
+                        "title": section.category.label,
+                        "products": serialized_category_preview_products(section.products),
+                        "type": "category",
+                        "active": section.active,
+                        "design": section.design,
+                        "device": section.device
+                    }
+            
             if section.type == 'swiper':
                 return {
                     "id": section.section_id,
                     "title": section.title,
                     "imageObjects": section.image_objects,
-                    "design": section.design,
                     "type": "swiper",
                     "active": True,
+                    "design": section.design,
                     "device": section.device
                 }
         return [
@@ -717,6 +723,8 @@ def home_customization_products(request):
         })
 
 
+
+
 @api_view(['POST'])
 def toggle_auto_home_page(request):
     data = json.loads(request.body)
@@ -729,6 +737,42 @@ def toggle_auto_home_page(request):
         'sections': home_page_section_serializer([default_home_page_section(store.products.all()[:20])]) if store.home_page.auto else home_page_section_serializer(store.home_page.sections.order_by('order'))
     })
 # hanotify.store
+
+@api_view(['GET'])
+def store_home_page_sections(request):
+    domain = request.GET.get('domain')    
+
+    store = Store.objects.get(domain__domain=domain)
+    if not store.active:
+        return JsonResponse({'detail', _('Store not found')}, status=400)
+    
+    home_page = store.home_page
+    if(home_page.auto):
+        return Response({
+            'sections': home_page_section_serializer([default_home_page_section(store.products.all()[:20])]),
+            'store': {
+                'primaryColor': store.color_primary,
+                'primaryColorDark': store.color_primary_dark,
+                'visionMode': store.mode,
+                'bordersRounded': store.borders_rounded
+            },
+            'generalDesign':  home_page.general_design,
+            'home_page_mode' : home_page.auto
+        })
+    else:
+        return Response({
+            'sections': home_page_section_serializer(home_page.sections.filter(active=True).order_by('order')),
+            'store': {
+                'primaryColor': store.color_primary,
+                'primaryColorDark': store.color_primary_dark,
+                'visionMode': store.mode,
+                'bordersRounded': store.borders_rounded
+            },
+            'generalDesign':  home_page.general_design,
+            'home_page_mode' : home_page.auto
+        })
+
+
 @api_view(['GET'])
 def sidebar_content(request):
     domain = request.GET.get('domain')    
@@ -787,3 +831,15 @@ def get_default_shipping_cost(request):
     store_id = request.GET.get('store_id')
     store = request.user.stores.get(id = store_id)
     return Response(StateCostSerializer(store.shipping_costs.all(), many=True).data)
+
+
+
+# for home_page_section in HomePageSection.objects.all():
+#     if home_page_section.type in ['category', 'products-conatiner'] :
+#         i = 1
+#         if home_page_section.category:
+#             home_page_section.section_id = f'category-{home_page_section.category.id}'
+#         else:
+#             home_page_section.section_id = f'products-container-{i}'
+#             i+=1
+#         home_page_section.save()

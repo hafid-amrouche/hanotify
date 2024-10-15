@@ -17,6 +17,8 @@ def produt_pre_delete(sender, instance, **kwargs):
     response = requests.post(receiver_url, data=data)
     if not response.ok:
         print('error product/signals 18', response)
+        print(response.text)
+        raise
 
     
 

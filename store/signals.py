@@ -1,5 +1,7 @@
 from .models import Store, Status, HomePage, HomePageSection
 from django.db.models.signals import post_save
+from django.utils.translation import gettext as _
+
 
 status_list =[
      {
@@ -105,8 +107,9 @@ def home_page_post_create(sender, instance, created,  **kwargs):
     if created:
         home_page = instance
         HomePageSection.objects.create(
-            home_page = home_page,   
-            section_id = 'top-picks',
+            home_page = home_page,  
+            title = _('Top picks'),
+            section_id = 'products-container-1',
             type = 'products-container',
         )
         

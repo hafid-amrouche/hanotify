@@ -60,7 +60,7 @@ def add_category(request):
             'data': data
         })
         return JsonResponse({
-            'catgeoryId': category.id
+            'categoryId': category.id
         }, status=200)
     except:
         category.delete()

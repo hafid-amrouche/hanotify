@@ -19,7 +19,7 @@ urlpatterns = [
         path('delete-conversions-api', views.delete_conversion_api_token),
         path('set-up-test-event-code', views.set_up_test_code_event),
         path('update-store-info', views.update_store_info),
-        path('non-selected-top-pick-products', views.non_selected_top_picks_products),
+        path('non-selected-top-pick-products', views.non_selected_products_container_products),
         path('non-selected-category-products', views.non_selected_category_products),
         path('update-homepage', views.update_homepage),
         path('home-customization-products', views.home_customization_products),
@@ -30,5 +30,6 @@ urlpatterns = [
         # hanotify.store
         path('get-sidebar-content', views.sidebar_content),
         path('home-page-sections', views.home_customization_products),
+        path('store-home-page-sections', views.store_home_page_sections)
 
 ]

@@ -115,7 +115,7 @@ def register(request):
                 'language': 'ar',
                 'mode': 'light',
                 'footer': '',
-                'defaultShipping': StateCostSerializer(shipping_costs_query_set, many=True).data
+                'defaultShippigCosts': StateCostSerializer(shipping_costs_query_set, many=True).data
             }),
             'user_id': user.id,
             'MESSAGING_KEY': settings.MESSAGING_KEY

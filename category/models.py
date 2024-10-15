@@ -18,18 +18,17 @@ class Category(models.Model):
     class Meta:
         ordering = ['-id']  # Default ordering: newest orders first
 
-def store_post_create(sender, instance, created,  **kwargs):
+def category_post_create(sender, instance, created,  **kwargs):
     category = instance
     if created:
         HomePageSection.objects.create(
             home_page = category.store.home_page,
-            section_id = category.id,
-            type = 'products-container',
+            section_id = f'category-{category.id}',
+            type = 'category',
             design = None,
-            # products container only
             category = category,
         )
-post_save.connect(store_post_create, Category)
+post_save.connect(category_post_create, Category)
 
 class CategoryPreviewProduct(models.Model):
     category =  models.ForeignKey(Category, on_delete=models.CASCADE, related_name='preview_products')

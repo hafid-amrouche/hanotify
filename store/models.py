@@ -46,14 +46,16 @@ class HomePageSection(models.Model):
     design = models.JSONField(null=True, blank=True)
     order = models.PositiveSmallIntegerField(default=0)
     device = models.JSONField(default=default_device, null=True, blank=True)
+    title = models.CharField(max_length=50, null=True, blank=True)
 
-    # products container only
+    # category only
     active = models.BooleanField(default=False)
+
+    # category and products container only
     category = models.OneToOneField('category.category', on_delete= models.CASCADE, null=True, blank=True, related_name='home_page_section')
     products = models.ManyToManyField('product.product')
 
     # swiper container only    
-    title = models.CharField(max_length=50, null=True, blank=True)
     image_objects = models.JSONField(null=True, blank=True)
 
 
