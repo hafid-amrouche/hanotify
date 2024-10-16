@@ -699,7 +699,7 @@ def home_customization_products(request):
     home_page = store.home_page
     if(home_page.auto):
         return Response({
-            'sections': home_page_section_serializer([default_home_page_section(store.products.filter(active=True, is_available=True)()[:20])]),
+            'sections': home_page_section_serializer([default_home_page_section(store.products.filter(active=True, is_available=True)[:20])]),
             'store': {
                 'primaryColor': store.color_primary,
                 'primaryColorDark': store.color_primary_dark,
@@ -749,7 +749,7 @@ def store_home_page_sections(request):
     home_page = store.home_page
     if(home_page.auto):
         return Response({
-            'sections': home_page_section_serializer([default_home_page_section(store.products.filter(active=True, is_available=True).all()[:20])]),
+            'sections': home_page_section_serializer([default_home_page_section(store.products.filter(active=True, is_available=True)[:20])]),
             'store': {
                 'primaryColor': store.color_primary,
                 'primaryColorDark': store.color_primary_dark,
