@@ -788,10 +788,6 @@ def sidebar_content(request):
         }
         for category in store.categories.filter(home_page_section__active=True)
     ]
-    catgeories_list.insert(0, {
-        'name': 'Top picks',
-        'slug': 'top-picks'
-    })
     return JsonResponse({
         'categories': catgeories_list
     })
