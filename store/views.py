@@ -733,6 +733,12 @@ def toggle_auto_home_page(request):
     store.home_page.auto = not store.home_page.auto
     store.home_page.save()
     return JsonResponse({
+        'store': {
+                'primaryColor': store.color_primary,
+                'primaryColorDark': store.color_primary_dark,
+                'visionMode': store.mode,
+                'bordersRounded': store.borders_rounded
+            },
         'home_page_mode': store.home_page.auto,
         'sections': home_page_section_serializer([default_home_page_section(store.products.filter(is_available=True, active=True)[:20])]) if store.home_page.auto else home_page_section_serializer(store.home_page.sections.order_by('order'))
     })
@@ -783,10 +789,10 @@ def sidebar_content(request):
     
     catgeories_list = [
         {
-            'name' : category.label,
-            'slug': category.slug
+            'name' : section.title,
+            'slug': section.section_id
         }
-        for category in store.categories.filter(home_page_section__active=True)
+        for section in store.home_page.sections.filter(type__in = ['category', 'products-container'], active=True)
     ]
     return JsonResponse({
         'categories': catgeories_list

@@ -174,17 +174,11 @@ def category_page(request):
     domain = request.GET.get('domain')  
     store = Store.objects.get(domain__domain = domain)  
     slug = request.GET.get('slug') 
-    if slug == 'top-picks':
-        section = store.home_page.sections.get(section_id='top-picks')
-        products =  section.products.all()[:20]
-        title= 'Top picks'
+    section = store.home_page.sections.get(section_id=slug)
+    products =  section.products.all()[:20]
 
-    else:
-        category = Category.objects.get(slug=slug, store__domain__domain = domain)
-        products = category.products.all()[:20]
-        title= category.label
 
     return JsonResponse({
         'products' : serialized_category_preview_products(products),
-        'title': title
+        'title': section.title
     })
