@@ -749,7 +749,7 @@ def store_home_page_sections(request):
     home_page = store.home_page
     if(home_page.auto):
         return Response({
-            'sections': home_page_section_serializer([default_home_page_section(store.products.all()[:20])]),
+            'sections': home_page_section_serializer([default_home_page_section(store.products.filter(active=True, is_available=True).all()[:20])]),
             'store': {
                 'primaryColor': store.color_primary,
                 'primaryColorDark': store.color_primary_dark,
@@ -832,14 +832,3 @@ def get_default_shipping_cost(request):
     store = request.user.stores.get(id = store_id)
     return Response(StateCostSerializer(store.shipping_costs.all(), many=True).data)
 
-
-
-# for home_page_section in HomePageSection.objects.all():
-#     if home_page_section.type in ['category', 'products-conatiner'] :
-#         i = 1
-#         if home_page_section.category:
-#             home_page_section.section_id = f'category-{home_page_section.category.id}'
-#         else:
-#             home_page_section.section_id = f'products-container-{i}'
-#             i+=1
-#         home_page_section.save()

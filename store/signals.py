@@ -111,6 +111,121 @@ def home_page_post_create(sender, instance, created,  **kwargs):
             title = _('Top picks'),
             section_id = 'products-container-1',
             type = 'products-container',
+            design = '''{
+                "PC": {
+                    "title": {
+                        "size": 23,
+                        "label": {
+                            "color": {
+                                "dark": "#8E8E49",
+                                "light": "#8E8E49"
+                            }
+                        },
+                        "padding": 8,
+                        "direction": "center",
+                        "showTitle": true
+                    },
+                    "products": {
+                        "gap": 8,
+                        "product": {
+                            "image": {
+                                "objectFit": "cover",
+                                "aspectRatio": "1/1"
+                            },
+                            "price": {
+                                "size": 18,
+                                "color": {
+                                    "dark": "#8E8E49",
+                                    "light": "#8E8E49"
+                                }
+                            },
+                            "title": {
+                                "size": 23,
+                                "color": {
+                                    "dark": "#ffffff",
+                                    "light": "#11181C"
+                                }
+                            },
+                            "width": "180px"
+                        },
+                        "borderColor": {
+                            "dark": "#50505080",
+                            "light": "#80808060"
+                        },
+                        "borderWidth": 1,
+                        "bordersRounded": true,
+                        "justifyContent": "center",
+                        "backgroundColor": {
+                            "dark": "#121212",
+                            "light": "#f6f6f6"
+                        },
+                        "productsDisplay": "swiper-1"
+                    },
+                    "marginTop": 0,
+                    "backgroundColor": {
+                        "dark": "#00000000",
+                        "light": "#00000000"
+                    },
+                    "marginHorizontal": 8
+                },
+                "mobile": {
+                    "title": {
+                        "size": 26,
+                        "label": {
+                            "color": {
+                                "dark": "#8E8E49",
+                                "light": "#8E8E49"
+                            }
+                        },
+                        "padding": 16,
+                        "direction": "center",
+                        "showTitle": true,
+                        "bordersRounded": null
+                    },
+                    "products": {
+                        "gap": 8,
+                        "product": {
+                            "image": {
+                                "objectFit": "cover",
+                                "aspectRatio": "1/1"
+                            },
+                            "price": {
+                                "size": 16,
+                                "color": {
+                                    "dark": "#8E8E49",
+                                    "light": "#8E8E49"
+                                }
+                            },
+                            "title": {
+                                "size": 18,
+                                "color": {
+                                    "dark": "#ffffff",
+                                    "light": "#11181C"
+                                }
+                            },
+                            "width": "65%"
+                        },
+                        "borderColor": {
+                            "dark": "#50505080",
+                            "light": "#80808060"
+                        },
+                        "borderWidth": 1,
+                        "bordersRounded": true,
+                        "justifyContent": "center",
+                        "backgroundColor": {
+                            "dark": "#00000000",
+                            "light": "#fdfdfd"
+                        },
+                        "productsDisplay": "swiper-3"
+                    },
+                    "marginTop": 12,
+                    "backgroundColor": {
+                        "dark": "#121212",
+                        "light": "#00000000"
+                    },
+                    "marginHorizontal": 4
+                }
+            }'''
         )
         
 post_save.connect(home_page_post_create, HomePage)
