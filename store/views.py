@@ -734,7 +734,7 @@ def toggle_auto_home_page(request):
     store.home_page.save()
     return JsonResponse({
         'home_page_mode': store.home_page.auto,
-        'sections': home_page_section_serializer([default_home_page_section(store.products.all()[:20])]) if store.home_page.auto else home_page_section_serializer(store.home_page.sections.order_by('order'))
+        'sections': home_page_section_serializer([default_home_page_section(store.products.filter(is_available=True, active=True)[:20])]) if store.home_page.auto else home_page_section_serializer(store.home_page.sections.order_by('order'))
     })
 # hanotify.store
 
