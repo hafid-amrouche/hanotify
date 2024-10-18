@@ -137,7 +137,7 @@ def register(request):
             store.delete()
         except :
             print('Error at hontify/user/views/register l126')
-        
+        raise
         message = {
             'detail': _('User was not created please try again'),
             "error 2": str(e)
