@@ -23,8 +23,6 @@ from django.db.models import F
 from .serializers import StateCostSerializer
 from .constants import default_home_page_section
 
-
-
         
 # Create your views here.
 
@@ -603,6 +601,8 @@ def update_homepage(request):
                         section.products.add(product)
                     
                     section.active = True
+                    section.show_latest_products = section_data.get('show_latest_products')
+                    section.lastest_products_count = section_data.get('lastest_products_count')
 
                 elif section_type == 'category':  # Assuming it's a category if it's an integer
                     category_id = section_data.get('id').split('-')[1]
@@ -617,6 +617,8 @@ def update_homepage(request):
                         section.products.add(product)
 
                     section.active = section_data.get('active')
+                    section.show_latest_products = section_data.get('show_latest_products')
+                    section.lastest_products_count = section_data.get('lastest_products_count')
 
                 elif section_type == 'swiper':
                     
@@ -643,6 +645,31 @@ def update_homepage(request):
 
     return JsonResponse({'status': 'error', 'message': 'Invalid request method.'}, status=405)
 
+@api_view(['POST'])
+def update_default_section(request):
+    if request.method == "POST":
+        try:
+            data = json.loads(request.body)  # Load the JSON payload
+            
+            # Get the home page for the store (assuming store_id is in the request or data)
+            store_id = data.get('store_id')
+            store = request.user.stores.get(id= store_id)
+            home_page = store.home_page
+            design = data.get('design')
+            title = data.get('title')
+            home_page.default_section.design = design
+            home_page.default_section.title = title
+            home_page.default_section.save()
+            home_page.general_design = data['general_design']
+            home_page.save()
+            return JsonResponse({'status': 'success', 'message': 'Home page sections populated successfully.'}, status=201)
+        
+        except Exception as e:
+            return JsonResponse({'status': 'error', 'message': str(e)}, status=400)
+
+    return JsonResponse({'status': 'error', 'message': 'Invalid request method.'}, status=405)
+
+
 def serialized_category_preview_products(query):
     return list(
         query.annotate(
@@ -659,7 +686,9 @@ def home_page_section_serializer(home_page_sections):
                         "type": "products-container",
                         "active": True,
                         "design": section.design,
-                        "device": section.device
+                        "device": section.device,
+                        "show_latest_products": section.show_latest_products,
+                        "lastest_products_count": section.lastest_products_count
                     }
         
             if section.type == 'category':
@@ -670,7 +699,9 @@ def home_page_section_serializer(home_page_sections):
                         "type": "category",
                         "active": section.active,
                         "design": section.design,
-                        "device": section.device
+                        "device": section.device,
+                        "show_latest_products": section.show_latest_products,
+                        "lastest_products_count": section.lastest_products_count
                     }
             
             if section.type == 'swiper':
@@ -699,7 +730,12 @@ def home_customization_products(request):
     home_page = store.home_page
     if(home_page.auto):
         return Response({
-            'sections': home_page_section_serializer([default_home_page_section(store.products.filter(active=True, is_available=True)[:20])]),
+            'sections': home_page_section_serializer([
+                default_home_page_section(
+                    store.products.filter(active=True, is_available=True)[:20], 
+                    home_page.default_section.design,
+                    home_page.default_section.title
+                )]),
             'store': {
                 'primaryColor': store.color_primary,
                 'primaryColorDark': store.color_primary_dark,
@@ -722,26 +758,49 @@ def home_customization_products(request):
             'home_page_mode' : home_page.auto
         })
 
-
-
-
 @api_view(['POST'])
 def toggle_auto_home_page(request):
     data = json.loads(request.body)
     store_id = data.get('store_id')
     store = request.user.stores.get(id=store_id)
     store.home_page.auto = not store.home_page.auto
+    try:
+        store.home_page.sections.get(section_id='default-section').delete()
+    except:
+        pass
     store.home_page.save()
     return JsonResponse({
-        'store': {
-                'primaryColor': store.color_primary,
-                'primaryColorDark': store.color_primary_dark,
-                'visionMode': store.mode,
-                'bordersRounded': store.borders_rounded
-            },
         'home_page_mode': store.home_page.auto,
-        'sections': home_page_section_serializer([default_home_page_section(store.products.filter(is_available=True, active=True)[:20])]) if store.home_page.auto else home_page_section_serializer(store.home_page.sections.order_by('order'))
     })
+
+@api_view(['POST'])
+def toggle_home_page_section_show_latest_products(request):
+    data = json.loads(request.body)
+    store_id = data.get('store_id')
+    store = request.user.stores.get(id=store_id)
+    section_id = data.get('section_id') 
+    home_page_section = store.home_page.sections.get(section_id=section_id)
+    show_latest_products = data.get('show_latest_products') 
+    latest_products_count = data.get('lastest_products_count')
+    
+    if home_page_section.type == 'products-container':
+        if show_latest_products:
+            products = store.products.filter(active=True, is_available=True)[: latest_products_count]
+        else:
+            products = None
+
+    elif home_page_section.type == 'category':
+        if show_latest_products:
+            products = home_page_section.category.products.filter(active=True, is_available=True)[:latest_products_count]
+        else:
+            products = None
+            
+    return JsonResponse({
+        'show_latest_products': show_latest_products,
+        'products': serialized_category_preview_products(products) if products else None
+    })
+
+
 # hanotify.store
 
 @api_view(['GET'])
@@ -755,7 +814,12 @@ def store_home_page_sections(request):
     home_page = store.home_page
     if(home_page.auto):
         return Response({
-            'sections': home_page_section_serializer([default_home_page_section(store.products.filter(active=True, is_available=True)[:20])]),
+            'sections': home_page_section_serializer([
+                default_home_page_section(
+                    store.products.filter(active=True, is_available=True)[:20], 
+                    home_page.default_section.design,
+                    home_page.default_section.title
+                )]),
             'store': {
                 'primaryColor': store.color_primary,
                 'primaryColorDark': store.color_primary_dark,
@@ -763,7 +827,6 @@ def store_home_page_sections(request):
                 'bordersRounded': store.borders_rounded
             },
             'generalDesign':  home_page.general_design,
-            'home_page_mode' : home_page.auto
         })
     else:
         return Response({

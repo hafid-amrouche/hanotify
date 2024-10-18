@@ -19,13 +19,15 @@ urlpatterns = [
         path('delete-conversions-api', views.delete_conversion_api_token),
         path('set-up-test-event-code', views.set_up_test_code_event),
         path('update-store-info', views.update_store_info),
-        path('non-selected-top-pick-products', views.non_selected_products_container_products),
+        path('non-selected-container-products', views.non_selected_products_container_products),
         path('non-selected-category-products', views.non_selected_category_products),
         path('update-homepage', views.update_homepage),
+        path('update-default-section', views.update_default_section),
         path('home-customization-products', views.home_customization_products),
         path('get-store-credit', views.get_store_credit),
         path('get-default-shipping-costs', views.get_default_shipping_cost),
         path('toggle-auto-home-page', views.toggle_auto_home_page),
+        path('toggle-home-page-section-show-latest-products', views.toggle_home_page_section_show_latest_products),
 
         # hanotify.store
         path('get-sidebar-content', views.sidebar_content),

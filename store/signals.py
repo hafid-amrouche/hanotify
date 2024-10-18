@@ -1,6 +1,7 @@
-from .models import Store, Status, HomePage, HomePageSection
+from .models import Store, Status, HomePage, DefaultPageSection
 from django.db.models.signals import post_save
 from django.utils.translation import gettext as _
+from .constants import default_design
 
 
 status_list =[
@@ -106,126 +107,134 @@ post_save.connect(store_post_create, Store)
 def home_page_post_create(sender, instance, created,  **kwargs):
     if created:
         home_page = instance
-        HomePageSection.objects.create(
+        DefaultPageSection.objects.create(
             home_page = home_page,  
-            title = _('Top picks'),
-            section_id = 'products-container-1',
-            type = 'products-container',
-            design = '''{
-                "PC": {
-                    "title": {
-                        "size": 23,
-                        "label": {
-                            "color": {
-                                "dark": "#8E8E49",
-                                "light": "#8E8E49"
-                            }
-                        },
-                        "padding": 8,
-                        "direction": "center",
-                        "showTitle": true
-                    },
-                    "products": {
-                        "gap": 8,
-                        "product": {
-                            "image": {
-                                "objectFit": "cover",
-                                "aspectRatio": "1/1"
-                            },
-                            "price": {
-                                "size": 18,
-                                "color": {
-                                    "dark": "#8E8E49",
-                                    "light": "#8E8E49"
-                                }
-                            },
-                            "title": {
-                                "size": 23,
-                                "color": {
-                                    "dark": "#ffffff",
-                                    "light": "#11181C"
-                                }
-                            },
-                            "width": "180px"
-                        },
-                        "borderColor": {
-                            "dark": "#50505080",
-                            "light": "#80808060"
-                        },
-                        "borderWidth": 1,
-                        "bordersRounded": true,
-                        "justifyContent": "center",
-                        "backgroundColor": {
-                            "dark": "#121212",
-                            "light": "#f6f6f6"
-                        },
-                        "productsDisplay": "swiper-1"
-                    },
-                    "marginTop": 0,
-                    "backgroundColor": {
-                        "dark": "#00000000",
-                        "light": "#00000000"
-                    },
-                    "marginHorizontal": 8
-                },
-                "mobile": {
-                    "title": {
-                        "size": 26,
-                        "label": {
-                            "color": {
-                                "dark": "#8E8E49",
-                                "light": "#8E8E49"
-                            }
-                        },
-                        "padding": 16,
-                        "direction": "center",
-                        "showTitle": true,
-                        "bordersRounded": null
-                    },
-                    "products": {
-                        "gap": 8,
-                        "product": {
-                            "image": {
-                                "objectFit": "cover",
-                                "aspectRatio": "1/1"
-                            },
-                            "price": {
-                                "size": 16,
-                                "color": {
-                                    "dark": "#8E8E49",
-                                    "light": "#8E8E49"
-                                }
-                            },
-                            "title": {
-                                "size": 18,
-                                "color": {
-                                    "dark": "#ffffff",
-                                    "light": "#11181C"
-                                }
-                            },
-                            "width": "65%"
-                        },
-                        "borderColor": {
-                            "dark": "#50505080",
-                            "light": "#80808060"
-                        },
-                        "borderWidth": 1,
-                        "bordersRounded": true,
-                        "justifyContent": "center",
-                        "backgroundColor": {
-                            "dark": "#00000000",
-                            "light": "#fdfdfd"
-                        },
-                        "productsDisplay": "swiper-3"
-                    },
-                    "marginTop": 12,
-                    "backgroundColor": {
-                        "dark": "#121212",
-                        "light": "#00000000"
-                    },
-                    "marginHorizontal": 4
-                }
-            }'''
+            design = default_design
         )
         
 post_save.connect(home_page_post_create, HomePage)
+
+
+
+# from store.models import Store, DefaultPageSection
+# default_design = {
+#             "mobile": {
+#                 "marginTop": 4,
+#                 "marginHorizontal": 4,
+#                 "backgroundColor": {
+#                     "light": "#00000000",
+#                     "dark": "#121212"
+#                 },
+#                 "title": {
+#                     "showTitle": True,
+#                     "size": 26,
+#                     "direction": "center",
+#                     "bordersRounded": None,
+#                     "padding": 0,
+#                     "label": {
+#                         "color": {
+#                             "light": "#72543c",
+#                             "dark": "#bca08a"
+#                         }
+#                     }
+#                 },
+#                 "products": {
+#                     "productsDisplay": "simple",
+#                     "justifyContent": "center",
+#                     "gap": 8,
+#                     "bordersRounded": True,
+#                     "borderWidth": 1,
+#                     "backgroundColor": {
+#                         "light": "#00000000",
+#                         "dark": "#121212"
+#                     },
+#                     "borderColor": {
+#                         "light": "#80808060",
+#                         "dark": "#50505080"
+#                     },
+#                     "product": {
+#                         "width": "50%",
+#                         "image": {
+#                             "objectFit": "cover",
+#                             "aspectRatio": "1/1"
+#                         },
+#                         "title": {
+#                             "size": 18,
+#                             "color": {
+#                                 "light": "#11181C",
+#                                 "dark": "#ffffff"
+#                             }
+#                         },
+#                         "price": {
+#                             "size": 18,
+#                             "color": {
+#                                 "light": "#754f32",
+#                                 "dark": "#bca08a"
+#                             }
+#                         }
+#                     }
+#                 }
+#             },
+#             "PC": {
+#                 "marginTop": 10,
+#                 "marginHorizontal": 8,
+#                 "backgroundColor": {
+#                     "light": "#00000000",
+#                     "dark": "#121212"
+#                 },
+#                 "title": {
+#                     "showTitle": True,
+#                     "size": 23,
+#                     "direction": "start",
+#                     "padding": 8,
+#                     "label": {
+#                         "color": {
+#                             "light": "#bca08a",
+#                             "dark": "#bca08a"
+#                         }
+#                     }
+#                 },
+#                 "products": {
+#                     "productsDisplay": "simple",
+#                     "justifyContent": "center",
+#                     "gap": 8,
+#                     "borderWidth": 1,
+#                     "backgroundColor": {
+#                         "light": "#00000000",
+#                         "dark": "#121212"
+#                     },
+#                     "borderColor": {
+#                         "light": "#80808060",
+#                         "dark": "#50505080"
+#                     },
+#                     "product": {
+#                         "width": "220px",
+#                         "image": {
+#                             "aspectRatio": "1/1",
+#                             "objectFit": "cover"
+#                         },
+#                         "title": {
+#                             "size": 22,
+#                             "color": {
+#                                 "light": "#11181C",
+#                                 "dark": "#ffffff"
+#                             }
+#                         },
+#                         "price": {
+#                             "size": 16,
+#                             "color": {
+#                                 "light": "#754f32",
+#                                 "dark": "#bca08a"
+#                             }
+#                         }
+#                     },
+#                     "bordersRounded": False
+#                 }
+#             }
+# }
+
+# for store in Store.objects.all():
+#     DefaultPageSection.objects.create(
+#         home_page = store.home_page,
+#         design = default_design,
+#     )

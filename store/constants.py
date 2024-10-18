@@ -1,16 +1,6 @@
 from types import SimpleNamespace
 
-def default_home_page_section(products): 
-
-    data = {
-        "id": "top-picks",
-        'section_id' : "top-picks",
-        "title": "Top picks",
-        "products": products,
-        "type": "products-container",
-        "active": True,
-        "image": None,
-        "design": {
+def default_design(): {
             "mobile": {
                 "marginTop": 4,
                 "marginHorizontal": 4,
@@ -19,7 +9,7 @@ def default_home_page_section(products):
                     "dark": "#121212"
                 },
                 "title": {
-                    "showTitle": False,
+                    "showTitle": True,
                     "size": 26,
                     "direction": "center",
                     "bordersRounded": None,
@@ -76,7 +66,7 @@ def default_home_page_section(products):
                     "dark": "#121212"
                 },
                 "title": {
-                    "showTitle": False,
+                    "showTitle": True,
                     "size": 23,
                     "direction": "start",
                     "padding": 8,
@@ -124,7 +114,21 @@ def default_home_page_section(products):
                     "bordersRounded": False
                 }
             }
-        },
+}
+        
+
+def default_home_page_section(products, design, title): 
+    data={
+        "id": "default-section",
+        'section_id' : "default-section",
+        "title": title,
+        "products": products,
+        "type": "products-container",
+        "active": True,
+        "image": None,
+        "show_latest_products": None,
+        "lastest_products_count": 12,
+        "design": design,
         "device": [
             "mobile",
             "PC"

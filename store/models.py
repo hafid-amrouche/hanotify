@@ -2,6 +2,11 @@ from django.db import models
 from django.contrib.auth.models import User 
 from others.models import State
 # Create your models here.
+from django.core.validators import MaxValueValidator
+from .constants import default_design
+from django.utils.translation import gettext as _
+
+
 
 class Store(models.Model):
     owner= models.ForeignKey(User, on_delete=models.CASCADE, related_name='stores')
@@ -48,17 +53,22 @@ class HomePageSection(models.Model):
     device = models.JSONField(default=default_device, null=True, blank=True)
     title = models.CharField(max_length=50, null=True, blank=True)
 
-    # category only
+    # category type only
     active = models.BooleanField(default=False)
 
-    # category and products container only
+    # category and products container types only
     category = models.OneToOneField('category.category', on_delete= models.CASCADE, null=True, blank=True, related_name='home_page_section')
     products = models.ManyToManyField('product.product')
+    show_latest_products = models.BooleanField(null=True, blank=True, )
+    lastest_products_count = models.PositiveSmallIntegerField(null=True, blank=True, validators=[MaxValueValidator(20)])
 
-    # swiper container only    
+    # swiper container type only    
     image_objects = models.JSONField(null=True, blank=True)
 
-
+class DefaultPageSection(models.Model):
+    home_page = models.OneToOneField(HomePage, on_delete=models.CASCADE, related_name='default_section')   
+    design = models.JSONField(null=True, blank=True, default=default_design)
+    title = models.CharField(max_length=50, default=_('All products'))
 
 
 class Domain(models.Model):
@@ -113,8 +123,3 @@ class TikTokPixel(models.Model):
 
 class VIPStore(models.Model):
     store = models.OneToOneField(Store, on_delete=models.CASCADE, related_name='vip_store')
-
-class StoreTopPick(models.Model):
-    store =  models.ForeignKey(Store, on_delete=models.CASCADE, related_name='top_picks')
-    product = models.ForeignKey('product.product', on_delete=models.CASCADE)
-    order = models.PositiveSmallIntegerField()
