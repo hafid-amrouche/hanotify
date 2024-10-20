@@ -177,7 +177,14 @@ def category_page(request):
     store = Store.objects.get(domain__domain = domain)  
     slug = request.GET.get('slug') 
     section = store.home_page.sections.get(section_id=slug)
-    products =  section.products.all()[:20]
+    if section.show_latest_products :
+        if section.category:
+            products = section.category.products.all()[:20]
+        else:
+            products = store.products.all()[:20]
+            
+    else:
+        products = section.products.all()[:20]
 
 
     return JsonResponse({
