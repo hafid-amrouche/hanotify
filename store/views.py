@@ -595,13 +595,15 @@ def update_homepage(request):
                 section_type = section_data.get('type')
                 if section_type == 'products-container':  # Assuming it's a category if it's an integer
                     section.products.clear()
-                    for product_data in section_data.get('products', []):
-                        product_id = product_data['product_id']
-                        product = Product.objects.get(id=product_id)
-                        section.products.add(product)
+                    show_latest_products = section_data.get('show_latest_products')
+                    if not show_latest_products:
+                        for product_data in section_data.get('products', []):
+                            product_id = product_data['product_id']
+                            product = Product.objects.get(id=product_id)
+                            section.products.add(product)
                     
                     section.active = True
-                    section.show_latest_products = section_data.get('show_latest_products')
+                    section.show_latest_products = show_latest_products
                     section.lastest_products_count = section_data.get('lastest_products_count')
 
                 elif section_type == 'category':  # Assuming it's a category if it's an integer
@@ -611,13 +613,15 @@ def update_homepage(request):
                     except:
                         pass
                     section.products.clear()
-                    for product_data in section_data.get('products', []):
-                        product_id = product_data['product_id']
-                        product = Product.objects.get(id=product_id)
-                        section.products.add(product)
+                    show_latest_products = section_data.get('show_latest_products')
+                    if not show_latest_products:
+                        for product_data in section_data.get('products', []):
+                            product_id = product_data['product_id']
+                            product = Product.objects.get(id=product_id)
+                            section.products.add(product)
 
                     section.active = section_data.get('active')
-                    section.show_latest_products = section_data.get('show_latest_products')
+                    section.show_latest_products = show_latest_products
                     section.lastest_products_count = section_data.get('lastest_products_count')
 
                 elif section_type == 'swiper':
@@ -676,13 +680,16 @@ def serialized_category_preview_products(query):
             product_id = F('id'),
         ).values('product_id','image', 'price', 'title', 'original_price', 'slug'))
 
-def home_page_section_serializer(home_page_sections):
+def home_page_section_serializer(home_page_sections, store):
         def serialize_section(section):
+            show_latest_products = section.show_latest_products
             if section.type == 'products-container':
+                products = store.products.filter(active=True, is_available=True)[: section.lastest_products_count] if show_latest_products else section.products 
+
                 return {
                         "id": section.section_id,
                         "title": section.title,
-                        "products": serialized_category_preview_products(section.products),
+                        "products": serialized_category_preview_products(products),
                         "type": "products-container",
                         "active": True,
                         "design": section.design,
@@ -692,10 +699,11 @@ def home_page_section_serializer(home_page_sections):
                     }
         
             if section.type == 'category':
+                products = section.category.products.filter(active=True, is_available=True)[: section.lastest_products_count] if show_latest_products else section.products 
                 return {
                         "id": section.section_id,
                         "title": section.category.label,
-                        "products": serialized_category_preview_products(section.products),
+                        "products": serialized_category_preview_products(products),
                         "type": "category",
                         "active": section.active,
                         "design": section.design,
@@ -735,7 +743,9 @@ def home_customization_products(request):
                     store.products.filter(active=True, is_available=True)[:20], 
                     home_page.default_section.design,
                     home_page.default_section.title
-                )]),
+                )
+            ],
+                store),
             'store': {
                 'primaryColor': store.color_primary,
                 'primaryColorDark': store.color_primary_dark,
@@ -747,7 +757,7 @@ def home_customization_products(request):
         })
     else:
         return Response({
-            'sections': home_page_section_serializer(home_page.sections.order_by('order')),
+            'sections': home_page_section_serializer(home_page.sections.order_by('order'), store),
             'store': {
                 'primaryColor': store.color_primary,
                 'primaryColorDark': store.color_primary_dark,
@@ -819,7 +829,7 @@ def store_home_page_sections(request):
                     store.products.filter(active=True, is_available=True)[:20], 
                     home_page.default_section.design,
                     home_page.default_section.title
-                )]),
+                )], store),
             'store': {
                 'primaryColor': store.color_primary,
                 'primaryColorDark': store.color_primary_dark,
@@ -830,7 +840,7 @@ def store_home_page_sections(request):
         })
     else:
         return Response({
-            'sections': home_page_section_serializer(home_page.sections.filter(active=True).order_by('order')),
+            'sections': home_page_section_serializer(home_page.sections.filter(active=True).order_by('order'), store),
             'store': {
                 'primaryColor': store.color_primary,
                 'primaryColorDark': store.color_primary_dark,
@@ -840,7 +850,6 @@ def store_home_page_sections(request):
             'generalDesign':  home_page.general_design,
             'home_page_mode' : home_page.auto
         })
-
 
 @api_view(['GET'])
 def sidebar_content(request):

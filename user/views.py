@@ -2,19 +2,16 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from django.http import JsonResponse
-from others.models import State
 from .serializers import UserSerializerWithToken
 from django.contrib.auth.hashers import make_password
-import json, os
-from django.db.models import Q
-from django.db.models import Avg
+import json
 from django.utils.translation import gettext as _
 from user.models import UserToken
 import json
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import User 
 from functions import is_acceptable_string, is_only_latin_and_arabic_letters
-from time import sleep
+
 from store.models import StateShippingCost, Domain
 from contants import media_files_domain, stores_domain
 import requests
@@ -137,17 +134,15 @@ def register(request):
             store.delete()
         except :
             print('Error at hontify/user/views/register l126')
-        raise
         message = {
             'detail': _('User was not created please try again'),
             "error 2": str(e)
-            }
+        }
         return JsonResponse(message, status=400)
 
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def logout(request):
-    
     data = json.loads(request.body)
     try :
         token = data.get('token')

@@ -55,19 +55,21 @@ def add_category(request):
         'store_id': store.id,
         'MESSAGING_KEY' : settings.MESSAGING_KEY,
     })
-    try:
-        response = requests.post(receiver_url, data={
-            'data': data
-        })
-        return JsonResponse({
-            'categoryId': category.id
-        }, status=200)
-    except:
+    
+    response = requests.post(receiver_url, data={
+        'data': data
+    })
+    if not response.ok:
         category.delete()
         return JsonResponse({
             'detail': _('Category was not created')
         }, status=400)
     
+    return JsonResponse({
+        'categoryId': category.id
+    }, status=200)
+
+
 @api_view(['POST'])
 def update_category(request):
     data = json.loads(request.body)

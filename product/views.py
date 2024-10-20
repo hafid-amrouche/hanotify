@@ -243,7 +243,6 @@ def add_product(request):
         product.selected_categories.clear()
         product.states_shipping_cost.all().delete()
         product.related_products.all().delete()
-        raise
         return JsonResponse({
                 'detail': _('your Product was not listed'),
             }, status=400)

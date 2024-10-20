@@ -21,13 +21,31 @@ class Category(models.Model):
 def category_post_create(sender, instance, created,  **kwargs):
     category = instance
     if created:
-        HomePageSection.objects.create(
-            home_page = category.store.home_page,
-            section_id = f'category-{category.id}',
-            type = 'category',
-            design = None,
-            category = category,
-        )
+        if category.store.home_page.auto:
+            HomePageSection.objects.create(
+                home_page = category.store.home_page,
+                section_id = f'category-{category.id}',
+                type = 'category',
+                design = None,
+                category = category,
+                show_latest_products = True,
+                lastest_products_count = 12,
+                active=True,
+            )
+        else:
+            HomePageSection.objects.create(
+                home_page = category.store.home_page,
+                section_id = f'category-{category.id}',
+                type = 'category',
+                design = None,
+                title=category.label,
+                category = category,
+            )
+    else:
+        if category.store.home_page.auto:
+            home_page_section = HomePageSection.objects.get(category=category)
+            home_page_section.title = category.label
+            home_page_section.save()
 post_save.connect(category_post_create, Category)
 
 class CategoryPreviewProduct(models.Model):
