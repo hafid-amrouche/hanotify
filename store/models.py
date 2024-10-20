@@ -121,5 +121,3 @@ class TikTokPixel(models.Model):
     store = models.ForeignKey(Store, on_delete=models.CASCADE, related_name='tiktok_pixels')
     pixel_id = models.CharField(max_length=255)
 
-class VIPStore(models.Model):
-    store = models.OneToOneField(Store, on_delete=models.CASCADE, related_name='vip_store')
