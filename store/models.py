@@ -58,7 +58,7 @@ class HomePageSection(models.Model):
 
     # category and products container types only
     category = models.OneToOneField('category.category', on_delete= models.CASCADE, null=True, blank=True, related_name='home_page_section')
-    products = models.ManyToManyField('product.product')
+    products = models.ManyToManyField('product.product', blank=True)
     show_latest_products = models.BooleanField(null=True, blank=True, )
     lastest_products_count = models.PositiveSmallIntegerField(null=True, blank=True, validators=[MaxValueValidator(20)])
 
