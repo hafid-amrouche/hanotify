@@ -156,9 +156,6 @@ def delete_category(request):
 def get_categories(request):
     return JsonResponse(list(request.user.categories.values('id', 'label', 'image', 'slug', 'description', 'id')), safe=False )
 
-
-
-
 # hanotify-store
 def serialized_searched_products(query):
     return list(query.values('id', 'slug', 'image', 'price', 'original_price', 'title'))
@@ -172,21 +169,20 @@ def serialized_category_preview_products(query):
 
 @api_view(['GET'])
 def category_page(request):
-
     domain = request.GET.get('domain')  
     store = Store.objects.get(domain__domain = domain)  
     slug = request.GET.get('slug') 
     section = store.home_page.sections.get(section_id=slug)
     if section.show_latest_products :
         if section.category:
-            products = section.category.products.all()[:20]
+            products = section.category.products.filter(is_available=True, active=True)[:20]
         else:
-            products = store.products.all()[:20]
+            products = store.products.filter(is_available=True, active=True)[:20]
             
     else:
-        products = section.products.all()[:20]
-
-
+        products = section.products.filter(is_available=True, active=True)[:20]
+    
+    print(products)
     return JsonResponse({
         'products' : serialized_category_preview_products(products),
         'title': section.title
