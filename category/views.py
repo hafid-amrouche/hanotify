@@ -172,17 +172,20 @@ def category_page(request):
     domain = request.GET.get('domain')  
     store = Store.objects.get(domain__domain = domain)  
     slug = request.GET.get('slug') 
-    section = store.home_page.sections.get(section_id=slug)
-    if section.show_latest_products :
+    if store.home_page.auto:
+        section = store.home_page.default_section
+        products = store.products.filter(is_available=True, active=True)[:12]
+    elif section.show_latest_products :
+        section = store.home_page.sections.get(section_id=slug)
         if section.category:
-            products = section.category.products.filter(is_available=True, active=True)[:20]
+            products = section.category.products.filter(is_available=True, active=True)[:section.lastest_products_count]
         else:
-            products = store.products.filter(is_available=True, active=True)[:20]
+            products = store.products.filter(is_available=True, active=True)[:section.lastest_products_count]
             
     else:
-        products = section.products.filter(is_available=True, active=True)[:20]
+        section = store.home_page.sections.get(section_id=slug)
+        products = section.products.filter(is_available=True, active=True)[:12]
     
-    print(products)
     return JsonResponse({
         'products' : serialized_category_preview_products(products),
         'title': section.title

@@ -1,7 +1,7 @@
 from .models import Store, Status, HomePage, DefaultPageSection
 from django.db.models.signals import post_save
 from django.utils.translation import gettext as _
-from .constants import default_design
+from product.models import Product, TestProduct
 
 
 status_list =[
@@ -109,7 +109,23 @@ def home_page_post_create(sender, instance, created,  **kwargs):
         home_page = instance
         DefaultPageSection.objects.create(
             home_page = home_page,  
-            design = default_design()
+            
         )
-        
+        for i in range(12):
+            user = home_page.store.owner
+            store = home_page.store
+            product = Product.objects.create(
+                user = user,
+                store = store,
+                title = _('Product'),
+                price= 99990,
+                original_price = 99990,
+                is_available = True,
+                active = True,
+                image = None
+            )
+            TestProduct.objects.create(
+                product = product
+            )
+
 post_save.connect(home_page_post_create, HomePage)

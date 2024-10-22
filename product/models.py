@@ -39,6 +39,9 @@ class Product(models.Model):
     class Meta:
         ordering = ['-created_at']
 
+class TestProduct(models.Model):
+    product = models.OneToOneField(Product, on_delete=models.CASCADE, related_name='is_test')
+
 class VariantsCombination(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='variants_combinations')
     index = models.PositiveIntegerField()
@@ -46,7 +49,6 @@ class VariantsCombination(models.Model):
     image = models.TextField(null=True, blank=True)
     price = models.PositiveIntegerField(null=True, blank=True)
     original_price = models.PositiveIntegerField(null=True, blank=True)
-
 
 class RelatedProduct(models.Model):
     main_product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='related_products')

@@ -455,12 +455,13 @@ def confirm_order(request): ## add this front end
         send_new_order_notification(product.store, order)
         try:
             gs_info = order.store.gs_info
+            phone_number = order.phone_number if order.store.plan else '/'
             order_data =[
                 # order.id,
                 order.created_at.strftime('%Y-%m-%d %H:%M'),
                 order.product['title'],
                 order.full_name,
-                order.phone_number,
+                phone_number,
                 order.shipping_state.name if order.shipping_state else _('No state'),
                 (order.shipping_city.name if order.shipping_to_home else _('Office')) if order.shipping_city else '/',
                 order.product_quantity,

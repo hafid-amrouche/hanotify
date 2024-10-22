@@ -661,6 +661,7 @@ def update_default_section(request):
             home_page = store.home_page
             design = data.get('design')
             title = data.get('title')
+            print(title)
             home_page.default_section.design = design
             home_page.default_section.title = title
             home_page.default_section.save()
@@ -837,6 +838,7 @@ def store_home_page_sections(request):
                 'bordersRounded': store.borders_rounded
             },
             'generalDesign':  home_page.general_design,
+            'home_page_mode' : home_page.auto
         })
     else:
         return Response({
@@ -858,14 +860,20 @@ def sidebar_content(request):
     store = Store.objects.get(domain__domain=domain)
     if not store.active:
         return JsonResponse({'detail', _('Store not found')}, status=400)
-    
-    catgeories_list = [
-        {
-            'name' : section.title,
-            'slug': section.section_id
-        }
-        for section in store.home_page.sections.filter(type__in = ['category', 'products-container'], active=True)
-    ]
+
+    if store.home_page.auto:
+        catgeories_list= [{
+            'name': store.home_page.default_section.title,
+            'slug': 'default',
+        }]
+    else:
+        catgeories_list = [
+            {
+                'name' : section.title,
+                'slug': section.section_id
+            }
+            for section in store.home_page.sections.filter(type__in = ['category', 'products-container'], active=True)
+        ]
     return JsonResponse({
         'categories': catgeories_list
     })
