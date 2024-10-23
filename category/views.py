@@ -177,6 +177,7 @@ def category_page(request):
         section = store.home_page.default_section
         products = store.products.filter(is_available=True, active=True)[:12]
     else:
+        section = store.home_page.sections.get(section_id=slug)
         if section.category:
             if section.show_latest_products:
                 products = section.category.products.filter(is_available=True, active=True)[:section.lastest_products_count]
@@ -186,18 +187,7 @@ def category_page(request):
             if section.show_latest_products:
                 products = store.products.filter(is_available=True, active=True)[:section.lastest_products_count]
             else:
-                products = section.productss.all()
-        
-        
-        section = store.home_page.sections.get(section_id=slug)
-        if section.show_latest_products :
-            if section.category:
-                products = section.category.products.filter(is_available=True, active=True)[:section.lastest_products_count]
-            else:
-                products = store.products.filter(is_available=True, active=True)[:section.lastest_products_count]
-                
-        else:
-            products = section.products.filter(is_available=True, active=True)[:12]
+                products = section.productss.all()     
     
     return JsonResponse({
         'products' : serialized_category_preview_products(products),
