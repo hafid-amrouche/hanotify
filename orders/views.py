@@ -339,6 +339,7 @@ def confirm_order(request): ## add this front end
         order_id = data.get('order_id')
         order_token = data.get('order_token')
         order = Order.objects.get(id=order_id, token=order_token)
+        store = order.store
         if not order.is_abandoned:
             return JsonResponse({"datail": 'You\'re not a hacker'}, status=400)
         product = Product.objects.get(id = order.product['id'])
@@ -397,7 +398,8 @@ def confirm_order(request): ## add this front end
             else:
                 shipping_state_cost = product.states_shipping_cost.get(state = shipping_state, product=product)
         
-        except:
+        except Exception as e:
+            print(e)
             shipping_state_cost = None
 
 
@@ -445,7 +447,6 @@ def confirm_order(request): ## add this front end
         if not full_name:
             return JsonResponse({"datail": 'Full name error'}, status=400)
         
-        store = order.store
         order.client_note= data.get('client_note')
         order.shipping_city = city
         order.product = product_dict
