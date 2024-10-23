@@ -172,19 +172,32 @@ def category_page(request):
     domain = request.GET.get('domain')  
     store = Store.objects.get(domain__domain = domain)  
     slug = request.GET.get('slug') 
+
     if store.home_page.auto:
         section = store.home_page.default_section
         products = store.products.filter(is_available=True, active=True)[:12]
-    elif section.show_latest_products :
-        section = store.home_page.sections.get(section_id=slug)
-        if section.category:
-            products = section.category.products.filter(is_available=True, active=True)[:section.lastest_products_count]
-        else:
-            products = store.products.filter(is_available=True, active=True)[:section.lastest_products_count]
-            
     else:
+        if section.category:
+            if section.show_latest_products:
+                products = section.category.products.filter(is_available=True, active=True)[:section.lastest_products_count]
+            else:
+                products = section.category.products.all()
+        else:
+            if section.show_latest_products:
+                products = store.products.filter(is_available=True, active=True)[:section.lastest_products_count]
+            else:
+                products = section.productss.all()
+        
+        
         section = store.home_page.sections.get(section_id=slug)
-        products = section.products.filter(is_available=True, active=True)[:12]
+        if section.show_latest_products :
+            if section.category:
+                products = section.category.products.filter(is_available=True, active=True)[:section.lastest_products_count]
+            else:
+                products = store.products.filter(is_available=True, active=True)[:section.lastest_products_count]
+                
+        else:
+            products = section.products.filter(is_available=True, active=True)[:12]
     
     return JsonResponse({
         'products' : serialized_category_preview_products(products),
