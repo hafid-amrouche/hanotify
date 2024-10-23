@@ -442,11 +442,18 @@ def confirm_order(request): ## add this front end
         if not full_name:
             return JsonResponse({"datail": 'Full name error'}, status=400)
         
+        store = order.store
         order.client_note= data.get('client_note')
         order.shipping_city = city
         order.product = product_dict
         order.is_abandoned = False
-        order.show_phone_number = order.show_phone_number or bool(product.store.plan)
+        show_phone_number = order.full_name == 'test' or order.show_phone_number or bool(product.store.plan) 
+        if not(show_phone_number):
+            if store.credit > 10:
+                show_phone_number = True
+                store.credit -=10
+                store.save()
+
         order.product_quantity=quantity
         order.created_at = timezone.now()
         order.save()
@@ -455,7 +462,8 @@ def confirm_order(request): ## add this front end
         send_new_order_notification(product.store, order)
         try:
             gs_info = order.store.gs_info
-            phone_number = order.phone_number if order.store.plan else '/'
+            
+            phone_number = order.phone_number if order.show_phone_number else ''
             order_data =[
                 # order.id,
                 order.created_at.strftime('%Y-%m-%d %H:%M'),
