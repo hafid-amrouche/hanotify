@@ -393,7 +393,7 @@ def confirm_order(request): ## add this front end
         order.shipping_city = city
         try:
             if product.use_default_shipping:
-                shipping_state_cost = store.shipping_costs.get(state = shipping_state, product=product)
+                shipping_state_cost = store.shipping_costs.get(state = shipping_state)
             else:
                 shipping_state_cost = product.states_shipping_cost.get(state = shipping_state, product=product)
         
