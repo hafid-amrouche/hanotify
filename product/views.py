@@ -278,7 +278,6 @@ def edit_product(request):
         prices_and_images_list = data.get('pricesAndImagesList') #
         variants_combinations = data.get('variantsCombinations')
         
-        
         rich_text = data.get('richText') #
         all_products_related = data.get('allProductsRelated') or False #
         related_products = data.get('relatedProducts') #

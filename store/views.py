@@ -16,7 +16,7 @@ from django.conf import settings
 from contants import media_files_domain
 import requests
 from django.core.paginator import Paginator, EmptyPage
-from .models import HomePageSection
+from .models import HomePageSection, StateShippingCost
 from category.models import Category
 from product.models import Product
 from django.db.models import F
@@ -34,15 +34,20 @@ def update_shipping_costs(request):
     store_id = data.get('store_id')
     store = request.user.stores.get(id=store_id)
    
-    shipping_costs = store.shipping_costs.all()
     new_shipping_costs = []
+    new_shipping_costs_ids = []
+
     for cost in costs_list:
-        costObj = shipping_costs.get(state_id=cost['id'])           
+        [costObj, created] = StateShippingCost.objects.get_or_create(
+            state_id=cost['id'],
+            store = store,
+        )           
         costObj.cost = cost['cost']
         costObj.cost_to_home = cost['costToHome']
         costObj.save()
-        if cost['cost'] or cost['costToHome']:
+        if cost['cost'] != None or cost['costToHome'] != None:
             new_shipping_costs.append(cost)
+            new_shipping_costs_ids.append(cost['id'])
     
     receiver_url = media_files_domain + '/update-store-shipping-costs'
     response = requests.post(receiver_url,{
@@ -54,6 +59,8 @@ def update_shipping_costs(request):
     })
     if not response.ok:
         return JsonResponse({'detail': 'Error setting up your shipping costs'}, status=400)
+    
+    store.shipping_costs.exclude(state_id__in = new_shipping_costs_ids).delete()
         
     return JsonResponse({'detail': 'Success'}, status=200)
 
