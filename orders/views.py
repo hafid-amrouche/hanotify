@@ -4,7 +4,7 @@ from .serializers import OrderPreviewSerializer, OrderDetailsSerializer, Abndone
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
-from product.models import Product, StateShippingCost
+from product.models import Product
 from others.models import State, City
 from django.http import JsonResponse
 from functions import get_client_ip, generate_token_from_id
@@ -391,9 +391,12 @@ def confirm_order(request): ## add this front end
         
         order.shipping_state = shipping_state
         order.shipping_city = city
-
         try:
-            shipping_state_cost = StateShippingCost.objects.get(state = shipping_state, product=product)
+            if product.use_default_shipping:
+                shipping_state_cost = store.shipping_costs.get(state = shipping_state, product=product)
+            else:
+                shipping_state_cost = product.states_shipping_cost.get(state = shipping_state, product=product)
+        
         except:
             shipping_state_cost = None
 
