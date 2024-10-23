@@ -453,7 +453,8 @@ def confirm_order(request): ## add this front end
                 show_phone_number = True
                 store.credit -=10
                 store.save()
-
+        
+        order.show_phone_number = show_phone_number
         order.product_quantity=quantity
         order.created_at = timezone.now()
         order.save()
