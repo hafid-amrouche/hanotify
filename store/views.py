@@ -823,7 +823,7 @@ def toggle_home_page_section_show_latest_products(request):
 
 @api_view(['GET'])
 def store_home_page_sections(request):
-    domain = request.GET.get('domain')    
+    domain = request.GET.get('domain')  
 
     store = Store.objects.get(domain__domain=domain)
     if not store.active:

@@ -383,29 +383,40 @@ def confirm_order(request): ## add this front end
         order.shipping_address = data.get("shipping_address")
         
         state_id = data.get('state_id')
-        shipping_state = State.objects.get(id = state_id)
-        city_id = data.get('city_id')
         try:
-            city = City.objects.get(id= city_id, state=shipping_state)
+            shipping_state = State.objects.get(id = state_id)
+            city_id = data.get('city_id')
+            try:
+                city = City.objects.get(id= city_id, state=shipping_state)
+            except:
+                city = shipping_state.cities.first()
+
+            order.shipping_state = shipping_state
+            order.shipping_city = city
+            try:
+                if product.use_default_shipping:
+                    shipping_state_cost = store.shipping_costs.get(state = shipping_state)
+                else:
+                    shipping_state_cost = product.states_shipping_cost.get(state = shipping_state, product=product)
+            
+            except Exception as e:
+                print(e)
+                shipping_state_cost = None
+
+
+            shipping_to_home = data.get('shippingToHome')
+            order.shipping_to_home = shipping_to_home
+            shipping_cost = shipping_state_cost and (shipping_state_cost.cost_to_home if shipping_to_home else shipping_state_cost.cost)
         except:
-            city = shipping_state.cities.first()
-        
-        order.shipping_state = shipping_state
-        order.shipping_city = city
-        try:
-            if product.use_default_shipping:
-                shipping_state_cost = store.shipping_costs.get(state = shipping_state)
-            else:
-                shipping_state_cost = product.states_shipping_cost.get(state = shipping_state, product=product)
-        
-        except Exception as e:
-            print(e)
-            shipping_state_cost = None
+            shipping_state = None
+            city = None
+            order.shipping_state = None
+            order.shipping_city = None
 
-
-        shipping_to_home = data.get('shippingToHome')
-        order.shipping_to_home = shipping_to_home
-        shipping_cost = shipping_state_cost and (shipping_state_cost.cost_to_home if shipping_to_home else shipping_state_cost.cost)
+            order.shipping_to_home = False
+            shipping_cost = 0
+        
+       
 
         combination_index = data.get('combination_index')
         if product.has_variants:
@@ -436,12 +447,6 @@ def confirm_order(request): ## add this front end
     
         if combination:
             product_dict['combination'] = combination
-        
-        city_id = data.get('city_id')
-        try:
-            city = City.objects.get(id= city_id, state=shipping_state)
-        except:
-            city = shipping_state.cities.first()
         
         full_name  = data.get('full_name').strip()
         if not full_name:
@@ -496,6 +501,7 @@ def confirm_order(request): ## add this front end
             sheet_name = gs_info.sheet_name   # The name of the sheet/tab in the Google Sheet
             append_order_to_sheet(order_data, spreadsheet_id, sheet_name)
         except:
+            print('ERROR 1 CONFIRM ORDER')
             pass  
 
         for conversions_api in order.store.conversions_apis.all():
@@ -528,11 +534,12 @@ def confirm_order(request): ## add this front end
                         test_event_code = test_event_code
                     )
             except:
+                print('ERROR 2 CONFIRM ORDER')
                 pass
-    
-
             
     except Exception as e:
+        raise
+        print('ERROR LAST CONFIRM ORDER')
         pass
 
     return JsonResponse({"datail": 'Success'}, status=200)
