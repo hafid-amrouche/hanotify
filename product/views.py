@@ -111,7 +111,7 @@ def add_product(request):
         rich_text = data.get('richText') #
         all_products_related = data.get('allProductsRelated') or False #
         related_products = data.get('relatedProducts') #
-        gallery_images= data.get('imagesUrls') if data.get('imagesUrls') else None
+        gallery_images= data.get('galleryImages') if data.get('galleryImages') else None
         quantity = data.get('quantity')
         sku = data.get('sku')
         use_default_shipping = data.get('useDefaultShipping')
@@ -281,7 +281,7 @@ def edit_product(request):
         rich_text = data.get('richText') #
         all_products_related = data.get('allProductsRelated') or False #
         related_products = data.get('relatedProducts') #
-        gallery_images= data.get('imagesUrls') if data.get('imagesUrls') else None
+        gallery_images= data.get('galleryImages') if data.get('galleryImages') else None
         quantity = data.get('quantity')
         sku = data.get('sku')
         use_default_shipping = data.get('useDefaultShipping')
